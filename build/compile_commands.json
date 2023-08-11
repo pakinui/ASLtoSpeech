@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/olike/OneDrive/Documents/GitHub/cosc345/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -g -o CMakeFiles\\HandApp.dir\\src\\main.cpp.obj -c C:\\Users\\olike\\OneDrive\\Documents\\GitHub\\cosc345\\src\\main.cpp",
+  "file": "C:\\Users\\olike\\OneDrive\\Documents\\GitHub\\cosc345\\src\\main.cpp",
+  "output": "CMakeFiles\\HandApp.dir\\src\\main.cpp.obj"
+}
+]
