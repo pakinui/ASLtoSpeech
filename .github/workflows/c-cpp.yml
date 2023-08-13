@@ -17,22 +17,18 @@ jobs:
     - name: Install Ninja
       run: |
         choco install ninja
+
   build:
-
     runs-on: windows-latest
-
     steps:
     - uses: actions/checkout@v3
-    - name: Build with CMake
+    - name: Build with Ninja
       run: |
         mkdir build
         cd build
-        cmake ..
+        cmake .. -GNinja
         cmake --build .
-    - name: Create Executable
-      run: |
-        cd build
-        ninja
+        
   run:
     runs-on: windows-latest
     steps:
@@ -40,4 +36,3 @@ jobs:
       run: |
         cd build
         ./HandApp.exe
-  
