@@ -13,9 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: make
-      run: make -f /CMakeLists.txt
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+    - name: Build with CMake
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
