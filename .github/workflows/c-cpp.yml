@@ -19,3 +19,15 @@ jobs:
         cd build
         cmake ..
         cmake --build .
+    - name: Create Executable
+      run: |
+        cd build
+        ninja
+  run:
+    runs-on: windows-latest
+    steps:
+    - name: Run
+      run: |
+        cd build
+        ./HandApp.exe
+  
