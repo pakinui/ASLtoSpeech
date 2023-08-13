@@ -7,6 +7,16 @@ on:
     branches: [ "main" ]
 
 jobs:
+  install: 
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install CMake
+      run: |
+        choco install cmake
+    - name: Install Ninja
+      run: |
+        choco install ninja
   build:
 
     runs-on: windows-latest
