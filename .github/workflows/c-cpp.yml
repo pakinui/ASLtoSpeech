@@ -29,19 +29,8 @@ jobs:
         cd build
         cmake .. -GNinja
         cmake --build .
-        
-  run:
-    needs: [install, build]
-    runs-on: windows-latest
-    steps:
-      - name: Check Directory Contents Before cd
-        run: |
-          ls
-      - name: Run
-        run: |
-          cd build
-          ./HandApp.exe
-      - name: Check Directory Contents After cd
-        run: |
-          ls
+    - name: Run
+      run: |
+        ./HandApp.exe
+    
         
