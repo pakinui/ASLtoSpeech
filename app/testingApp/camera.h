@@ -57,6 +57,7 @@ private:
     void setupMenus();
     QMenu *fileMenu;
     QMenu *devicesMenu;
+    QMenu *cameraMenu;
 
 
     bool m_isCapturingImage = false;

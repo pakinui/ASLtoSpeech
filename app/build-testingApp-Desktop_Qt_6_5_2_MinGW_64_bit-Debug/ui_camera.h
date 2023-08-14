@@ -14,12 +14,14 @@
 #include <QtMultimediaWidgets/QVideoWidget>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -30,7 +32,10 @@ public:
     QAction *actionStartCamera;
     QAction *actionStopCamera;
     QWidget *centralwidget;
-    QGridLayout *gridLayout_5;
+    QVBoxLayout *verticalLayout;
+    QLabel *label_4;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout;
     QStackedWidget *stackedWidget;
     QWidget *previewPage;
     QGridLayout *gridLayout_7;
@@ -45,6 +50,7 @@ public:
     QWidget *tab_2;
     QGridLayout *gridLayout_8;
     QLabel *label;
+    QWidget *tab_3;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -52,16 +58,35 @@ public:
     {
         if (Camera->objectName().isEmpty())
             Camera->setObjectName("Camera");
-        Camera->resize(436, 260);
+        Camera->resize(800, 500);
+        Camera->setMinimumSize(QSize(800, 500));
         actionStartCamera = new QAction(Camera);
         actionStartCamera->setObjectName("actionStartCamera");
         actionStopCamera = new QAction(Camera);
         actionStopCamera->setObjectName("actionStopCamera");
         centralwidget = new QWidget(Camera);
         centralwidget->setObjectName("centralwidget");
-        gridLayout_5 = new QGridLayout(centralwidget);
-        gridLayout_5->setObjectName("gridLayout_5");
-        stackedWidget = new QStackedWidget(centralwidget);
+        centralwidget->setMinimumSize(QSize(800, 500));
+        verticalLayout = new QVBoxLayout(centralwidget);
+        verticalLayout->setObjectName("verticalLayout");
+        label_4 = new QLabel(centralwidget);
+        label_4->setObjectName("label_4");
+        label_4->setStyleSheet(QString::fromUtf8("\n"
+"QLabel {\n"
+"	color: rgb(50, 50, 100);\n"
+"    font-weight: bold;\n"
+"    font-size: 12px; /* Adjust the font size as needed */\n"
+" }"));
+        label_4->setAlignment(Qt::AlignCenter);
+
+        verticalLayout->addWidget(label_4);
+
+        widget = new QWidget(centralwidget);
+        widget->setObjectName("widget");
+        horizontalLayout = new QHBoxLayout(widget);
+        horizontalLayout->setSpacing(5);
+        horizontalLayout->setObjectName("horizontalLayout");
+        stackedWidget = new QStackedWidget(widget);
         stackedWidget->setObjectName("stackedWidget");
         QPalette palette;
         QBrush brush(QColor(192, 192, 192, 255));
@@ -92,9 +117,9 @@ public:
 
         stackedWidget->addWidget(viewfinderPage);
 
-        gridLayout_5->addWidget(stackedWidget, 0, 0, 1, 1);
+        horizontalLayout->addWidget(stackedWidget);
 
-        tabWidget = new QTabWidget(centralwidget);
+        tabWidget = new QTabWidget(widget);
         tabWidget->setObjectName("tabWidget");
         tab = new QWidget();
         tab->setObjectName("tab");
@@ -116,13 +141,21 @@ public:
         gridLayout_8->addWidget(label, 0, 0, 1, 1);
 
         tabWidget->addTab(tab_2, QString());
+        tab_3 = new QWidget();
+        tab_3->setObjectName("tab_3");
+        tabWidget->addTab(tab_3, QString());
 
-        gridLayout_5->addWidget(tabWidget, 0, 1, 1, 1);
+        horizontalLayout->addWidget(tabWidget);
+
+        horizontalLayout->setStretch(0, 3);
+        horizontalLayout->setStretch(1, 1);
+
+        verticalLayout->addWidget(widget);
 
         Camera->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Camera);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 436, 17));
+        menubar->setGeometry(QRect(0, 0, 800, 17));
         Camera->setMenuBar(menubar);
         statusbar = new QStatusBar(Camera);
         statusbar->setObjectName("statusbar");
@@ -131,7 +164,7 @@ public:
         retranslateUi(Camera);
 
         stackedWidget->setCurrentIndex(1);
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(Camera);
@@ -142,11 +175,13 @@ public:
         Camera->setWindowTitle(QCoreApplication::translate("Camera", "MainWindow", nullptr));
         actionStartCamera->setText(QCoreApplication::translate("Camera", "StartCamera", nullptr));
         actionStopCamera->setText(QCoreApplication::translate("Camera", "StopCamera", nullptr));
+        label_4->setText(QCoreApplication::translate("Camera", "Sign Language to Speech Translator", nullptr));
         label_2->setText(QCoreApplication::translate("Camera", "TextLabel", nullptr));
         label_3->setText(QCoreApplication::translate("Camera", "TextLabel", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("Camera", "Tab 1", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("Camera", "Trans", nullptr));
         label->setText(QCoreApplication::translate("Camera", "TextLabel", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("Camera", "Tab 2", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("Camera", "Dict", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("Camera", "Hist", nullptr));
     } // retranslateUi
 
 };

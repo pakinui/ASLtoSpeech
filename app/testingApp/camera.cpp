@@ -22,6 +22,7 @@
 #include <QDir>
 #include <QTimer>
 #include <QDebug>
+#include <QColor>
 
 
 Camera::Camera() : ui(new Ui::Camera)
@@ -70,21 +71,17 @@ void Camera::updateCameraActive(bool active){
 void Camera::setupMenus(){
     fileMenu = new QMenu("File", this);
     // Create QAction instances
-    QAction *startCameraAction = new QAction("Start Camera", this);
-    QAction *stopCameraAction = new QAction("Stop Camera", this);
-    QAction *cameraSettingsAction = new QAction("Camera Settings", this);
+    QAction *settingsAction = new QAction("Settings", this);
     QAction *closeAction = new QAction("Close", this);
+    QAction *helpAction = new QAction("Help", this);
 
     // Add actions to the menu
-    fileMenu->addAction(startCameraAction);
-    fileMenu->addAction(stopCameraAction);
-    fileMenu->addAction(cameraSettingsAction);
+    fileMenu->addAction(settingsAction);
+    fileMenu->addAction(helpAction);
     fileMenu->addSeparator(); // Adds a separator line
     fileMenu->addAction(closeAction);
 
-    // Adding start and stop camera button connections
-    connect(startCameraAction, &QAction::triggered, this, &Camera::startCamera);
-    connect(stopCameraAction, &QAction::triggered, this, &Camera::stopCamera);
+
     // Add the menu to the menu bar
     menuBar()->addMenu(fileMenu);
 
@@ -94,6 +91,23 @@ void Camera::setupMenus(){
     //    QAction *deviceAction = new QAction("Choose device", this);
     //    devicesMenu->addAction(deviceAction);
     menuBar()->addMenu(devicesMenu);
+
+    // Camera menu
+    cameraMenu = new QMenu("Camera", this);
+
+    QAction *startCameraAction = new QAction("Start Camera", this);
+    QAction *stopCameraAction = new QAction("Stop Camera", this);
+    QAction *cameraSettingsAction = new QAction("Camera Settings", this);
+
+    cameraMenu->addAction(startCameraAction);
+    cameraMenu->addAction(stopCameraAction);
+    cameraMenu->addAction(cameraSettingsAction);
+
+    // Adding start and stop camera button connections
+    connect(startCameraAction, &QAction::triggered, this, &Camera::startCamera);
+    connect(stopCameraAction, &QAction::triggered, this, &Camera::stopCamera);
+
+    menuBar()->addMenu(cameraMenu);
 }
 
 void Camera::displayCameraError()
