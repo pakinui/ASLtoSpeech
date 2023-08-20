@@ -7,7 +7,15 @@ on:
     branches: [ "main" ]
 
 jobs:
+  setup-workspace:
+    runs-on: windows-latest
+    steps:
+    - name: Create workspace
+      run: |
+        mkdir ${{ runner.workspace }}/dependencies
+        mkdir ${{ runner.workspace }}/dependencies/python_packages
   install-cmake: 
+    needs: setup-workspace
     runs-on: windows-latest
     steps:
     - name: Install CMake
@@ -16,24 +24,22 @@ jobs:
     - name: Install Ninja
       run: |
         choco install ninja
-    - name: Set up workspace
-      run: |
-        mkdir -p ${{ runner.workspace }}/dependencies
     - name: Store dependencies
       run: |
         mv CMake* ${{ runner.workspace }}/dependencies/
         mv Ninja* ${{ runner.workspace }}/dependencies/
 
   install-python:
+    needs: setup-workspace
     runs-on: windows-latest
     steps:
       - uses: actions/setup-python@v4.7.0
         with:
           python-version: 3.10
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
           pip install tts
-          mv $HOME/.local ${{ runner.workspace }}/dependencies/python_packages
+          mv $GITHUB_WORKSPACE/.local ${{ runner.workspace }}/dependencies/python_packages
         
 
   build:
