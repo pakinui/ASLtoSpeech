@@ -98,6 +98,31 @@ Camera::Camera() : ui(new Ui::Camera)
         cv::Mat frame;
         cap.read(frame);
 
+        // Get the shape of the frame
+        PyObject *pFrameShape = PyObject_GetAttrString(frame, "shape");
+
+        // Extract the height, width, and number of channels
+        PyObject *pHeight = PyLong_FromSsize_t(0);
+        PyObject *pWidth = PyLong_FromSsize_t(0);
+        PyObject *pChannels = PyLong_FromSsize_t(0);
+
+        if (PyTuple_Check(pFrameShape) && PyTuple_Size(pFrameShape) == 3)
+        {
+            pHeight = PyTuple_GetItem(pFrameShape, 0);
+            pWidth = PyTuple_GetItem(pFrameShape, 1);
+            pChannels = PyTuple_GetItem(pFrameShape, 2);
+        }
+
+        // Convert the PyObject* values to C++ types
+        int H = PyLong_AsLong(pHeight);
+        int W = PyLong_AsLong(pWidth);
+
+        // Clean up
+        Py_XDECREF(pFrameShape);
+        Py_XDECREF(pHeight);
+        Py_XDECREF(pWidth);
+        Py_XDECREF(pChannels);
+
         // Convert frame to RGB
         cv::Mat frameRgb;
         cv::cvtColor(frame, frameRgb, cv::COLOR_BGR2RGB);
@@ -133,15 +158,19 @@ Camera::Camera() : ui(new Ui::Camera)
 
                     PyObject *pX1 = PyFloat_FromDouble(x);
                     PyObject *pY1 = PyFloat_FromDouble(y);
+                    Py_DECREF(pX);
+                    Py_DECREF(pY);
+
                     PyList_Append(x_, pX1);
                     PyList_Append(y_, pY1);
 
                     // Release pX and pY
-                    Py_DECREF(pX);
-                    Py_DECREF(pY);
+                    Py_DECREF(pX1);
+                    Py_DECREF(pY1);
 
                     Py_DECREF(pLandmark);
                 }
+
                 double min_x = *std::min_element(x_.begin(), x_.end());
                 double min_y = *std::min_element(y_.begin(), y_.end());
                 double max_x = *std::max_element(x_.begin(), x_.end());
@@ -189,8 +218,6 @@ Camera::Camera() : ui(new Ui::Camera)
                     // Release pData
                     Py_DECREF(pData);
                 }
-
-
 
                 int x1 = static_cast<int>(min_x * W) - 10;
                 int y1 = static_cast<int>(min_y * H) - 10;
