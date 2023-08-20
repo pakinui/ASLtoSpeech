@@ -1,0 +1,37 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  install: 
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install CMake
+      run: |
+        choco install cmake
+    - name: Install Ninja
+      run: |
+        choco install ninja
+
+  build:
+    needs: install
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build with Ninja
+      run: |
+        mkdir build
+        cd build
+        cmake .. -GNinja
+        cmake --build .
+    - name: Run
+      run: |
+        cd build
+        ./HandApp.exe
+    
+        
