@@ -98,6 +98,7 @@ Camera::Camera() : ui(new Ui::Camera)
     m_camera.start(); // to start the camera
     cv::VideoCapture cap(0);
 
+
     while (true)
     {
         // Read frame
@@ -225,13 +226,13 @@ Camera::Camera() : ui(new Ui::Camera)
                     Py_DECREF(pData);
                 }
 
-                int x1 = static_cast<int>(min_x * W) - 10;
-                int y1 = static_cast<int>(min_y * H) - 10;
-                int x2 = static_cast<int>(max_x * W) - 10;
-                int y2 = static_cast<int>(max_y * H) - 10;
+//                int x1 = static_cast<int>(min_x * W) - 10;
+//                int y1 = static_cast<int>(min_y * H) - 10;
+//                int x2 = static_cast<int>(max_x * W) - 10;
+//                int y2 = static_cast<int>(max_y * H) - 10;
 
                 // Convert data_aux to a numpy array
-                PyObject *pNpArrayDataAux = PyObject_CallMethod(np, "array", "(O)", data_aux);
+                PyObject *pNpArrayDataAux = PyObject_CallMethod(np, "array", "(O)", dataAux);
 
                 // Create a list containing the numpy array
                 PyObject *pInputList = PyList_New(1);
