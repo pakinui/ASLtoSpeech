@@ -138,7 +138,7 @@ Camera::Camera() : ui(new Ui::Camera)
         PyObject *y_ = PyList_New(0);
 
         // Process hands
-        PyObject *pResults = PyObject_CallMethod(pHands, "process", frameRgb);
+        PyObject *pResults = PyObject_CallFunctionObjArgs(pHands, "process", frameRgb);
 
         // Get multi_hand_landmarks
         PyObject *pMultiHandLandmarks = PyObject_GetAttrString(pResults, "multi_hand_landmarks");
@@ -175,8 +175,12 @@ Camera::Camera() : ui(new Ui::Camera)
                     Py_DECREF(pLandmark);
                 }
 
-                double min_x = *std::min_element(x_.begin(), x_.end());
-                double min_y = *std::min_element(y_.begin(), y_.end());
+                PyObject *pBuiltInMin = PyDict_GetItemString(PyEval_GetBuiltins(), "min");
+
+                PyObject *xMinValue = PyObject_CallFunctionObjArgs(pBuiltInMin, x_, NULL);
+                double min_x = PyFloat_AsDouble(xMinValue);
+                PyObject *yMinValue = PyObject_CallFunctionObjArgs(pBuiltInMin, y_, NULL);
+                double min_y = PyFloat_AsDouble(yMinValue);
 
                 for (int h = 0; h <= num_detected_hands; ++h)
                 {
