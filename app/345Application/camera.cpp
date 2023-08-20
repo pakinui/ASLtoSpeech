@@ -9,6 +9,7 @@
 #include <opencv2/opencv.hpp>
 
 #include <QAudioDevice>
+
 #include <QAudioInput>
 #include <QCameraDevice>
 #include <QMediaDevices>
@@ -52,6 +53,11 @@ Camera::Camera() : ui(new Ui::Camera)
     ui->translateButton->setStyleSheet("background-color: #F5EFEE; color: black;");
 
     m_captureSession.setCamera(&m_camera);
+
+//    QList<QSize> resolutions = m_camera.supportedViewfinderResolutions();
+
+//    qDebug() << "Width:" << resolutions.width()
+//             << "Height:" << resolutions.height();
 
     m_captureSession.setVideoOutput(ui->viewfinder);
     ui->viewfinder->show();
@@ -99,29 +105,29 @@ Camera::Camera() : ui(new Ui::Camera)
         cap.read(frame);
 
         // Get the shape of the frame
-        PyObject *pFrameShape = PyObject_GetAttrString(frame, "shape");
+//        PyObject *pFrameShape = PyObject_GetAttrString(frame, "shape");
 
-        // Extract the height, width, and number of channels
-        PyObject *pHeight = PyLong_FromSsize_t(0);
-        PyObject *pWidth = PyLong_FromSsize_t(0);
-        PyObject *pChannels = PyLong_FromSsize_t(0);
+//        // Extract the height, width, and number of channels
+//        PyObject *pHeight = PyLong_FromSsize_t(0);
+//        PyObject *pWidth = PyLong_FromSsize_t(0);
+//        PyObject *pChannels = PyLong_FromSsize_t(0);
 
-        if (PyTuple_Check(pFrameShape) && PyTuple_Size(pFrameShape) == 3)
-        {
-            pHeight = PyTuple_GetItem(pFrameShape, 0);
-            pWidth = PyTuple_GetItem(pFrameShape, 1);
-            pChannels = PyTuple_GetItem(pFrameShape, 2);
-        }
+//        if (PyTuple_Check(pFrameShape) && PyTuple_Size(pFrameShape) == 3)
+//        {
+//            pHeight = PyTuple_GetItem(pFrameShape, 0);
+//            pWidth = PyTuple_GetItem(pFrameShape, 1);
+//            pChannels = PyTuple_GetItem(pFrameShape, 2);
+//        }
 
-        // Convert the PyObject* values to C++ types
-        int H = PyLong_AsLong(pHeight);
-        int W = PyLong_AsLong(pWidth);
+//        // Convert the PyObject* values to C++ types
+//        int H = PyLong_AsLong(pHeight);
+//        int W = PyLong_AsLong(pWidth);
 
-        // Clean up
-        Py_XDECREF(pFrameShape);
-        Py_XDECREF(pHeight);
-        Py_XDECREF(pWidth);
-        Py_XDECREF(pChannels);
+//        // Clean up
+//        Py_XDECREF(pFrameShape);
+//        Py_XDECREF(pHeight);
+//        Py_XDECREF(pWidth);
+//        Py_XDECREF(pChannels);
 
         // Convert frame to RGB
         cv::Mat frameRgb;
@@ -158,15 +164,15 @@ Camera::Camera() : ui(new Ui::Camera)
 
                     PyObject *pX1 = PyFloat_FromDouble(x);
                     PyObject *pY1 = PyFloat_FromDouble(y);
-                    Py_DECREF(pX);
-                    Py_DECREF(pY);
+//                    Py_DECREF(pX);
+//                    Py_DECREF(pY);
 
                     PyList_Append(x_, pX1);
                     PyList_Append(y_, pY1);
 
                     // Release pX and pY
-                    Py_DECREF(pX1);
-                    Py_DECREF(pY1);
+//                    Py_DECREF(pX1);
+//                    Py_DECREF(pY1);
 
                     Py_DECREF(pLandmark);
                 }
