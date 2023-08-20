@@ -77,6 +77,18 @@ Camera::Camera() : ui(new Ui::Camera)
     PyObject *pModelDict = PyObject_CallMethod(pickle, "load", "(s)", "./ASL_model.p");
     PyObject *pModel = PyObject_GetAttrString(pModelDict, "model");
 
+    // Get references to the required classes and functions
+    PyObject *pMpHands = PyObject_GetAttrString(mp, "solutions");
+    PyObject *pMpHandsClass = PyObject_GetAttrString(pMpHands, "Hands");
+
+    // Create a dictionary to store the constructor arguments
+    PyObject *pArgsDict = PyDict_New();
+    PyDict_SetItemString(pArgsDict, "static_image_mode", Py_True);                        // static_image_mode=True
+    PyDict_SetItemString(pArgsDict, "min_detection_confidence", PyFloat_FromDouble(0.3)); // min_detection_confidence=0.3
+
+    // Create an instance of the Hands class with the specified parameters
+    PyObject *pHands = PyObject_Call(pMpHandsClass, PyTuple_New(0), pArgsDict);
+
     m_camera.start(); // to start the camera
 
     while (true)
@@ -94,7 +106,7 @@ Camera::Camera() : ui(new Ui::Camera)
         PyObject *y_ = PyList_New(0);
 
         // Process hands
-        PyObject *pResults = PyObject_CallMethod(pModuleMediapipe, "Hands_process", "O", frameRgb);
+        PyObject *pResults = PyObject_GetAttrString(pHands, "process", );
 
         // Get multi_hand_landmarks
         PyObject *pMultiHandLandmarks = PyObject_GetAttrString(pResults, "multi_hand_landmarks");
