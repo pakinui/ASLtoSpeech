@@ -98,6 +98,8 @@ Camera::Camera() : ui(new Ui::Camera)
     m_camera.start(); // to start the camera
     cv::VideoCapture cap(0);
 
+    cv::VideoWriter out('output.avi', cv::VideoWriter::fourcc('X', 'V', 'I', 'D'), 20.0, cv::Size(640, 480));
+    PyObject *pCv2VideoWriter = PyObject_GetAttrString(pModuleCv2, "VideoWriter");
 
     while (true)
     {
@@ -226,10 +228,10 @@ Camera::Camera() : ui(new Ui::Camera)
                     Py_DECREF(pData);
                 }
 
-//                int x1 = static_cast<int>(min_x * W) - 10;
-//                int y1 = static_cast<int>(min_y * H) - 10;
-//                int x2 = static_cast<int>(max_x * W) - 10;
-//                int y2 = static_cast<int>(max_y * H) - 10;
+                //                int x1 = static_cast<int>(min_x * W) - 10;
+                //                int y1 = static_cast<int>(min_y * H) - 10;
+                //                int x2 = static_cast<int>(max_x * W) - 10;
+                //                int y2 = static_cast<int>(max_y * H) - 10;
 
                 // Convert data_aux to a numpy array
                 PyObject *pNpArrayDataAux = PyObject_CallMethod(np, "array", "(O)", dataAux);
