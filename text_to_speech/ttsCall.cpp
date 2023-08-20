@@ -1,7 +1,8 @@
+#include "ttsCall.h"
 #include <iostream>
 #include <cstdlib>
 
-int main() {
+bool tts(const std::string& text) {
     std::string text = "The quick brown fox jumps over the lazy dog.";
 
     // Construct the command
