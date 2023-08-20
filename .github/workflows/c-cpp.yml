@@ -7,21 +7,44 @@ on:
     branches: [ "main" ]
 
 jobs:
-  install: 
+  install-cmake: 
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
     - name: Install CMake
       run: |
         choco install cmake
     - name: Install Ninja
       run: |
         choco install ninja
+    - name: Set up workspace
+      run: |
+        mkdir -p ${{ runner.workspace }}/dependencies
+    - name: Store dependencies
+      run: |
+        mv CMake* ${{ runner.workspace }}/dependencies/
+        mv Ninja* ${{ runner.workspace }}/dependencies/
 
-  build:
-    needs: install
+  install-python:
     runs-on: windows-latest
     steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v4.7.0
+      with:
+        python-version: 3.10
+    - name: Install dependencies
+      run: |
+        pip install tts
+        mv $HOME/.local ${{ runner.workspace }}/dependencies/python_packages
+
+  build:
+    needs: [install-cmake, install-python]
+    runs-on: windows-latest
+    steps:
+    - name: Restore dependencies
+      run: |
+        mv ${{ runner.workspace }}/dependencies/* .
     - uses: actions/checkout@v3
     - name: Build with Ninja
       run: |
@@ -29,13 +52,29 @@ jobs:
         cd build
         cmake .. -GNinja
         cmake --build .
-    - name: Run
-      run: |
-        cd build
-        ./HandApp.exe
-    - name: Upload coverage reports to Codecov
-      uses: codecov/codecov-action@v3
-      env:
-        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-    
-        
+
+  run:
+    needs: build
+    runs-on: windows-latest
+    steps: 
+      - uses: actions/checkout@v3
+      - name: Restore dependencies
+        run: |
+          mv ${{ runner.workspace }}/dependencies/* .
+      - name: Run
+        run: |
+          cd build
+          ./HandApp.exe
+
+  codecov:
+     needs: run
+     runs-on: windows-latest
+     steps: 
+      - uses: actions/checkout@v3
+      - name: Restore dependencies
+        run: |
+          mv ${{ runner.workspace }}/dependencies/* .
+      - uses: codecov/codecov-action@v3
+      - name: Upload coverage reports to Codecov
+        env:
+          token: ${{ secrets.CODECOV_TOKEN }}
