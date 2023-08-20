@@ -66,7 +66,7 @@ Camera::Camera() : ui(new Ui::Camera)
     if (mp == NULL || np == NULL || pickle == NULL)
     {
         PyErr_Print();
-        return 1;
+        qDebug() << "Error";
     }
     else
     {
@@ -90,6 +90,7 @@ Camera::Camera() : ui(new Ui::Camera)
     PyObject *pHands = PyObject_Call(pMpHandsClass, PyTuple_New(0), pArgsDict);
 
     m_camera.start(); // to start the camera
+    cv::VideoCapture cap(0);
 
     while (true)
     {
@@ -106,7 +107,7 @@ Camera::Camera() : ui(new Ui::Camera)
         PyObject *y_ = PyList_New(0);
 
         // Process hands
-        PyObject *pResults = PyObject_GetAttrString(pHands, "process", );
+        PyObject *pResults = PyObject_GetAttrString(pHands, "process");
 
         // Get multi_hand_landmarks
         PyObject *pMultiHandLandmarks = PyObject_GetAttrString(pResults, "multi_hand_landmarks");
@@ -130,10 +131,10 @@ Camera::Camera() : ui(new Ui::Camera)
                     double x = PyFloat_AsDouble(pX);
                     double y = PyFloat_AsDouble(pY);
 
-                    PyObject *pX = PyFloat_FromDouble(x);
-                    PyObject *pY = PyFloat_FromDouble(y);
-                    PyList_Append(x_, pX);
-                    PyList_Append(y_, pY);
+                    PyObject *pX1 = PyFloat_FromDouble(x);
+                    PyObject *pY1 = PyFloat_FromDouble(y);
+                    PyList_Append(x_, pX1);
+                    PyList_Append(y_, pY1);
 
                     // Release pX and pY
                     Py_DECREF(pX);
@@ -141,10 +142,14 @@ Camera::Camera() : ui(new Ui::Camera)
 
                     Py_DECREF(pLandmark);
                 }
+                double min_x = *std::min_element(x_.begin(), x_.end());
+                double min_y = *std::min_element(y_.begin(), y_.end());
+                double max_x = *std::max_element(x_.begin(), x_.end());
+                double max_y = *std::max_element(y_.begin(), y_.end());
 
                 for (int h = 0; h <= num_detected_hands; ++h)
                 {
-                    PyObject *pLandmark = PyList_GetItem(pLandmakrtPoint, i);
+                    PyObject *pLandmark = PyList_GetItem(pLandmakrtPoint, h);
 
                     PyObject *pX = PyObject_GetAttrString(pLandmark, "x");
                     PyObject *pY = PyObject_GetAttrString(pLandmark, "y");
@@ -185,10 +190,7 @@ Camera::Camera() : ui(new Ui::Camera)
                     Py_DECREF(pData);
                 }
 
-                double min_x = *std::min_element(x_.begin(), x_.end());
-                double min_y = *std::min_element(y_.begin(), y_.end());
-                double max_x = *std::max_element(x_.begin(), x_.end());
-                double max_y = *std::max_element(y_.begin(), y_.end());
+
 
                 int x1 = static_cast<int>(min_x * W) - 10;
                 int y1 = static_cast<int>(min_y * H) - 10;
