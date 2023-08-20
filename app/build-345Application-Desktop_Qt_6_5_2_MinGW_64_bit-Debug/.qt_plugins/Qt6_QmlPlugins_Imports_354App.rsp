@@ -1,0 +1,9 @@
+-rootPath
+C:/Users/poppy/Documents/GitHub/cosc345/app/345Application
+-cmake-output
+-output-file
+C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.qt_plugins/Qt6_QmlPlugins_Imports_354App.cmake
+-importPath
+C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug
+-importPath
+C:/Qt/6.5.2/mingw_64/./qml
