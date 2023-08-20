@@ -27,14 +27,14 @@ jobs:
   install-python:
     runs-on: windows-latest
     steps:
-    - uses: actions/setup-python@v4.7.0
-    - name: Set up Python 3.10
-      with:
-        python-version: 3.10
-    - name: Install dependencies
-      run: |
-        pip install tts
-        mv $HOME/.local ${{ runner.workspace }}/dependencies/python_packages
+      - uses: actions/setup-python@v4.7.0
+        with:
+          python-version: 3.10
+      - name: Install dependencies
+        run: |
+          pip install tts
+          mv $HOME/.local ${{ runner.workspace }}/dependencies/python_packages
+        
 
   build:
     needs: [install-cmake, install-python]
@@ -65,14 +65,16 @@ jobs:
           ./HandApp.exe
 
   codecov:
-     needs: run
-     runs-on: windows-latest
-     steps: 
-      - uses: actions/checkout@v3
+    needs: run
+    runs-on: windows-latest
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v3
       - name: Restore dependencies
         run: |
           mv ${{ runner.workspace }}/dependencies/* .
-      - uses: codecov/codecov-action@v3
       - name: Upload coverage reports to Codecov
-        env:
+        uses: codecov/codecov-action@v3
+        with:
           token: ${{ secrets.CODECOV_TOKEN }}
+          
