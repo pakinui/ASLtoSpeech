@@ -3,9 +3,8 @@
 #include <cstdlib>
 
 bool tts(const std::string& text) {
-    std::string text = "The quick brown fox jumps over the lazy dog.";
-
-    // Construct the command
+    
+    // Construct the command using the passed text
     std::string command = "tts --text \"" + text + "\" --model_name \"tts_models/en/ljspeech/glow-tts\" --out_path speech.wav";
 
     // Execute the command using system()

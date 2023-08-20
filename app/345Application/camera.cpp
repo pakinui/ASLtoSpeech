@@ -72,6 +72,11 @@ void Camera::translateText(){
     //QString translatedText = performTranslation(inputText);
     //ui->translationDisplay->setPlainText(translatedText);
 
+    // Create standard string of input text
+    std::string inputTextStdString = inputText.toStdString();
+    // Call the text-to-speech function with the standard string of input text
+    tts(inputTextStdString);
+
     ui->translationDisplay->setPlainText(inputText);
     // Store translation in history data structure
     //addToHistory(inputText, translatedText);
