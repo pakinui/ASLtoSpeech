@@ -1,0 +1,19 @@
+{
+	"BUILD_DIR" : "C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/354App_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/poppy/Documents/GitHub/cosc345/app/345Application",
+	"CMAKE_SOURCE_DIR" : "C:/Users/poppy/Documents/GitHub/cosc345/app/345Application",
+	"INCLUDE_DIR" : "C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/354App_autogen/include",
+	"INPUTS" : [],
+	"LOCK_FILE" : "C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/CMakeFiles/354App_autogen.dir/AutoRcc_resouces_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "resouces" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_resouces.cpp",
+	"RCC_EXECUTABLE" : "C:/Qt/6.5.2/mingw_64/./bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/CMakeFiles/354App_autogen.dir/AutoRcc_resouces_EWIEGA46WW_Used.txt",
+	"SOURCE" : "C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/resouces.qrc",
+	"VERBOSITY" : 0
+}
