@@ -1,3 +1,12 @@
+/*!
+    @file
+    @brief Doxygen Example
+    @author poppy
+*/
+/*!
+    @breif Core methods.
+*/
+
 #ifndef CAMERA_H
 #define CAMERA_H
 
