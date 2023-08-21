@@ -3,5 +3,5 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/409b0d67499c4c9b8def12c695be78f9)](https://app.codacy.com/gh/pakinui/cosc345/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) <!--Codacy = Static Source Code Analysis-->
 ![Coverity Analysis Status](https://scan.coverity.com/projects/28987/badge.svg)<!--Coverity = Static Source Code Analysis-->
 [![codecov](https://codecov.io/gh/pakinui/cosc345/graph/badge.svg?token=GUFNGUO6M4)](https://codecov.io/gh/pakinui/cosc345)
-![codedocs](https://codedocs.xyz/pakinui/cosc345.svg)
+
 ![image](https://img.shields.io/badge/Codecov-F01F7A?style=for-the-badge&logo=Codecov&logoColor=white)
