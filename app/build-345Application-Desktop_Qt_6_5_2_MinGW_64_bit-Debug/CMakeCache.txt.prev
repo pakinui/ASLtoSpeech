@@ -205,7 +205,7 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_INCLUDE_BEFORE:FILEPATH=C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=354App
+CMAKE_PROJECT_NAME:STATIC=345Application
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=0.1

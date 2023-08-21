@@ -18,15 +18,15 @@
 	[
 		{
 			"backtrace" : 0,
-			"id" : "354App_qmlimportscan::@6890427a1f51a3e7e1df"
+			"id" : "345Application_qmlimportscan::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "354App_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"id" : "345Application_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "354App_autogen::@6890427a1f51a3e7e1df",
+	"id" : "345Application_autogen::@6890427a1f51a3e7e1df",
 	"isGeneratorProvided" : true,
-	"name" : "354App_autogen",
+	"name" : "345Application_autogen",
 	"paths" : 
 	{
 		"build" : ".",
@@ -55,19 +55,19 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/CMakeFiles/354App_autogen",
+			"path" : "C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/CMakeFiles/345Application_autogen",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/CMakeFiles/354App_autogen.rule",
+			"path" : "C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/CMakeFiles/345Application_autogen.rule",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/354App_autogen/timestamp.rule",
+			"path" : "C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/345Application_autogen/timestamp.rule",
 			"sourceGroupIndex" : 1
 		}
 	],

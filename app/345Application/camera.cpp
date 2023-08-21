@@ -1,12 +1,12 @@
 #include "camera.h"
 #include "ui_camera.h"
 // to use min(), max()
-#include <algorithm>
-#include "python_files/include/python.h"
-// #include "dictionary.h" // Include the Dictionary class header
-// #include "translationtab.h"
-// #include "dictionarytab.h"
-#include <opencv2/opencv.hpp>
+//#include <algorithm>
+//#include "python_files/include/python.h"
+//// #include "dictionary.h" // Include the Dictionary class header
+//// #include "translationtab.h"
+//// #include "dictionarytab.h"
+//#include <opencv2/opencv.hpp>
 
 #include <QAudioDevice>
 
@@ -65,204 +65,204 @@ Camera::Camera() : ui(new Ui::Camera)
     setupMenus();
     updateCameras();
 
-    PyObject *mp = PyImport_ImportModule("mediapipe");
-    PyObject *np = PyImport_ImportModule("numpy");
-    PyObject *pickle = PyImport_ImportModule("pickle");
+//    PyObject *mp = PyImport_ImportModule("mediapipe");
+//    PyObject *np = PyImport_ImportModule("numpy");
+//    PyObject *pickle = PyImport_ImportModule("pickle");
 
-    if (mp == NULL || np == NULL || pickle == NULL)
-    {
-        PyErr_Print();
-        qDebug() << "Error";
-    }
-    else
-    {
-        PyRun_SimpleString("print('All moduels are successfully imported!')");
-    }
+//    if (mp == NULL || np == NULL || pickle == NULL)
+//    {
+//        PyErr_Print();
+//        qDebug() << "Error";
+//    }
+//    else
+//    {
+//        PyRun_SimpleString("print('All moduels are successfully imported!')");
+//    }
 
-    // Load model dictionary
-    PyObject *pModelDict = PyObject_CallMethod(pickle, "load", "(s)", "./ASL_model.p");
-    PyObject *pModel = PyObject_GetAttrString(pModelDict, "model");
+//    // Load model dictionary
+//    PyObject *pModelDict = PyObject_CallMethod(pickle, "load", "(s)", "./ASL_model.p");
+//    PyObject *pModel = PyObject_GetAttrString(pModelDict, "model");
 
-    // Get references to the required classes and functions
-    PyObject *pMpHands = PyObject_GetAttrString(mp, "solutions");
-    PyObject *pMpHandsClass = PyObject_GetAttrString(pMpHands, "Hands");
+//    // Get references to the required classes and functions
+//    PyObject *pMpHands = PyObject_GetAttrString(mp, "solutions");
+//    PyObject *pMpHandsClass = PyObject_GetAttrString(pMpHands, "Hands");
 
-    // Create a dictionary to store the constructor arguments
-    PyObject *pArgsDict = PyDict_New();
-    PyDict_SetItemString(pArgsDict, "static_image_mode", Py_True);                        // static_image_mode=True
-    PyDict_SetItemString(pArgsDict, "min_detection_confidence", PyFloat_FromDouble(0.3)); // min_detection_confidence=0.3
+//    // Create a dictionary to store the constructor arguments
+//    PyObject *pArgsDict = PyDict_New();
+//    PyDict_SetItemString(pArgsDict, "static_image_mode", Py_True);                        // static_image_mode=True
+//    PyDict_SetItemString(pArgsDict, "min_detection_confidence", PyFloat_FromDouble(0.3)); // min_detection_confidence=0.3
 
-    // Create an instance of the Hands class with the specified parameters
-    PyObject *pHands = PyObject_Call(pMpHandsClass, PyTuple_New(0), pArgsDict);
+//    // Create an instance of the Hands class with the specified parameters
+//    PyObject *pHands = PyObject_Call(pMpHandsClass, PyTuple_New(0), pArgsDict);
 
     m_camera.start(); // to start the camera
-    cv::VideoCapture cap(0);
+//    cv::VideoCapture cap(0);
 
-    cv::VideoWriter out('output.avi', cv::VideoWriter::fourcc('X', 'V', 'I', 'D'), 20.0, cv::Size(640, 480));
-    PyObject *pCv2VideoWriter = PyObject_GetAttrString(pModuleCv2, "VideoWriter");
+//    cv::VideoWriter out('output.avi', cv::VideoWriter::fourcc('X', 'V', 'I', 'D'), 20.0, cv::Size(640, 480));
+//    PyObject *pCv2VideoWriter = PyObject_GetAttrString(pModuleCv2, "VideoWriter");
 
-    while (true)
-    {
-        // Read frame
-        cv::Mat frame;
-        cap.read(frame);
+//    while (true)
+//    {
+//        // Read frame
+//        cv::Mat frame;
+//        cap.read(frame);
 
-        // Get the shape of the frame
-        //        PyObject *pFrameShape = PyObject_GetAttrString(frame, "shape");
+//        // Get the shape of the frame
+//        //        PyObject *pFrameShape = PyObject_GetAttrString(frame, "shape");
 
-        //        // Extract the height, width, and number of channels
-        //        PyObject *pHeight = PyLong_FromSsize_t(0);
-        //        PyObject *pWidth = PyLong_FromSsize_t(0);
-        //        PyObject *pChannels = PyLong_FromSsize_t(0);
+//        //        // Extract the height, width, and number of channels
+//        //        PyObject *pHeight = PyLong_FromSsize_t(0);
+//        //        PyObject *pWidth = PyLong_FromSsize_t(0);
+//        //        PyObject *pChannels = PyLong_FromSsize_t(0);
 
-        //        if (PyTuple_Check(pFrameShape) && PyTuple_Size(pFrameShape) == 3)
-        //        {
-        //            pHeight = PyTuple_GetItem(pFrameShape, 0);
-        //            pWidth = PyTuple_GetItem(pFrameShape, 1);
-        //            pChannels = PyTuple_GetItem(pFrameShape, 2);
-        //        }
+//        //        if (PyTuple_Check(pFrameShape) && PyTuple_Size(pFrameShape) == 3)
+//        //        {
+//        //            pHeight = PyTuple_GetItem(pFrameShape, 0);
+//        //            pWidth = PyTuple_GetItem(pFrameShape, 1);
+//        //            pChannels = PyTuple_GetItem(pFrameShape, 2);
+//        //        }
 
-        //        // Convert the PyObject* values to C++ types
-        //        int H = PyLong_AsLong(pHeight);
-        //        int W = PyLong_AsLong(pWidth);
+//        //        // Convert the PyObject* values to C++ types
+//        //        int H = PyLong_AsLong(pHeight);
+//        //        int W = PyLong_AsLong(pWidth);
 
-        //        // Clean up
-        //        Py_XDECREF(pFrameShape);
-        //        Py_XDECREF(pHeight);
-        //        Py_XDECREF(pWidth);
-        //        Py_XDECREF(pChannels);
+//        //        // Clean up
+//        //        Py_XDECREF(pFrameShape);
+//        //        Py_XDECREF(pHeight);
+//        //        Py_XDECREF(pWidth);
+//        //        Py_XDECREF(pChannels);
 
-        // Convert frame to RGB
-        cv::Mat frameRgb;
-        cv::cvtColor(frame, frameRgb, cv::COLOR_BGR2RGB);
+//        // Convert frame to RGB
+//        cv::Mat frameRgb;
+//        cv::cvtColor(frame, frameRgb, cv::COLOR_BGR2RGB);
 
-        PyObject *dataAux = PyList_New(0);
-        PyObject *x_ = PyList_New(0);
-        PyObject *y_ = PyList_New(0);
+//        PyObject *dataAux = PyList_New(0);
+//        PyObject *x_ = PyList_New(0);
+//        PyObject *y_ = PyList_New(0);
 
-        // Process hands
-        PyObject *pResults = PyObject_CallFunctionObjArgs(pHands, "process", frameRgb);
+//        // Process hands
+//        PyObject *pResults = PyObject_CallFunctionObjArgs(pHands, "process", frameRgb);
 
-        // Get multi_hand_landmarks
-        PyObject *pMultiHandLandmarks = PyObject_GetAttrString(pResults, "multi_hand_landmarks");
+//        // Get multi_hand_landmarks
+//        PyObject *pMultiHandLandmarks = PyObject_GetAttrString(pResults, "multi_hand_landmarks");
 
-        if (pMultiHandLandmarks != NULL && PyList_Check(pMultiHandLandmarks))
-        {
-            int num_detected_hands = PyList_Size(pMultiHandLandmarks);
+//        if (pMultiHandLandmarks != NULL && PyList_Check(pMultiHandLandmarks))
+//        {
+//            int num_detected_hands = PyList_Size(pMultiHandLandmarks);
 
-            for (int h = 0; h <= num_detected_hands; ++h)
-            {
-                PyObject *pHandLandmarks = PyList_GetItem(pMultiHandLandmarks, h);
-                PyObject *pLandmakrtPoint = PyObject_GetAttrString(pHandLandmarks, "landmarks");
+//            for (int h = 0; h <= num_detected_hands; ++h)
+//            {
+//                PyObject *pHandLandmarks = PyList_GetItem(pMultiHandLandmarks, h);
+//                PyObject *pLandmakrtPoint = PyObject_GetAttrString(pHandLandmarks, "landmarks");
 
-                for (int i = 0; h <= PyList_Size(pLandmakrtPoint); ++i)
-                {
-                    PyObject *pLandmark = PyList_GetItem(pLandmakrtPoint, i);
+//                for (int i = 0; h <= PyList_Size(pLandmakrtPoint); ++i)
+//                {
+//                    PyObject *pLandmark = PyList_GetItem(pLandmakrtPoint, i);
 
-                    PyObject *pX = PyObject_GetAttrString(pLandmark, "x");
-                    PyObject *pY = PyObject_GetAttrString(pLandmark, "y");
+//                    PyObject *pX = PyObject_GetAttrString(pLandmark, "x");
+//                    PyObject *pY = PyObject_GetAttrString(pLandmark, "y");
 
-                    double x = PyFloat_AsDouble(pX);
-                    double y = PyFloat_AsDouble(pY);
+//                    double x = PyFloat_AsDouble(pX);
+//                    double y = PyFloat_AsDouble(pY);
 
-                    PyObject *pX1 = PyFloat_FromDouble(x);
-                    PyObject *pY1 = PyFloat_FromDouble(y);
+//                    PyObject *pX1 = PyFloat_FromDouble(x);
+//                    PyObject *pY1 = PyFloat_FromDouble(y);
 
-                    PyList_Append(x_, pX1);
-                    PyList_Append(y_, pY1);
+//                    PyList_Append(x_, pX1);
+//                    PyList_Append(y_, pY1);
 
-                    // Release pX and pY
-                    Py_DECREF(pX);
-                    Py_DECREF(pY);
+//                    // Release pX and pY
+//                    Py_DECREF(pX);
+//                    Py_DECREF(pY);
 
-                    Py_DECREF(pLandmark);
-                }
+//                    Py_DECREF(pLandmark);
+//                }
 
-                PyObject *pBuiltInMin = PyDict_GetItemString(PyEval_GetBuiltins(), "min");
+//                PyObject *pBuiltInMin = PyDict_GetItemString(PyEval_GetBuiltins(), "min");
 
-                PyObject *xMinValue = PyObject_CallFunctionObjArgs(pBuiltInMin, x_, NULL);
-                double min_x = PyFloat_AsDouble(xMinValue);
-                PyObject *yMinValue = PyObject_CallFunctionObjArgs(pBuiltInMin, y_, NULL);
-                double min_y = PyFloat_AsDouble(yMinValue);
+//                PyObject *xMinValue = PyObject_CallFunctionObjArgs(pBuiltInMin, x_, NULL);
+//                double min_x = PyFloat_AsDouble(xMinValue);
+//                PyObject *yMinValue = PyObject_CallFunctionObjArgs(pBuiltInMin, y_, NULL);
+//                double min_y = PyFloat_AsDouble(yMinValue);
 
-                for (int h = 0; h <= num_detected_hands; ++h)
-                {
-                    PyObject *pLandmark = PyList_GetItem(pLandmakrtPoint, h);
+//                for (int h = 0; h <= num_detected_hands; ++h)
+//                {
+//                    PyObject *pLandmark = PyList_GetItem(pLandmakrtPoint, h);
 
-                    PyObject *pX = PyObject_GetAttrString(pLandmark, "x");
-                    PyObject *pY = PyObject_GetAttrString(pLandmark, "y");
+//                    PyObject *pX = PyObject_GetAttrString(pLandmark, "x");
+//                    PyObject *pY = PyObject_GetAttrString(pLandmark, "y");
 
-                    double x = PyFloat_AsDouble(pX);
-                    double y = PyFloat_AsDouble(pY);
+//                    double x = PyFloat_AsDouble(pX);
+//                    double y = PyFloat_AsDouble(pY);
 
-                    double x_diff = x - min_x;
-                    double y_diff = y - min_y;
+//                    double x_diff = x - min_x;
+//                    double y_diff = y - min_y;
 
-                    // Append x_diff and y_diff to data_aux list
-                    PyObject *pXDiff = PyFloat_FromDouble(x_diff);
-                    PyObject *pYDiff = PyFloat_FromDouble(y_diff);
-                    PyList_Append(dataAux, pXDiff);
-                    PyList_Append(dataAux, pYDiff);
+//                    // Append x_diff and y_diff to data_aux list
+//                    PyObject *pXDiff = PyFloat_FromDouble(x_diff);
+//                    PyObject *pYDiff = PyFloat_FromDouble(y_diff);
+//                    PyList_Append(dataAux, pXDiff);
+//                    PyList_Append(dataAux, pYDiff);
 
-                    // Release pX, pY, pXDiff, pYDiff
-                    Py_DECREF(pX);
-                    Py_DECREF(pY);
-                    Py_DECREF(pXDiff);
-                    Py_DECREF(pYDiff);
+//                    // Release pX, pY, pXDiff, pYDiff
+//                    Py_DECREF(pX);
+//                    Py_DECREF(pY);
+//                    Py_DECREF(pXDiff);
+//                    Py_DECREF(pYDiff);
 
-                    // Release pLandmark
-                    Py_DECREF(pLandmark);
-                }
+//                    // Release pLandmark
+//                    Py_DECREF(pLandmark);
+//                }
 
-                int data_aux_size = PyList_Size(dataAux);
+//                int data_aux_size = PyList_Size(dataAux);
 
-                // data_aux += data_aux
-                for (int i = 0; i < data_aux_size; ++i)
-                {
-                    PyObject *pData = PyList_GetItem(dataAux, i);
+//                // data_aux += data_aux
+//                for (int i = 0; i < data_aux_size; ++i)
+//                {
+//                    PyObject *pData = PyList_GetItem(dataAux, i);
 
-                    // Append pData to pDataAuxList again
-                    PyList_Append(dataAux, pData);
+//                    // Append pData to pDataAuxList again
+//                    PyList_Append(dataAux, pData);
 
-                    // Release pData
-                    Py_DECREF(pData);
-                }
+//                    // Release pData
+//                    Py_DECREF(pData);
+//                }
 
-                //                int x1 = static_cast<int>(min_x * W) - 10;
-                //                int y1 = static_cast<int>(min_y * H) - 10;
-                //                int x2 = static_cast<int>(max_x * W) - 10;
-                //                int y2 = static_cast<int>(max_y * H) - 10;
+//                //                int x1 = static_cast<int>(min_x * W) - 10;
+//                //                int y1 = static_cast<int>(min_y * H) - 10;
+//                //                int x2 = static_cast<int>(max_x * W) - 10;
+//                //                int y2 = static_cast<int>(max_y * H) - 10;
 
-                // Convert data_aux to a numpy array
-                PyObject *pNpArrayDataAux = PyObject_CallMethod(np, "array", "(O)", dataAux);
+//                // Convert data_aux to a numpy array
+//                PyObject *pNpArrayDataAux = PyObject_CallMethod(np, "array", "(O)", dataAux);
 
-                // Create a list containing the numpy array
-                PyObject *pInputList = PyList_New(1);
-                PyList_SetItem(pInputList, 0, pNpArrayDataAux);
+//                // Create a list containing the numpy array
+//                PyObject *pInputList = PyList_New(1);
+//                PyList_SetItem(pInputList, 0, pNpArrayDataAux);
 
-                // Call model.predict
-                PyObject *pPrediction = PyObject_CallMethod(pModel, "predict", "(O)", pInputList);
-                Py_DECREF(pInputList);
+//                // Call model.predict
+//                PyObject *pPrediction = PyObject_CallMethod(pModel, "predict", "(O)", pInputList);
+//                Py_DECREF(pInputList);
 
-                // Get the predicted class label
-                PyObject *pPredictedClassLabel = PyList_GetItem(pPrediction, 0);
+//                // Get the predicted class label
+//                PyObject *pPredictedClassLabel = PyList_GetItem(pPrediction, 0);
 
-                // Release objects
-                Py_DECREF(pNpArrayDataAux);
-                Py_DECREF(pPrediction);
-            }
-            // Write frame to video writer
-            out.write(frame);
+//                // Release objects
+//                Py_DECREF(pNpArrayDataAux);
+//                Py_DECREF(pPrediction);
+//            }
+//            // Write frame to video writer
+//            out.write(frame);
 
-            // Show frame
-            cv::imshow("frame", frame);
+//            // Show frame
+//            cv::imshow("frame", frame);
 
-            // Exit on 'q' key press
-            if (cv::waitKey(1) == 'q')
-            {
-                break;
-            }
-        }
+//            // Exit on 'q' key press
+//            if (cv::waitKey(1) == 'q')
+//            {
+//                break;
+//            }
+//        }
 
         // Create instances of the tab classes
         //    TranslationTab translationTab(ui->historyTextEdit, ui->translateLineEdit);

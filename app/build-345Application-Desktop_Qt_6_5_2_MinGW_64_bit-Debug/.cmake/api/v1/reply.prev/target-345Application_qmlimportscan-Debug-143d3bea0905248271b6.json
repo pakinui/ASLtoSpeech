@@ -26,7 +26,7 @@
 			{
 				"command" : 6,
 				"file" : 2,
-				"line" : 94,
+				"line" : 95,
 				"parent" : 0
 			},
 			{
@@ -67,8 +67,8 @@
 			}
 		]
 	},
-	"id" : "354App_qmlimportscan::@6890427a1f51a3e7e1df",
-	"name" : "354App_qmlimportscan",
+	"id" : "345Application_qmlimportscan::@6890427a1f51a3e7e1df",
+	"name" : "345Application_qmlimportscan",
 	"paths" : 
 	{
 		"build" : ".",
@@ -97,19 +97,19 @@
 		{
 			"backtrace" : 7,
 			"isGenerated" : true,
-			"path" : "C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/CMakeFiles/354App_qmlimportscan",
+			"path" : "C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/CMakeFiles/345Application_qmlimportscan",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/CMakeFiles/354App_qmlimportscan.rule",
+			"path" : "C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/CMakeFiles/345Application_qmlimportscan.rule",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.qt_plugins/Qt6_QmlPlugins_Imports_354App.cmake.rule",
+			"path" : "C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.qt_plugins/Qt6_QmlPlugins_Imports_345Application.cmake.rule",
 			"sourceGroupIndex" : 1
 		}
 	],

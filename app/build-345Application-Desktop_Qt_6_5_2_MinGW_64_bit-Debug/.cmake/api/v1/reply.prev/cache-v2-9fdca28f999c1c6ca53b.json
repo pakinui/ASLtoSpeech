@@ -1111,7 +1111,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "354App"
+			"value" : "345Application"
 		},
 		{
 			"name" : "CMAKE_PROJECT_VERSION",
