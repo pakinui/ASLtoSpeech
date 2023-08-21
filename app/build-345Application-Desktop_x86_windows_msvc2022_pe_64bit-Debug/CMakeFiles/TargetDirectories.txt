@@ -1,0 +1,9 @@
+C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/345Application.dir
+C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/345Application_qmlimportscan.dir
+C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/list_install_components.dir
+C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/install.dir
+C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/install/local.dir
+C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/345Application_autogen_timestamp_deps.dir
+C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/345Application_autogen.dir

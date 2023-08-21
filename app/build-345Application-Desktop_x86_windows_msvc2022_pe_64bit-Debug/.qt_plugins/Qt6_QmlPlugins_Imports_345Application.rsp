@@ -1,0 +1,9 @@
+-rootPath
+C:/Users/poppy/Documents/GitHub/cosc345/app/345Application
+-cmake-output
+-output-file
+C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_x86_windows_msvc2022_pe_64bit-Debug/.qt_plugins/Qt6_QmlPlugins_Imports_345Application.cmake
+-importPath
+C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_x86_windows_msvc2022_pe_64bit-Debug
+-importPath
+C:/Qt/6.5.2/msvc2019_64/./qml

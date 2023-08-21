@@ -17,6 +17,9 @@
 #include <QVideoWidget>
 #include <QMediaPlayer>
 
+//#include "python_wrapper.h"
+
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class Camera;
@@ -56,9 +59,7 @@ private:
     bool m_applicationExiting = false;
     bool m_doImageCapture = true;
 
-public slots:
-
-private slots:
+//private slots:
     void displayCameraError();
     void updateCameraDevice(QAction *action);
     void updateCameras();
@@ -70,6 +71,11 @@ private slots:
     void addToHistory(const QString &original, const QString &translated);
     void stopCamera();
     QString getHistoryText();
+
+
+
+
+
 };
 
 #endif // CAMERA_H
