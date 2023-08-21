@@ -24,8 +24,6 @@ An innovative application that bridges the communication gap between individuals
 - [Installation](#installation)
 - [Usage](#usage)
 - [Configuration](#configuration)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## About
 
@@ -33,7 +31,19 @@ Working together as a team, we've selected two distinct datasets to create a uni
 
 ## Features
 
-List the key features of your project. This could include a bullet-point list or a brief paragraph about each feature.
+**Features:**
+
+1. **ASL to Speech:** Convert ASL gestures captured by the camera into text and then output them as spoken words. :white_check_mark:
+3. **Subtitles:** Display subtitles in distinct colors for both the ASL user and the person speaking. :white_check_mark:
+
+**Potential/Along-the-line Features:**
+
+1. **Record Transcript:** Optional feature to save conversation transcripts as .txt files. :x:
+2. **Add Gestures:** Allow users to add custom gestures to expand the vocabulary of the app. :x:
+3. **Change Voice:** Provide users with the flexibility to select and customize the synthesized voice. :white_check_mark:
+4. **Emotion Detector:** Utilize facial emotion recognition to infuse emotion into the generated speech. :x:
+5. **Dictionary Mode:** Offer a comprehensive list of ASL gestures with an option to bookmark for future learning. :x:
+6. **Speech to Text:** Enable voice recording for users and transform recorded speech into written text for interactive conversations. :x:
 
 ## Installation
 
@@ -44,3 +54,12 @@ Provide step-by-step instructions on how to install and set up your project. Inc
 $ git clone https://github.com/yourusername/your-project.git
 $ cd your-project
 $ npm install
+```
+
+## Usage
+
+Explain how users can use your project. Include code examples, command-line usage, or screenshots if relevant.
+
+## Configuration
+
+If your project has configuration options, APIs, or settings that can be customized, explain how users can configure these. Include examples and explanations.
