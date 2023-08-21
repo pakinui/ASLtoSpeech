@@ -5,15 +5,15 @@ project(345Application VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
-#set(OpenCV_DIR "C:/opencv")
-#set(CMAKE_PREFIX_PATH "C:/opencv/build/x64/vc16/lib")
+set(OpenCV_DIR "C:/opencv")
+set(CMAKE_PREFIX_PATH "C:/opencv/build/x64/vc16/lib")
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt6 COMPONENTS Core Widgets Multimedia MultimediaWidgets Gui Quick QuickControls2 REQUIRED)
-#find_package(OpenCV REQUIRED)
+find_package(OpenCV REQUIRED)
 
 #find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 #find_package(QT NAMES Qt6 REQUIRED COMPONENTS TextToSpeech)
@@ -63,7 +63,7 @@ target_link_libraries(345Application PRIVATE
     Qt6::Quick
     Qt6::Gui
 )
-#target_link_libraries(345Application PRIVATE ${OpenCV_LIBS})
+target_link_libraries(345Application PRIVATE ${OpenCV_LIBS})
 
 #target_link_libraries(345Application PRIVATE Qt6::Gui)
 #target_link_libraries(345Application PRIVATE Qt6::TextToSpeech)
@@ -83,7 +83,7 @@ set_target_properties(345Application PROPERTIES
 )
 
 include(GNUInstallDirs)
-#include_directories( ${OpenCV_INCLUDE_DIRS} )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
 
 install(TARGETS 345Application
     BUNDLE DESTINATION .

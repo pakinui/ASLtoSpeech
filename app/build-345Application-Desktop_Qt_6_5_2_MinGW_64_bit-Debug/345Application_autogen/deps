@@ -1083,5 +1083,10 @@
 	C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/CMakeFiles/3.24.2/CMakeCXXCompiler.cmake \
 	C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/CMakeFiles/3.24.2/CMakeRCCompiler.cmake \
 	C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/CMakeFiles/3.24.2/CMakeSystem.cmake \
+	C:/opencv/build/x64/vc16/lib/OpenCVConfig-version.cmake \
+	C:/opencv/build/x64/vc16/lib/OpenCVConfig.cmake \
+	C:/opencv/build/x64/vc16/lib/OpenCVModules-debug.cmake \
+	C:/opencv/build/x64/vc16/lib/OpenCVModules-release.cmake \
+	C:/opencv/build/x64/vc16/lib/OpenCVModules.cmake \
 	C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/camera.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

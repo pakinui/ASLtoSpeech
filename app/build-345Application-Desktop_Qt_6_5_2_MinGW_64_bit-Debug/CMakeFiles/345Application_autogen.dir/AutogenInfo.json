@@ -687,6 +687,13 @@
 		"C:/Qt/6.5.2/mingw_64/lib/cmake/Qt6QuickControls2/Qt6QuickControls2Targets-relwithdebinfo.cmake",
 		"C:/Qt/6.5.2/mingw_64/lib/cmake/Qt6QuickControls2/Qt6QuickControls2AdditionalTargetInfo.cmake",
 		"C:/Qt/6.5.2/mingw_64/lib/cmake/Qt6QuickControls2/Qt6QuickControls2VersionlessTargets.cmake",
+		"C:/opencv/build/x64/vc16/lib/OpenCVConfig-version.cmake",
+		"C:/opencv/build/x64/vc16/lib/OpenCVConfig.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/FindPackageMessage.cmake",
+		"C:/opencv/build/x64/vc16/lib/OpenCVModules.cmake",
+		"C:/opencv/build/x64/vc16/lib/OpenCVModules-debug.cmake",
+		"C:/opencv/build/x64/vc16/lib/OpenCVModules-release.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/GNUInstallDirs.cmake",
 		"C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/resouces.qrc"
 	],
@@ -1871,6 +1878,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
+		"C:/opencv/build/include",
 		"C:/Qt/6.5.2/mingw_64/include/QtCore",
 		"C:/Qt/6.5.2/mingw_64/include",
 		"C:/Qt/6.5.2/mingw_64/mkspecs/win32-g++",

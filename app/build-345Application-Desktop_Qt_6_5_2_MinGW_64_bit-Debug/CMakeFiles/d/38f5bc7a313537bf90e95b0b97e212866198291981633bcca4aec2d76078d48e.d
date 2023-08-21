@@ -1083,5 +1083,10 @@
   CMakeFiles/3.24.2/CMakeCXXCompiler.cmake \
   CMakeFiles/3.24.2/CMakeRCCompiler.cmake \
   CMakeFiles/3.24.2/CMakeSystem.cmake \
+  C:/opencv/build/x64/vc16/lib/OpenCVConfig-version.cmake \
+  C:/opencv/build/x64/vc16/lib/OpenCVConfig.cmake \
+  C:/opencv/build/x64/vc16/lib/OpenCVModules-debug.cmake \
+  C:/opencv/build/x64/vc16/lib/OpenCVModules-release.cmake \
+  C:/opencv/build/x64/vc16/lib/OpenCVModules.cmake \
   C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/camera.ui \
   C:/Qt/Tools/CMake_64/bin/cmake.exe
