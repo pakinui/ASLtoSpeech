@@ -83,4 +83,11 @@ jobs:
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          
+  
+  coverity-analysis:
+    runs-on: windows-latest
+    steps:
+      # ... other steps for building and running Coverity analysis ...
+      
+      - name: Display Coverity Badge
+        run: echo "![Coverity Analysis Status](https://scan.coverity.com/projects/28987/badge.svg)" >> README.md
