@@ -6,6 +6,7 @@ C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/camera.h
  mdp:C:/Qt/6.5.2/mingw_64/include/QtCore/QList
  mdp:C:/Qt/6.5.2/mingw_64/include/QtCore/QPair
  mdp:C:/Qt/6.5.2/mingw_64/include/QtCore/QScopedPointer
+ mdp:C:/Qt/6.5.2/mingw_64/include/QtCore/Qt
  mdp:C:/Qt/6.5.2/mingw_64/include/QtCore/q20memory.h
  mdp:C:/Qt/6.5.2/mingw_64/include/QtCore/q20type_traits.h
  mdp:C:/Qt/6.5.2/mingw_64/include/QtCore/qalgorithms.h
@@ -311,6 +312,7 @@ C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/camera.h
  mdp:C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits
  mdp:C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/list
  mdp:C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/map
+ mdp:C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/math.h
  mdp:C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/memory
  mdp:C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/new
  mdp:C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/numbers
@@ -373,6 +375,8 @@ C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/camera.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/crtdefs.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/ctype.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/errno.h
+ mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/inttypes.h
+ mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/io.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/locale.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/process.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/pthread.h
@@ -389,13 +393,123 @@ C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/camera.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/stdio.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/string.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/swprintf.inl
+ mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/sys/stat.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/sys/timeb.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/sys/types.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/abstract.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/bltinmodule.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/boolobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/bytearrayobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/bytesobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/ceval.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/codecs.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/compile.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/complexobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/abstract.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/bytearrayobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/bytesobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/cellobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/ceval.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/classobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/code.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/compile.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/complexobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/context.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/descrobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/dictobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/fileobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/fileutils.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/floatobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/funcobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/genobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/import.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/initconfig.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/listobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/longintrepr.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/longobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/methodobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/modsupport.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/object.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/objimpl.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/odictobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/picklebufobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pyctype.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pydebug.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pyerrors.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pyfpe.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pyframe.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pylifecycle.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pymem.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pystate.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pythonrun.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pythread.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pytime.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/setobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/sysmodule.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/traceback.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/tupleobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/unicodeobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/warnings.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/weakrefobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/descrobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/dictobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/enumobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/exports.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/fileobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/fileutils.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/floatobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/genericaliasobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/import.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/intrcheck.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/iterobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/listobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/longobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/memoryobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/methodobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/modsupport.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/moduleobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/object.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/objimpl.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/osmodule.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/patchlevel.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pybuffer.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pycapsule.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pyconfig.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pyerrors.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pyframe.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pyhash.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pylifecycle.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pymacconfig.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pymacro.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pymath.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pymem.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pyport.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pystate.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pystrcmp.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pystrtod.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/python.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pythonrun.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pythread.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pytypedefs.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/rangeobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/setobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/sliceobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/structseq.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/sysmodule.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/traceback.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/tracemalloc.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/tupleobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/typeslots.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/unicodeobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/warnings.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/weakrefobject.h
+ mdp:C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_wrapper.h
 C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/camera.cpp
  uic:ui_camera.h
 C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/main.cpp
  uic:ui_camera.h
+C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_wrapper.h

@@ -2,6 +2,7 @@
   C:/Qt/6.5.2/mingw_64/include/QtCore/QList \
   C:/Qt/6.5.2/mingw_64/include/QtCore/QPair \
   C:/Qt/6.5.2/mingw_64/include/QtCore/QScopedPointer \
+  C:/Qt/6.5.2/mingw_64/include/QtCore/Qt \
   C:/Qt/6.5.2/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.5.2/mingw_64/include/QtCore/q20type_traits.h \
   C:/Qt/6.5.2/mingw_64/include/QtCore/qalgorithms.h \
@@ -800,6 +801,7 @@
   C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits \
   C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/list \
   C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/map \
+  C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/math.h \
   C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/memory \
   C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/new \
   C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/numbers \
@@ -862,6 +864,8 @@
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/crtdefs.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/ctype.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/errno.h \
+  C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/inttypes.h \
+  C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/io.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/locale.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/process.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/pthread.h \
@@ -878,6 +882,7 @@
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/stdio.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/string.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/swprintf.inl \
+  C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/sys/stat.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/sys/timeb.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/sys/types.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h \
@@ -888,6 +893,114 @@
   C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/camera.cpp \
   C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/camera.h \
   C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/main.cpp \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/abstract.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/bltinmodule.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/boolobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/bytearrayobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/bytesobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/ceval.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/codecs.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/compile.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/complexobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/abstract.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/bytearrayobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/bytesobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/cellobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/ceval.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/classobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/code.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/compile.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/complexobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/context.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/descrobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/dictobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/fileobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/fileutils.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/floatobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/funcobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/genobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/import.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/initconfig.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/listobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/longintrepr.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/longobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/methodobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/modsupport.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/object.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/objimpl.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/odictobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/picklebufobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pyctype.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pydebug.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pyerrors.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pyfpe.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pyframe.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pylifecycle.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pymem.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pystate.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pythonrun.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pythread.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/pytime.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/setobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/sysmodule.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/traceback.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/tupleobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/unicodeobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/warnings.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/cpython/weakrefobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/descrobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/dictobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/enumobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/exports.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/fileobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/fileutils.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/floatobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/genericaliasobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/import.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/intrcheck.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/iterobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/listobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/longobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/memoryobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/methodobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/modsupport.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/moduleobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/object.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/objimpl.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/osmodule.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/patchlevel.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pybuffer.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pycapsule.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pyconfig.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pyerrors.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pyframe.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pyhash.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pylifecycle.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pymacconfig.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pymacro.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pymath.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pymem.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pyport.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pystate.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pystrcmp.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pystrtod.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/python.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pythonrun.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pythread.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/pytypedefs.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/rangeobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/setobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/sliceobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/structseq.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/sysmodule.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/traceback.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/tracemalloc.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/tupleobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/typeslots.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/unicodeobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/warnings.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_files/include/weakrefobject.h \
+  C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_wrapper.h \
   C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/resouces.qrc \
   .qtc/package-manager/auto-setup.cmake \
   345Application_autogen/moc_predefs.h \

@@ -1,0 +1,9 @@
+# ninja log v5
+31	636	7142863754059681	.qt_plugins/Qt6_QmlPlugins_Imports_345Application.cmake	2525565bfdd6d8dc
+31	636	7142863754059681	C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_x86_windows_msvc2022_pe_64bit-Debug/.qt_plugins/Qt6_QmlPlugins_Imports_345Application.cmake	2525565bfdd6d8dc
+992	1025	7142863758099472	345Application_autogen/EWIEGA46WW/qrc_resouces.cpp	7240cdb2ae29ac6c
+43	422	7142871681454102	345Application_autogen/timestamp	d5fce788d428d0f6
+43	422	7142871681454102	345Application_autogen/mocs_compilation.cpp	d5fce788d428d0f6
+43	422	7142871681454102	C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_x86_windows_msvc2022_pe_64bit-Debug/345Application_autogen/mocs_compilation.cpp	d5fce788d428d0f6
+43	422	7142871681454102	C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_x86_windows_msvc2022_pe_64bit-Debug/345Application_autogen/timestamp	d5fce788d428d0f6
+992	1025	7142863758099472	C:/Users/poppy/Documents/GitHub/cosc345/app/build-345Application-Desktop_x86_windows_msvc2022_pe_64bit-Debug/345Application_autogen/EWIEGA46WW/qrc_resouces.cpp	7240cdb2ae29ac6c

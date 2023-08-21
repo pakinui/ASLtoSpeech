@@ -707,6 +707,12 @@
 			"MU",
 			"EWIEGA46WW/moc_camera.cpp",
 			null
+		],
+		[
+			"C:/Users/poppy/Documents/GitHub/cosc345/app/345Application/python_wrapper.h",
+			"MU",
+			"EWIEGA46WW/moc_python_wrapper.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
