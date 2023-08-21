@@ -4,3 +4,4 @@
 ![Coverity Analysis Status](https://scan.coverity.com/projects/28987/badge.svg)<!--Coverity = Static Source Code Analysis-->
 [![codecov](https://codecov.io/gh/pakinui/cosc345/graph/badge.svg?token=GUFNGUO6M4)](https://codecov.io/gh/pakinui/cosc345)
 ![codedocs](https://codedocs.xyz/pakinui/cosc345.svg)
+![image](https://img.shields.io/badge/Codecov-F01F7A?style=for-the-badge&logo=Codecov&logoColor=white)
