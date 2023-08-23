@@ -1,10 +1,7 @@
 name: C/C++ CI
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  [push, pull_request]
 
 jobs:
   setup-workspace:
@@ -13,8 +10,8 @@ jobs:
     - name: Create workspace
       run: |
         mkdir ${{ runner.workspace }}/dependencies
-        mkdir ${{ runner.workspace }}/dependencies/python_packages
-  install-cmake: 
+        
+  build: 
     needs: setup-workspace
     runs-on: windows-latest
     steps:
@@ -24,13 +21,16 @@ jobs:
     - name: Install Ninja
       run: |
         choco install ninja
-    - name: Store dependencies
+    - name: Setup build environment
       run: |
-        mv CMake* ${{ runner.workspace }}/dependencies/
-        mv Ninja* ${{ runner.workspace }}/dependencies/
+        mkdir build
+        cd build
+        cmake .. -GNinja
+        
+    - name: Build with Ninja
+      run: cmake --build ./build
 
   install-python:
-    needs: setup-workspace
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
@@ -42,24 +42,8 @@ jobs:
         run: |
           pip install tts
         
-
-  build:
-    needs: [install-cmake, install-python]
-    runs-on: windows-latest
-    steps:
-    - name: Restore dependencies
-      run: |
-        mv ${{ runner.workspace }}/dependencies/* .
-    - uses: actions/checkout@v3
-    - name: Build with Ninja
-      run: |
-        mkdir build
-        cd build
-        cmake .. -GNinja
-        cmake --build .
-
   run:
-    needs: build
+    needs: [build, install-python]
     runs-on: windows-latest
     steps: 
       - uses: actions/checkout@v3
