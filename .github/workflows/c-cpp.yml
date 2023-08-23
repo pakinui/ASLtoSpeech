@@ -33,6 +33,7 @@ jobs:
     needs: setup-workspace
     runs-on: windows-latest
     steps:
+      - uses: actions/checkout@v3
       - uses: actions/setup-python@v4.7.0
         with:
           python-version: 3.10
