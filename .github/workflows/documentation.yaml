@@ -17,10 +17,10 @@ jobs:
       #   run: sudo apt-get install -y doxygen  # Install Doxygen (adjust for non-Debian systems)
 
       - name: Generate Documentation
-        run: cd app/345Application && doxygen Doxyfile  # Adjust the path to Doxyfile
+        run: doxygen Doxyfile  # Adjust the path to Doxyfile
 
-      - name: Move Documentation to ./docs
-        run: mv app/345Application/html/* docs/  # Move generated HTML files to the ./docs folder
+      # - name: Move Documentation to ./docs
+      #   run: mv app/345Application/html/* docs/  # Move generated HTML files to the ./docs folder
 
       - name: Commit and Push Changes
         run: |
