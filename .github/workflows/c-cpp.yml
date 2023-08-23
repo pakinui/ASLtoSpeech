@@ -23,7 +23,7 @@ jobs:
     - name: Build with Ninja
       run: cmake --build ./build
     - name: Upload Artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
           name: executable
           path: build/HandApp.exe
@@ -45,12 +45,12 @@ jobs:
     runs-on: windows-latest
     steps: 
       - name: Download Artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: executable
       - name: Run Executable
         run: |
-          HandApp.exe
+          ./HandApp.exe
 
   codecov:
     needs: run
