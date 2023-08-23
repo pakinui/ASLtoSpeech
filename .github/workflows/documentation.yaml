@@ -21,7 +21,9 @@ jobs:
 
       # - name: Move Documentation to ./docs
       #   run: mv app/345Application/html/* docs/  # Move generated HTML files to the ./docs folder
-
+      - name: Move index.html to /docs
+        run: mv docs/html/index.html docs/
+        
       - name: Commit and Push Changes
         run: |
           git config --local user.name "GitHub Actions"
