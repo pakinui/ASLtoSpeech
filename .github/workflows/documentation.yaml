@@ -24,10 +24,10 @@ jobs:
       - name: Move index.html to /docs
         run: mv docs/html/index.html docs/
         
-      - name: Commit and Push Changes
-        run: |
-          git config --local user.name "GitHub Actions"
-          git config --local user.email "actions@github.com"
-          git add docs/
-          git commit -m "Update documentation"
-          git push
+      # - name: Commit and Push Changes
+      #   run: |
+      #     git config --local user.name "GitHub Actions"
+      #     git config --local user.email "actions@github.com"
+      #     git add docs/
+      #     git commit -m "Update documentation"
+      #     git push
