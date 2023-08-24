@@ -29,14 +29,14 @@ An innovative application that bridges the communication gap between individuals
 Working together as a team, we've selected two distinct datasets to create a unique and impactful application: one that translates ASL gestures into text, and another that converts text into spoken language. This innovative combination allows us to facilitate communication across three different formats: ASL gestures, written text, and spoken words. Our primary objective is to create an inclusive environment for both the deaf and hard of hearing individuals, as well as those who may not be familiar with sign language.
 
 ## Guidelines
-1. Source code that builds :x:
-2. Version control (e.g. git) ✅
-3. Continuous Integration :x: (currently just refers to hello world file needs more work)
-4. Tests :x:
-5. Coverage reports :x: (can't access git right now)
-6. Static source code analysis ✅ (might need a check)
-7. Documentation ❔ (checking now)
-8. Questionnaire ❔ (needs review)
+1.  Source code that builds :x:
+2.  Version control (e.g. git) ✅
+3.  Continuous Integration :x: (currently just refers to hello world file needs more work)
+4.  Tests :x:
+5.  Coverage reports :x: (can't access git right now)
+6.  Static source code analysis ✅ (might need a check)
+7.  Documentation ❔ (checking now)
+8.  Questionnaire ❔ (needs review)
  
 ## Features
 
