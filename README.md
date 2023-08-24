@@ -36,7 +36,7 @@ Working together as a team, we've selected two distinct datasets to create a uni
 5.  Coverage reports :x: (can't access git right now)
 6.  Static source code analysis ✅ (might need a check)
 7.  Documentation ❔ (checking now)
-8.  Questionnaire ❔ (needs review)
+8.  Questionnaire :white_check_mark:
  
 ## Features
 
