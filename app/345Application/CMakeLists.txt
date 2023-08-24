@@ -70,7 +70,7 @@ target_link_libraries(345Application PRIVATE
     Qt6::Gui
 )
 
-#comment this out
+#comment this out.
 #target_link_libraries(345Application PRIVATE ${OpenCV_LIBS} Python::Python)
 
 
