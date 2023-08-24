@@ -19,10 +19,6 @@ jobs:
         mkdir build
         cd build
         cmake .. -GNinja
-    - uses: actions/checkout@master
-    - uses: codecov/codecov-action@v3
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
         
     - name: Build with Ninja
       run: cmake --build ./build
@@ -56,16 +52,16 @@ jobs:
         run: |
           ./HandApp.exe
 
-  # codecov:
-  #   needs: run
-  #   runs-on: windows-latest
-  #   steps: 
-  #     - name: Checkout code
-  #       uses: actions/checkout@v3
-  #     - name: Upload coverage reports to Codecov
-  #       uses: codecov/codecov-action@v3
-  #       env:
-  #         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+  codecov:
+    needs: run
+    runs-on: windows-latest
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
   
   coverity-analysis:
