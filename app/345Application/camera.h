@@ -14,6 +14,7 @@
 #include <QAudioInput>
 #include <QCamera>
 #include <QImageCapture>
+#include <QVideoFrame>
 #include <QMediaCaptureSession>
 #include <QMediaDevices>
 #include <QMediaMetaData>
@@ -25,6 +26,7 @@
 #include <QPair>
 #include <QVideoWidget>
 #include <QMediaPlayer>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -47,7 +49,7 @@ private:
     QActionGroup *videoDevicesGroup = nullptr;
 
     QMediaDevices m_devices;
-    QScopedPointer<QImageCapture> m_imageCapture;
+    QImageCapture m_imageCapture;
     QMediaCaptureSession m_captureSession;
     QCamera m_camera;
 

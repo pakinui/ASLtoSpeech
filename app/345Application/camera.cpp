@@ -1,7 +1,5 @@
 #include "camera.h"
 #include "ui_camera.h"
-// to use min(), max()
-#include <algorithm>
 #include <Python.h>
 //// #include "dictionary.h" // Include the Dictionary class header
 //// #include "translationtab.h"
@@ -49,39 +47,27 @@
 #include <QApplication>
 #include <QCamera>
 #include <QVBoxLayout>
+#include <QPixmap>
 
 Camera::Camera() : ui(new Ui::Camera)
 {
 
-    ui->setupUi(this);
+//    ui->setupUi(this);
 
-    QPlainTextEdit *historyTextEdit;
-    connect(ui->translateButton, &QPushButton::clicked, this, &Camera::translateText);
-    connect(ui->dictionaryButton, &QPushButton::clicked, this, &Camera::searchDictionary);
-    ui->translateButton->setStyleSheet("background-color: #F5EFEE; color: black;");
+//    QPlainTextEdit *historyTextEdit;
+//    connect(ui->translateButton, &QPushButton::clicked, this, &Camera::translateText);
+//    connect(ui->dictionaryButton, &QPushButton::clicked, this, &Camera::searchDictionary);
+//    ui->translateButton->setStyleSheet("background-color: #F5EFEE; color: black;");
 
-    m_captureSession.setCamera(&m_camera);
-
-    m_captureSession.setVideoOutput(ui->viewfinder);
-    ui->viewfinder->show();
-
-    setupMenus();
-    updateCameras();
-
-//    Py_Initialize();
-//    QString currentPath = QDir::currentPath();
-//    QString newPath = currentPath + "/../345Application";
-//    qDebug() << "currentPATH:" << newPath;
-//    std::string pythonCode = "import sys; sys.path.append('"+ newPath.toStdString() +"')";
-//    PyRun_SimpleString(pythonCode.c_str());
-//    PyObject *pDetectionModule = PyImport_ImportModule("inference_classifier");
-
-//    Py_Finalize();
-    m_camera.start();
-    cv::VideoCapture cvCapture(0);
-    // OpenCV capture object to capture frames
+//    m_captureSession.setCamera(&m_camera);
+//    m_captureSession.setVideoOutput(ui->viewfinder);
+//    ui->viewfinder->show();
 
 
+//    setupMenus();
+//    updateCameras();
+
+//    m_camera.start();
 }
 
 void Camera::translateText()

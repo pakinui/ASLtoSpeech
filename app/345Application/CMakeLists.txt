@@ -9,19 +9,18 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
 #comment these out
-#set(OpenCV_DIR "C:/opencv")
-#set(CMAKE_PREFIX_PATH "C:/opencv/build/x64/vc16/lib")
-
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Widgets)
 find_package(Qt6 COMPONENTS Core Widgets Multimedia MultimediaWidgets Gui Quick QuickControls2 REQUIRED)
 
-#comment these out
-#find_package(OpenCV REQUIRED)
-#find_package(Python REQUIRED Development)
+set(OpenCV_DIR "C:/opencv")
+set(CMAKE_PREFIX_PATH "C:/opencv/build/x64/vc16/lib")
 
+#comment these out
+find_package(OpenCV REQUIRED)
+find_package(Python REQUIRED Development)
 
 
 set(PROJECT_SOURCES
@@ -37,6 +36,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${PROJECT_SOURCES}
         resouces.qrc
         inference_classifier.py
+        webcam_pattern_detection.py
 #*****************************************important*************************************************#
 #**********once you finished building, put ASL_model(located in img_recognition) in your build folder and uncomment this.*****/
 #        ../build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/ASL_model.p
@@ -63,6 +63,7 @@ endif()
 
 target_link_libraries(345Application PRIVATE
     Qt6::Widgets
+    Qt6::Core
     Qt6::Multimedia
     Qt6::MultimediaWidgets
     Qt6::QuickControls2
@@ -70,9 +71,10 @@ target_link_libraries(345Application PRIVATE
     Qt6::Gui
 )
 
-#comment this out
-#target_link_libraries(345Application PRIVATE ${OpenCV_LIBS} Python::Python)
 
+target_link_libraries(345Application PRIVATE Python::Python)
+target_link_libraries(345Application PRIVATE ${OpenCV_LIBS})
+#target_link_directories(345Application PRIVATE "C:/Users/yhkyh/Desktop/experiment/build/lib/Release")
 
 #target_link_libraries(345Application PRIVATE Qt6::Gui)
 #target_link_libraries(345Application PRIVATE Qt6::TextToSpeech)
