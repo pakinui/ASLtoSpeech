@@ -16,7 +16,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Widgets)
-find_package(Qt6 COMPONENTS Core Widgets Multimedia MultimediaWidgets Gui Quick QuickControls2 REQUIRED)
+find_package(Qt6 COMPONENTS Core Widgets Multimedia MultimediaWidgets Gui Quick QuickControls2 Test REQUIRED)
+
 
 #comment these out
 #find_package(OpenCV REQUIRED)
@@ -37,10 +38,12 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${PROJECT_SOURCES}
         resouces.qrc
         inference_classifier.py
+
 #*****************************************important*************************************************#
 #**********once you finished building, put ASL_model(located in img_recognition) in your build folder and uncomment this.*****/
 #        ../build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/ASL_model.p
     )
+
 
 
 # Define target properties for Android with Qt 6 as:
@@ -68,7 +71,13 @@ target_link_libraries(345Application PRIVATE
     Qt6::QuickControls2
     Qt6::Quick
     Qt6::Gui
+#    Qt6::Test
 )
+
+add_executable(camera_unit_tests
+    tests/unit_tests/camera_unit_tests.cpp
+)
+target_link_libraries(camera_unit_tests PRIVATE Qt6::Test)
 
 #comment this out.
 #target_link_libraries(345Application PRIVATE ${OpenCV_LIBS} Python::Python)

@@ -66,7 +66,7 @@ Camera::Camera() : ui(new Ui::Camera)
     // Constructor implementation
     ui->setupUi(this);
 
-    QPlainTextEdit *historyTextEdit;
+//    QPlainTextEdit *historyTextEdit;
     connect(ui->translateButton, &QPushButton::clicked, this, &Camera::translateText);
     connect(ui->dictionaryButton, &QPushButton::clicked, this, &Camera::searchDictionary);
     ui->translateButton->setStyleSheet("background-color: #F5EFEE; color: black;");
