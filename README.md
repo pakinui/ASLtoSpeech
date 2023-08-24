@@ -6,8 +6,7 @@ An innovative application that bridges the communication gap between individuals
 [![C/C++ CI](https://github.com/pakinui/cosc345/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/pakinui/cosc345/actions/workflows/c-cpp.yml)
 [![Generate Doxygen Documentation](https://github.com/pakinui/cosc345/actions/workflows/documentation.yaml/badge.svg)](https://github.com/pakinui/cosc345/actions/workflows/documentation.yaml)
 [![GitHub Pages](https://github.com/pakinui/cosc345/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/pakinui/cosc345/actions/workflows/pages/pages-build-deployment)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/409b0d67499c4c9b8def12c695be78f9)](https://app.codacy.com/gh/pakinui/cosc345/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) <!--Codacy = Static Source Code Analysis-->
-![Coverity Analysis Status](https://scan.coverity.com/projects/28987/badge.svg)<!--Coverity = Static Source Code Analysis-->
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/409b0d67499c4c9b8def12c695be78f9)](https://app.codacy.com/gh/pakinui/cosc345/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) 
 [![codecov](https://codecov.io/gh/pakinui/cosc345/graph/badge.svg?token=GUFNGUO6M4)](https://codecov.io/gh/pakinui/cosc345)
 
 ![image](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
