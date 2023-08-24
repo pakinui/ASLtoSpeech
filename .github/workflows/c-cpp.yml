@@ -28,17 +28,17 @@ jobs:
           name: executable
           path: build/HandApp.exe
 
-  install-python-tts:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4.7.0
-        with:
-          python-version: 3.10
-          cache: 'pip'
-      - name: Install TTS using Python 3.10
-        run: |
-          pip install tts
+  # install-python-tts:
+  #   runs-on: windows-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: actions/setup-python@v4.7.0
+  #       with:
+  #         python-version: 3.10
+  #         cache: 'pip'
+  #     - name: Install TTS using Python 3.10
+  #       run: |
+  #         pip install tts
         
   run:
     needs: [build, install-python-tts]
@@ -63,8 +63,8 @@ jobs:
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-  
+          token: ${{ secrets.CODECOV_TOKEN }}
+
   coverity-analysis:
     runs-on: windows-latest
     steps:
