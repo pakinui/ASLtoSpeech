@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cosc345_20cool_20group_20asl_20to_20speech_20app_1',['COSC345 Cool Group ASL to Speech App',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['cosc345_20cool_20group_20asl_20to_20speech_20app_1',['COSC345 Cool Group ASL to Speech App',['../md__r_e_a_d_m_e.html',1,'(Global Namespace)'],['../md__r_e_a_d_m_e____copy.html',1,'(Global Namespace)']]]
 ];
