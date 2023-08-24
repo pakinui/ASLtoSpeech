@@ -64,6 +64,7 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage1.xml
 
   coverity-analysis:
     runs-on: windows-latest
