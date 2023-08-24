@@ -12,9 +12,9 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-        with:
-            python-version: 3.11
-            cache: 'pip'
+        # with:
+        #     python-version: 3.11
+        #     cache: 'pip'
       - name: Install Doxygen using Python 3.11
         run: |
             pip install doxygen
