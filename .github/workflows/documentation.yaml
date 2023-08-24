@@ -14,16 +14,14 @@ jobs:
         uses: actions/checkout@v2
       - name: Set up Doxygen
         run: choco install doxygen.install -y
-      # - name: Set up Doxygen
-      #   run: pip install -y doxygen  # Install Doxygen (adjust for non-Debian systems)
-      # - name: Delete Old Files
-      #   run: rm -r docs/*
+
+      - name: Delete Old Files
+        run: rm -r docs/*
         
       - name: Generate Documentation
         run: doxygen Doxyfile  # Adjust the path to Doxyfile
       
-      # - name: Move Documentation to ./docs
-      #   run: mv app/345Application/html/* docs/  # Move generated HTML files to the ./docs folder
+
       - name: Move files to /docs
         run: mv docs/html/* docs/
         
