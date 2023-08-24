@@ -12,12 +12,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-        # with:
-        #     python-version: 3.11
-        #     cache: 'pip'
-      - name: Install Doxygen using Python 3.11
-        run: |
-            pip install doxygen
+      - name: Set up Doxygen
+        run: choco install doxygen.install -y
       # - name: Set up Doxygen
       #   run: pip install -y doxygen  # Install Doxygen (adjust for non-Debian systems)
       # - name: Delete Old Files
