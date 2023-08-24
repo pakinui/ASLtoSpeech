@@ -71,9 +71,9 @@ jobs:
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+          CODECOV_TOKEN: 1afab4df-7044-4128-ac0c-6909eeba0bbf
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+          # token: ${{ secrets.CODECOV_TOKEN }}
           directory: ./coverage/reports/
           # env_vars: OS,PYTHON
           # fail_ci_if_error: true

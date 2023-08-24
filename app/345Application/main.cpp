@@ -1,3 +1,11 @@
+/**
+ *  @file main.cpp
+ *  @brief This file ...
+ *  @author
+ *
+ *  Description...
+ *
+ */
 #include "camera.h"
 
 #include <QApplication>
@@ -10,7 +18,12 @@
 
 #include "ui_camera.h"
 
-
+/**
+ * @brief main
+ * @param argc
+ * @param argv
+ * @return
+ */
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);

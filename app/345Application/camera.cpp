@@ -1,3 +1,12 @@
+/**
+ *  @file camera.cpp
+ *  @brief This file contains the declaration of the Camera class.
+ *  @author
+ *
+ *  Description...
+ *
+ */
+
 #include "camera.h"
 #include "ui_camera.h"
 // to use min(), max()
@@ -49,10 +58,12 @@
 #include <QApplication>
 #include <QCamera>
 #include <QVBoxLayout>
-
+/**
+ * @brief Camera::Camera
+ */
 Camera::Camera() : ui(new Ui::Camera)
 {
-
+    // Constructor implementation
     ui->setupUi(this);
 
     QPlainTextEdit *historyTextEdit;
@@ -85,7 +96,9 @@ Camera::Camera() : ui(new Ui::Camera)
 
 
 }
-
+/**
+ * @brief Camera::translateText
+ */
 void Camera::translateText()
 {
     QString inputText = ui->translateInput->toPlainText();
@@ -99,13 +112,20 @@ void Camera::translateText()
     // addToHistory(inputText, translatedText);
     addToHistory(inputText, inputText);
 }
-
+/**
+ * @brief Camera::addToHistory
+ * @param original
+ * @param translated
+ */
 void Camera::addToHistory(const QString &original, const QString &translated)
 {
     history.append(QPair<QString, QString>(original, translated));
     ui->historyDisplay->setPlainText(getHistoryText());
 }
-
+/**
+ * @brief Camera::getHistoryText
+ * @return
+ */
 QString Camera::getHistoryText()
 {
     QString historyText;
@@ -116,7 +136,9 @@ QString Camera::getHistoryText()
     }
     return historyText;
 }
-
+/**
+ * @brief Camera::searchDictionary
+ */
 void Camera::searchDictionary()
 {
     QString searchTerm = ui->dictionaryInput->toPlainText();
@@ -135,25 +157,35 @@ void Camera::searchDictionary()
     // ui->dictionaryDisplay->setPlainText(searchResult);
     ui->dictionaryTextOutput->setPlainText(searchTerm);
 }
-
+/**
+ * @brief Camera::updateCameraDevice
+ * @param action
+ */
 void Camera::updateCameraDevice(QAction * action)
 {
     setCamera(qvariant_cast<QCameraDevice>(action->data()));
 }
-
+/**
+ * @brief Camera::startCamera
+ */
 void Camera::startCamera()
 {
     qDebug() << "starting camera";
 
     m_camera.start();
 }
-
+/**
+ * @brief Camera::stopCamera
+ */
 void Camera::stopCamera()
 {
     m_camera.stop();
     qDebug() << "stopping camera";
 }
-
+/**
+ * @brief Camera::updateCameraActive
+ * @param active
+ */
 void Camera::updateCameraActive(bool active)
 {
     if (active)
@@ -167,7 +199,9 @@ void Camera::updateCameraActive(bool active)
         ui->actionStopCamera->setEnabled(false);
     }
 }
-
+/**
+ * @brief Camera::setupMenus
+ */
 void Camera::setupMenus()
 {
     fileMenu = new QMenu("File", this);
@@ -209,13 +243,18 @@ void Camera::setupMenus()
 
     menuBar()->addMenu(cameraMenu);
 }
-
+/**
+ * @brief Camera::displayCameraError
+ */
 void Camera::displayCameraError()
 {
     if (m_camera.error() != QCamera::NoError)
         QMessageBox::warning(this, tr("Camera Error"), m_camera.errorString());
 }
-
+/**
+ * @brief
+ * @param cameraDevice
+ */
 void Camera::setCamera(const QCameraDevice &cameraDevice)
 {
     // m_camera.reset(new QCamera(cameraDevice));
@@ -241,7 +280,9 @@ void Camera::setCamera(const QCameraDevice &cameraDevice)
 
     m_camera.start();
 }
-
+/**
+ * @brief Update the camera being used.
+ */
 void Camera::updateCameras()
 {
     devicesMenu->clear();
