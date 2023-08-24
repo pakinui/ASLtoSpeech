@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['out_103',['out',['../namespaceinference__classifier.html#a3845e63bf437d473948b3c65705993e7',1,'inference_classifier']]],
-  ['output_5fimg_104',['output_img',['../namespaceexperiment.html#a904845ba290a270f3c66a4f6d814d0a7',1,'experiment']]]
+  ['image_134',['image',['../namespaceexperiment.html#a2c3ef2b52964aaffccb5bb3a644ae2d5',1,'experiment']]]
 ];

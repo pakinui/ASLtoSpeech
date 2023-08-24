@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['y_117',['y',['../namespaceinference__classifier.html#a3437c407116ea453eaf13aefb21a2c6d',1,'inference_classifier']]],
-  ['y1_118',['y1',['../namespaceinference__classifier.html#a7342ea4261947552c21f02c8e2a1a340',1,'inference_classifier']]],
-  ['y2_119',['y2',['../namespaceinference__classifier.html#afbca8015bbb8b0176f48e7c1a9624fed',1,'inference_classifier']]],
-  ['y_5f_120',['y_',['../namespaceinference__classifier.html#aa9813b89760f4481a5d56e18578880b6',1,'inference_classifier']]]
+  ['save_5fname_155',['save_name',['../namespaceexperiment.html#ad192825ff2b3c42266e7b912939e9a53',1,'experiment']]],
+  ['status_156',['status',['../classwebcam__pattern__detection_1_1_thread.html#a63495c9e12e68e91fe871930819d381d',1,'webcam_pattern_detection::Thread']]]
 ];

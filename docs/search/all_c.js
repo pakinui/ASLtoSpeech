@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['save_5fname_46',['save_name',['../namespaceexperiment.html#ad192825ff2b3c42266e7b912939e9a53',1,'experiment']]]
+  ['net_5fsave_5fname_47',['net_save_name',['../namespaceexperiment.html#a1c75cf29e682c25a250c2356c1cda39a',1,'experiment']]],
+  ['num_5fdetected_5fhands_48',['num_detected_hands',['../namespaceinference__classifier.html#a68007a4ae0ff4cc15ee093dbe31bf510',1,'inference_classifier']]]
 ];

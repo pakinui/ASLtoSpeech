@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['h_92',['H',['../namespaceinference__classifier.html#a4c68be61f9bca60f33c410c1f09d2cec',1,'inference_classifier']]],
-  ['hand_5findex_93',['hand_index',['../namespaceexperiment.html#a43cab5c9608d4a375bf2b17721032f77',1,'experiment']]],
-  ['hands_94',['hands',['../namespaceinference__classifier.html#a4f7db0066861dd8a561dd7033952efc3',1,'inference_classifier']]]
+  ['data_5faux_125',['data_aux',['../namespaceinference__classifier.html#acb6e34a80e67aa8c6a0b0566b5979977',1,'inference_classifier']]],
+  ['detector_126',['detector',['../namespaceexperiment.html#a9dcf524fe0652f42c6c6ce032311282b',1,'experiment']]]
 ];

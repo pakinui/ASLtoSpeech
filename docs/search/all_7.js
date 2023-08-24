@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['main_27',['main',['../app_2345_application_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp'],['../src_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp'],['../tts_call_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;ttsCall.cpp']]],
-  ['main_2ecpp_28',['main.cpp',['../app_2345_application_2main_8cpp.html',1,'(Global Namespace)'],['../src_2main_8cpp.html',1,'(Global Namespace)']]],
-  ['model_29',['model',['../namespaceinference__classifier.html#aa135dc5054503e252fd8560c3a28017e',1,'inference_classifier.model()'],['../namespaceexperiment.html#ac68d912be4897900d7ccaef02d7225a6',1,'experiment.model()']]],
-  ['model_5fdict_30',['model_dict',['../namespaceinference__classifier.html#aaba7d4d8fdab515be7a297536a682d47',1,'inference_classifier']]],
-  ['mp_5fdrawing_31',['mp_drawing',['../namespaceinference__classifier.html#ab0bb49f77b81aa89d916b76aad210d5f',1,'inference_classifier']]],
-  ['mp_5fdrawing_5fstyles_32',['mp_drawing_styles',['../namespaceinference__classifier.html#a0d057330ca2edcaabf86759b3186701c',1,'inference_classifier']]],
-  ['mp_5fhands_33',['mp_hands',['../namespaceinference__classifier.html#a8b19fe04e5e4bddcd96bca08469b9812',1,'inference_classifier']]]
+  ['h_27',['H',['../namespaceinference__classifier.html#a4c68be61f9bca60f33c410c1f09d2cec',1,'inference_classifier']]],
+  ['hand_5findex_28',['hand_index',['../namespaceexperiment.html#a43cab5c9608d4a375bf2b17721032f77',1,'experiment']]],
+  ['hands_29',['hands',['../namespaceinference__classifier.html#a4f7db0066861dd8a561dd7033952efc3',1,'inference_classifier.hands()'],['../namespacewebcam__pattern__detection.html#a8b85ba4169ba3bc87581b55e51a07cc7',1,'webcam_pattern_detection.hands()']]]
 ];

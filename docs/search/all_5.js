@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['image_23',['image',['../namespaceexperiment.html#a2c3ef2b52964aaffccb5bb3a644ae2d5',1,'experiment']]],
-  ['inference_5fclassifier_24',['inference_classifier',['../namespaceinference__classifier.html',1,'']]],
-  ['inference_5fclassifier_2epy_25',['inference_classifier.py',['../app_2345_application_2inference__classifier_8py.html',1,'(Global Namespace)'],['../img__recognition_2inference__classifier_8py.html',1,'(Global Namespace)']]]
+  ['exit_5faction_21',['exit_action',['../namespacewebcam__pattern__detection.html#ace553945bbd7ac6f538d7cc8727f4c14',1,'webcam_pattern_detection']]],
+  ['experiment_22',['experiment',['../namespaceexperiment.html',1,'']]],
+  ['experiment_2epy_23',['experiment.py',['../experiment_8py.html',1,'']]]
 ];

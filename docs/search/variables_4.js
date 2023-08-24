@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['image_95',['image',['../namespaceexperiment.html#a2c3ef2b52964aaffccb5bb3a644ae2d5',1,'experiment']]]
+  ['exit_5faction_127',['exit_action',['../namespacewebcam__pattern__detection.html#ace553945bbd7ac6f538d7cc8727f4c14',1,'webcam_pattern_detection']]]
 ];

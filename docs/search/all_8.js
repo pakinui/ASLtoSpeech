@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['net_5fsave_5fname_34',['net_save_name',['../namespaceexperiment.html#a1c75cf29e682c25a250c2356c1cda39a',1,'experiment']]],
-  ['num_5fdetected_5fhands_35',['num_detected_hands',['../namespaceinference__classifier.html#a68007a4ae0ff4cc15ee093dbe31bf510',1,'inference_classifier']]]
+  ['image_30',['image',['../namespaceexperiment.html#a2c3ef2b52964aaffccb5bb3a644ae2d5',1,'experiment']]],
+  ['inference_5fclassifier_31',['inference_classifier',['../namespaceinference__classifier.html',1,'']]],
+  ['inference_5fclassifier_2epy_32',['inference_classifier.py',['../app_2345_application_2inference__classifier_8py.html',1,'(Global Namespace)'],['../img__recognition_2inference__classifier_8py.html',1,'(Global Namespace)']]]
 ];
