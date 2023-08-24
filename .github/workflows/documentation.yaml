@@ -15,8 +15,8 @@ jobs:
 
       # - name: Set up Doxygen
       #   run: sudo apt-get install -y doxygen  # Install Doxygen (adjust for non-Debian systems)
-      # - name: Delete Old Files
-      #   run: rm -r docs/*
+      - name: Delete Old Files
+        run: rm -r docs/*
         
       - name: Generate Documentation
         run: doxygen Doxyfile  # Adjust the path to Doxyfile
