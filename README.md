@@ -8,6 +8,8 @@ An innovative application that bridges the communication gap between individuals
 [![GitHub Pages](https://github.com/pakinui/cosc345/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/pakinui/cosc345/actions/workflows/pages/pages-build-deployment)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/409b0d67499c4c9b8def12c695be78f9)](https://app.codacy.com/gh/pakinui/cosc345/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) 
 [![codecov](https://codecov.io/gh/pakinui/cosc345/graph/badge.svg?token=GUFNGUO6M4)](https://codecov.io/gh/pakinui/cosc345)
+[![Documentation](https://codedocs.xyz/pakinui/cosc345.svg)](https://codedocs.xyz/pakinui/cosc345/)
+# COSC345-Project
 
 ![image](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![image](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
