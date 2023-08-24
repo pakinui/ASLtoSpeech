@@ -12,9 +12,14 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-
-      - name: Set up Doxygen
-        run: sudo apt-get install -y doxygen  # Install Doxygen (adjust for non-Debian systems)
+        with:
+            python-version: 3.11
+            cache: 'pip'
+      - name: Install Doxygen using Python 3.11
+        run: |
+            pip install -y doxygen
+      # - name: Set up Doxygen
+      #   run: pip install -y doxygen  # Install Doxygen (adjust for non-Debian systems)
       # - name: Delete Old Files
       #   run: rm -r docs/*
         
