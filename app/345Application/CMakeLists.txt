@@ -2,23 +2,26 @@ cmake_minimum_required(VERSION 3.5)
 
 project(345Application VERSION 0.1 LANGUAGES CXX)
 
+ADD_DEFINITIONS(-DQT_NO_KEYWORDS)
+
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
-set(OpenCV_DIR "C:/opencv")
-set(CMAKE_PREFIX_PATH "C:/opencv/build/x64/vc16/lib")
+
+#comment these out
+#set(OpenCV_DIR "C:/opencv")
+#set(CMAKE_PREFIX_PATH "C:/opencv/build/x64/vc16/lib")
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
+find_package(QT NAMES Qt6 REQUIRED COMPONENTS Widgets)
 find_package(Qt6 COMPONENTS Core Widgets Multimedia MultimediaWidgets Gui Quick QuickControls2 REQUIRED)
-find_package(OpenCV REQUIRED)
 
-#find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
-#find_package(QT NAMES Qt6 REQUIRED COMPONENTS TextToSpeech)
+#comment these out
 #find_package(OpenCV REQUIRED)
-#find_package(Qt6 REQUIRED COMPONENTS Gui)
+#find_package(Python REQUIRED Development)
+
 
 
 set(PROJECT_SOURCES
@@ -33,6 +36,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         resouces.qrc
+        inference_classifier.py
+#*****************************************important*************************************************#
+#**********once you finished building, put ASL_model(located in img_recognition) in your build folder and uncomment this.*****/
+#        ../build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/ASL_model.p
     )
 
 
@@ -62,7 +69,10 @@ target_link_libraries(345Application PRIVATE
     Qt6::Quick
     Qt6::Gui
 )
-target_link_libraries(345Application PRIVATE ${OpenCV_LIBS})
+
+#comment this out
+#target_link_libraries(345Application PRIVATE ${OpenCV_LIBS} Python::Python)
+
 
 #target_link_libraries(345Application PRIVATE Qt6::Gui)
 #target_link_libraries(345Application PRIVATE Qt6::TextToSpeech)

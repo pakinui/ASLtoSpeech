@@ -1,41 +1,72 @@
 name: C/C++ CI
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  [push, pull_request]
 
-jobs:
-  install: 
+jobs:   
+  build: 
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v3
     - name: Install CMake
       run: |
         choco install cmake
     - name: Install Ninja
       run: |
         choco install ninja
-
-  build:
-    needs: install
-    runs-on: windows-latest
-    steps:
     - uses: actions/checkout@v3
-    - name: Build with Ninja
+    - name: Setup build environment
       run: |
         mkdir build
         cd build
         cmake .. -GNinja
-        cmake --build .
-    - name: Run
-      run: |
-        cd build
-        ./HandApp.exe
-    - name: Upload coverage reports to Codecov
-      uses: codecov/codecov-action@v3
-      env:
-        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-    
         
+    - name: Build with Ninja
+      run: cmake --build ./build
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+          name: executable
+          path: build/HandApp.exe
+
+  install-python-tts:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4.7.0
+        with:
+          python-version: 3.10
+          cache: 'pip'
+      - name: Install TTS using Python 3.10
+        run: |
+          pip install tts
+        
+  run:
+    needs: [build, install-python-tts]
+    runs-on: windows-latest
+    steps: 
+      - name: Download Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: executable
+      - name: Run Executable
+        run: |
+          ./HandApp.exe
+
+  codecov:
+    needs: run
+    runs-on: windows-latest
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+  
+  coverity-analysis:
+    runs-on: windows-latest
+    steps:
+      # ... other steps for building and running Coverity analysis ...
+      
+      - name: Display Coverity Badge
+        run: echo "![Coverity Analysis Status](https://scan.coverity.com/projects/28987/badge.svg)" >> README.md

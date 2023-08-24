@@ -1,3 +1,12 @@
+/*!
+    @file
+    @brief Doxygen Example
+    @author poppy
+*/
+/*!
+    @breif Core methods.
+*/
+
 #ifndef CAMERA_H
 #define CAMERA_H
 
@@ -56,9 +65,9 @@ private:
     bool m_applicationExiting = false;
     bool m_doImageCapture = true;
 
-public slots:
+public Q_SLOTS:
 
-private slots:
+private Q_SLOTS:
     void displayCameraError();
     void updateCameraDevice(QAction *action);
     void updateCameras();

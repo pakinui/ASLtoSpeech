@@ -1,12 +1,15 @@
 #include "camera.h"
 #include "ui_camera.h"
-//#include "dictionary.h" // Include the Dictionary class header
-//#include "translationtab.h"
-//#include "dictionarytab.h"
+// to use min(), max()
+#include <algorithm>
+#include <Python.h>
+//// #include "dictionary.h" // Include the Dictionary class header
+//// #include "translationtab.h"
+//// #include "dictionarytab.h"
 #include <opencv2/opencv.hpp>
 
-
 #include <QAudioDevice>
+
 #include <QAudioInput>
 #include <QCameraDevice>
 #include <QMediaDevices>
@@ -38,6 +41,14 @@
 
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QCoreApplication>
+#include <QProcessEnvironment>
+#include <QDebug>
+#include <QDir>
+#include <iostream>
+#include <QApplication>
+#include <QCamera>
+#include <QVBoxLayout>
 
 Camera::Camera() : ui(new Ui::Camera)
 {
@@ -57,20 +68,29 @@ Camera::Camera() : ui(new Ui::Camera)
     setupMenus();
     updateCameras();
 
+//    Py_Initialize();
+//    QString currentPath = QDir::currentPath();
+//    QString newPath = currentPath + "/../345Application";
+//    qDebug() << "currentPATH:" << newPath;
+//    std::string pythonCode = "import sys; sys.path.append('"+ newPath.toStdString() +"')";
+//    PyRun_SimpleString(pythonCode.c_str());
+//    PyObject *pDetectionModule = PyImport_ImportModule("inference_classifier");
 
-    m_camera.start(); // to start the camera
+//    Py_Finalize();
+    m_camera.start();
+    cv::VideoCapture cvCapture(0);
+    // OpenCV capture object to capture frames
 
-    // Create instances of the tab classes
-    //    TranslationTab translationTab(ui->historyTextEdit, ui->translateLineEdit);
-    //    DictionaryTab dictionaryTab(ui->dictionaryTextBrowser, ui->dictionaryLineEdit);
+
 }
 
-void Camera::translateText(){
+void Camera::translateText()
+{
     QString inputText = ui->translateInput->toPlainText();
     // Translation logic
 
-    //QString translatedText = performTranslation(inputText);
-    //ui->translationDisplay->setPlainText(translatedText);
+    // QString translatedText = performTranslation(inputText);
+    // ui->translationDisplay->setPlainText(translatedText);
 
     // Create standard string of input text
     std::string inputTextStdString = inputText.toStdString();
@@ -79,7 +99,7 @@ void Camera::translateText(){
 
     ui->translationDisplay->setPlainText(inputText);
     // Store translation in history data structure
-    //addToHistory(inputText, translatedText);
+    // addToHistory(inputText, translatedText);
     addToHistory(inputText, inputText);
 }
 
@@ -100,8 +120,6 @@ QString Camera::getHistoryText()
     return historyText;
 }
 
-
-
 void Camera::searchDictionary()
 {
     QString searchTerm = ui->dictionaryInput->toPlainText();
@@ -109,46 +127,52 @@ void Camera::searchDictionary()
     //    QResource jsonResource(":/data/1000.json");
     //    QString dataFilePath = jsonResource.absoluteFilePath(); // Construct the file path
 
-    //qDebug() << dataFilePath;
-    // Create an instance of the Dictionary class
-    //Dictionary dictionary(":/data/data/1000.json", ui->videoDisplay, ui->dictionaryPhoto);
+    // qDebug() << dataFilePath;
+    //  Create an instance of the Dictionary class
+    // Dictionary dictionary(":/data/data/1000.json", ui->videoDisplay, ui->dictionaryPhoto);
 
-
-    //dictionary.search(searchTerm);
-
+    // dictionary.search(searchTerm);
 
     // Dictionary search logic
-    //QString searchResult = performDictionarySearch(searchTerm);
-    //ui->dictionaryDisplay->setPlainText(searchResult);
+    // QString searchResult = performDictionarySearch(searchTerm);
+    // ui->dictionaryDisplay->setPlainText(searchResult);
     ui->dictionaryTextOutput->setPlainText(searchTerm);
 }
 
-void Camera::updateCameraDevice(QAction *action){
+void Camera::updateCameraDevice(QAction * action)
+{
     setCamera(qvariant_cast<QCameraDevice>(action->data()));
 }
 
-void Camera::startCamera(){
+void Camera::startCamera()
+{
     qDebug() << "starting camera";
+
     m_camera.start();
 }
 
-void Camera::stopCamera(){
+void Camera::stopCamera()
+{
     m_camera.stop();
     qDebug() << "stopping camera";
 }
 
-void Camera::updateCameraActive(bool active){
-    if (active) {
+void Camera::updateCameraActive(bool active)
+{
+    if (active)
+    {
         ui->actionStartCamera->setEnabled(false);
         ui->actionStopCamera->setEnabled(true);
-
-    } else {
+    }
+    else
+    {
         ui->actionStartCamera->setEnabled(true);
         ui->actionStopCamera->setEnabled(false);
     }
 }
 
-void Camera::setupMenus(){
+void Camera::setupMenus()
+{
     fileMenu = new QMenu("File", this);
     // Create QAction instances
     QAction *settingsAction = new QAction("Settings", this);
@@ -161,12 +185,11 @@ void Camera::setupMenus(){
     fileMenu->addSeparator(); // Adds a separator line
     fileMenu->addAction(closeAction);
 
-
     // Add the menu to the menu bar
     menuBar()->addMenu(fileMenu);
 
     // Devices menu
-    //Prob can remove and put in settings?
+    // Prob can remove and put in settings?
     devicesMenu = new QMenu("Devices", this);
     //    QAction *deviceAction = new QAction("Choose device", this);
     //    devicesMenu->addAction(deviceAction);
@@ -196,18 +219,18 @@ void Camera::displayCameraError()
         QMessageBox::warning(this, tr("Camera Error"), m_camera.errorString());
 }
 
+void Camera::setCamera(const QCameraDevice &cameraDevice)
+{
+    // m_camera.reset(new QCamera(cameraDevice));
+    // m_captureSession.setCamera(m_camera.data());
 
-void Camera::setCamera(const QCameraDevice &cameraDevice){
-    //m_camera.reset(new QCamera(cameraDevice));
-    //m_captureSession.setCamera(m_camera.data());
+    // connect(m_camera.data(), &QCamera::activeChanged, this, &Camera::updateCameraActive);
+    // connect(m_camera.data(), &QCamera::errorOccurred, this, &Camera::displayCameraError);
 
-    //connect(m_camera.data(), &QCamera::activeChanged, this, &Camera::updateCameraActive);
-    //connect(m_camera.data(), &QCamera::errorOccurred, this, &Camera::displayCameraError);
-
-    if (!m_mediaRecorder) {
+    if (!m_mediaRecorder)
+    {
         m_mediaRecorder.reset(new QMediaRecorder);
         m_captureSession.setRecorder(m_mediaRecorder.data());
-
     }
 
     m_captureSession.setVideoOutput(ui->viewfinder);
@@ -222,7 +245,8 @@ void Camera::setCamera(const QCameraDevice &cameraDevice){
     m_camera.start();
 }
 
-void Camera::updateCameras(){
+void Camera::updateCameras()
+{
     devicesMenu->clear();
     /*
      * This will add all available cameras to the devicesMenu.
@@ -230,7 +254,8 @@ void Camera::updateCameras(){
      * from the list.
      * */
     const QList<QCameraDevice> availableCameras = QMediaDevices::videoInputs();
-    for (const QCameraDevice &cameraDevice : availableCameras) {
+    for (const QCameraDevice &cameraDevice : availableCameras)
+    {
         QAction *videoDeviceAction = new QAction(cameraDevice.description(), videoDevicesGroup);
         videoDeviceAction->setCheckable(true);
         videoDeviceAction->setData(QVariant::fromValue(cameraDevice));
@@ -240,5 +265,3 @@ void Camera::updateCameras(){
         devicesMenu->addAction(videoDeviceAction);
     }
 }
-
-
