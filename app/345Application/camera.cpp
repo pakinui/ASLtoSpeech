@@ -2,11 +2,11 @@
 #include "ui_camera.h"
 // to use min(), max()
 #include <algorithm>
-#include <Python.h>
-//// #include "dictionary.h" // Include the Dictionary class header
-//// #include "translationtab.h"
-//// #include "dictionarytab.h"
-#include <opencv2/opencv.hpp>
+//#include <Python.h>
+////// #include "dictionary.h" // Include the Dictionary class header
+////// #include "translationtab.h"
+////// #include "dictionarytab.h"
+//#include <opencv2/opencv.hpp>
 
 #include <QAudioDevice>
 
@@ -75,10 +75,12 @@ Camera::Camera() : ui(new Ui::Camera)
 //    std::string pythonCode = "import sys; sys.path.append('"+ newPath.toStdString() +"')";
 //    PyRun_SimpleString(pythonCode.c_str());
 //    PyObject *pDetectionModule = PyImport_ImportModule("inference_classifier");
-
+//    if(!pDetectionModule){
+//        PyErr_Print();
+//    }
 //    Py_Finalize();
     m_camera.start();
-    cv::VideoCapture cvCapture(0);
+    //cv::VideoCapture cvCapture(0);
     // OpenCV capture object to capture frames
 
 
