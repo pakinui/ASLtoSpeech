@@ -1,10 +1,10 @@
+#include "ttsCall.h"
 #include <iostream>
 #include <cstdlib>
 
-int main() {
-    std::string text = "The quick brown fox jumps over the lazy dog.";
-
-    // Construct the command
+bool tts(const std::string& text) {
+    
+    // Construct the command using the passed text
     std::string command = "tts --text \"" + text + "\" --model_name \"tts_models/en/ljspeech/glow-tts\" --out_path speech.wav";
 
     // Execute the command using system()

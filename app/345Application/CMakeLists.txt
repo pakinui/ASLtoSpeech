@@ -28,6 +28,8 @@ set(PROJECT_SOURCES
         camera.cpp
         camera.h
         camera.ui
+        text_to_speech/ttsCall.h
+        text_to_speech/ttsCall.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -72,6 +74,7 @@ target_link_libraries(345Application PRIVATE
     Qt6::Gui
 )
 
+target_link_libraries(345Application PRIVATE winmm)
 
 target_link_libraries(345Application PRIVATE Python::Python)
 target_link_libraries(345Application PRIVATE ${OpenCV_LIBS})
