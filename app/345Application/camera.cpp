@@ -1,5 +1,6 @@
 #include "camera.h"
 #include "ui_camera.h"
+#include "text_to_speech/ttsCall.h"
 #include <Python.h>
 
 //// #include "dictionary.h" // Include the Dictionary class header
@@ -193,6 +194,11 @@ void Camera::translateText()
 
     // QString translatedText = performTranslation(inputText);
     // ui->translationDisplay->setPlainText(translatedText);
+
+    // Create standard string of input text
+    std::string inputTextStdString = inputText.toStdString();
+    // Call the text-to-speech function with the standard string of input text
+    tts(inputTextStdString);
 
     ui->translationDisplay->setPlainText(inputText);
     // Store translation in history data structure

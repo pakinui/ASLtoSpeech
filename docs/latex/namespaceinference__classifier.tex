@@ -4,6 +4,8 @@
 \begin{DoxyCompactItemize}
 \item 
 def \mbox{\hyperlink{namespaceinference__classifier_a22eaa9727a323cf264806ce6ce66cfcf}{print\+\_\+hello}} ()
+\item 
+def \mbox{\hyperlink{namespaceinference__classifier_a67f9f2e8f1ae2abdc5c0163834940c8e}{overlay\+Text}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -11,6 +13,8 @@ def \mbox{\hyperlink{namespaceinference__classifier_a22eaa9727a323cf264806ce6ce6
 \mbox{\hyperlink{namespaceinference__classifier_aaba7d4d8fdab515be7a297536a682d47}{model\+\_\+dict}} = pickle.\+load(open(\textquotesingle{}ASL\+\_\+model.\+p\textquotesingle{}, \textquotesingle{}rb\textquotesingle{}))
 \item 
 \mbox{\hyperlink{namespaceinference__classifier_aa135dc5054503e252fd8560c3a28017e}{model}} = \mbox{\hyperlink{namespaceinference__classifier_aaba7d4d8fdab515be7a297536a682d47}{model\+\_\+dict}}\mbox{[}\textquotesingle{}model\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceinference__classifier_a1641a84facba7ec9ee48c22a75e13012}{video\+\_\+sink}} = QVideo\+Sink()
 \item 
 \mbox{\hyperlink{namespaceinference__classifier_a528deb456d1dcf0a15f1c39bb2503617}{cap}} = cv2.\+Video\+Capture(0)
 \item 
@@ -26,11 +30,11 @@ def \mbox{\hyperlink{namespaceinference__classifier_a22eaa9727a323cf264806ce6ce6
 \item 
 \mbox{\hyperlink{namespaceinference__classifier_a3845e63bf437d473948b3c65705993e7}{out}} = cv2.\+Video\+Writer(\textquotesingle{}output.\+avi\textquotesingle{}, \mbox{\hyperlink{namespaceinference__classifier_aee228a39e4164af6c0bba471a2317ba9}{fourcc}}, 20.\+0, (640, 480))
 \item 
-list \mbox{\hyperlink{namespaceinference__classifier_acb6e34a80e67aa8c6a0b0566b5979977}{data\+\_\+aux}} = \mbox{[}$\,$\mbox{]}
+list \mbox{\hyperlink{namespaceinference__classifier_aa2b384856e53b3c5c4002c2d2896f8d8}{data\+\_\+aux}} = \mbox{[}$\,$\mbox{]}
 \item 
-list \mbox{\hyperlink{namespaceinference__classifier_ad4945c0c5aef6a27429c714e3895543f}{x\+\_\+}} = \mbox{[}$\,$\mbox{]}
+list \mbox{\hyperlink{namespaceinference__classifier_ae0cf913b571feab465be3edccf81c4b4}{x\+\_\+}} = \mbox{[}$\,$\mbox{]}
 \item 
-list \mbox{\hyperlink{namespaceinference__classifier_aa9813b89760f4481a5d56e18578880b6}{y\+\_\+}} = \mbox{[}$\,$\mbox{]}
+list \mbox{\hyperlink{namespaceinference__classifier_aad10cd80ed1f8e42ece85a71475330c6}{y\+\_\+}} = \mbox{[}$\,$\mbox{]}
 \item 
 \mbox{\hyperlink{namespaceinference__classifier_af8f2a644975b684c94d091d58dd3bf20}{ret}}
 \item 
@@ -50,21 +54,27 @@ list \mbox{\hyperlink{namespaceinference__classifier_aa9813b89760f4481a5d56e1857
 \item 
 \mbox{\hyperlink{namespaceinference__classifier_a3437c407116ea453eaf13aefb21a2c6d}{y}} = hand\+\_\+landmarks.\+landmark\mbox{[}i\mbox{]}.y
 \item 
-int \mbox{\hyperlink{namespaceinference__classifier_a378d2147f742cc6eb00dd509d67b2240}{x1}} = int(min(\mbox{\hyperlink{namespaceinference__classifier_ad4945c0c5aef6a27429c714e3895543f}{x\+\_\+}}) $\ast$ \mbox{\hyperlink{namespaceinference__classifier_ae0fa7a3568aa1c6986cac688cae7ca54}{W}}) -\/ 10
+int \mbox{\hyperlink{namespaceinference__classifier_a6212a6e64c8a21e4e9ea12c35899e730}{x1}} = int(min(\mbox{\hyperlink{namespaceinference__classifier_ae0cf913b571feab465be3edccf81c4b4}{x\+\_\+}}) $\ast$ \mbox{\hyperlink{namespaceinference__classifier_ae0fa7a3568aa1c6986cac688cae7ca54}{W}}) -\/ 10
 \item 
-int \mbox{\hyperlink{namespaceinference__classifier_a7342ea4261947552c21f02c8e2a1a340}{y1}} = int(min(\mbox{\hyperlink{namespaceinference__classifier_aa9813b89760f4481a5d56e18578880b6}{y\+\_\+}}) $\ast$ \mbox{\hyperlink{namespaceinference__classifier_a4c68be61f9bca60f33c410c1f09d2cec}{H}}) -\/ 10
+int \mbox{\hyperlink{namespaceinference__classifier_aabb40ddc7a806645ee6222775e99c2b8}{y1}} = int(min(\mbox{\hyperlink{namespaceinference__classifier_aad10cd80ed1f8e42ece85a71475330c6}{y\+\_\+}}) $\ast$ \mbox{\hyperlink{namespaceinference__classifier_a4c68be61f9bca60f33c410c1f09d2cec}{H}}) -\/ 10
 \item 
-int \mbox{\hyperlink{namespaceinference__classifier_a64cd1f215797be0f01be1f0525c912f2}{x2}} = int(max(\mbox{\hyperlink{namespaceinference__classifier_ad4945c0c5aef6a27429c714e3895543f}{x\+\_\+}}) $\ast$ \mbox{\hyperlink{namespaceinference__classifier_ae0fa7a3568aa1c6986cac688cae7ca54}{W}}) -\/ 10
+int \mbox{\hyperlink{namespaceinference__classifier_aeae9102df96aebbbf821c673ae1ba012}{x2}} = int(max(\mbox{\hyperlink{namespaceinference__classifier_ae0cf913b571feab465be3edccf81c4b4}{x\+\_\+}}) $\ast$ \mbox{\hyperlink{namespaceinference__classifier_ae0fa7a3568aa1c6986cac688cae7ca54}{W}}) -\/ 10
 \item 
-int \mbox{\hyperlink{namespaceinference__classifier_afbca8015bbb8b0176f48e7c1a9624fed}{y2}} = int(max(\mbox{\hyperlink{namespaceinference__classifier_aa9813b89760f4481a5d56e18578880b6}{y\+\_\+}}) $\ast$ \mbox{\hyperlink{namespaceinference__classifier_a4c68be61f9bca60f33c410c1f09d2cec}{H}}) -\/ 10
+int \mbox{\hyperlink{namespaceinference__classifier_a6086685d79be3bcc4b78bf97c90ab174}{y2}} = int(max(\mbox{\hyperlink{namespaceinference__classifier_aad10cd80ed1f8e42ece85a71475330c6}{y\+\_\+}}) $\ast$ \mbox{\hyperlink{namespaceinference__classifier_a4c68be61f9bca60f33c410c1f09d2cec}{H}}) -\/ 10
 \item 
-\mbox{\hyperlink{namespaceinference__classifier_ab100d39039f23ca684e7cdb2b2e536ea}{prediction}} = model.\+predict(\mbox{[}np.\+asarray(\mbox{\hyperlink{namespaceinference__classifier_acb6e34a80e67aa8c6a0b0566b5979977}{data\+\_\+aux}})\mbox{]})
+\mbox{\hyperlink{namespaceinference__classifier_ab100d39039f23ca684e7cdb2b2e536ea}{prediction}} = model.\+predict(\mbox{[}np.\+asarray(\mbox{\hyperlink{namespaceinference__classifier_aa2b384856e53b3c5c4002c2d2896f8d8}{data\+\_\+aux}})\mbox{]})
 \item 
 \mbox{\hyperlink{namespaceinference__classifier_a6d19b5363e0889431e539512182b0ede}{predicted\+\_\+class\+\_\+label}} = \mbox{\hyperlink{namespaceinference__classifier_ab100d39039f23ca684e7cdb2b2e536ea}{prediction}}\mbox{[}0\mbox{]}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceinference__classifier_a67f9f2e8f1ae2abdc5c0163834940c8e}\label{namespaceinference__classifier_a67f9f2e8f1ae2abdc5c0163834940c8e}} 
+\index{inference\_classifier@{inference\_classifier}!overlayText@{overlayText}}
+\index{overlayText@{overlayText}!inference\_classifier@{inference\_classifier}}
+\doxysubsubsection{\texorpdfstring{overlayText()}{overlayText()}}
+{\footnotesize\ttfamily def inference\+\_\+classifier.\+overlay\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{namespaceinference__classifier_a22eaa9727a323cf264806ce6ce66cfcf}\label{namespaceinference__classifier_a22eaa9727a323cf264806ce6ce66cfcf}} 
 \index{inference\_classifier@{inference\_classifier}!print\_hello@{print\_hello}}
 \index{print\_hello@{print\_hello}!inference\_classifier@{inference\_classifier}}
@@ -80,7 +90,7 @@ int \mbox{\hyperlink{namespaceinference__classifier_afbca8015bbb8b0176f48e7c1a96
 \doxysubsubsection{\texorpdfstring{cap}{cap}}
 {\footnotesize\ttfamily inference\+\_\+classifier.\+cap = cv2.\+Video\+Capture(0)}
 
-\mbox{\Hypertarget{namespaceinference__classifier_acb6e34a80e67aa8c6a0b0566b5979977}\label{namespaceinference__classifier_acb6e34a80e67aa8c6a0b0566b5979977}} 
+\mbox{\Hypertarget{namespaceinference__classifier_aa2b384856e53b3c5c4002c2d2896f8d8}\label{namespaceinference__classifier_aa2b384856e53b3c5c4002c2d2896f8d8}} 
 \index{inference\_classifier@{inference\_classifier}!data\_aux@{data\_aux}}
 \index{data\_aux@{data\_aux}!inference\_classifier@{inference\_classifier}}
 \doxysubsubsection{\texorpdfstring{data\_aux}{data\_aux}}
@@ -168,7 +178,7 @@ int \mbox{\hyperlink{namespaceinference__classifier_afbca8015bbb8b0176f48e7c1a96
 \index{inference\_classifier@{inference\_classifier}!prediction@{prediction}}
 \index{prediction@{prediction}!inference\_classifier@{inference\_classifier}}
 \doxysubsubsection{\texorpdfstring{prediction}{prediction}}
-{\footnotesize\ttfamily inference\+\_\+classifier.\+prediction = model.\+predict(\mbox{[}np.\+asarray(\mbox{\hyperlink{namespaceinference__classifier_acb6e34a80e67aa8c6a0b0566b5979977}{data\+\_\+aux}})\mbox{]})}
+{\footnotesize\ttfamily inference\+\_\+classifier.\+prediction = model.\+predict(\mbox{[}np.\+asarray(\mbox{\hyperlink{namespaceinference__classifier_aa2b384856e53b3c5c4002c2d2896f8d8}{data\+\_\+aux}})\mbox{]})}
 
 \mbox{\Hypertarget{namespaceinference__classifier_a4eea7fa2e4f395bc4f4156200a8e2ccb}\label{namespaceinference__classifier_a4eea7fa2e4f395bc4f4156200a8e2ccb}} 
 \index{inference\_classifier@{inference\_classifier}!results@{results}}
@@ -182,6 +192,12 @@ int \mbox{\hyperlink{namespaceinference__classifier_afbca8015bbb8b0176f48e7c1a96
 \doxysubsubsection{\texorpdfstring{ret}{ret}}
 {\footnotesize\ttfamily inference\+\_\+classifier.\+ret}
 
+\mbox{\Hypertarget{namespaceinference__classifier_a1641a84facba7ec9ee48c22a75e13012}\label{namespaceinference__classifier_a1641a84facba7ec9ee48c22a75e13012}} 
+\index{inference\_classifier@{inference\_classifier}!video\_sink@{video\_sink}}
+\index{video\_sink@{video\_sink}!inference\_classifier@{inference\_classifier}}
+\doxysubsubsection{\texorpdfstring{video\_sink}{video\_sink}}
+{\footnotesize\ttfamily inference\+\_\+classifier.\+video\+\_\+sink = QVideo\+Sink()}
+
 \mbox{\Hypertarget{namespaceinference__classifier_ae0fa7a3568aa1c6986cac688cae7ca54}\label{namespaceinference__classifier_ae0fa7a3568aa1c6986cac688cae7ca54}} 
 \index{inference\_classifier@{inference\_classifier}!W@{W}}
 \index{W@{W}!inference\_classifier@{inference\_classifier}}
@@ -194,19 +210,19 @@ int \mbox{\hyperlink{namespaceinference__classifier_afbca8015bbb8b0176f48e7c1a96
 \doxysubsubsection{\texorpdfstring{x}{x}}
 {\footnotesize\ttfamily inference\+\_\+classifier.\+x = hand\+\_\+landmarks.\+landmark\mbox{[}i\mbox{]}.x}
 
-\mbox{\Hypertarget{namespaceinference__classifier_a378d2147f742cc6eb00dd509d67b2240}\label{namespaceinference__classifier_a378d2147f742cc6eb00dd509d67b2240}} 
+\mbox{\Hypertarget{namespaceinference__classifier_a6212a6e64c8a21e4e9ea12c35899e730}\label{namespaceinference__classifier_a6212a6e64c8a21e4e9ea12c35899e730}} 
 \index{inference\_classifier@{inference\_classifier}!x1@{x1}}
 \index{x1@{x1}!inference\_classifier@{inference\_classifier}}
 \doxysubsubsection{\texorpdfstring{x1}{x1}}
-{\footnotesize\ttfamily int inference\+\_\+classifier.\+x1 = int(min(\mbox{\hyperlink{namespaceinference__classifier_ad4945c0c5aef6a27429c714e3895543f}{x\+\_\+}}) $\ast$ \mbox{\hyperlink{namespaceinference__classifier_ae0fa7a3568aa1c6986cac688cae7ca54}{W}}) -\/ 10}
+{\footnotesize\ttfamily int inference\+\_\+classifier.\+x1 = int(min(\mbox{\hyperlink{namespaceinference__classifier_ae0cf913b571feab465be3edccf81c4b4}{x\+\_\+}}) $\ast$ \mbox{\hyperlink{namespaceinference__classifier_ae0fa7a3568aa1c6986cac688cae7ca54}{W}}) -\/ 10}
 
-\mbox{\Hypertarget{namespaceinference__classifier_a64cd1f215797be0f01be1f0525c912f2}\label{namespaceinference__classifier_a64cd1f215797be0f01be1f0525c912f2}} 
+\mbox{\Hypertarget{namespaceinference__classifier_aeae9102df96aebbbf821c673ae1ba012}\label{namespaceinference__classifier_aeae9102df96aebbbf821c673ae1ba012}} 
 \index{inference\_classifier@{inference\_classifier}!x2@{x2}}
 \index{x2@{x2}!inference\_classifier@{inference\_classifier}}
 \doxysubsubsection{\texorpdfstring{x2}{x2}}
-{\footnotesize\ttfamily int inference\+\_\+classifier.\+x2 = int(max(\mbox{\hyperlink{namespaceinference__classifier_ad4945c0c5aef6a27429c714e3895543f}{x\+\_\+}}) $\ast$ \mbox{\hyperlink{namespaceinference__classifier_ae0fa7a3568aa1c6986cac688cae7ca54}{W}}) -\/ 10}
+{\footnotesize\ttfamily int inference\+\_\+classifier.\+x2 = int(max(\mbox{\hyperlink{namespaceinference__classifier_ae0cf913b571feab465be3edccf81c4b4}{x\+\_\+}}) $\ast$ \mbox{\hyperlink{namespaceinference__classifier_ae0fa7a3568aa1c6986cac688cae7ca54}{W}}) -\/ 10}
 
-\mbox{\Hypertarget{namespaceinference__classifier_ad4945c0c5aef6a27429c714e3895543f}\label{namespaceinference__classifier_ad4945c0c5aef6a27429c714e3895543f}} 
+\mbox{\Hypertarget{namespaceinference__classifier_ae0cf913b571feab465be3edccf81c4b4}\label{namespaceinference__classifier_ae0cf913b571feab465be3edccf81c4b4}} 
 \index{inference\_classifier@{inference\_classifier}!x\_@{x\_}}
 \index{x\_@{x\_}!inference\_classifier@{inference\_classifier}}
 \doxysubsubsection{\texorpdfstring{x\_}{x\_}}
@@ -218,19 +234,19 @@ int \mbox{\hyperlink{namespaceinference__classifier_afbca8015bbb8b0176f48e7c1a96
 \doxysubsubsection{\texorpdfstring{y}{y}}
 {\footnotesize\ttfamily inference\+\_\+classifier.\+y = hand\+\_\+landmarks.\+landmark\mbox{[}i\mbox{]}.y}
 
-\mbox{\Hypertarget{namespaceinference__classifier_a7342ea4261947552c21f02c8e2a1a340}\label{namespaceinference__classifier_a7342ea4261947552c21f02c8e2a1a340}} 
+\mbox{\Hypertarget{namespaceinference__classifier_aabb40ddc7a806645ee6222775e99c2b8}\label{namespaceinference__classifier_aabb40ddc7a806645ee6222775e99c2b8}} 
 \index{inference\_classifier@{inference\_classifier}!y1@{y1}}
 \index{y1@{y1}!inference\_classifier@{inference\_classifier}}
 \doxysubsubsection{\texorpdfstring{y1}{y1}}
-{\footnotesize\ttfamily int inference\+\_\+classifier.\+y1 = int(min(\mbox{\hyperlink{namespaceinference__classifier_aa9813b89760f4481a5d56e18578880b6}{y\+\_\+}}) $\ast$ \mbox{\hyperlink{namespaceinference__classifier_a4c68be61f9bca60f33c410c1f09d2cec}{H}}) -\/ 10}
+{\footnotesize\ttfamily int inference\+\_\+classifier.\+y1 = int(min(\mbox{\hyperlink{namespaceinference__classifier_aad10cd80ed1f8e42ece85a71475330c6}{y\+\_\+}}) $\ast$ \mbox{\hyperlink{namespaceinference__classifier_a4c68be61f9bca60f33c410c1f09d2cec}{H}}) -\/ 10}
 
-\mbox{\Hypertarget{namespaceinference__classifier_afbca8015bbb8b0176f48e7c1a9624fed}\label{namespaceinference__classifier_afbca8015bbb8b0176f48e7c1a9624fed}} 
+\mbox{\Hypertarget{namespaceinference__classifier_a6086685d79be3bcc4b78bf97c90ab174}\label{namespaceinference__classifier_a6086685d79be3bcc4b78bf97c90ab174}} 
 \index{inference\_classifier@{inference\_classifier}!y2@{y2}}
 \index{y2@{y2}!inference\_classifier@{inference\_classifier}}
 \doxysubsubsection{\texorpdfstring{y2}{y2}}
-{\footnotesize\ttfamily int inference\+\_\+classifier.\+y2 = int(max(\mbox{\hyperlink{namespaceinference__classifier_aa9813b89760f4481a5d56e18578880b6}{y\+\_\+}}) $\ast$ \mbox{\hyperlink{namespaceinference__classifier_a4c68be61f9bca60f33c410c1f09d2cec}{H}}) -\/ 10}
+{\footnotesize\ttfamily int inference\+\_\+classifier.\+y2 = int(max(\mbox{\hyperlink{namespaceinference__classifier_aad10cd80ed1f8e42ece85a71475330c6}{y\+\_\+}}) $\ast$ \mbox{\hyperlink{namespaceinference__classifier_a4c68be61f9bca60f33c410c1f09d2cec}{H}}) -\/ 10}
 
-\mbox{\Hypertarget{namespaceinference__classifier_aa9813b89760f4481a5d56e18578880b6}\label{namespaceinference__classifier_aa9813b89760f4481a5d56e18578880b6}} 
+\mbox{\Hypertarget{namespaceinference__classifier_aad10cd80ed1f8e42ece85a71475330c6}\label{namespaceinference__classifier_aad10cd80ed1f8e42ece85a71475330c6}} 
 \index{inference\_classifier@{inference\_classifier}!y\_@{y\_}}
 \index{y\_@{y\_}!inference\_classifier@{inference\_classifier}}
 \doxysubsubsection{\texorpdfstring{y\_}{y\_}}
