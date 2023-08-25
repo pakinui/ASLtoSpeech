@@ -1,5 +1,6 @@
 #include "camera.h"
 #include "ui_camera.h"
+#include "text_to_speech/ttsCall.h"
 #include <Python.h>
 
 //// #include "dictionary.h" // Include the Dictionary class header
