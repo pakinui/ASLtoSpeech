@@ -121,27 +121,69 @@ Camera::Camera() : ui(new Ui::Camera)
 
 // This slot is called when a new frame is captured.
 void Camera::imageAvailable(QVideoFrame frame) {
-    //qDebug() << count << "not working";
-    if(count == 1){
-        old_frame = frame;
+    const uchar *frame_data = frame.bits(2);
+    int height = frame.height();
+    int width = frame.width();
+    int c = frame.planeCount();
+    qDebug() << c;
+    Py_Initialize();
+    QString currentPath = QDir::currentPath();
+    QString newPath = currentPath + "/../345Application";
+    std::string pythonCode = "import sys; sys.path.append('"+ newPath.toStdString() +"')";
+    PyRun_SimpleString(pythonCode.c_str());
+    PyObject* pModule = PyImport_ImportModule("inference_classifier");
+    if(!pModule){
+        PyErr_Print();
+    }else{
+        qDebug() << "yo";
     }
-    if(count%20 == 0){
-        qDebug() << count;
 
-        //QImage image = frame.toImage();
-        QString str = "hello " + QString::number(count);;
-        sink->setSubtitleText(str);
-        // Create a Python object that wraps the C++ object.
-        //PySide6.QtMultimedia.QVideoSink video_sink = new PySide6.QtMultimedia.QVideoSink(video_sink_cpp);
 
-        // Pass the Python object to the Python.
-        //python_code.video_sink = video_sink;
-
-        sink->setVideoFrame(old_frame);
-        old_frame = frame;
-        count++;
+    PyObject *pFunc = PyObject_GetAttrString(pModule, "overlay");
+    if(!pFunc){
+        PyErr_Print();
+    }else{
+        qDebug() << "yo2";
     }
-    count++;
+    qDebug() << "hi";
+    // Create a flat C array to hold the image data
+    size_t frame_size = height * width * 3;
+    qDebug() << "hi";
+    unsigned char *flat_array = new unsigned char[frame_size];
+    qDebug() << "hi";
+    qDebug() << "hi";
+    // Convert flat array into a Python bytes object
+    PyObject *pBytes = PyBytes_FromStringAndSize(reinterpret_cast<const char *>(flat_array), frame_size);
+    qDebug() << "hi";
+    if(!pBytes){
+        PyErr_Print();
+    }else{
+        qDebug() << pBytes;
+    }
+
+    PyObject *pValue = PyObject_CallFunctionObjArgs(pFunc, pBytes, NULL);
+    if(!pValue){
+        qDebug() << "?";
+        PyErr_Print();
+    }else{
+        qDebug() << "yo3";
+    }
+
+
+
+    //QImage image = frame.toImage();
+    QString resultString = QString::fromUtf8(PyUnicode_AsUTF8(pValue));
+    Py_Finalize();
+    QString str = "hello " + resultString;
+    sink->setSubtitleText(str);
+    // Create a Python object that wraps the C++ object.
+    //PySide6.QtMultimedia.QVideoSink video_sink = new PySide6.QtMultimedia.QVideoSink(video_sink_cpp);
+
+    // Pass the Python object to the Python.
+    //python_code.video_sink = video_sink;
+
+    sink->setVideoFrame(frame);
+
 // below saves the frames as images in /captures
 // currently just overwrites the old image with the current frame
 // but it can save each frame individually
@@ -158,7 +200,6 @@ void Camera::imageAvailable(QVideoFrame frame) {
 
 //    // Generate a unique filename using the current time.
 //    QString filename = QString::number(count);
-////    count += 1;
 
 //    QString currentPath = QDir::currentPath();
 //    QString newPath = currentPath + "/../345Application";
