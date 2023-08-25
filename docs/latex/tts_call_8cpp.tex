@@ -1,5 +1,10 @@
 \hypertarget{tts_call_8cpp}{}\doxysection{app/345\+Application/text\+\_\+to\+\_\+speech/tts\+Call.cpp File Reference}
 \label{tts_call_8cpp}\index{app/345Application/text\_to\_speech/ttsCall.cpp@{app/345Application/text\_to\_speech/ttsCall.cpp}}
+
+
+Contains the function for text-\/to-\/speech conversion using an external tool.  
+
+
 {\ttfamily \#include \char`\"{}tts\+Call.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$cstdlib$>$}\newline
@@ -8,7 +13,12 @@
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{tts_call_8cpp_a3d0baebc9d2f23f7308db2e71af6aff0}{tts}} (const std\+::string \&text)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Converts the given text to speech using an external tool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the function for text-\/to-\/speech conversion using an external tool. 
+
 
 
 \doxysubsection{Function Documentation}
@@ -18,3 +28,17 @@ bool \mbox{\hyperlink{tts_call_8cpp_a3d0baebc9d2f23f7308db2e71af6aff0}{tts}} (co
 \doxysubsubsection{\texorpdfstring{tts()}{tts()}}
 {\footnotesize\ttfamily bool tts (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text }\end{DoxyParamCaption})}
 
+
+
+Converts the given text to speech using an external tool. 
+
+This function takes a text input, constructs a command using the input text, and executes the command using an external text-\/to-\/speech tool. The resulting audio is saved as \char`\"{}speech.\+wav\char`\"{} and can be played using Play\+Sound.
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & The input text to convert to speech. Currently the text is hardcoded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if the text-\/to-\/speech process is completed successfully. 
+\end{DoxyReturn}
