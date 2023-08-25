@@ -1,0 +1,6 @@
+format: html
+source:
+  include:
+    - app/345Application
+publish:
+  destination: /path/to/your/docs/destination
