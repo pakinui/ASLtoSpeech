@@ -5,6 +5,7 @@
 {\ttfamily \#include $<$Python.\+h$>$}\newline
 {\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
 {\ttfamily \#include $<$QAudio\+Device$>$}\newline
+{\ttfamily \#include $<$QPainter$>$}\newline
 {\ttfamily \#include $<$QAudio\+Input$>$}\newline
 {\ttfamily \#include $<$QCamera\+Device$>$}\newline
 {\ttfamily \#include $<$QMedia\+Devices$>$}\newline
@@ -38,3 +39,45 @@
 {\ttfamily \#include $<$QCamera$>$}\newline
 {\ttfamily \#include $<$QVBox\+Layout$>$}\newline
 {\ttfamily \#include $<$QPixmap$>$}\newline
+{\ttfamily \#include $<$QImage\+Capture$>$}\newline
+{\ttfamily \#include $<$QVideo\+Sink$>$}\newline
+{\ttfamily \#include $<$QVideo\+Frame\+Format$>$}\newline
+{\ttfamily \#include $<$Qt\+Multimedia$>$}\newline
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{camera_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}} = 1
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{camera_8cpp_a4dbc047c32fb0f01d244b0fc49a8d35a}{p\+Module}}
+\item 
+QVideo\+Sink $\ast$ \mbox{\hyperlink{camera_8cpp_a4e559e1404c873662c9d0fac7094df66}{sink}}
+\item 
+QVideo\+Frame \mbox{\hyperlink{camera_8cpp_a16df30dbceece8ecb372b47feb3f2290}{old\+\_\+frame}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{camera_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}\label{camera_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}} 
+\index{camera.cpp@{camera.cpp}!count@{count}}
+\index{count@{count}!camera.cpp@{camera.cpp}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily int count = 1}
+
+\mbox{\Hypertarget{camera_8cpp_a16df30dbceece8ecb372b47feb3f2290}\label{camera_8cpp_a16df30dbceece8ecb372b47feb3f2290}} 
+\index{camera.cpp@{camera.cpp}!old\_frame@{old\_frame}}
+\index{old\_frame@{old\_frame}!camera.cpp@{camera.cpp}}
+\doxysubsubsection{\texorpdfstring{old\_frame}{old\_frame}}
+{\footnotesize\ttfamily QVideo\+Frame old\+\_\+frame}
+
+\mbox{\Hypertarget{camera_8cpp_a4dbc047c32fb0f01d244b0fc49a8d35a}\label{camera_8cpp_a4dbc047c32fb0f01d244b0fc49a8d35a}} 
+\index{camera.cpp@{camera.cpp}!pModule@{pModule}}
+\index{pModule@{pModule}!camera.cpp@{camera.cpp}}
+\doxysubsubsection{\texorpdfstring{pModule}{pModule}}
+{\footnotesize\ttfamily Py\+Object$\ast$ p\+Module}
+
+\mbox{\Hypertarget{camera_8cpp_a4e559e1404c873662c9d0fac7094df66}\label{camera_8cpp_a4e559e1404c873662c9d0fac7094df66}} 
+\index{camera.cpp@{camera.cpp}!sink@{sink}}
+\index{sink@{sink}!camera.cpp@{camera.cpp}}
+\doxysubsubsection{\texorpdfstring{sink}{sink}}
+{\footnotesize\ttfamily QVideo\+Sink$\ast$ sink}
+

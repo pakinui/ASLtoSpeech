@@ -9,6 +9,8 @@
 \begin{DoxyCompactItemize}
 \item 
 def \mbox{\hyperlink{namespaceinference__classifier_a22eaa9727a323cf264806ce6ce66cfcf}{inference\+\_\+classifier.\+print\+\_\+hello}} ()
+\item 
+def \mbox{\hyperlink{namespaceinference__classifier_a67f9f2e8f1ae2abdc5c0163834940c8e}{inference\+\_\+classifier.\+overlay\+Text}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -16,6 +18,8 @@ def \mbox{\hyperlink{namespaceinference__classifier_a22eaa9727a323cf264806ce6ce6
 \mbox{\hyperlink{namespaceinference__classifier_aaba7d4d8fdab515be7a297536a682d47}{inference\+\_\+classifier.\+model\+\_\+dict}} = pickle.\+load(open(\textquotesingle{}ASL\+\_\+model.\+p\textquotesingle{}, \textquotesingle{}rb\textquotesingle{}))
 \item 
 \mbox{\hyperlink{namespaceinference__classifier_aa135dc5054503e252fd8560c3a28017e}{inference\+\_\+classifier.\+model}} = model\+\_\+dict\mbox{[}\textquotesingle{}model\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceinference__classifier_a1641a84facba7ec9ee48c22a75e13012}{inference\+\_\+classifier.\+video\+\_\+sink}} = QVideo\+Sink()
 \item 
 \mbox{\hyperlink{namespaceinference__classifier_a528deb456d1dcf0a15f1c39bb2503617}{inference\+\_\+classifier.\+cap}} = cv2.\+Video\+Capture(0)
 \item 
@@ -30,40 +34,4 @@ def \mbox{\hyperlink{namespaceinference__classifier_a22eaa9727a323cf264806ce6ce6
 \mbox{\hyperlink{namespaceinference__classifier_aee228a39e4164af6c0bba471a2317ba9}{inference\+\_\+classifier.\+fourcc}} = cv2.\+Video\+Writer\+\_\+fourcc($\ast$\textquotesingle{}XVID\textquotesingle{})
 \item 
 \mbox{\hyperlink{namespaceinference__classifier_a3845e63bf437d473948b3c65705993e7}{inference\+\_\+classifier.\+out}} = cv2.\+Video\+Writer(\textquotesingle{}output.\+avi\textquotesingle{}, fourcc, 20.\+0, (640, 480))
-\item 
-list \mbox{\hyperlink{namespaceinference__classifier_acb6e34a80e67aa8c6a0b0566b5979977}{inference\+\_\+classifier.\+data\+\_\+aux}} = \mbox{[}$\,$\mbox{]}
-\item 
-list \mbox{\hyperlink{namespaceinference__classifier_ad4945c0c5aef6a27429c714e3895543f}{inference\+\_\+classifier.\+x\+\_\+}} = \mbox{[}$\,$\mbox{]}
-\item 
-list \mbox{\hyperlink{namespaceinference__classifier_aa9813b89760f4481a5d56e18578880b6}{inference\+\_\+classifier.\+y\+\_\+}} = \mbox{[}$\,$\mbox{]}
-\item 
-\mbox{\hyperlink{namespaceinference__classifier_af8f2a644975b684c94d091d58dd3bf20}{inference\+\_\+classifier.\+ret}}
-\item 
-\mbox{\hyperlink{namespaceinference__classifier_ae25d3c2c7f74e2160ed8ed3f5373fe21}{inference\+\_\+classifier.\+frame}} = cv2.\+flip(frame, 1)
-\item 
-\mbox{\hyperlink{namespaceinference__classifier_a4c68be61f9bca60f33c410c1f09d2cec}{inference\+\_\+classifier.\+H}}
-\item 
-\mbox{\hyperlink{namespaceinference__classifier_ae0fa7a3568aa1c6986cac688cae7ca54}{inference\+\_\+classifier.\+W}}
-\item 
-\mbox{\hyperlink{namespaceinference__classifier_a8832c07b6a4d16b7f47de6a0c535a69b}{inference\+\_\+classifier.\+frame\+\_\+rgb}} = cv2.\+cvt\+Color(frame, cv2.\+COLOR\+\_\+\+BGR2\+RGB)
-\item 
-\mbox{\hyperlink{namespaceinference__classifier_a4eea7fa2e4f395bc4f4156200a8e2ccb}{inference\+\_\+classifier.\+results}} = hands.\+process(frame\+\_\+rgb)
-\item 
-\mbox{\hyperlink{namespaceinference__classifier_a68007a4ae0ff4cc15ee093dbe31bf510}{inference\+\_\+classifier.\+num\+\_\+detected\+\_\+hands}} = len(results.\+multi\+\_\+hand\+\_\+landmarks)
-\item 
-\mbox{\hyperlink{namespaceinference__classifier_a7a730e348866d0cdc8a20e6ed0d10b6f}{inference\+\_\+classifier.\+x}} = hand\+\_\+landmarks.\+landmark\mbox{[}i\mbox{]}.x
-\item 
-\mbox{\hyperlink{namespaceinference__classifier_a3437c407116ea453eaf13aefb21a2c6d}{inference\+\_\+classifier.\+y}} = hand\+\_\+landmarks.\+landmark\mbox{[}i\mbox{]}.y
-\item 
-int \mbox{\hyperlink{namespaceinference__classifier_a378d2147f742cc6eb00dd509d67b2240}{inference\+\_\+classifier.\+x1}} = int(min(x\+\_\+) $\ast$ W) -\/ 10
-\item 
-int \mbox{\hyperlink{namespaceinference__classifier_a7342ea4261947552c21f02c8e2a1a340}{inference\+\_\+classifier.\+y1}} = int(min(y\+\_\+) $\ast$ H) -\/ 10
-\item 
-int \mbox{\hyperlink{namespaceinference__classifier_a64cd1f215797be0f01be1f0525c912f2}{inference\+\_\+classifier.\+x2}} = int(max(x\+\_\+) $\ast$ W) -\/ 10
-\item 
-int \mbox{\hyperlink{namespaceinference__classifier_afbca8015bbb8b0176f48e7c1a9624fed}{inference\+\_\+classifier.\+y2}} = int(max(y\+\_\+) $\ast$ H) -\/ 10
-\item 
-\mbox{\hyperlink{namespaceinference__classifier_ab100d39039f23ca684e7cdb2b2e536ea}{inference\+\_\+classifier.\+prediction}} = model.\+predict(\mbox{[}np.\+asarray(data\+\_\+aux)\mbox{]})
-\item 
-\mbox{\hyperlink{namespaceinference__classifier_a6d19b5363e0889431e539512182b0ede}{inference\+\_\+classifier.\+predicted\+\_\+class\+\_\+label}} = prediction\mbox{[}0\mbox{]}
 \end{DoxyCompactItemize}

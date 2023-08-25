@@ -27,6 +27,9 @@
 #include <QPair>
 #include <QVideoWidget>
 #include <QMediaPlayer>
+#include <QImageCapture>
+#include <QVideoSink>
+#include <QtCore>
 
 
 QT_BEGIN_NAMESPACE
@@ -44,6 +47,9 @@ class Camera : public QMainWindow
 {
     Q_OBJECT
 
+
+
+
 public:
     /**
      *  @brief Constructor for Camera.
@@ -51,6 +57,7 @@ public:
      *  Description...
      */
     Camera();
+
 
 private:
     Ui::Camera *ui;
@@ -61,6 +68,10 @@ private:
     QImageCapture m_imageCapture;
     QMediaCaptureSession m_captureSession;
     QCamera m_camera;
+    QCamera *cam;
+
+
+
 
     QScopedPointer<QAudioInput> m_audioInput;
     QScopedPointer<QMediaRecorder> m_mediaRecorder;
@@ -131,6 +142,8 @@ private Q_SLOTS:
      * @return
      */
     QString getHistoryText();
+
+    void imageAvailable(QVideoFrame frame);
 };
 
 #endif // CAMERA_H

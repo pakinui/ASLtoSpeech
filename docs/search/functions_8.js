@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['set_5fimage_115',['set_image',['../namespacewebcam__pattern__detection.html#aa76046843959ae961ae7b1f8127bebad',1,'webcam_pattern_detection']]],
-  ['start_116',['start',['../namespacewebcam__pattern__detection.html#a8dbfcd1cd7b974b7f4901a6dbc698762',1,'webcam_pattern_detection']]]
+  ['run_120',['run',['../classwebcam__pattern__detection_1_1_thread.html#af76f0e2aef1c6beb9a6414ff853943c5',1,'webcam_pattern_detection::Thread']]],
+  ['run_5fdetector_121',['run_detector',['../namespaceexperiment.html#ad4ed2a21deaeea229f11c1cf5f3e00a9',1,'experiment']]]
 ];
