@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7ecameratesting_124',['~CameraTesting',['../class_camera_testing.html#a2b6bcdded4ccab5880249c36f6136f87',1,'CameraTesting']]]
+  ['tts_127',['tts',['../tts_call_8cpp.html#a3d0baebc9d2f23f7308db2e71af6aff0',1,'tts(const std::string &amp;text):&#160;ttsCall.cpp'],['../tts_call_8h.html#a3d0baebc9d2f23f7308db2e71af6aff0',1,'tts(const std::string &amp;text):&#160;ttsCall.cpp']]]
 ];
