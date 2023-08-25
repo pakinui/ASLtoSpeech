@@ -58,11 +58,31 @@ jobs:
     steps: 
       - name: Checkout code
         uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v4.7.0
+        with:
+          python-version: 3.10
+          # cache: 'pip'
+      - name: Generate coverage report
+        run: |
+          pip install pytest
+          pip install pytest-cov
+          pytest --cov=./ --cov-report=xml
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-  
+          CODECOV_TOKEN: 1afab4df-7044-4128-ac0c-6909eeba0bbf
+        with:
+          # token: ${{ secrets.CODECOV_TOKEN }}
+          directory: ./coverage/reports/
+          # env_vars: OS,PYTHON
+          # fail_ci_if_error: true
+          # files: ./coverage1.xml,./coverage2.xml,!./cache
+          flags: unittests
+          # name: codecov-umbrella
+          # verbose: true
+          files: ./coverage1.xml
+
   coverity-analysis:
     runs-on: windows-latest
     steps:
@@ -70,3 +90,6 @@ jobs:
       
       - name: Display Coverity Badge
         run: echo "![Coverity Analysis Status](https://scan.coverity.com/projects/28987/badge.svg)" >> README.md
+
+
+    
