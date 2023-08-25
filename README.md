@@ -32,12 +32,12 @@ Working together as a team, we've selected two distinct datasets to create a uni
 
 ## Guidelines
 1.  Source code that builds :x:
-2.  Version control (e.g. git) ✅
+2.  Version control (e.g. git) :white_check_mark:
 3.  Continuous Integration :x: (currently just refers to hello world file needs more work)
 4.  Tests :x:
 5.  Coverage reports :x: (can't access git right now)
 6.  Static source code analysis :white_check_mark:
-7.  Documentation ❔ (need to write comments)
+7.  Documentation :white_check_mark: (More Comments needed though!)
 8.  Questionnaire :white_check_mark:
  
 ## Features
