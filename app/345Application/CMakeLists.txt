@@ -37,6 +37,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         resouces.qrc
         inference_classifier.py
         webcam_pattern_detection.py
+
 #*****************************************important*************************************************#
 #**********once you finished building, put ASL_model(located in img_recognition) in your build folder and uncomment this.*****/
 #        ../build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/ASL_model.p

@@ -1,13 +1,14 @@
 #include "camera.h"
 #include "ui_camera.h"
 #include <Python.h>
+
 //// #include "dictionary.h" // Include the Dictionary class header
 //// #include "translationtab.h"
 //// #include "dictionarytab.h"
 #include <opencv2/opencv.hpp>
 
 #include <QAudioDevice>
-
+#include <QPainter>
 #include <QAudioInput>
 #include <QCameraDevice>
 #include <QMediaDevices>
@@ -49,25 +50,140 @@
 #include <QVBoxLayout>
 #include <QPixmap>
 
+#include <QImageCapture>
+#include <QVideoSink>
+#include <QVideoFrameFormat>
+#include <QtMultimedia>
+
+
+
+
+int count = 1;
+PyObject *pModule;
+QVideoSink *sink;
+QVideoFrame old_frame;
+
+
 Camera::Camera() : ui(new Ui::Camera)
 {
-
-//    ui->setupUi(this);
+    qDebug() << "beginning";
+    ui->setupUi(this);
 
 //    QPlainTextEdit *historyTextEdit;
-//    connect(ui->translateButton, &QPushButton::clicked, this, &Camera::translateText);
-//    connect(ui->dictionaryButton, &QPushButton::clicked, this, &Camera::searchDictionary);
-//    ui->translateButton->setStyleSheet("background-color: #F5EFEE; color: black;");
+    connect(ui->translateButton, &QPushButton::clicked, this, &Camera::translateText);
+    connect(ui->dictionaryButton, &QPushButton::clicked, this, &Camera::searchDictionary);
+    ui->translateButton->setStyleSheet("background-color: #F5EFEE; color: black;");
 
-//    m_captureSession.setCamera(&m_camera);
-//    m_captureSession.setVideoOutput(ui->viewfinder);
-//    ui->viewfinder->show();
+    m_captureSession.setCamera(&m_camera);
+
+    m_captureSession.setVideoOutput(ui->viewfinder);
+    ui->viewfinder->show();
+
+    sink = ui->viewfinder->videoSink();
+    m_captureSession.setVideoOutput(sink);
+
+    setupMenus();
+    updateCameras();
+
+//    QImageCapture *imageCapture = new QImageCapture();
+    // Connect the imageCaptured() signal to a slot that will be called when a new frame is captured.
+    //connect(m_camera, &QCamera::imageFrameReady, this, &Camera::imageAvailable);
+    // Connect the imageCaptured() signal to a slot that will be called when a new frame is captured.
+    //connect(m_imageCapture, &QImageCapture::imageCaptured, this, &Camera::imageCaptured);
+
+    // Set the camera to be used by the image capture.
+    //m_imageCapture->setCaptureSession(&m_captureSession);
+//    Py_Initialize();
+//    QString currentPath = QDir::currentPath();
+//    QString newPath = currentPath + "/../345Application";
+//    std::string pythonCode = "import sys; sys.path.append('"+ newPath.toStdString() +"')";
+//    PyRun_SimpleString(pythonCode.c_str());
+//    pModule = PyImport_ImportModule("inference_classifier");
+//    PyErr_Print();
+
+//    Py_Finalize();
+
+    m_captureSession.setImageCapture(&m_imageCapture);
+
+    m_imageCapture.capture();
+    //m_imageCapture.setCaptureInterval(500); // 5 frames per second
+
+    m_camera.start();
+
+//    connect(&m_imageCapture, &QImageCapture::imageAvailable, this, &Camera::imageAvailable, Qt::QueuedConnection);
+    connect(sink, &QVideoSink::videoFrameChanged, this, &Camera::imageAvailable);
 
 
-//    setupMenus();
-//    updateCameras();
 
-//    m_camera.start();
+}
+
+
+// This slot is called when a new frame is captured.
+void Camera::imageAvailable(QVideoFrame frame) {
+    //qDebug() << count << "not working";
+    if(count == 1){
+        old_frame = frame;
+    }
+    if(count%20 == 0){
+        qDebug() << count;
+
+        //QImage image = frame.toImage();
+        QString str = "hello " + QString::number(count);;
+        sink->setSubtitleText(str);
+        // Create a Python object that wraps the C++ object.
+        //PySide6.QtMultimedia.QVideoSink video_sink = new PySide6.QtMultimedia.QVideoSink(video_sink_cpp);
+
+        // Pass the Python object to the Python.
+        //python_code.video_sink = video_sink;
+
+        sink->setVideoFrame(old_frame);
+        old_frame = frame;
+        count++;
+    }
+    count++;
+// below saves the frames as images in /captures
+// currently just overwrites the old image with the current frame
+// but it can save each frame individually
+
+//    QImage image = frame.toImage();
+//    // Do something with the frame.
+//    // Load or create a QImage
+
+//    if (image.isNull())
+//    {
+//        qDebug() << "Failed to load image.";
+
+//    }
+
+//    // Generate a unique filename using the current time.
+//    QString filename = QString::number(count);
+////    count += 1;
+
+//    QString currentPath = QDir::currentPath();
+//    QString newPath = currentPath + "/../345Application";
+//    // Create a file in the `captures` folder with the unique filename.
+//    QString path = QString("/captures/%1.jpg").arg(filename);
+//    QString path2 = newPath + path;
+
+//    QFile file(path2);
+
+//    // Save the QImage object to the file.
+//    file.open(QIODevice::WriteOnly);
+//    image.save(&file, "JPG");
+//    file.close();
+//    //qDebug() << path2 << "saved";
+
+//    // Save the QImage to a file
+
+//    if (image.save(path2))
+//    {
+//        qDebug() << "Image saved successfully.";
+//    }
+//    else
+//    {
+//        qDebug() << "Failed to save image.";
+//    }
+
 }
 
 void Camera::translateText()
