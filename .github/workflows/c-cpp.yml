@@ -41,13 +41,13 @@ jobs:
         modules: 'qtmultimedia'
     - uses: ilammy/msvc-dev-cmd@v1.4.1
     - name: Setup build environment
-      working-directory: ${{github.workspace}}/app/345Application/
+      working-directory: ${{github.workspace}}
       run: |
           cat CMakeLists.txt
           mkdir build
           cd build
           cmake -GNinja -DCMAKE_BUILD_TYPE=Release ..
-          cmake --build .
+          cmake --build . 
       
     - uses: ilammy/msvc-dev-cmd@v1.4.1
     - name: Build with Ninja
