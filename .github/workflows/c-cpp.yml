@@ -7,41 +7,55 @@ jobs:
   build: 
     runs-on: windows-latest
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Python 3.11.4
+      uses: actions/setup-python@v4.7.0
+      with:
+        python-version: 3.11.4
+        cache: 'pip'
+
+    - name: Install Python dependencies
+      run: |
+        pip install -r requirements.txt
     - name: Install CMake
       run: |
         choco install cmake
     - name: Install Ninja
       run: |
         choco install ninja
-    - uses: actions/checkout@v3
+    - name: Install OpenCV
+      run: |
+        choco install opencv
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v3
+      with:
+        version: '6.5.2'
+        host: 'windows'
+        target: 'desktop'
+        arch: 'win64_msvc2019_64'
+        install-deps: 'true'
+        cache: 'true'
+        cache-key-prefix: 'install-qt-action'
+        modules: 'qtmultimedia'
+    - uses: ilammy/msvc-dev-cmd@v1.4.1
     - name: Setup build environment
       run: |
         mkdir build
         cd build
-        cmake .. -GNinja
-        
+        cmake ../app/345Application -GNinja -DCMAKE_BUILD_TYPE=Release
+    - uses: ilammy/msvc-dev-cmd@v1.4.1
     - name: Build with Ninja
-      run: cmake --build ./build
+      run: cmake --build ./build --config Release
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
-          name: executable
-          path: build/HandApp.exe
-
-  install-python-tts:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4.7.0
-        with:
-          python-version: 3.10
-          cache: 'pip'
-      - name: Install TTS using Python 3.10
-        run: |
-          pip install tts
+        name: executable
+        path: build/345Application.exe
         
   run:
-    needs: [build, install-python-tts]
+    needs: build
     runs-on: windows-latest
     steps: 
       - name: Download Artifact
@@ -50,7 +64,7 @@ jobs:
           name: executable
       - name: Run Executable
         run: |
-          ./HandApp.exe
+          ./345Application.exe
 
   code-coverage:
     needs: run
