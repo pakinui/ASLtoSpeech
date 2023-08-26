@@ -32,22 +32,22 @@ find_package(Python REQUIRED Development)
 #find_package(PySide6 REQUIRED)
 
 set(PROJECT_SOURCES
-        main.cpp
-        camera.cpp
-        camera.h
-        camera.ui
-        text_to_speech/ttsCall.h
-        text_to_speech/ttsCall.cpp
+        ../../src/main.cpp
+        ../../src/camera.cpp
+        ../../src/camera.h
+        ../../src/camera.ui
+        ../../src/text_to_speech/ttsCall.h
+        ../../src/text_to_speech/ttsCall.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(345Application
-        MANUAL_FINALIZATION
+        #MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         resouces.qrc
         inference_classifier.py
-        webcam_pattern_detection.py
-        shared_lib.cpp
+        #webcam_pattern_detection.py
+        #shared_lib.cpp
 
 
 #*****************************************important*************************************************#
@@ -74,7 +74,7 @@ else()
     endif()
 endif()
 
-add_library(shared SHARED shared_lib.cpp)
+#add_library(shared SHARED shared_lib.cpp)
 
 target_link_libraries(345Application PRIVATE
     Qt6::Widgets
@@ -93,7 +93,7 @@ target_link_libraries(345Application PRIVATE winmm)
 target_link_libraries(345Application PRIVATE Python::Python)
 target_link_libraries(345Application PRIVATE ${OpenCV_LIBS})
 #target_link_directories(345Application PRIVATE "C:/Users/yhkyh/Desktop/experiment/build/lib/Release")
-target_link_libraries(shared PRIVATE  Qt6::Multimedia)
+#target_link_libraries(shared PRIVATE  Qt6::Multimedia)
 
 add_executable(Tests
     tests/camera_tests.cpp
