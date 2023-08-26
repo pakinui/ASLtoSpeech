@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 {
 //    Py_Initialize();
 //    QString currentPath = QDir::currentPath();
-//    QString newPath = currentPath + "/../345Application";
+//    QString newPath = currentPath + "/../../src";
 //    std::string pythonCode = "import sys; sys.path.append('"+ newPath.toStdString() +"')";
 //    PyRun_SimpleString(pythonCode.c_str());
 //    PyObject *pModule = PyImport_ImportModule("webcam_pattern_detection");

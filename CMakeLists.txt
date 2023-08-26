@@ -31,6 +31,8 @@ set(PROJECT_SOURCES
         src/camera.cpp
         src/camera.h
         src/camera.ui
+        src/text_to_speech/ttsCall.h
+        src/text_to_speech/ttsCall.cpp
 
 
 )
@@ -79,11 +81,14 @@ target_link_libraries(345Application PRIVATE
     Qt6::Quick
     Qt6::Gui
 #    shared_lib
+    winmm
+    Python::Python
+    ${OpenCV_LIBS}
 )
 
 
-target_link_libraries(345Application PRIVATE Python::Python)
-target_link_libraries(345Application PRIVATE ${OpenCV_LIBS})
+#target_link_libraries(345Application PRIVATE Python::Python)
+#target_link_libraries(345Application PRIVATE ${OpenCV_LIBS})
 #target_link_directories(345Application PRIVATE "C:/Users/yhkyh/Desktop/experiment/build/lib/Release")
 #target_link_libraries(shared PRIVATE  Qt6::Multimedia)
 

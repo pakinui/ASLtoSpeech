@@ -60,14 +60,20 @@
 
 
 int count = 1;
-PyObject *pModule;
+PyObject *pModule; // the python inference_classifier module(file)
+PyObject *pFunc; //  the python 'function'overlay' def in the class (class_object)
+PyObject *helloFunc; //  the python 'print_hello' def in the class (class_object)
 QVideoSink *sink;
 QVideoFrame old_frame;
+PyObject *class_object; // the python class object from inference_classifier
+PyObject *instance;
+QString captures_path;
+QString imgOutputPath;
 
 
 Camera::Camera() : ui(new Ui::Camera)
 {
-    qDebug() << "beginning";
+    //qDebug() << "beginning";
     ui->setupUi(this);
 
 //    QPlainTextEdit *historyTextEdit;
@@ -94,21 +100,73 @@ Camera::Camera() : ui(new Ui::Camera)
 
     // Set the camera to be used by the image capture.
     //m_imageCapture->setCaptureSession(&m_captureSession);
+//    Py_Initialize();
+//    QString currentPath = QDir::currentPath();
+//    QString newPath = currentPath + "/../../src";
+//    std::string pythonCode = "import sys; sys.path.append('"+ newPath.toStdString() +"')";
+//    PyRun_SimpleString(pythonCode.c_str());
+////    qDebug() << newPath;
+//    pModule = PyImport_ImportModule("inference_classifier");
+
+//    PyErr_Print();
+//    // Create a Python object that wraps the C++ object.
+//    PyObject *python_object = PyCapsule_New(sink, "sink", nullptr);
+
+//    // Pass the Python object to Python.
+//    PyModule_AddObject(pModule, "sink", python_object);
+//    Py_Finalize();
     Py_Initialize();
     QString currentPath = QDir::currentPath();
     QString newPath = currentPath + "/../../src";
     std::string pythonCode = "import sys; sys.path.append('"+ newPath.toStdString() +"')";
     PyRun_SimpleString(pythonCode.c_str());
-//    qDebug() << newPath;
     pModule = PyImport_ImportModule("inference_classifier");
 
-    PyErr_Print();
-    // Create a Python object that wraps the C++ object.
-    PyObject *python_object = PyCapsule_New(sink, "sink", nullptr);
 
-    // Pass the Python object to Python.
-    PyModule_AddObject(pModule, "sink", python_object);
-    Py_Finalize();
+    captures_path = currentPath + "/../../resources/captures";
+    // Create a file in the `captures` folder with the unique filename.
+
+
+    imgOutputPath = captures_path + "/output.jpg";
+    // Create a file in the `captures` folder with the unique filename.
+    //        QString path = QString("/captures/%1.jpg").arg(filename);
+    //        QString path2 = newPath2 + path;
+    //qDebug() << newPath2;
+
+
+    if(!pModule){
+        PyErr_Print();
+    }else{
+        //qDebug() << "yo";
+
+    }
+    class_object = PyObject_GetAttrString(pModule, "PythonTest");
+
+    if(!class_object){
+        PyErr_Print();
+    }else{
+        //qDebug() << "yo233";
+    }
+    // Create an instance of the PythonTest class
+
+
+
+    instance = PyObject_CallObject(class_object, NULL);
+    if(!instance){
+        PyErr_Print();
+    }else{
+        //qDebug() << "yo233 instance";
+    }
+
+    pFunc = PyObject_GetAttrString(instance, "overlay");
+
+    if(!pFunc){
+        PyErr_Print();
+    }else{
+        //qDebug() << "yo2";
+    }
+    //Py_Finalize();
+
 
     m_captureSession.setImageCapture(&m_imageCapture);
 
@@ -119,7 +177,7 @@ Camera::Camera() : ui(new Ui::Camera)
 
 //    connect(&m_imageCapture, &QImageCapture::imageAvailable, this, &Camera::imageAvailable, Qt::QueuedConnection);
     connect(sink, &QVideoSink::videoFrameChanged, this, &Camera::imageAvailable);
-
+    //sink->setSubtitleText("hii");
 
 
 }
@@ -127,112 +185,136 @@ Camera::Camera() : ui(new Ui::Camera)
 
 // This slot is called when a new frame is captured.
 void Camera::imageAvailable(QVideoFrame frame) {
-    const uchar *frame_data = frame.bits(2);
-    int height = frame.height();
-    int width = frame.width();
-    int c = frame.planeCount();
-    qDebug() << c;
-    Py_Initialize();
-    QString currentPath = QDir::currentPath();
-    QString newPath = currentPath + "/../345Application";
-    std::string pythonCode = "import sys; sys.path.append('"+ newPath.toStdString() +"')";
-    PyRun_SimpleString(pythonCode.c_str());
-    PyObject* pModule = PyImport_ImportModule("inference_classifier");
-    if(!pModule){
-        PyErr_Print();
-    }else{
-        qDebug() << "yo";
-    }
+//    const uchar *frame_data = frame.bits(2);
+//    int height = frame.height();
+//    int width = frame.width();
+//    int c = frame.planeCount();
+    //qDebug() << c;
+//    Py_Initialize();
+
+    // Convert QVideoFrame to QImage
+    //QImage image1(frame.bits(2),
+//                 frame.width(),
+//                 frame.height(),
+//                 frame.bytesPerLine(2),
+//                 QImage::Format_RGB888);
+//    QImage image1 = frame.toImage();
+
+//    // Convert QImage to QPixmap (if needed)
+//    QPixmap pixmap = QPixmap::fromImage(image1);
+
+//    // Convert QPixmap to Python bytes object (if needed)
+//    QByteArray byteArray;
+//    QBuffer buffer(&byteArray);
+//    pixmap.save(&buffer, "PNG"); // Use any desired format here
+//    PyObject *bytesObject = PyBytes_FromStringAndSize(byteArray.constData(), byteArray.size());
+    // below saves the frames as images in resources/captures
+    // currently just overwrites the old image with the current frame
+    // but it can save each frame individually
+    if(count%9 == 0){
+
+        QImage image = frame.toImage();
+        // Do something with the frame.
+        // Load or create a QImage
+
+        if (image.isNull())
+        {
+            qDebug() << "Failed to load image.";
+
+        }
+
+     //Generate a unique filename using the current time.
+       // QString filename = QString::number(1);
+    //    count += 1;
 
 
-    PyObject *pFunc = PyObject_GetAttrString(pModule, "overlay");
-    if(!pFunc){
-        PyErr_Print();
-    }else{
-        qDebug() << "yo2";
+//        QString newPath2 = captures_path + "/output.jpg";
+//        // Create a file in the `captures` folder with the unique filename.
+////        QString path = QString("/captures/%1.jpg").arg(filename);
+////        QString path2 = newPath2 + path;
+//        //qDebug() << newPath2;
+//        QFile file(newPath2);
+        QFile imgFile(imgOutputPath);
+
+        // Save the QImage object to the file.
+        imgFile.open(QIODevice::WriteOnly);
+        image.save(&imgFile, "JPG");
+        imgFile.close();
+
+        //qDebug() << path2 << "saved";
+
+     //Save the QImage to a file
+
+        if (image.save(imgOutputPath))
+        {
+            //qDebug() << "Image saved successfully.";
+        }
+        else
+        {
+            qDebug() << "Failed to save image.";
+        }
+
+        //Py_Initialize();
+
+        PyObject *result = PyObject_CallObject(pFunc, NULL);
+
+        //PyObject *result = PyObject_CallFunctionObjArgs(pFunc, NULL);
+        Py_DECREF(result);
+        if(result){
+            QString resultString = QString::fromUtf8(PyUnicode_AsUTF8(result));
+
+            //qDebug() << resultString;
+            sink->setSubtitleText(resultString);
+
+        }
+
+
+        //Py_Finalize();
+
     }
-    qDebug() << "hi";
+    count ++;
+
+
+//    QString currentPath = QDir::currentPath();
+//    QString newPath = currentPath + "/../../src";
+//    std::string pythonCode = "import sys; sys.path.append('"+ newPath.toStdString() +"')";
+//    PyRun_SimpleString(pythonCode.c_str());
+//    PyObject* pModule = PyImport_ImportModule("inference_classifier");
+//    if(!pModule){
+//        PyErr_Print();
+//    }else{
+//        qDebug() << "yo";
+//    }
+
+
+//    PyObject *pFunc = PyObject_GetAttrString(pModule, "overlay");
+//    if(!pFunc){
+//        PyErr_Print();
+//    }else{
+//        qDebug() << "yo2";
+//    }
+//    qDebug() << "hi";
     // Create a flat C array to hold the image data
-    size_t frame_size = height * width * 3;
-    qDebug() << "hi";
-    unsigned char *flat_array = new unsigned char[frame_size];
-    qDebug() << "hi";
-    qDebug() << "hi";
-    // Convert flat array into a Python bytes object
-    PyObject *pBytes = PyBytes_FromStringAndSize(reinterpret_cast<const char *>(flat_array), frame_size);
-    qDebug() << "hi";
-    if(!pBytes){
-        PyErr_Print();
-    }else{
-        qDebug() << pBytes;
-    }
+//    size_t frame_size = height * width * 3;
 
-    PyObject *pValue = PyObject_CallFunctionObjArgs(pFunc, pBytes, NULL);
-    if(!pValue){
-        qDebug() << "?";
-        PyErr_Print();
-    }else{
-        qDebug() << "yo3";
-    }
+//    unsigned char *flat_array = new unsigned char[frame_size];
 
-
+//    // Convert flat array into a Python bytes object
+//    PyObject *pBytes = PyBytes_FromStringAndSize(reinterpret_cast<const char *>(flat_array), frame_size);
 
     //QImage image = frame.toImage();
-    QString resultString = QString::fromUtf8(PyUnicode_AsUTF8(pValue));
-    Py_Finalize();
-    QString str = "hello " + resultString;
-    sink->setSubtitleText(str);
+//    QString resultString = QString::fromUtf8(PyUnicode_AsUTF8(pValue));
+
+//    QString str = "hello " + resultString;
+//    sink->setSubtitleText(str);
+
     // Create a Python object that wraps the C++ object.
     //PySide6.QtMultimedia.QVideoSink video_sink = new PySide6.QtMultimedia.QVideoSink(video_sink_cpp);
 
     // Pass the Python object to the Python.
     //python_code.video_sink = video_sink;
 
-    sink->setVideoFrame(frame);
-
-// below saves the frames as images in /captures
-// currently just overwrites the old image with the current frame
-// but it can save each frame individually
-
-    QImage image = frame.toImage();
-    // Do something with the frame.
-    // Load or create a QImage
-
-    if (image.isNull())
-    {
-        qDebug() << "Failed to load image.";
-
-    }
-
-    // Generate a unique filename using the current time.
-    QString filename = QString::number(1);
-//    count += 1;
-
-    QString currentPath = QDir::currentPath();
-    QString newPath = currentPath + "/../../resources";
-    // Create a file in the `captures` folder with the unique filename.
-    QString path = QString("/captures/%1.jpg").arg(filename);
-    QString path2 = newPath + path;
-
-    QFile file(path2);
-
-    // Save the QImage object to the file.
-    file.open(QIODevice::WriteOnly);
-    image.save(&file, "JPG");
-    file.close();
-    //qDebug() << path2 << "saved";
-
-    // Save the QImage to a file
-
-    if (image.save(path2))
-    {
-        //qDebug() << "Image saved successfully.";
-    }
-    else
-    {
-        qDebug() << "Failed to save image.";
-    }
-
+    //sink->setVideoFrame(frame);
 }
 
 void Camera::translateText()
@@ -306,6 +388,7 @@ void Camera::stopCamera()
 {
     m_camera.stop();
     qDebug() << "stopping camera";
+    Py_Finalize(); // stop the py
 }
 
 void Camera::updateCameraActive(bool active)
