@@ -4,6 +4,7 @@ CMakeLists.txt.user
 build-*/
 *.jpg
 resources/captures/
+.gcno
 # This file is used to ignore files which are generated
 # ----------------------------------------------------------------------------
 
