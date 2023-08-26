@@ -7,14 +7,18 @@ jobs:
   build: 
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-python@v4.7.0
-    - name: Install Python TTS
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Python 3.11.4
+      uses: actions/setup-python@v4.7.0
       with:
-          python-version: 3.11.4
-          cache: 'pip'
-    - run: |
-          pip install -r requirements.txt
+        python-version: 3.11.4
+        cache: 'pip'
+
+    - name: Install Python dependencies
+      run: |
+        pip install -r requirements.txt
     - name: Install CMake
       run: |
         choco install cmake
