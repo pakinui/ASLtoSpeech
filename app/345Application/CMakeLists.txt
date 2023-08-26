@@ -95,10 +95,6 @@ target_link_libraries(345Application PRIVATE ${OpenCV_LIBS})
 #target_link_directories(345Application PRIVATE "C:/Users/yhkyh/Desktop/experiment/build/lib/Release")
 #target_link_libraries(shared PRIVATE  Qt6::Multimedia)
 
-#add_executable(Tests
-    tests/camera_tests.cpp
-)
-
 #target_link_libraries(345Application PRIVATE Qt6::Gui)
 #target_link_libraries(345Application PRIVATE Qt6::TextToSpeech)
 
