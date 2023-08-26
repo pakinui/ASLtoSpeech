@@ -84,9 +84,9 @@ jobs:
           echo "C:\Program Files\OpenCppCoverage" >> $env:GITHUB_PATH
              
       - name: Generate coverage report
-        working-directory: ${{github.workspace}}\\build\\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-Release\\
+        working-directory: ${{github.workspace}}/build/build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-Release/
         shell: cmd
-        run: OpenCppCoverage --export_type=cobertura:coverage\\coverage1.xml 345Application.exe
+        run: OpenCppCoverage --export_type=cobertura:coverage/coverage1.xml 345Application.exe
 
           
       - name: Upload coverage reports to Codecov
