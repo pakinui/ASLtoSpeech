@@ -42,13 +42,11 @@ jobs:
     - uses: ilammy/msvc-dev-cmd@v1.4.1
     - name: Setup build environment
       working-directory: ${{github.workspace}}
-      # run: |
-      #   mkdir build
-      #   cd build
-      #   cmake -GNinja -DCMAKE_BUILD_TYPE=Release
       run: |
+        mkdir build
         cd build
-        cmake ../ -GNinja -DCMAKE_BUILD_TYPE=Release
+        cmake ../app/345Application -GNinja -DCMAKE_BUILD_TYPE=Release
+
     - uses: ilammy/msvc-dev-cmd@v1.4.1
     - name: Build with Ninja
       run: cmake --build ./build --config Release
@@ -106,6 +104,12 @@ jobs:
           # name: codecov-umbrella
           # verbose: true
           files: ./coverage1.xml ./camera_test.xml
+      - name: Upload2?
+        run: |
+          pip install codecov-cli
+          codecovcli create-commit
+          codecovcli create-report
+          codecovcli do-upload
 
   coverity-analysis:
     runs-on: windows-latest
