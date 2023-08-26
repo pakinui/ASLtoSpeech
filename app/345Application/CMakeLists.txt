@@ -13,21 +13,26 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Widgets)
-find_package(Qt6 COMPONENTS Core Widgets Multimedia MultimediaWidgets Gui Quick QuickControls2 REQUIRED)
+find_package(Qt6 COMPONENTS Core Widgets Multimedia MultimediaWidgets Gui Quick QuickControls2 Test REQUIRED)
 
 set(OpenCV_DIR "C:/opencv")
-set(CMAKE_PREFIX_PATH "C:/opencv/build/x64/vc16/lib")
+set(CMAKE_PREFIX_PATH "C:/opencv/build/x64/vc16/lib" "C:/Qt/6.5.2/msvc2019_64/include" "C:Qt/6.5.2/msvc2019_64/bin")
+set(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "C:/Qt/6.5.2/msvc2019_64/include" "C:Qt/6.5.2/msvc2019_64/bin")
+
+
 
 #comment these out
 find_package(OpenCV REQUIRED)
 find_package(Python REQUIRED Development)
-
+#find_package(PySide6 REQUIRED)
 
 set(PROJECT_SOURCES
         main.cpp
         camera.cpp
         camera.h
         camera.ui
+
+
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -37,6 +42,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         resouces.qrc
         inference_classifier.py
         webcam_pattern_detection.py
+        shared_lib.cpp
+
 
 #*****************************************important*************************************************#
 #**********once you finished building, put ASL_model(located in img_recognition) in your build folder and uncomment this.*****/
@@ -62,6 +69,8 @@ else()
     endif()
 endif()
 
+add_library(shared SHARED shared_lib.cpp)
+
 target_link_libraries(345Application PRIVATE
     Qt6::Widgets
     Qt6::Core
@@ -70,12 +79,18 @@ target_link_libraries(345Application PRIVATE
     Qt6::QuickControls2
     Qt6::Quick
     Qt6::Gui
+    shared_lib
 )
 
 
 target_link_libraries(345Application PRIVATE Python::Python)
 target_link_libraries(345Application PRIVATE ${OpenCV_LIBS})
 #target_link_directories(345Application PRIVATE "C:/Users/yhkyh/Desktop/experiment/build/lib/Release")
+target_link_libraries(shared PRIVATE  Qt6::Multimedia)
+
+add_executable(Tests
+    tests/camera_tests.cpp
+)
 
 #target_link_libraries(345Application PRIVATE Qt6::Gui)
 #target_link_libraries(345Application PRIVATE Qt6::TextToSpeech)
@@ -96,6 +111,7 @@ set_target_properties(345Application PROPERTIES
 
 include(GNUInstallDirs)
 include_directories( ${OpenCV_INCLUDE_DIRS} )
+
 
 install(TARGETS 345Application
     BUNDLE DESTINATION .
