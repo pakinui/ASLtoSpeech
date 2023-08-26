@@ -19,7 +19,16 @@ jobs:
         mkdir build
         cd build
         cmake ../app/345Application -GNinja
-        
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v3
+      with:
+        version: '6.5.2'
+        host: 'windows'
+        target: 'desktop'
+        arch: 'win64_msvc2019_64'
+        install-deps: 'true'
+        cache: 'true'
+        cache-key-prefix: 'install-qt-action'
     - name: Build with Ninja
       run: cmake --build ./build
     - name: Upload Artifact
