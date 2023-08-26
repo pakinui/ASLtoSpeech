@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['old_5fframe_50',['old_frame',['../camera_8cpp.html#a16df30dbceece8ecb372b47feb3f2290',1,'camera.cpp']]],
-  ['out_51',['out',['../namespaceinference__classifier.html#a3845e63bf437d473948b3c65705993e7',1,'inference_classifier']]],
-  ['output_5fimg_52',['output_img',['../namespaceexperiment.html#a904845ba290a270f3c66a4f6d814d0a7',1,'experiment']]],
-  ['overlaytext_53',['overlayText',['../namespaceinference__classifier.html#a67f9f2e8f1ae2abdc5c0163834940c8e',1,'inference_classifier']]]
+  ['net_5fsave_5fname_57',['net_save_name',['../namespaceexperiment.html#a1c75cf29e682c25a250c2356c1cda39a',1,'experiment']]],
+  ['num_5fdetected_5fhands_58',['num_detected_hands',['../namespaceinference__classifier.html#a68007a4ae0ff4cc15ee093dbe31bf510',1,'inference_classifier']]]
 ];

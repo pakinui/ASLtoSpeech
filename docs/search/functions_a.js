@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['tts_127',['tts',['../tts_call_8cpp.html#a3d0baebc9d2f23f7308db2e71af6aff0',1,'tts(const std::string &amp;text):&#160;ttsCall.cpp'],['../tts_call_8h.html#a3d0baebc9d2f23f7308db2e71af6aff0',1,'tts(const std::string &amp;text):&#160;ttsCall.cpp']]]
+  ['set_5fimage_151',['set_image',['../namespacewebcam__pattern__detection.html#aa76046843959ae961ae7b1f8127bebad',1,'webcam_pattern_detection']]],
+  ['sharedobject_152',['SharedObject',['../class_shared_object.html#a852b716237753c48654dce4491a41b59',1,'SharedObject']]],
+  ['start_153',['start',['../namespacewebcam__pattern__detection.html#a8dbfcd1cd7b974b7f4901a6dbc698762',1,'webcam_pattern_detection']]]
 ];

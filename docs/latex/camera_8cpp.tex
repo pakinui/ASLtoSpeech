@@ -1,5 +1,10 @@
-\hypertarget{camera_8cpp}{}\doxysection{app/345\+Application/camera.cpp File Reference}
-\label{camera_8cpp}\index{app/345Application/camera.cpp@{app/345Application/camera.cpp}}
+\hypertarget{camera_8cpp}{}\doxysection{src/camera.cpp File Reference}
+\label{camera_8cpp}\index{src/camera.cpp@{src/camera.cpp}}
+
+
+Contains the implementation of the \mbox{\hyperlink{class_camera}{Camera}} class and associated functions.  
+
+
 {\ttfamily \#include \char`\"{}camera.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ui\+\_\+camera.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}text\+\_\+to\+\_\+speech/tts\+Call.\+h\char`\"{}}\newline
@@ -51,24 +56,77 @@ int \mbox{\hyperlink{camera_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}} = 1
 \item 
 Py\+Object $\ast$ \mbox{\hyperlink{camera_8cpp_a4dbc047c32fb0f01d244b0fc49a8d35a}{p\+Module}}
 \item 
+Py\+Object $\ast$ \mbox{\hyperlink{camera_8cpp_a28e31ca845ee48e7badebe1bc42babba}{p\+Func}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{camera_8cpp_a013822f1b75f990f1d8638c4d6c40b0c}{hello\+Func}}
+\item 
 QVideo\+Sink $\ast$ \mbox{\hyperlink{camera_8cpp_a4e559e1404c873662c9d0fac7094df66}{sink}}
 \item 
 QVideo\+Frame \mbox{\hyperlink{camera_8cpp_a16df30dbceece8ecb372b47feb3f2290}{old\+\_\+frame}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{camera_8cpp_a61277ddb50aabc074b0742719df29937}{class\+\_\+object}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{camera_8cpp_a042bdaef342f7cc6b44fe013af07fdab}{instance}}
+\item 
+QString \mbox{\hyperlink{camera_8cpp_a6e439f8deb135436151d480aec315b41}{captures\+\_\+path}}
+\item 
+QString \mbox{\hyperlink{camera_8cpp_a4f663c585b133e04c0167b276d576346}{img\+Output\+Path}}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Contains the implementation of the \mbox{\hyperlink{class_camera}{Camera}} class and associated functions. 
+
+This file contains the implementation of the \mbox{\hyperlink{class_camera}{Camera}} class, which represents the main application window and provides functionalities related to camera capture, image processing, and user interaction. 
+
 \doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{camera_8cpp_a6e439f8deb135436151d480aec315b41}\label{camera_8cpp_a6e439f8deb135436151d480aec315b41}} 
+\index{camera.cpp@{camera.cpp}!captures\_path@{captures\_path}}
+\index{captures\_path@{captures\_path}!camera.cpp@{camera.cpp}}
+\doxysubsubsection{\texorpdfstring{captures\_path}{captures\_path}}
+{\footnotesize\ttfamily QString captures\+\_\+path}
+
+\mbox{\Hypertarget{camera_8cpp_a61277ddb50aabc074b0742719df29937}\label{camera_8cpp_a61277ddb50aabc074b0742719df29937}} 
+\index{camera.cpp@{camera.cpp}!class\_object@{class\_object}}
+\index{class\_object@{class\_object}!camera.cpp@{camera.cpp}}
+\doxysubsubsection{\texorpdfstring{class\_object}{class\_object}}
+{\footnotesize\ttfamily Py\+Object$\ast$ class\+\_\+object}
+
 \mbox{\Hypertarget{camera_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}\label{camera_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}} 
 \index{camera.cpp@{camera.cpp}!count@{count}}
 \index{count@{count}!camera.cpp@{camera.cpp}}
 \doxysubsubsection{\texorpdfstring{count}{count}}
 {\footnotesize\ttfamily int count = 1}
 
+\mbox{\Hypertarget{camera_8cpp_a013822f1b75f990f1d8638c4d6c40b0c}\label{camera_8cpp_a013822f1b75f990f1d8638c4d6c40b0c}} 
+\index{camera.cpp@{camera.cpp}!helloFunc@{helloFunc}}
+\index{helloFunc@{helloFunc}!camera.cpp@{camera.cpp}}
+\doxysubsubsection{\texorpdfstring{helloFunc}{helloFunc}}
+{\footnotesize\ttfamily Py\+Object$\ast$ hello\+Func}
+
+\mbox{\Hypertarget{camera_8cpp_a4f663c585b133e04c0167b276d576346}\label{camera_8cpp_a4f663c585b133e04c0167b276d576346}} 
+\index{camera.cpp@{camera.cpp}!imgOutputPath@{imgOutputPath}}
+\index{imgOutputPath@{imgOutputPath}!camera.cpp@{camera.cpp}}
+\doxysubsubsection{\texorpdfstring{imgOutputPath}{imgOutputPath}}
+{\footnotesize\ttfamily QString img\+Output\+Path}
+
+\mbox{\Hypertarget{camera_8cpp_a042bdaef342f7cc6b44fe013af07fdab}\label{camera_8cpp_a042bdaef342f7cc6b44fe013af07fdab}} 
+\index{camera.cpp@{camera.cpp}!instance@{instance}}
+\index{instance@{instance}!camera.cpp@{camera.cpp}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily Py\+Object$\ast$ instance}
+
 \mbox{\Hypertarget{camera_8cpp_a16df30dbceece8ecb372b47feb3f2290}\label{camera_8cpp_a16df30dbceece8ecb372b47feb3f2290}} 
 \index{camera.cpp@{camera.cpp}!old\_frame@{old\_frame}}
 \index{old\_frame@{old\_frame}!camera.cpp@{camera.cpp}}
 \doxysubsubsection{\texorpdfstring{old\_frame}{old\_frame}}
 {\footnotesize\ttfamily QVideo\+Frame old\+\_\+frame}
+
+\mbox{\Hypertarget{camera_8cpp_a28e31ca845ee48e7badebe1bc42babba}\label{camera_8cpp_a28e31ca845ee48e7badebe1bc42babba}} 
+\index{camera.cpp@{camera.cpp}!pFunc@{pFunc}}
+\index{pFunc@{pFunc}!camera.cpp@{camera.cpp}}
+\doxysubsubsection{\texorpdfstring{pFunc}{pFunc}}
+{\footnotesize\ttfamily Py\+Object$\ast$ p\+Func}
 
 \mbox{\Hypertarget{camera_8cpp_a4dbc047c32fb0f01d244b0fc49a8d35a}\label{camera_8cpp_a4dbc047c32fb0f01d244b0fc49a8d35a}} 
 \index{camera.cpp@{camera.cpp}!pModule@{pModule}}

@@ -7,41 +7,60 @@ jobs:
   build: 
     runs-on: windows-latest
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Python 3.11.4
+      uses: actions/setup-python@v4.7.0
+      with:
+        python-version: 3.11.4
+        cache: 'pip'
+
+    - name: Install Python dependencies
+      run: |
+        pip install -r requirements.txt
     - name: Install CMake
       run: |
         choco install cmake
     - name: Install Ninja
       run: |
         choco install ninja
-    - uses: actions/checkout@v3
-    - name: Setup build environment
+    - name: Install OpenCV
       run: |
+        choco install opencv
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v3
+      with:
+        version: '6.5.2'
+        host: 'windows'
+        target: 'desktop'
+        arch: 'win64_msvc2019_64'
+        install-deps: 'true'
+        cache: 'true'
+        cache-key-prefix: 'install-qt-action'
+        modules: 'qtmultimedia'
+    - uses: ilammy/msvc-dev-cmd@v1.4.1
+    - name: Setup build environment
+      working-directory: ${{github.workspace}}
+      run: |
+        cd
+        
         mkdir build
         cd build
-        cmake .. -GNinja
-        
+        dir
+        cmake ../cosc345/src -GNinja -DCMAKE_BUILD_TYPE=Release
+      
+    - uses: ilammy/msvc-dev-cmd@v1.4.1
     - name: Build with Ninja
-      run: cmake --build ./build
+      run: cmake --build ./build --config Release
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
-          name: executable
-          path: build/HandApp.exe
-
-  install-python-tts:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4.7.0
-        with:
-          python-version: 3.10
-          cache: 'pip'
-      - name: Install TTS using Python 3.10
-        run: |
-          pip install tts
+        name: executable
+        path: build/345Application.exe
         
   run:
-    needs: [build, install-python-tts]
+    needs: build
     runs-on: windows-latest
     steps: 
       - name: Download Artifact
@@ -50,10 +69,10 @@ jobs:
           name: executable
       - name: Run Executable
         run: |
-          ./HandApp.exe
+          ./345Application.exe
 
-  codecov:
-    needs: run
+  code-coverage:
+    # needs: run
     runs-on: windows-latest
     steps: 
       - name: Checkout code
@@ -63,25 +82,37 @@ jobs:
         with:
           python-version: 3.10
           # cache: 'pip'
-      - name: Generate coverage report
+
+      - name: Install Compiler
         run: |
-          pip install pytest
-          pip install pytest-cov
-          pytest --cov=cosc345 --cov-report=xml
+          choco install OpenCppCoverage -y
+          echo "C:\Program Files\OpenCppCoverage" >> $env:GITHUB_PATH
+            
+      - name: Generate coverage report
+        working-directory: ${{github.workspace}}
+        shell: cmd
+        run: OpenCppCoverage --export_type=cobertura:coverage\coverage1.xml build\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-Release\Tests.exe
+          
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         env:
           CODECOV_TOKEN: 1afab4df-7044-4128-ac0c-6909eeba0bbf
         with:
-          # token: ${{ secrets.CODECOV_TOKEN }}
-          directory: ./coverage/reports/
+          token: ${{ secrets.CODECOV_TOKEN }}
+          directory: ./coverage
           # env_vars: OS,PYTHON
           # fail_ci_if_error: true
           # files: ./coverage1.xml,./coverage2.xml,!./cache
-          flags: unittests
+          # flags: unittests
           # name: codecov-umbrella
           # verbose: true
-          files: ./coverage1.xml
+          files: ./coverage1.xml ./camera_test.xml
+      - name: Upload2?
+        run: |
+          pip install codecov-cli
+          codecovcli create-commit
+          codecovcli create-report
+          codecovcli do-upload
 
   coverity-analysis:
     runs-on: windows-latest
