@@ -11,9 +11,9 @@
 #include "text_to_speech/ttsCall.h"
 #include <Python.h>
 
-//// #include "dictionary.h"
-//// #include "translationtab.h"
-//// #include "dictionarytab.h"
+// #include "dictionary.h" // for later use
+// #include "translationtab.h"
+// #include "dictionarytab.h"
 #include <opencv2/opencv.hpp>
 
 #include <QAudioDevice>
@@ -65,8 +65,6 @@
 #include <QtMultimedia>
 
 
-
-
 int count = 1;
 PyObject *pModule; // the python inference_classifier module(file)
 PyObject *pFunc; //  the python 'function'overlay' def in the class (class_object)
@@ -91,8 +89,7 @@ Camera::Camera() : ui(new Ui::Camera)
 
 //    QPlainTextEdit *historyTextEdit;
     connect(ui->translateButton, &QPushButton::clicked, this, &Camera::translateText);
-    connect(ui->dictionaryButton, &QPushButton::clicked, this, &Camera::searchDictionary);
-    ui->translateButton->setStyleSheet("background-color: #F5EFEE; color: black;");
+    //connect(ui->dictionaryButton, &QPushButton::clicked, this, &Camera::searchDictionary);
 
     m_captureSession.setCamera(&m_camera);
 
@@ -105,90 +102,45 @@ Camera::Camera() : ui(new Ui::Camera)
     setupMenus();
     updateCameras();
 
-//    QImageCapture *imageCapture = new QImageCapture();
-    // Connect the imageCaptured() signal to a slot that will be called when a new frame is captured.
-    //connect(m_camera, &QCamera::imageFrameReady, this, &Camera::imageAvailable);
-    // Connect the imageCaptured() signal to a slot that will be called when a new frame is captured.
-    //connect(m_imageCapture, &QImageCapture::imageCaptured, this, &Camera::imageCaptured);
 
-    // Set the camera to be used by the image capture.
-    //m_imageCapture->setCaptureSession(&m_captureSession);
-//    Py_Initialize();
-//    QString currentPath = QDir::currentPath();
-//    QString newPath = currentPath + "/../../src";
-//    std::string pythonCode = "import sys; sys.path.append('"+ newPath.toStdString() +"')";
-//    PyRun_SimpleString(pythonCode.c_str());
-////    qDebug() << newPath;
-//    pModule = PyImport_ImportModule("inference_classifier");
-
-//    PyErr_Print();
-//    // Create a Python object that wraps the C++ object.
-//    PyObject *python_object = PyCapsule_New(sink, "sink", nullptr);
-
-//    // Pass the Python object to Python.
-//    PyModule_AddObject(pModule, "sink", python_object);
-//    Py_Finalize();
-    Py_Initialize();
     QString currentPath = QDir::currentPath();
-    QString newPath = currentPath + "/../../src";
+    QString newPath = currentPath + "/../../src"; // The current path (of this file)
     std::string pythonCode = "import sys; sys.path.append('"+ newPath.toStdString() +"')";
+    captures_path = currentPath + "/../../resources/captures"; // path to where images are saved
+    imgOutputPath = captures_path + "/output.jpg"; // path where camera frames are saved
+
+    Py_Initialize();
     PyRun_SimpleString(pythonCode.c_str());
+
     pModule = PyImport_ImportModule("inference_classifier");
-
-
-    captures_path = currentPath + "/../../resources/captures";
-    // Create a file in the `captures` folder with the unique filename.
-
-
-    imgOutputPath = captures_path + "/output.jpg";
-    // Create a file in the `captures` folder with the unique filename.
-    //        QString path = QString("/captures/%1.jpg").arg(filename);
-    //        QString path2 = newPath2 + path;
-    //qDebug() << newPath2;
-
-
     if(!pModule){
         PyErr_Print();
-    }else{
-        //qDebug() << "yo";
-
     }
-    class_object = PyObject_GetAttrString(pModule, "PythonTest");
 
+    class_object = PyObject_GetAttrString(pModule, "PythonTest");
     if(!class_object){
         PyErr_Print();
-    }else{
-        //qDebug() << "yo233";
     }
-    // Create an instance of the PythonTest class
 
-
-
-    instance = PyObject_CallObject(class_object, NULL);
+    instance = PyObject_CallObject(class_object, NULL); // Create an instance of the Python class module
     if(!instance){
         PyErr_Print();
-    }else{
-        //qDebug() << "yo233 instance";
     }
 
-    pFunc = PyObject_GetAttrString(instance, "overlay");
-
+    pFunc = PyObject_GetAttrString(instance, "sign_identifier"); // The Python function to identify the ASL sign.
     if(!pFunc){
         PyErr_Print();
-    }else{
-        //qDebug() << "yo2";
     }
-    //Py_Finalize();
-
 
     m_captureSession.setImageCapture(&m_imageCapture);
-
     m_imageCapture.capture();
-    //m_imageCapture.setCaptureInterval(500); // 5 frames per second
-
     m_camera.start();
 
-//    connect(&m_imageCapture, &QImageCapture::imageAvailable, this, &Camera::imageAvailable, Qt::QueuedConnection);
+    /**
+     * @brief Connect Camera::imageAvailable to QVideoSink::videoFrameChanged.
+     *
+     * Everytime QVideoSink has a new frame, Camera::imageAvailable is called.
+     */
     connect(sink, &QVideoSink::videoFrameChanged, this, &Camera::imageAvailable);
 
 }
@@ -200,139 +152,40 @@ Camera::Camera() : ui(new Ui::Camera)
  * and updates the video frame display. It also performs necessary data conversion
  * between C++ and Python.
  *
+ * @note Currently only calls the Python function every 9 frames as to reduce lag.
+ *
  * @param frame The incoming video frame.
  */
 void Camera::imageAvailable(QVideoFrame frame) {
-//    const uchar *frame_data = frame.bits(2);
-//    int height = frame.height();
-//    int width = frame.width();
-//    int c = frame.planeCount();
-    //qDebug() << c;
-//    Py_Initialize();
 
-    // Convert QVideoFrame to QImage
-    //QImage image1(frame.bits(2),
-//                 frame.width(),
-//                 frame.height(),
-//                 frame.bytesPerLine(2),
-//                 QImage::Format_RGB888);
-//    QImage image1 = frame.toImage();
-
-//    // Convert QImage to QPixmap (if needed)
-//    QPixmap pixmap = QPixmap::fromImage(image1);
-
-//    // Convert QPixmap to Python bytes object (if needed)
-//    QByteArray byteArray;
-//    QBuffer buffer(&byteArray);
-//    pixmap.save(&buffer, "PNG"); // Use any desired format here
-//    PyObject *bytesObject = PyBytes_FromStringAndSize(byteArray.constData(), byteArray.size());
-    // below saves the frames as images in resources/captures
-    // currently just overwrites the old image with the current frame
-    // but it can save each frame individually
-    if(count%9 == 0){
+    if(count%9 == 0){ // Only call the Python function every 9 frames
 
         QImage image = frame.toImage();
-        // Do something with the frame.
-        // Load or create a QImage
 
         if (image.isNull())
         {
             qDebug() << "Failed to load image.";
-
         }
 
-     //Generate a unique filename using the current time.
-       // QString filename = QString::number(1);
-    //    count += 1;
-
-
-//        QString newPath2 = captures_path + "/output.jpg";
-//        // Create a file in the `captures` folder with the unique filename.
-////        QString path = QString("/captures/%1.jpg").arg(filename);
-////        QString path2 = newPath2 + path;
-//        //qDebug() << newPath2;
-//        QFile file(newPath2);
         QFile imgFile(imgOutputPath);
-
         // Save the QImage object to the file.
         imgFile.open(QIODevice::WriteOnly);
         image.save(&imgFile, "JPG");
         imgFile.close();
 
-        //qDebug() << path2 << "saved";
-
-     //Save the QImage to a file
-
-        if (image.save(imgOutputPath))
-        {
-            //qDebug() << "Image saved successfully.";
-        }
-        else
+        if (!image.save(imgOutputPath))
         {
             qDebug() << "Failed to save image.";
         }
 
-        //Py_Initialize();
-
         PyObject *result = PyObject_CallObject(pFunc, NULL);
-
-        //PyObject *result = PyObject_CallFunctionObjArgs(pFunc, NULL);
         Py_DECREF(result);
         if(result){
             QString resultString = QString::fromUtf8(PyUnicode_AsUTF8(result));
-
-            //qDebug() << resultString;
             sink->setSubtitleText(resultString);
-
         }
-
-
-        //Py_Finalize();
-
     }
     count ++;
-
-
-//    QString currentPath = QDir::currentPath();
-//    QString newPath = currentPath + "/../../src";
-//    std::string pythonCode = "import sys; sys.path.append('"+ newPath.toStdString() +"')";
-//    PyRun_SimpleString(pythonCode.c_str());
-//    PyObject* pModule = PyImport_ImportModule("inference_classifier");
-//    if(!pModule){
-//        PyErr_Print();
-//    }else{
-//        qDebug() << "yo";
-//    }
-
-
-//    PyObject *pFunc = PyObject_GetAttrString(pModule, "overlay");
-//    if(!pFunc){
-//        PyErr_Print();
-//    }else{
-//        qDebug() << "yo2";
-//    }
-//    qDebug() << "hi";
-    // Create a flat C array to hold the image data
-//    size_t frame_size = height * width * 3;
-
-//    unsigned char *flat_array = new unsigned char[frame_size];
-
-//    // Convert flat array into a Python bytes object
-//    PyObject *pBytes = PyBytes_FromStringAndSize(reinterpret_cast<const char *>(flat_array), frame_size);
-
-    //QImage image = frame.toImage();
-//    QString resultString = QString::fromUtf8(PyUnicode_AsUTF8(pValue));
-
-//    QString str = "hello " + resultString;
-//    sink->setSubtitleText(str);
-
-    // Create a Python object that wraps the C++ object.
-    //PySide6.QtMultimedia.QVideoSink video_sink = new PySide6.QtMultimedia.QVideoSink(video_sink_cpp);
-
-    // Pass the Python object to the Python.
-    //python_code.video_sink = video_sink;
-
-    //sink->setVideoFrame(frame);
 }
 
 /**
@@ -343,6 +196,8 @@ void Camera::imageAvailable(QVideoFrame frame) {
  * and then uses the text-to-speech function to generate speech from the input text.
  * The translated text is displayed in the GUI, and the original and translated text
  * are stored in the history for reference.
+ *
+ * @note Not currently active.
  */
 void Camera::translateText()
 {
@@ -370,6 +225,8 @@ void Camera::translateText()
  * history data structure. It updates the history display in the GUI to reflect the
  * new entry.
  *
+ * @note Not currently active.
+ *
  * @param original The original text before translation.
  * @param translated The translated text (or modified text) after translation.
  */
@@ -386,6 +243,8 @@ void Camera::addToHistory(const QString &original, const QString &translated)
  * translation history data structure. Each entry includes the original and
  * translated (or modified) text. The formatted text is suitable for display in the
  * history spot in the GUI.
+ *
+ * @note Not currently active.
  *
  * @return A text string containing translation history.
  */
@@ -405,6 +264,8 @@ QString Camera::getHistoryText()
  *
  * This function is triggered when the "Search" button is clicked in the GUI.
  * It retrieves the input text from the UI and performs a search in the dictionary.
+ *
+ * @note Not currently active.
  */
 void Camera::searchDictionary()
 {
@@ -458,7 +319,7 @@ void Camera::stopCamera()
 {
     m_camera.stop();
     qDebug() << "stopping camera";
-    Py_Finalize(); // stop the py
+    Py_Finalize(); // Stop the Python
 }
 
 /**

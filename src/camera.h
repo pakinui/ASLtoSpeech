@@ -66,7 +66,7 @@ private:
     QList<QPair<QString, QString>> history; ///< list to store history of translations
     QActionGroup *videoDevicesGroup = nullptr; ///< group of video devices
 
-    QMediaDevices m_devices;
+    QMediaDevices m_devices; ///< available multimedia input/output devices instance
     QImageCapture m_imageCapture; ///< image capture instance
     QMediaCaptureSession m_captureSession; ///< media capture session instance
     QCamera m_camera; ///< camera instance
