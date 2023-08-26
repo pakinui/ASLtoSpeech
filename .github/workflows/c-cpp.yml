@@ -44,6 +44,7 @@ jobs:
       working-directory: ${{github.workspace}}/app/345Application/
       run: |
           cat CMakeLists.txt
+          rm -rf build
           mkdir build
           cd build
           cmake -GNinja -DCMAKE_BUILD_TYPE=Release ..
