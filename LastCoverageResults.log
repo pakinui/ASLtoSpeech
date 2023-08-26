@@ -1,4 +1,4 @@
-[2023-08-26 12:05:12] [info] Start Program:
+[2023-08-26 19:23:52] [info] Start Program:
 Path:"build\\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-Release\\Tests.exe"
 Arguments:
 Working directory: not set.
@@ -9,52 +9,52 @@ Cover Children: 0
 Aggregate by file: 1
 Continue after C++ exception: 0
 Optimized build support: 0
-Export: cobertura coverage\camera_test.xml 
+Export: cobertura coverage\coverage1.xml 
 Input coverage: 
 Unified diff: 
 Excluded line regular expressions: 
 Substitute pdb source paths: 
-[2023-08-26 12:05:12] [info] Module: C:\Users\poppy\Documents\GitHub\cosc345\build\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-Release\Tests.exe is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\ntdll.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\kernel32.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\KernelBase.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\ucrtbase.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\vcruntime140.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\vcruntime140_1.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Qt\6.5.2\msvc2019_64\bin\Qt6Test.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Qt\6.5.2\msvc2019_64\bin\Qt6Core.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\advapi32.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\mpr.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\msvcrt.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\msvcp140.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\sechost.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\rpcrt4.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\userenv.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\ole32.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\msvcp_win.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\gdi32.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\win32u.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\authz.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\gdi32full.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\netapi32.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\user32.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\combase.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\shell32.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\ws2_32.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\version.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\oleaut32.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\winmm.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\msvcp140_1.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\cryptbase.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\srvcli.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\netutils.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\imm32.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\bcryptprimitives.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] Module: C:\Windows\System32\kernel.appcore.dll is selected because it matches selected pattern: *
-[2023-08-26 12:05:12] [info] ----------------------------------------------------
-[2023-08-26 12:05:12] [info] Cobertura report generated: coverage\camera_test.xml
-[2023-08-26 12:05:12] [info] ----------------------------------------------------
-[2023-08-26 12:05:12] [info] The code coverage report is not what you expect? See the FAQ https://github.com/OpenCppCoverage/OpenCppCoverage/wiki/FAQ.
-[2023-08-26 12:05:12] [warning] No modules were selected. Please check the values of --modules and --excluded_modules.
+[2023-08-26 19:23:52] [info] Module: C:\Users\poppy\Documents\GitHub\cosc345\build\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-Release\Tests.exe is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\ntdll.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\kernel32.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\KernelBase.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\ucrtbase.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\vcruntime140.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\vcruntime140_1.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Qt\6.5.2\msvc2019_64\bin\Qt6Core.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\advapi32.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\msvcrt.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\sechost.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\rpcrt4.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\ole32.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\msvcp_win.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\gdi32.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\win32u.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\gdi32full.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\user32.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\userenv.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\combase.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\shell32.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\mpr.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\ws2_32.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\authz.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\oleaut32.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\netapi32.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\version.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\winmm.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\msvcp140.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\msvcp140_1.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\cryptbase.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\srvcli.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\netutils.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Qt\6.5.2\msvc2019_64\bin\Qt6Test.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\imm32.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\bcryptprimitives.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] Module: C:\Windows\System32\kernel.appcore.dll is selected because it matches selected pattern: *
+[2023-08-26 19:23:52] [info] ----------------------------------------------------
+[2023-08-26 19:23:52] [info] Cobertura report generated: coverage\coverage1.xml
+[2023-08-26 19:23:52] [info] ----------------------------------------------------
+[2023-08-26 19:23:52] [info] The code coverage report is not what you expect? See the FAQ https://github.com/OpenCppCoverage/OpenCppCoverage/wiki/FAQ.
+[2023-08-26 19:23:52] [warning] No modules were selected. Please check the values of --modules and --excluded_modules.
 You can try to remove all --modules and --excluded_modules and use --modules=C:\Users\poppy\Documents\GitHub\cosc345\build\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-Release instead.
 For additional help, see https://github.com/OpenCppCoverage/OpenCppCoverage/wiki/FAQ#coverage-report-is-empty.

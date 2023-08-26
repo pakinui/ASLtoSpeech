@@ -41,8 +41,12 @@ jobs:
         modules: 'qtmultimedia'
     - uses: ilammy/msvc-dev-cmd@v1.4.1
     - name: Setup build environment
+      working-directory: ${{github.workspace}}
+      # run: |
+      #   mkdir build
+      #   cd build
+      #   cmake -GNinja -DCMAKE_BUILD_TYPE=Release
       run: |
-        mkdir build
         cd build
         cmake -GNinja -DCMAKE_BUILD_TYPE=Release
     - uses: ilammy/msvc-dev-cmd@v1.4.1
@@ -93,7 +97,7 @@ jobs:
         env:
           CODECOV_TOKEN: 1afab4df-7044-4128-ac0c-6909eeba0bbf
         with:
-          # token: ${{ secrets.CODECOV_TOKEN }}
+          token: ${{ secrets.CODECOV_TOKEN }}
           directory: ./coverage
           # env_vars: OS,PYTHON
           # fail_ci_if_error: true
@@ -101,7 +105,7 @@ jobs:
           # flags: unittests
           # name: codecov-umbrella
           # verbose: true
-          files: ./coverage1.xml
+          files: ./coverage1.xml ./camera_test.xml
 
   coverity-analysis:
     runs-on: windows-latest
