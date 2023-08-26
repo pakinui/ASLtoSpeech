@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>345Application: text_to_speech/ttsCall.cpp File Reference</title>
+<title>345Application: app/345Application/text_to_speech/ttsCall.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5d7dc9d5233e2a84a7a6422ed31876cc.html">text_to_speech</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d422163b96683743ed3963d4aac17747.html">app</a></li><li class="navelem"><a class="el" href="dir_eb0a9f02155bcdebad3c024f93815e93.html">345Application</a></li><li class="navelem"><a class="el" href="dir_a1a709eccc88961a2abde70d2dfd3e46.html">text_to_speech</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -71,29 +71,48 @@ $(function() {
 <div class="title">ttsCall.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+
+<p>Contains the function for text-to-speech conversion using an external tool.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="tts_call_8h_source.html">ttsCall.h</a>&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;Windows.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tts_call_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
-<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d0baebc9d2f23f7308db2e71af6aff0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tts_call_8cpp.html#a3d0baebc9d2f23f7308db2e71af6aff0">tts</a> (const std::string &amp;text)</td></tr>
+<tr class="memdesc:a3d0baebc9d2f23f7308db2e71af6aff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the given text to speech using an external tool.  <a href="tts_call_8cpp.html#a3d0baebc9d2f23f7308db2e71af6aff0">More...</a><br /></td></tr>
+<tr class="separator:a3d0baebc9d2f23f7308db2e71af6aff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Contains the function for text-to-speech conversion using an external tool. </p>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a3d0baebc9d2f23f7308db2e71af6aff0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d0baebc9d2f23f7308db2e71af6aff0">&#9670;&nbsp;</a></span>tts()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int main </td>
+          <td class="memname">bool tts </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Converts the given text to speech using an external tool. </p>
+<p>This function takes a text input, constructs a command using the input text, and executes the command using an external text-to-speech tool. The resulting audio is saved as "speech.wav" and can be played using PlaySound.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>The input text to convert to speech. Currently the text is hardcoded. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns 0 if the text-to-speech process is completed successfully. </dd></dl>
 
 </div>
 </div>
