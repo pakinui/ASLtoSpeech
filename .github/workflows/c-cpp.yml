@@ -13,12 +13,6 @@ jobs:
     - name: Install Ninja
       run: |
         choco install ninja
-    - uses: actions/checkout@v3
-    - name: Setup build environment
-      run: |
-        mkdir build
-        cd build
-        cmake ../app/345Application -GNinja
     - name: Install Qt
       uses: jurplel/install-qt-action@v3
       with:
@@ -29,13 +23,20 @@ jobs:
         install-deps: 'true'
         cache: 'true'
         cache-key-prefix: 'install-qt-action'
+    - uses: actions/checkout@v3
+    - name: Setup build environment
+      run: |
+        mkdir build
+        cd build
+        cmake ../app/345Application -GNinja
+   
     - name: Build with Ninja
       run: cmake --build ./build
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
-          name: executable
-          path: build/HandApp.exe
+        name: executable
+        path: build/HandApp.exe
 
   install-python-tts:
     runs-on: windows-latest
