@@ -13,6 +13,10 @@ jobs:
     - name: Install Ninja
       run: |
         choco install ninja
+    - name: Install OpenCV
+    - uses: Dovyski/setup-opencv-action@v1.1
+      with:
+          opencv-version: '4.0.0'
     - name: Install Qt
       uses: jurplel/install-qt-action@v3
       with:
@@ -23,7 +27,8 @@ jobs:
         install-deps: 'true'
         cache: 'true'
         cache-key-prefix: 'install-qt-action'
-        modules: 'qtmultimedia opencv'
+        modules: 'qtmultimedia'
+    
     - uses: actions/checkout@v3
     - name: Setup build environment
       run: |
