@@ -14,7 +14,7 @@ jobs:
       run: |
         choco install ninja
     - name: Install OpenCV
-    - uses: Dovyski/setup-opencv-action@v1.1
+      uses: Dovyski/setup-opencv-action@v1.1
       with:
           opencv-version: '4.0.0'
     - name: Install Qt
