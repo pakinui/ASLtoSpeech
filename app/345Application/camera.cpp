@@ -1,3 +1,7 @@
+/**
+ * @file camera.cpp
+ * @brief Contains the implementation of the Camera class and associated functions.
+ */
 #include "camera.h"
 #include "ui_camera.h"
 #include "text_to_speech/ttsCall.h"
@@ -64,7 +68,12 @@ PyObject *pModule;
 QVideoSink *sink;
 QVideoFrame old_frame;
 
-
+/**
+ * @brief Construct a new Camera:: Camera object
+ * 
+ * This constructor initializes the Camera object and sets up various connections
+ * for button clicks and video frame updates. It also initializes camera resources.
+ */
 Camera::Camera() : ui(new Ui::Camera)
 {
     qDebug() << "beginning";
@@ -114,12 +123,17 @@ Camera::Camera() : ui(new Ui::Camera)
 //    connect(&m_imageCapture, &QImageCapture::imageAvailable, this, &Camera::imageAvailable, Qt::QueuedConnection);
     connect(sink, &QVideoSink::videoFrameChanged, this, &Camera::imageAvailable);
 
-
-
 }
 
-
-// This slot is called when a new frame is captured.
+/**
+ * @brief Slot called when a new video frame is captured.
+ *
+ * This slot processes the incoming video frame, interacts with a Python module,
+ * and updates the video frame display. It also performs necessary data conversion
+ * between C++ and Python.
+ *
+ * @param frame The incoming video frame.
+ */
 void Camera::imageAvailable(QVideoFrame frame) {
     const uchar *frame_data = frame.bits(2);
     int height = frame.height();
@@ -228,6 +242,15 @@ void Camera::imageAvailable(QVideoFrame frame) {
 
 }
 
+/**
+ * @brief Translates and displays input text using text-to-speech.
+ *
+ * This function is triggered when the "Translate" button is clicked in the GUI.
+ * It retrieves the input text from the UI, performs translation logic (if any),
+ * and then uses the text-to-speech function to generate speech from the input text.
+ * The translated text is displayed in the GUI, and the original and translated text
+ * are stored in the history for reference.
+ */
 void Camera::translateText()
 {
     QString inputText = ui->translateInput->toPlainText();
@@ -247,12 +270,32 @@ void Camera::translateText()
     addToHistory(inputText, inputText);
 }
 
+/**
+ * @brief Adds an entry to the translation history.
+ *
+ * This function appends a pair of original and translated text to the translation
+ * history data structure. It updates the history display in the GUI to reflect the
+ * new entry.
+ *
+ * @param original The original text before translation.
+ * @param translated The translated text (or modified text) after translation.
+ */
 void Camera::addToHistory(const QString &original, const QString &translated)
 {
     history.append(QPair<QString, QString>(original, translated));
     ui->historyDisplay->setPlainText(getHistoryText());
 }
 
+/**
+ * @brief Retrieves formatted text for displaying translation history.
+ *
+ * This function generates a formatted text string containing all entries in the
+ * translation history data structure. Each entry includes the original and
+ * translated (or modified) text. The formatted text is suitable for display in the
+ * history spot in the GUI.
+ *
+ * @return A text string containing translation history.
+ */
 QString Camera::getHistoryText()
 {
     QString historyText;
@@ -264,6 +307,12 @@ QString Camera::getHistoryText()
     return historyText;
 }
 
+/**
+ * @brief Performs dictionary search logic.
+ *
+ * This function is triggered when the "Search" button is clicked in the GUI.
+ * It retrieves the input text from the UI and performs a search in the dictionary.
+ */
 void Camera::searchDictionary()
 {
     QString searchTerm = ui->dictionaryInput->toPlainText();
@@ -283,11 +332,23 @@ void Camera::searchDictionary()
     ui->dictionaryTextOutput->setPlainText(searchTerm);
 }
 
+/**
+ * @brief updates the camera device for the application to use.
+ * 
+ * This function updates the camera device for the application to use.
+ * 
+ * @param action the QAction corresponding to the camera device to use
+ */
 void Camera::updateCameraDevice(QAction * action)
 {
     setCamera(qvariant_cast<QCameraDevice>(action->data()));
 }
 
+/**
+ * @brief Starts the current camera.
+ * 
+ * This function starts the current camera.
+ */
 void Camera::startCamera()
 {
     qDebug() << "starting camera";
@@ -295,12 +356,24 @@ void Camera::startCamera()
     m_camera.start();
 }
 
+/**
+ * @brief Stops the current camera.
+ * 
+ * This function stops the current camera.
+ */
 void Camera::stopCamera()
 {
     m_camera.stop();
     qDebug() << "stopping camera";
 }
 
+/**
+ * @brief Updates the camera active state.
+ * 
+ * This function updates the camera active state.
+ * 
+ * @param active the new active state
+ */
 void Camera::updateCameraActive(bool active)
 {
     if (active)
@@ -315,6 +388,13 @@ void Camera::updateCameraActive(bool active)
     }
 }
 
+/**
+ * @brief Sets up the application menus.
+ *
+ * This function creates and sets up menus for the application, such as File,
+ * Devices, and Camera menus. It also connects menu actions to corresponding
+ * functions in the Camera class.
+ */
 void Camera::setupMenus()
 {
     fileMenu = new QMenu("File", this);
@@ -357,12 +437,27 @@ void Camera::setupMenus()
     menuBar()->addMenu(cameraMenu);
 }
 
+/**
+ * @brief Displays a camera error message.
+ *
+ * This function displays a camera error message in a message box if
+ * there is an error with the camera.
+ */
 void Camera::displayCameraError()
 {
     if (m_camera.error() != QCamera::NoError)
         QMessageBox::warning(this, tr("Camera Error"), m_camera.errorString());
 }
 
+/**
+ * @brief sets up the camera for the application to use.
+ * 
+ * This function is called when the user selects a camera device from the Devices menu.
+ * It initializes the selected camera for video capture and updates the camera settings.
+ * Additionally, it sets up the necessary connections for camera signals.
+ * 
+ * @param cameraDevice the camera for capturing video.
+ */
 void Camera::setCamera(const QCameraDevice &cameraDevice)
 {
     // m_camera.reset(new QCamera(cameraDevice));
@@ -389,6 +484,12 @@ void Camera::setCamera(const QCameraDevice &cameraDevice)
     m_camera.start();
 }
 
+/**
+ * @brief Updates the list of available cameras in the Devices menu.
+ *
+ * This function queries and updates the list of available camera devices in the
+ * Devices menu. Users can then select a camera device to use.
+ */
 void Camera::updateCameras()
 {
     devicesMenu->clear();

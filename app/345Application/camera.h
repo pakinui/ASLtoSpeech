@@ -1,13 +1,10 @@
 /**
- *  @file camera.h
- *  @brief This file contains the declaration of the Camera class.
- *  @author
+ * @file camera.h
+ * @brief Contains the declaration of the Camera class.
  *
- *  This class provides ...
- *
+ * This file defines the Camera class, which represents the main application window
+ * and provides functionalities related to camera capture, image processing, and user interaction.
  */
-
-
 #ifndef CAMERA_H
 #define CAMERA_H
 
@@ -39,9 +36,10 @@ namespace Ui {
 class Camera;
 }
 QT_END_NAMESPACE
+
 /**
  * @class Camera
- * @brief The Camera class
+ * @brief The Camera class represents the main application window and camera functionalities.
  */
 class Camera : public QMainWindow
 {
@@ -52,22 +50,22 @@ class Camera : public QMainWindow
 
 public:
     /**
-     *  @brief Constructor for Camera.
+     * @brief Constructor for the Camera class.
      *
-     *  Description...
+     * This constructor initializes the Camera class and sets up the UI and camera-related components.
      */
     Camera();
 
 
 private:
     Ui::Camera *ui;
-    QList<QPair<QString, QString>> history;
-    QActionGroup *videoDevicesGroup = nullptr;
+    QList<QPair<QString, QString>> history; ///< list to store history of translations
+    QActionGroup *videoDevicesGroup = nullptr; ///< group of video devices
 
     QMediaDevices m_devices;
-    QImageCapture m_imageCapture;
-    QMediaCaptureSession m_captureSession;
-    QCamera m_camera;
+    QImageCapture m_imageCapture; ///< image capture instance
+    QMediaCaptureSession m_captureSession; ///< media capture session instance
+    QCamera m_camera; ///< camera instance
     QCamera *cam;
 
 
@@ -147,4 +145,3 @@ private Q_SLOTS:
 };
 
 #endif // CAMERA_H
-
