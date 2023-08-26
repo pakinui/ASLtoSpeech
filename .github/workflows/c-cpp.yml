@@ -53,17 +53,6 @@ jobs:
       with:
         name: executable
         path: build/HandApp.exe
-
-  install-python-tts:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4.7.0
-        with:
-          python-version: 3.11.4
-          cache: 'pip'
-      - run: |
-          pip install -r requirements.txt
         
   run:
     needs: build
