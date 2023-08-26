@@ -23,6 +23,7 @@ from PIL import ImageColor
 from PIL import ImageDraw
 from PIL import ImageFont
 from PIL import ImageOps
+from PIL import ImageEnhance
 
 # For measuring the inference time.
 import time
@@ -31,7 +32,7 @@ import time
 
 # Check available GPU devices.
 print("The following GPU devices are available: %s" % tf.test.gpu_device_name())
-save_name = os.path.join('saved', 'sign_lang_experiment')
+save_name = os.path.join('saved', 'sign_lang_new_experiment2')
 net_save_name = save_name + '_cnn_sign_lang.h5'
 model = tf.keras.models.load_model(net_save_name)
 save_name = os.path.join('saved')
@@ -45,22 +46,7 @@ def display_image(image):
   plt.show()
 
 
-def download_and_resize_image(img, new_width=256, new_height=256,
-                              display=False):
-  # _, filename = tempfile.mkstemp(suffix=".jpg")
-  # response = urlopen(url)
-  # image_data = response.read()
-  # image_data = BytesIO(image_data)
-  pil_image = Image.open(img)
-  pil_image = ImageOps.fit(pil_image, (new_width, new_height), Image.LANCZOS)
-  pil_image_rgb = pil_image.convert("RGB")
-  # pil_image_rgb.save(filename, format="JPEG", quality=90)
-  # print("Image downloaded to %s." % filename)
-  if display:
-    display_image(pil_image)
-  return pil_image_rgb
-
-class_names = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y']
+class_names = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y','Z','del','nothing','space']
 
 def draw_bounding_box_on_image(image,
                                ymin,
@@ -76,9 +62,11 @@ def draw_bounding_box_on_image(image,
   im_width, im_height = image.size
   (left, right, top, bottom) = (xmin * im_width, xmax * im_width,
                                 ymin * im_height, ymax * im_height)
+
+  print(left, right, top, bottom)
   # Calculate the adjustments to make the box bigger
-  width_adjustment = (right - left) * (1.2 - 1) / 2
-  height_adjustment = (bottom - top) * (1.5 - 1) / 2
+  width_adjustment = (right - left) * (1.3 - 1) / 2
+  height_adjustment = (bottom - top) * (1.6 - 1) / 2
 
   # Adjust the bounding box coordinates to make it bigger
   left -= width_adjustment
@@ -91,22 +79,33 @@ def draw_bounding_box_on_image(image,
             fill=color)
 
   croped_img = image.crop((left, top, right, bottom))
-  croped_img = croped_img.resize((28, 28))
-  croped_img = croped_img.convert("L")
+  croped_img = croped_img.convert('RGB')
+  croped_img = croped_img.resize((64, 64))
+  # Enhance the brightness of the cropped image
+  enhancer = ImageEnhance.Brightness(croped_img)
+  brightness_factor = 0.9 # Adjust the brightness factor as needed
+  brightened_img = enhancer.enhance(brightness_factor)
+  # Enhance the contrast of the cropped image
+  enhancer = ImageEnhance.Contrast(brightened_img)
+  contrast_factor = 1.2  # Adjust the contrast factor as needed
+  filtered_img = enhancer.enhance(contrast_factor)
+  #
+  # plt.imshow(filtered_img)
+  # plt.title("Cropped Image")
+  # plt.show()
   # Convert the PIL.Image.Image to a NumPy array
-  numpy_array = np.array(croped_img)
+  numpy_array = np.array(filtered_img)
 
   # Normalize the array (optional, depending on your model requirements)
   normalized_array = numpy_array / 255.0
 
   # Reshape the array if needed (depends on your model input shape)
-  reshaped_array = normalized_array.reshape(1, 28, 28, 1)
+  reshaped_array = normalized_array.reshape(1, 64, 64, 3)
   predictions = model.predict(reshaped_array)
-  time.sleep(2)
 
   # Get the predicted class index (highest probability)
   predicted_class_index = np.argmax(predictions, axis=1)
-
+  print(predictions)
   # Get the class label from the sign language labels
   predicted_label = class_names[predicted_class_index[0]]
 
@@ -157,9 +156,9 @@ def draw_boxes(image, boxes, class_names, scores):
   except IOError:
     font = ImageFont.truetype("./Roboto-Medium.ttf", 25)
 
+
   ymin, xmin, ymax, xmax = tuple(boxes)
-  display_str = "{}: {}%".format(class_names.decode("ascii"),
-                                 int(100 * scores))
+  display_str = "{}".format(class_names.decode("ascii"))
   color = colors[hash(class_names) % len(colors)]
   image_pil = Image.fromarray(np.uint8(image)).convert("RGB")
   draw_bounding_box_on_image(
@@ -186,17 +185,17 @@ def load_img(path):
 
 def detected(coverted_img):
     result = detector(coverted_img)
-    time.sleep(2)
+    # time.sleep(2)
     return result
 
 def run_detector(img):
     start_time = time.time()
 
     # enable this line for image input
-    img = tf.image.convert_image_dtype(img, tf.float32)[tf.newaxis, ...]
-    result = detector(img)
+    # img = tf.image.convert_image_dtype(img, tf.float32)[tf.newaxis, ...]
+    # result = detector(img)
 
-    # result = detected(img)
+    result = detected(img)
     
     end_time = time.time()
 
@@ -208,49 +207,49 @@ def run_detector(img):
 
 
 # load image input
-image = "./image1.jpg"
-result = run_detector(load_img(image))
-output_img = np.array(load_img(image))
-hand_index = np.where(result["detection_class_entities"] == b'Human hand')
-if hand_index[0].size != 0:
-    output_img = draw_boxes(
-        output_img, result["detection_boxes"][hand_index[0][0]],
-        result["detection_class_entities"][hand_index[0][0]], result["detection_scores"][hand_index[0][0]])
-display_image(output_img)
+# image = "./image1.jpg"
+# result = run_detector(load_img(image))
+# output_img = np.array(load_img(image))
+# hand_index = np.where(result["detection_class_entities"] == b'Human hand')
+# if hand_index[0].size != 0:
+#     output_img = draw_boxes(
+#         output_img, result["detection_boxes"][hand_index[0][0]],
+#         result["detection_class_entities"][hand_index[0][0]], result["detection_scores"][hand_index[0][0]])
+# display_image(output_img)
 
 # load video input
-# while True:
-#     ret, frame = video_capture.read()
-#     # Read a frame from the video capture
-#     if not ret:
-#         break
-#
-#     frame = cv2.flip(frame, 1)
-#     # frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-#     normalised_frame = frame / 255.0 # Normalize pixel values to the range [0, 1]
-#     # frame = tf.expand_dims(frame, axis=0)
-#     # frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-#     # frame = np.expand_dims(frame, axis=0)
-#     image_np = np.array(normalised_frame)
-#     input_tensor = tf.convert_to_tensor(np.expand_dims(image_np, 0), dtype=tf.float32)
-#     result = run_detector(input_tensor)
-#
-#     output_img = np.array(frame)
-#     hand_index = np.where(result["detection_class_entities"] == b'Human hand')
-#     if hand_index[0].size != 0:
-#         output_img = draw_boxes(
-#             output_img, result["detection_boxes"][hand_index[0][0]],
-#             result["detection_class_entities"][hand_index[0][0]], result["detection_scores"][hand_index[0][0]])
-#
-#     # Display the output frame with predictions
-#     cv2.imshow('Object Detection', output_img)
-#     # cv2.imshow('Object Detection', cv2.resize(image_np_with_detections, (800, 600)))
-#
-#     # Exit the loop if the 'q' key is pressed
-#     if cv2.waitKey(1) & 0xFF == ord('q'):
-#         break
-#
-#
-# # Release video file when we're ready
-# video_capture.release()
-# cv2.destroyAllWindows()
+while True:
+    ret, frame = video_capture.read()
+    # Read a frame from the video capture
+    if not ret:
+        break
+
+    frame = cv2.flip(frame, 1)
+    # frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    normalised_frame = frame / 255.0 # Normalize pixel values to the range [0, 1]
+    # frame = tf.expand_dims(frame, axis=0)
+    # frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    # frame = np.expand_dims(frame, axis=0)
+    image_np = np.array(normalised_frame)
+    input_tensor = tf.convert_to_tensor(np.expand_dims(image_np, 0), dtype=tf.float32)
+    result = run_detector(input_tensor)
+
+    output_img = np.array(frame)
+    hand_index = np.where(result["detection_class_entities"] == b'Human hand')
+    if hand_index[0].size != 0:
+        output_img = draw_boxes(
+            output_img, result["detection_boxes"][hand_index[0][0]],
+            result["detection_class_entities"][hand_index[0][0]], result["detection_scores"][hand_index[0][0]])
+
+    # Display the output frame with predictions
+    cv2.imshow('Object Detection', output_img)
+    # cv2.imshow('Object Detection', cv2.resize(image_np_with_detections, (800, 600)))
+
+    # Exit the loop if the 'q' key is pressed
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+
+# Release video file when we're ready
+video_capture.release()
+cv2.destroyAllWindows()
