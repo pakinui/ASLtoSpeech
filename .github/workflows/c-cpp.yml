@@ -44,10 +44,9 @@ jobs:
       working-directory: ${{github.workspace}}/app/345Application/
       run: |
           cat CMakeLists.txt
-          rm -r -fo build
           mkdir build
           cd build
-          cmake -GNinja -DCMAKE_BUILD_TYPE=Release ..
+          cmake -DCMAKE_BUILD_TYPE=Release ..
           cmake --build .
       
     - uses: ilammy/msvc-dev-cmd@v1.4.1
