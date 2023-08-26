@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['w_214',['W',['../namespaceinference__classifier.html#ae0fa7a3568aa1c6986cac688cae7ca54',1,'inference_classifier']]],
-  ['widget_215',['widget',['../namespacewebcam__pattern__detection.html#af98f02aae986c5465b23541bcd7710a5',1,'webcam_pattern_detection']]],
-  ['window_216',['window',['../namespacewebcam__pattern__detection.html#a877cd978244842a6783131b3556c4046',1,'webcam_pattern_detection']]]
+  ['x_181',['x',['../namespaceinference__classifier.html#a7a730e348866d0cdc8a20e6ed0d10b6f',1,'inference_classifier']]],
+  ['x1_182',['x1',['../namespaceinference__classifier.html#a378d2147f742cc6eb00dd509d67b2240',1,'inference_classifier']]],
+  ['x2_183',['x2',['../namespaceinference__classifier.html#a64cd1f215797be0f01be1f0525c912f2',1,'inference_classifier']]],
+  ['x_5f_184',['x_',['../namespaceinference__classifier.html#ae0cf913b571feab465be3edccf81c4b4',1,'inference_classifier']]]
 ];

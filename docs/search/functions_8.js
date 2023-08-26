@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['print_5fhello_148',['print_hello',['../classinference__classifier_1_1_python_test.html#a005b6265106fab0ae2b11f88c29b67d3',1,'inference_classifier::PythonTest']]]
+  ['set_5fimage_124',['set_image',['../namespacewebcam__pattern__detection.html#aa76046843959ae961ae7b1f8127bebad',1,'webcam_pattern_detection']]],
+  ['sharedobject_125',['SharedObject',['../class_shared_object.html#a852b716237753c48654dce4491a41b59',1,'SharedObject']]],
+  ['start_126',['start',['../namespacewebcam__pattern__detection.html#a8dbfcd1cd7b974b7f4901a6dbc698762',1,'webcam_pattern_detection']]]
 ];

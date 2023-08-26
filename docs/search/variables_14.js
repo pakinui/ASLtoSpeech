@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['x_217',['x',['../namespaceinference__classifier.html#a7a730e348866d0cdc8a20e6ed0d10b6f',1,'inference_classifier']]],
-  ['x1_218',['x1',['../namespaceinference__classifier.html#a378d2147f742cc6eb00dd509d67b2240',1,'inference_classifier']]],
-  ['x2_219',['x2',['../namespaceinference__classifier.html#a64cd1f215797be0f01be1f0525c912f2',1,'inference_classifier']]],
-  ['x_5f_220',['x_',['../namespaceinference__classifier.html#ae0cf913b571feab465be3edccf81c4b4',1,'inference_classifier']]]
+  ['y_185',['y',['../namespaceinference__classifier.html#a3437c407116ea453eaf13aefb21a2c6d',1,'inference_classifier']]],
+  ['y1_186',['y1',['../namespaceinference__classifier.html#a7342ea4261947552c21f02c8e2a1a340',1,'inference_classifier']]],
+  ['y2_187',['y2',['../namespaceinference__classifier.html#afbca8015bbb8b0176f48e7c1a9624fed',1,'inference_classifier']]],
+  ['y_5f_188',['y_',['../namespaceinference__classifier.html#aad10cd80ed1f8e42ece85a71475330c6',1,'inference_classifier']]]
 ];
