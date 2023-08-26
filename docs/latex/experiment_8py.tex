@@ -1,0 +1,47 @@
+\hypertarget{experiment_8py}{}\doxysection{img\+\_\+recognition/experiment.py File Reference}
+\label{experiment_8py}\index{img\_recognition/experiment.py@{img\_recognition/experiment.py}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceexperiment}{experiment}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceexperiment_a8b8cd2f60c458dee93ba877aae024a4f}{experiment.\+display\+\_\+image}} (image)
+\item 
+def \mbox{\hyperlink{namespaceexperiment_a67d08ec039ca80e74dbd4ca81ef35a07}{experiment.\+download\+\_\+and\+\_\+resize\+\_\+image}} (img, new\+\_\+width=256, new\+\_\+height=256, display=False)
+\item 
+def \mbox{\hyperlink{namespaceexperiment_a46306f5ed3fb063e1245dfa01f318d6c}{experiment.\+draw\+\_\+bounding\+\_\+box\+\_\+on\+\_\+image}} (image, ymin, xmin, ymax, xmax, color, font, thickness=4, display\+\_\+str\+\_\+list=())
+\item 
+def \mbox{\hyperlink{namespaceexperiment_a81cba01729468106e8f9b60cb66734be}{experiment.\+draw\+\_\+boxes}} (image, boxes, class\+\_\+names, scores)
+\item 
+def \mbox{\hyperlink{namespaceexperiment_ae431364953bf0d21d8a51920487e0886}{experiment.\+load\+\_\+img}} (path)
+\item 
+def \mbox{\hyperlink{namespaceexperiment_af5596c8cd3d367dcbd0a3f13a66fd637}{experiment.\+detected}} (coverted\+\_\+img)
+\item 
+def \mbox{\hyperlink{namespaceexperiment_ad4ed2a21deaeea229f11c1cf5f3e00a9}{experiment.\+run\+\_\+detector}} (img)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceexperiment_ad192825ff2b3c42266e7b912939e9a53}{experiment.\+save\+\_\+name}} = os.\+path.\+join(\textquotesingle{}saved\textquotesingle{}, \textquotesingle{}sign\+\_\+lang\+\_\+experiment\textquotesingle{})
+\item 
+string \mbox{\hyperlink{namespaceexperiment_a1c75cf29e682c25a250c2356c1cda39a}{experiment.\+net\+\_\+save\+\_\+name}} = save\+\_\+name + \textquotesingle{}\+\_\+cnn\+\_\+sign\+\_\+lang.\+h5\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespaceexperiment_ac68d912be4897900d7ccaef02d7225a6}{experiment.\+model}} = tf.\+keras.\+models.\+load\+\_\+model(net\+\_\+save\+\_\+name)
+\item 
+\mbox{\hyperlink{namespaceexperiment_a9dcf524fe0652f42c6c6ce032311282b}{experiment.\+detector}} = tf.\+saved\+\_\+model.\+load(save\+\_\+name).signatures\mbox{[}\textquotesingle{}default\textquotesingle{}\mbox{]}
+\item 
+list \mbox{\hyperlink{namespaceexperiment_a8d552e7165bb5088f1bfca4c8c390ba8}{experiment.\+class\+\_\+names}} = \mbox{[}\textquotesingle{}A\textquotesingle{}, \textquotesingle{}B\textquotesingle{}, \textquotesingle{}C\textquotesingle{}, \textquotesingle{}D\textquotesingle{}, \textquotesingle{}E\textquotesingle{}, \textquotesingle{}F\textquotesingle{}, \textquotesingle{}G\textquotesingle{}, \textquotesingle{}H\textquotesingle{}, \textquotesingle{}I\textquotesingle{}, \textquotesingle{}K\textquotesingle{}, \textquotesingle{}L\textquotesingle{}, \textquotesingle{}M\textquotesingle{}, \textquotesingle{}N\textquotesingle{}, \textquotesingle{}O\textquotesingle{}, \textquotesingle{}P\textquotesingle{}, \textquotesingle{}Q\textquotesingle{}, \textquotesingle{}R\textquotesingle{}, \textquotesingle{}S\textquotesingle{}, \textquotesingle{}T\textquotesingle{}, \textquotesingle{}U\textquotesingle{}, \textquotesingle{}V\textquotesingle{}, \textquotesingle{}W\textquotesingle{}, \textquotesingle{}X\textquotesingle{}, \textquotesingle{}Y\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceexperiment_a3252fbc6fc9f6e2605ce72eb34303f7f}{experiment.\+video\+\_\+capture}} = cv2.\+Video\+Capture(0)
+\item 
+string \mbox{\hyperlink{namespaceexperiment_a2c3ef2b52964aaffccb5bb3a644ae2d5}{experiment.\+image}} = \char`\"{}./image1.\+jpg\char`\"{}
+\item 
+def \mbox{\hyperlink{namespaceexperiment_aa3c103d58cd16623e44a9e5b709bc1b2}{experiment.\+result}} = run\+\_\+detector(load\+\_\+img(image))
+\item 
+\mbox{\hyperlink{namespaceexperiment_a904845ba290a270f3c66a4f6d814d0a7}{experiment.\+output\+\_\+img}} = np.\+array(load\+\_\+img(image))
+\item 
+\mbox{\hyperlink{namespaceexperiment_a43cab5c9608d4a375bf2b17721032f77}{experiment.\+hand\+\_\+index}} = np.\+where(result\mbox{[}\char`\"{}detection\+\_\+class\+\_\+entities\char`\"{}\mbox{]} == b\textquotesingle{}Human hand\textquotesingle{})
+\end{DoxyCompactItemize}

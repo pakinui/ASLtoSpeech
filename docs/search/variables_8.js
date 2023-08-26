@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['pmodule_96',['pModule',['../camera_8cpp.html#a4dbc047c32fb0f01d244b0fc49a8d35a',1,'camera.cpp']]]
+  ['label_147',['label',['../namespacewebcam__pattern__detection.html#a876f30a782c600625baf9c3fd9a7dfa6',1,'webcam_pattern_detection']]],
+  ['layout_148',['layout',['../namespacewebcam__pattern__detection.html#a763202468453a80c3ff9eff9ea5bd56d',1,'webcam_pattern_detection']]]
 ];

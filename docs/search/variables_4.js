@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hands_84',['hands',['../namespaceinference__classifier.html#a4f7db0066861dd8a561dd7033952efc3',1,'inference_classifier.hands()'],['../namespacewebcam__pattern__detection.html#a8b85ba4169ba3bc87581b55e51a07cc7',1,'webcam_pattern_detection.hands()']]]
+  ['exit_5faction_139',['exit_action',['../namespacewebcam__pattern__detection.html#ace553945bbd7ac6f538d7cc8727f4c14',1,'webcam_pattern_detection']]]
 ];

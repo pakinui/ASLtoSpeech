@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['set_5fimage_35',['set_image',['../namespacewebcam__pattern__detection.html#aa76046843959ae961ae7b1f8127bebad',1,'webcam_pattern_detection']]],
-  ['sink_36',['sink',['../camera_8cpp.html#a4e559e1404c873662c9d0fac7094df66',1,'camera.cpp']]],
-  ['start_37',['start',['../namespacewebcam__pattern__detection.html#a8dbfcd1cd7b974b7f4901a6dbc698762',1,'webcam_pattern_detection']]],
-  ['status_38',['status',['../classwebcam__pattern__detection_1_1_thread.html#a63495c9e12e68e91fe871930819d381d',1,'webcam_pattern_detection::Thread']]]
+  ['old_5fframe_51',['old_frame',['../camera_8cpp.html#a16df30dbceece8ecb372b47feb3f2290',1,'camera.cpp']]],
+  ['out_52',['out',['../namespaceinference__classifier.html#a3845e63bf437d473948b3c65705993e7',1,'inference_classifier']]],
+  ['output_5fimg_53',['output_img',['../namespaceexperiment.html#a904845ba290a270f3c66a4f6d814d0a7',1,'experiment']]],
+  ['overlay_54',['overlay',['../namespaceinference__classifier.html#a116e71a14eeefdddc50b0c1c4d21f230',1,'inference_classifier']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['exit_5faction_83',['exit_action',['../namespacewebcam__pattern__detection.html#ace553945bbd7ac6f538d7cc8727f4c14',1,'webcam_pattern_detection']]]
+  ['data_5faux_137',['data_aux',['../namespaceinference__classifier.html#aa2b384856e53b3c5c4002c2d2896f8d8',1,'inference_classifier']]],
+  ['detector_138',['detector',['../namespaceexperiment.html#a9dcf524fe0652f42c6c6ce032311282b',1,'experiment']]]
 ];

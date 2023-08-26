@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['th_39',['th',['../namespacewebcam__pattern__detection.html#a6f7d0a4c1d36f0c32e96057beb6504cc',1,'webcam_pattern_detection']]],
-  ['thread_40',['Thread',['../classwebcam__pattern__detection_1_1_thread.html',1,'webcam_pattern_detection']]],
-  ['tts_41',['tts',['../tts_call_8cpp.html#a3d0baebc9d2f23f7308db2e71af6aff0',1,'tts(const std::string &amp;text):&#160;ttsCall.cpp'],['../tts_call_8h.html#a3d0baebc9d2f23f7308db2e71af6aff0',1,'tts(const std::string &amp;text):&#160;ttsCall.cpp']]],
-  ['ttscall_2ecpp_42',['ttsCall.cpp',['../tts_call_8cpp.html',1,'']]],
-  ['ttscall_2eh_43',['ttsCall.h',['../tts_call_8h.html',1,'']]]
+  ['pmodule_55',['pModule',['../camera_8cpp.html#a4dbc047c32fb0f01d244b0fc49a8d35a',1,'camera.cpp']]],
+  ['predicted_5fclass_5flabel_56',['predicted_class_label',['../namespaceinference__classifier.html#a6d19b5363e0889431e539512182b0ede',1,'inference_classifier']]],
+  ['prediction_57',['prediction',['../namespaceinference__classifier.html#ab100d39039f23ca684e7cdb2b2e536ea',1,'inference_classifier']]],
+  ['project_20goals_3a_58',['Project Goals:',['../index.html',1,'']]]
 ];
