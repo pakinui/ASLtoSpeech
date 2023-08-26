@@ -1,6 +1,8 @@
 /**
  * @file ttsCall.h
  * @brief Contains the declaration of the text-to-speech function.
+ * 
+ * This file contains the declaration of the text-to-speech function.
  */
 
 

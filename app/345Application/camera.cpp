@@ -1,13 +1,17 @@
 /**
  * @file camera.cpp
  * @brief Contains the implementation of the Camera class and associated functions.
+ * 
+ * This file contains the implementation of the Camera class, which represents the main
+ * application window and provides functionalities related to camera capture, image processing,
+ * and user interaction.
  */
 #include "camera.h"
 #include "ui_camera.h"
 #include "text_to_speech/ttsCall.h"
 #include <Python.h>
 
-//// #include "dictionary.h" // Include the Dictionary class header
+//// #include "dictionary.h"
 //// #include "translationtab.h"
 //// #include "dictionarytab.h"
 #include <opencv2/opencv.hpp>
