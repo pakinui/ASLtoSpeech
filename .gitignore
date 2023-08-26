@@ -1,6 +1,6 @@
 build/
 .DS_Store
-CMakeLists.txt.usr
+CMakeLists.txt.user
 build-*/
 *.jpg
 resources/captures/
