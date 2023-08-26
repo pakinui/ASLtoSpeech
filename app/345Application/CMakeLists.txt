@@ -15,8 +15,16 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Widgets)
 find_package(Qt6 COMPONENTS Core Widgets Multimedia MultimediaWidgets Gui Quick QuickControls2 REQUIRED)
 
-set(OpenCV_DIR "C:/opencv")
-set(CMAKE_PREFIX_PATH "C:/opencv/build/x64/vc16/lib")
+# Set OpenCV paths based on environment
+if(DEFINED ENV{GITHUB_ACTIONS})
+    message(STATUS "Running in GitHub Actions environment")
+    set(OpenCV_DIR "C:/tools/opencv")  # Adjust to your GitHub Actions path
+    set(CMAKE_PREFIX_PATH "C:/tools/opencv/build/x64/vc16/lib")  # Adjust to your GitHub Actions path
+else()
+    message(STATUS "Running in standard user environment")
+    set(OpenCV_DIR "C:/opencv")  # Adjust to your standard user path
+    set(CMAKE_PREFIX_PATH "C:/opencv/build/x64/vc16/lib")  # Adjust to your standard user path
+endif()
 
 #comment these out
 find_package(OpenCV REQUIRED)
