@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['set_5fimage_122',['set_image',['../namespacewebcam__pattern__detection.html#aa76046843959ae961ae7b1f8127bebad',1,'webcam_pattern_detection']]],
-  ['start_123',['start',['../namespacewebcam__pattern__detection.html#a8dbfcd1cd7b974b7f4901a6dbc698762',1,'webcam_pattern_detection']]]
+  ['_7ecameratesting_75',['~CameraTesting',['../class_camera_testing.html#a2b6bcdded4ccab5880249c36f6136f87',1,'CameraTesting']]]
 ];

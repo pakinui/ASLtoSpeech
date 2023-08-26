@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['net_5fsave_5fname_154',['net_save_name',['../namespaceexperiment.html#a1c75cf29e682c25a250c2356c1cda39a',1,'experiment']]],
-  ['num_5fdetected_5fhands_155',['num_detected_hands',['../namespaceinference__classifier.html#a68007a4ae0ff4cc15ee093dbe31bf510',1,'inference_classifier']]]
+  ['sink_98',['sink',['../camera_8cpp.html#a4e559e1404c873662c9d0fac7094df66',1,'camera.cpp']]],
+  ['status_99',['status',['../classwebcam__pattern__detection_1_1_thread.html#a63495c9e12e68e91fe871930819d381d',1,'webcam_pattern_detection::Thread']]]
 ];

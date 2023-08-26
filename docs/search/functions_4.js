@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['load_5fimg_117',['load_img',['../namespaceexperiment.html#ae431364953bf0d21d8a51920487e0886',1,'experiment']]]
+  ['overlay_70',['overlay',['../namespaceinference__classifier.html#a116e71a14eeefdddc50b0c1c4d21f230',1,'inference_classifier']]]
 ];

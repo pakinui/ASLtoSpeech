@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['experiment_94',['experiment',['../namespaceexperiment.html',1,'']]]
+  ['inference_5fclassifier_54',['inference_classifier',['../namespaceinference__classifier.html',1,'']]]
 ];

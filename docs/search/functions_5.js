@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_118',['main',['../app_2345_application_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp'],['../src_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp']]]
+  ['run_71',['run',['../classwebcam__pattern__detection_1_1_thread.html#af76f0e2aef1c6beb9a6414ff853943c5',1,'webcam_pattern_detection::Thread']]]
 ];
