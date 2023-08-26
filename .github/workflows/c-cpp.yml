@@ -23,6 +23,7 @@ jobs:
         install-deps: 'true'
         cache: 'true'
         cache-key-prefix: 'install-qt-action'
+        modules: qtmultimedia
     - uses: actions/checkout@v3
     - name: Setup build environment
       run: |
