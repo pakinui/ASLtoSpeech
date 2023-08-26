@@ -42,7 +42,7 @@ set(PROJECT_SOURCES
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(345Application
-        #MANUAL_FINALIZATION
+        MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         resouces.qrc
         inference_classifier.py
@@ -95,7 +95,7 @@ target_link_libraries(345Application PRIVATE ${OpenCV_LIBS})
 #target_link_directories(345Application PRIVATE "C:/Users/yhkyh/Desktop/experiment/build/lib/Release")
 #target_link_libraries(shared PRIVATE  Qt6::Multimedia)
 
-add_executable(Tests
+#add_executable(Tests
     tests/camera_tests.cpp
 )
 
