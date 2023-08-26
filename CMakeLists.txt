@@ -19,7 +19,16 @@ set(OpenCV_DIR "C:/opencv")
 set(CMAKE_PREFIX_PATH "C:/opencv/build/x64/vc16/lib" "C:/Qt/6.5.2/msvc2019_64/include" "C:Qt/6.5.2/msvc2019_64/bin")
 set(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "C:/Qt/6.5.2/msvc2019_64/include" "C:Qt/6.5.2/msvc2019_64/bin")
 
-
+# Set OpenCV paths based on environment
+if(DEFINED ENV{GITHUB_ACTIONS})
+    message(STATUS "Running in GitHub Actions environment")
+    set(OpenCV_DIR "C:/tools/opencv")  # Adjust to your GitHub Actions path
+    set(CMAKE_PREFIX_PATH "C:/tools/opencv/build/x64/vc16/lib")  # Adjust to your GitHub Actions path
+else()
+    message(STATUS "Running in standard user environment")
+    set(OpenCV_DIR "C:/opencv")  # Adjust to your standard user path
+    set(CMAKE_PREFIX_PATH "C:/opencv/build/x64/vc16/lib")  # Adjust to your standard user path
+endif()
 
 #comment these out
 find_package(OpenCV REQUIRED)
@@ -33,8 +42,6 @@ set(PROJECT_SOURCES
         src/camera.ui
         src/text_to_speech/ttsCall.h
         src/text_to_speech/ttsCall.cpp
-
-
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -43,13 +50,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${PROJECT_SOURCES}
         src/inference_classifier.py
         src/webcam_pattern_detection.py
-        src/shared_lib.cpp
-
-
-#*****************************************important*************************************************#
-#**********once you finished building, put ASL_model(located in img_recognition) in your build folder and uncomment this.*****/
-#        ../build-345Application-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/ASL_model.p
-    )
+)
 
 
 # Define target properties for Android with Qt 6 as:
@@ -70,8 +71,6 @@ else()
     endif()
 endif()
 
-#add_library(shared SHARED src/shared_lib.cpp)
-
 target_link_libraries(345Application PRIVATE
     Qt6::Widgets
     Qt6::Core
@@ -80,17 +79,10 @@ target_link_libraries(345Application PRIVATE
     Qt6::QuickControls2
     Qt6::Quick
     Qt6::Gui
-#    shared_lib
-    winmm
     Python::Python
     ${OpenCV_LIBS}
+    winmm
 )
-
-
-#target_link_libraries(345Application PRIVATE Python::Python)
-#target_link_libraries(345Application PRIVATE ${OpenCV_LIBS})
-#target_link_directories(345Application PRIVATE "C:/Users/yhkyh/Desktop/experiment/build/lib/Release")
-#target_link_libraries(shared PRIVATE  Qt6::Multimedia)
 
 
 add_executable(Tests

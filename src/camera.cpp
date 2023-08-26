@@ -1,7 +1,7 @@
 /**
  * @file camera.cpp
  * @brief Contains the implementation of the Camera class and associated functions.
- * 
+ *
  * This file contains the implementation of the Camera class, which represents the main
  * application window and provides functionalities related to camera capture, image processing,
  * and user interaction.
@@ -80,13 +80,13 @@ QString imgOutputPath;
 
 /**
  * @brief Construct a new Camera:: Camera object
- * 
+ *
  * This constructor initializes the Camera object and sets up various connections
  * for button clicks and video frame updates. It also initializes camera resources.
  */
 Camera::Camera() : ui(new Ui::Camera)
 {
-    //qDebug() << "beginning";
+
     ui->setupUi(this);
 
 //    QPlainTextEdit *historyTextEdit;

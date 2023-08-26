@@ -3,7 +3,7 @@ build/
 CMakeLists.txt.usr
 build-*/
 *.jpg
-
+resources/captures/
 # This file is used to ignore files which are generated
 # ----------------------------------------------------------------------------
 

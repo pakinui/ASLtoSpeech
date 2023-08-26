@@ -85,6 +85,7 @@ target_link_libraries(345Application PRIVATE
     Qt6::Quick
     Qt6::Gui
     shared_lib
+
 )
 
 target_link_libraries(345Application PRIVATE winmm)

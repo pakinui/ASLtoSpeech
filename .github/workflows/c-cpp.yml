@@ -44,7 +44,7 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake ../app/345Application -GNinja -DCMAKE_BUILD_TYPE=Release
+        cmake -GNinja -DCMAKE_BUILD_TYPE=Release
     - uses: ilammy/msvc-dev-cmd@v1.4.1
     - name: Build with Ninja
       run: cmake --build ./build --config Release

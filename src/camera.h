@@ -72,18 +72,13 @@ private:
     QCamera m_camera; ///< camera instance
     QCamera *cam;
 
-
-
-
     QScopedPointer<QAudioInput> m_audioInput;
     QScopedPointer<QMediaRecorder> m_mediaRecorder;
 
-    void setupMenus();
+
     QMenu *fileMenu;
     QMenu *devicesMenu;
     QMenu *cameraMenu;
-
-
 
     bool m_isCapturingImage = false;
     bool m_applicationExiting = false;
@@ -92,6 +87,12 @@ private:
 public Q_SLOTS:
 
 private Q_SLOTS:
+    /**
+     * @brief setupMenus
+     *
+     * Sets up the MenuBar in the applicatoin.
+     */
+    void setupMenus();
     /**
      * @brief displayCameraError
      * 
@@ -180,6 +181,14 @@ private Q_SLOTS:
      */
     QString getHistoryText();
 
+    /**
+     * @brief imageAvailable
+     * @param frame The current frame from the camera.
+     *
+     * This function is connected to the QVideoSink::imageAvailable function.
+     * Everytime the camera recieves a new frame, this function is also called.
+     * This checks the frame for a recognised ASL sign.
+     */
     void imageAvailable(QVideoFrame frame);
 };
 
