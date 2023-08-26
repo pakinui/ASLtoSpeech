@@ -46,8 +46,8 @@ jobs:
           cat CMakeLists.txt
           mkdir build
           cd build
-          cmake ..
-          make
+          cmake -GNinja -DCMAKE_BUILD_TYPE=Release ..
+          cmake --build .
       
     - uses: ilammy/msvc-dev-cmd@v1.4.1
     - name: Build with Ninja
