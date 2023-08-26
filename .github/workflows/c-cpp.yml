@@ -48,7 +48,7 @@ jobs:
         mkdir build
         cd build
         dir
-        cmake ../src -GNinja -DCMAKE_BUILD_TYPE=Release
+        cmake ../cosc345/src -GNinja -DCMAKE_BUILD_TYPE=Release
       
     - uses: ilammy/msvc-dev-cmd@v1.4.1
     - name: Build with Ninja
@@ -72,7 +72,7 @@ jobs:
           ./345Application.exe
 
   code-coverage:
-    needs: run
+    # needs: run
     runs-on: windows-latest
     steps: 
       - name: Checkout code
