@@ -52,7 +52,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: executable
-        path: build/HandApp.exe
+        path: build/345Application.exe
         
   run:
     needs: build
@@ -64,7 +64,7 @@ jobs:
           name: executable
       - name: Run Executable
         run: |
-          ./HandApp.exe
+          ./345Application.exe
 
   codecov:
     needs: run
