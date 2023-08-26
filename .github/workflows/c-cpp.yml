@@ -23,7 +23,7 @@ jobs:
         install-deps: 'true'
         cache: 'true'
         cache-key-prefix: 'install-qt-action'
-        modules: qtmultimedia
+        modules: 'qtmultimedia opencv'
     - uses: actions/checkout@v3
     - name: Setup build environment
       run: |
@@ -47,9 +47,8 @@ jobs:
         with:
           python-version: 3.10
           cache: 'pip'
-      - name: Install TTS using Python 3.10
-        run: |
-          pip install tts
+      - run: |
+          pip install -r requirements.txt
         
   run:
     needs: [build, install-python-tts]
