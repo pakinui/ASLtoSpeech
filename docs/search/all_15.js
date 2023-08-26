@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['x_84',['x',['../namespaceinference__classifier.html#a7a730e348866d0cdc8a20e6ed0d10b6f',1,'inference_classifier']]],
-  ['x1_85',['x1',['../namespaceinference__classifier.html#a6212a6e64c8a21e4e9ea12c35899e730',1,'inference_classifier']]],
-  ['x2_86',['x2',['../namespaceinference__classifier.html#aeae9102df96aebbbf821c673ae1ba012',1,'inference_classifier']]],
-  ['x_5f_87',['x_',['../namespaceinference__classifier.html#ae0cf913b571feab465be3edccf81c4b4',1,'inference_classifier']]]
+  ['video_5fcapture_96',['video_capture',['../namespaceexperiment.html#a3252fbc6fc9f6e2605ce72eb34303f7f',1,'experiment']]],
+  ['videoframe_97',['videoFrame',['../classinference__classifier_1_1_python_video_sink.html#a6233d3231a2e5fd86dd51c05c05493bc',1,'inference_classifier::PythonVideoSink']]]
 ];

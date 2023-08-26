@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>345Application: app/345Application/camera.cpp File Reference</title>
+<title>345Application: src/camera.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d422163b96683743ed3963d4aac17747.html">app</a></li><li class="navelem"><a class="el" href="dir_eb0a9f02155bcdebad3c024f93815e93.html">345Application</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -76,7 +76,7 @@ $(function() {
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="camera_8h_source.html">camera.h</a>&quot;</code><br />
 <code>#include &quot;ui_camera.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="tts_call_8h_source.html">text_to_speech/ttsCall.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="src_2text__to__speech_2tts_call_8h_source.html">text_to_speech/ttsCall.h</a>&quot;</code><br />
 <code>#include &lt;Python.h&gt;</code><br />
 <code>#include &lt;opencv2/opencv.hpp&gt;</code><br />
 <code>#include &lt;QAudioDevice&gt;</code><br />
@@ -125,15 +125,55 @@ Variables</h2></td></tr>
 <tr class="separator:ad43c3812e6d13e0518d9f8b8f463ffcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dbc047c32fb0f01d244b0fc49a8d35a"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camera_8cpp.html#a4dbc047c32fb0f01d244b0fc49a8d35a">pModule</a></td></tr>
 <tr class="separator:a4dbc047c32fb0f01d244b0fc49a8d35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28e31ca845ee48e7badebe1bc42babba"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camera_8cpp.html#a28e31ca845ee48e7badebe1bc42babba">pFunc</a></td></tr>
+<tr class="separator:a28e31ca845ee48e7badebe1bc42babba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a013822f1b75f990f1d8638c4d6c40b0c"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camera_8cpp.html#a013822f1b75f990f1d8638c4d6c40b0c">helloFunc</a></td></tr>
+<tr class="separator:a013822f1b75f990f1d8638c4d6c40b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e559e1404c873662c9d0fac7094df66"><td class="memItemLeft" align="right" valign="top">QVideoSink *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camera_8cpp.html#a4e559e1404c873662c9d0fac7094df66">sink</a></td></tr>
 <tr class="separator:a4e559e1404c873662c9d0fac7094df66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16df30dbceece8ecb372b47feb3f2290"><td class="memItemLeft" align="right" valign="top">QVideoFrame&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camera_8cpp.html#a16df30dbceece8ecb372b47feb3f2290">old_frame</a></td></tr>
 <tr class="separator:a16df30dbceece8ecb372b47feb3f2290"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61277ddb50aabc074b0742719df29937"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camera_8cpp.html#a61277ddb50aabc074b0742719df29937">class_object</a></td></tr>
+<tr class="separator:a61277ddb50aabc074b0742719df29937"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a042bdaef342f7cc6b44fe013af07fdab"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camera_8cpp.html#a042bdaef342f7cc6b44fe013af07fdab">instance</a></td></tr>
+<tr class="separator:a042bdaef342f7cc6b44fe013af07fdab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e439f8deb135436151d480aec315b41"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camera_8cpp.html#a6e439f8deb135436151d480aec315b41">captures_path</a></td></tr>
+<tr class="separator:a6e439f8deb135436151d480aec315b41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f663c585b133e04c0167b276d576346"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camera_8cpp.html#a4f663c585b133e04c0167b276d576346">imgOutputPath</a></td></tr>
+<tr class="separator:a4f663c585b133e04c0167b276d576346"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains the implementation of the <a class="el" href="class_camera.html" title="The Camera class represents the main application window and camera functionalities.">Camera</a> class and associated functions. </p>
 <p>This file contains the implementation of the <a class="el" href="class_camera.html" title="The Camera class represents the main application window and camera functionalities.">Camera</a> class, which represents the main application window and provides functionalities related to camera capture, image processing, and user interaction. </p>
 </div><h2 class="groupheader">Variable Documentation</h2>
+<a id="a6e439f8deb135436151d480aec315b41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e439f8deb135436151d480aec315b41">&#9670;&nbsp;</a></span>captures_path</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString captures_path</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a61277ddb50aabc074b0742719df29937"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61277ddb50aabc074b0742719df29937">&#9670;&nbsp;</a></span>class_object</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyObject* class_object</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ad43c3812e6d13e0518d9f8b8f463ffcf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad43c3812e6d13e0518d9f8b8f463ffcf">&#9670;&nbsp;</a></span>count</h2>
 
@@ -148,6 +188,48 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a013822f1b75f990f1d8638c4d6c40b0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a013822f1b75f990f1d8638c4d6c40b0c">&#9670;&nbsp;</a></span>helloFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyObject* helloFunc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f663c585b133e04c0167b276d576346"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f663c585b133e04c0167b276d576346">&#9670;&nbsp;</a></span>imgOutputPath</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString imgOutputPath</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a042bdaef342f7cc6b44fe013af07fdab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a042bdaef342f7cc6b44fe013af07fdab">&#9670;&nbsp;</a></span>instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyObject* instance</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a16df30dbceece8ecb372b47feb3f2290"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a16df30dbceece8ecb372b47feb3f2290">&#9670;&nbsp;</a></span>old_frame</h2>
 
@@ -156,6 +238,20 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">QVideoFrame old_frame</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a28e31ca845ee48e7badebe1bc42babba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28e31ca845ee48e7badebe1bc42babba">&#9670;&nbsp;</a></span>pFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyObject* pFunc</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['video_5fcapture_174',['video_capture',['../namespaceexperiment.html#a3252fbc6fc9f6e2605ce72eb34303f7f',1,'experiment']]]
+  ['updateframe_212',['updateFrame',['../classwebcam__pattern__detection_1_1_thread.html#a5e8a66fb67777655c6dcc93519e9e4ff',1,'webcam_pattern_detection::Thread']]]
 ];
