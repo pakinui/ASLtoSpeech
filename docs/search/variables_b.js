@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['old_5fframe_156',['old_frame',['../camera_8cpp.html#a16df30dbceece8ecb372b47feb3f2290',1,'camera.cpp']]],
-  ['out_157',['out',['../namespaceinference__classifier.html#a3845e63bf437d473948b3c65705993e7',1,'inference_classifier']]],
-  ['output_5fimg_158',['output_img',['../namespaceexperiment.html#a904845ba290a270f3c66a4f6d814d0a7',1,'experiment']]]
+  ['th_100',['th',['../namespacewebcam__pattern__detection.html#a6f7d0a4c1d36f0c32e96057beb6504cc',1,'webcam_pattern_detection']]]
 ];

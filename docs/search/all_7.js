@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['h_28',['H',['../namespaceinference__classifier.html#a4c68be61f9bca60f33c410c1f09d2cec',1,'inference_classifier']]],
-  ['hand_5findex_29',['hand_index',['../namespaceexperiment.html#a43cab5c9608d4a375bf2b17721032f77',1,'experiment']]],
-  ['hands_30',['hands',['../namespaceinference__classifier.html#a4f7db0066861dd8a561dd7033952efc3',1,'inference_classifier.hands()'],['../namespacewebcam__pattern__detection.html#a8b85ba4169ba3bc87581b55e51a07cc7',1,'webcam_pattern_detection.hands()']]]
+  ['kill_5fthread_17',['kill_thread',['../namespacewebcam__pattern__detection.html#a4603f70cc3ea809a529d39d6fbd129c1',1,'webcam_pattern_detection']]]
 ];
