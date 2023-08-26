@@ -1,3 +1,5 @@
+#include "../src/camera.h"
+
 #include <QApplication>
 #include <QtTest/QtTest>
 
