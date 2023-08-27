@@ -42,7 +42,7 @@ hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)
 #processing them using hand tracking and a trained model, and updating the display.
 class Thread(QThread):
 
-    
+    ## declare variable updateFrame that is a Signal of type QImage.
     updateFrame = Signal(QImage)
 
     ## @brief Initialize the Thread class.
