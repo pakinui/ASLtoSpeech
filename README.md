@@ -45,7 +45,7 @@ Working together as a team, we've selected two distinct datasets to create a uni
 **Essential Features:**
 
 1.  **ASL to Speech:** Convert ASL gestures captured by the camera into text and then output them as spoken words. :white_check_mark:
-2.  **Subtitles:** Display subtitles in distinct colors for both the ASL user and the person speaking. :question:
+2.  **Subtitles:** Display subtitles in distinct colors for both the ASL user and the person speaking. :white_check_mark:
 
 **Potential/Along-the-line Features:**
 
@@ -58,20 +58,33 @@ Working together as a team, we've selected two distinct datasets to create a uni
 
 ## Installation
 
-Step-by-step instructions on how to install and set up our project. Any prerequisites, dependencies, or system requirements should be displayed here.
+Prerequisites:
+Python 3.11.0
+QT 6.5.2
+QT MSVC 2019 64-bit
+QT Additional Library QT multimedia
 
 ```bash
 # Example installation commands
-$ Ignore me please. Not yet used.
+$ pip install scikit-learn==1.2.2
+$ pip install mediapipe
+$ pip install opencv-python
+$ pip install tts
+$ pip install numpy
+$ pip install pickle
+$ pip install python-dev-package
 ```
 
 ## Usage
 
-How users can use your project. Code examples, command-line usage, or screenshots if relevant. N/A Currently. 
+Firstly, Our ASL to Speech App will access the webcam from user's devices to detect the hand object.
+Once it is detected, it will then be put through the pre-trained American Sign Lanauge model to do a detection.
+Those detected sing languages will be converted to text and will be shown on the frame as a subtitle.
+These sentences made out of Sign Lanauges can be converted to speech by pressing the 'Translate' button.
 
 ## Configuration
 
-If your project has configuration options, APIs, or settings that can be customized, explain how users can configure these. Include examples and explanations. N/A Currently.
+This configuarations will be the Potential/Along-the-line Features above and will work on them during Bata. 
 
 ## Codecov Coverage Graph
 [![image](https://codecov.io/gh/pakinui/cosc345/graphs/sunburst.svg?token=GUFNGUO6M4.svg)](https://app.codecov.io/gh/pakinui/cosc345)
