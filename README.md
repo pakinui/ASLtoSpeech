@@ -68,8 +68,9 @@ QT Additional Library QT multimedia<br />
 git clone https://github.com/pakinui/cosc345.git
 cd cosc345
 pip install -r requirements.txt
-pip install cmake
 pip install python-dev-tools
+choco install cmake
+choco install opencv
 mkdir build
 cd build
 cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
