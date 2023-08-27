@@ -117,7 +117,7 @@ jobs:
         with:
           files: ${{github.workspace}}/tests/coverage.xml
   doxygen:
-    needs: build
+    needs: run
     runs-on: windows-latest
     steps:
       - name: Checkout Repository
