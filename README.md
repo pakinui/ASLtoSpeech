@@ -65,13 +65,13 @@ QT MSVC 2019 64-bit<br />
 QT Additional Library QT multimedia<br />
 
 ```bash
-$ pip install scikit-learn==1.2.2
-$ pip install mediapipe
-$ pip install opencv-python
-$ pip install tts
-$ pip install numpy
-$ pip install pickle
-$ pip install python-dev-package
+git clone https://github.com/pakinui/cosc345.git
+cd cosc345
+pip install -r requirements.txt
+mkdir build
+cd build
+cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
+cmake --build ./ --config Release
 ```
 
 ## Usage
