@@ -65,16 +65,16 @@
 #include <QtMultimedia>
 
 
-int count = 1;
-PyObject *pModule; // the python inference_classifier module(file)
-PyObject *pFunc; //  the python 'function'overlay' def in the class (class_object)
-PyObject *helloFunc; //  the python 'print_hello' def in the class (class_object)
-QVideoSink *sink;
-QVideoFrame old_frame;
-PyObject *class_object; // the python class object from inference_classifier
-PyObject *instance;
-QString captures_path;
-QString imgOutputPath;
+int count = 1; ///< counter for the number of frames
+PyObject *pModule; ///< the python inference_classifier module(file)
+PyObject *pFunc; ///<  the python 'function'overlay' def in the class (class_object)
+PyObject *helloFunc; ///<  the python 'print_hello' def in the class (class_object)
+QVideoSink *sink; ///< the QVideoSink object that is used to display the video frame
+QVideoFrame old_frame; ///< the previous video frame
+PyObject *class_object; ///< the python class object from inference_classifier
+PyObject *instance; ///< the python instance of the class object
+QString captures_path; ///< Path to where images are saved
+QString imgOutputPath; ///< Path where camera frames are saved
 
 /**
  * @brief Construct a new Camera:: Camera object
