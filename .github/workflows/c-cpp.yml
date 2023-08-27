@@ -61,7 +61,7 @@ jobs:
       run: cmake --build ./build --config Release
     - name: Test
       run: |
-        ctest -S build/CMakeCache.txt -C build --verbose
+        ctest -C build --verbose --test-dir build
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
