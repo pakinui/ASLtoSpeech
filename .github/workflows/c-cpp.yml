@@ -88,7 +88,7 @@ jobs:
           
       - name: Generate coverage report
         shell: cmd
-        run: OpenCppCoverage.exe --sources src --export_type=cobertura:coverage\coverage1.xml -- "345Application.exe"
+        run: OpenCppCoverage.exe --sources src --export_type=cobertura:coverage\coverage1.xml -- ./345Application.exe
           
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
