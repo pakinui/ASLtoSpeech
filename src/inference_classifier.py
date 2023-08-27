@@ -137,8 +137,8 @@ class PythonTest:
                      data_aux.append(y - min(y_))
 
              # If only one hand is detected, duplicate the data_aux
-             data_aux += data_aux
              if num_detected_hands == 1:
+                 data_aux += data_aux
 
              x1 = int(min(x_) * W) - 10
              y1 = int(min(y_) * H) - 10
