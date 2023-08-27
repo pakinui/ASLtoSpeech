@@ -42,7 +42,9 @@ Construct a new \mbox{\hyperlink{class_camera}{Camera}}\+:\+: \mbox{\hyperlink{c
 
 This constructor initializes the \mbox{\hyperlink{class_camera}{Camera}} class and sets up the UI and camera-\/related components.
 
-This constructor initializes the \mbox{\hyperlink{class_camera}{Camera}} object and sets up various connections for button clicks and video frame updates. It also initializes camera resources. 
+This constructor initializes the \mbox{\hyperlink{class_camera}{Camera}} object and sets up various connections for button clicks and video frame updates. It also initializes camera resources. Connect Camera\+::image\+Available to QVideo\+Sink\+::video\+Frame\+Changed.
+
+Everytime QVideo\+Sink has a new frame, Camera\+::image\+Available is called.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

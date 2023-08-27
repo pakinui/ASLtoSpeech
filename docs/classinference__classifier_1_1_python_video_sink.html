@@ -92,7 +92,14 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a9ff8812cad29d6081ebb06d879f9854f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinference__classifier_1_1_python_video_sink.html#a9ff8812cad29d6081ebb06d879f9854f">psink</a></td></tr>
 <tr class="separator:a9ff8812cad29d6081ebb06d879f9854f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><pre class="fragment">@brief A class representing a video sink for Python video processing.
+
+This class is used as a video sink for Python video processing.
+It takes a PySide6 video frame and performs processing on it.
+
+@param psink The PySide6 video sink to use.
+</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a68a804e461f444979b02c7080df2832d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a68a804e461f444979b02c7080df2832d">&#9670;&nbsp;</a></span>__init__()</h2>
 
@@ -147,7 +154,14 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<pre class="fragment">@brief Process a video frame.
 
+This method is called when a new video frame is available.
+It performs processing on the frame and passes it to the
+associated PySide6 video sink.
+
+@param psink The PySide6 video sink containing the frame.
+</pre> 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

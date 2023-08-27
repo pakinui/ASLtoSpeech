@@ -1,3 +1,11 @@
+"""
+@file webcam_pattern_detection.py
+@brief Contains the implementation of the ASL detection application using webcam and trained model.
+
+This file contains the implementation of an American Sign Language (ASL) detection application
+using webcam capture, OpenCV for hand tracking, and a trained model for sign language recognition.
+"""
+
 # Copyright (C) 2022 The Qt Company Ltd.
 # SPDX-License-Identifier: LicenseRef-Qt-Commercial OR BSD-3-Clause
 
@@ -14,10 +22,7 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QGroupBox,
                                QHBoxLayout, QLabel, QMainWindow, QPushButton,
                                QSizePolicy, QVBoxLayout, QWidget)
 
-
-"""This example uses the video from a  webcam to apply pattern
-detection from the OpenCV module. e.g.: face, eyes, body, etc."""
-
+# Load the trained sign language detection model
 model_dict = pickle.load(open('ASL_model.p', 'rb'))
 model = model_dict['model']
 
@@ -29,14 +34,31 @@ mp_drawing_styles = mp.solutions.drawing_styles
 hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)
 
 class Thread(QThread):
+    """
+    @brief Represents a thread for capturing and processing webcam frames.
+
+    This class extends QThread to create a separate thread for capturing webcam frames,
+    processing them using hand tracking and a trained model, and updating the display.
+    """
     updateFrame = Signal(QImage)
 
     def __init__(self, parent=None):
+        """
+        @brief Initialize the Thread class.
+
+        This constructor initializes the thread and captures the webcam input.
+        """
         QThread.__init__(self, parent)
         self.status = True
         self.cap = True
 
     def run(self):
+        """
+        @brief Run the thread.
+
+        This method runs the thread and captures webcam frames, processes them using
+        hand tracking and a trained model, and updates the display.
+        """
         self.cap = cv2.VideoCapture(0)
         while self.status:
             data_aux = []
@@ -96,6 +118,11 @@ class Thread(QThread):
         sys.exit(-1)
 
 def kill_thread():
+    """
+    @brief Kill the thread.
+
+    This method kills the thread and releases the webcam capture.
+    """
     print("Finishing...")
     button2.setEnabled(False)
     button1.setEnabled(True)
@@ -107,12 +134,22 @@ def kill_thread():
     time.sleep(1)
 
 def start():
+    """
+    @brief Start the thread.
+
+    This method starts the thread and enables the stop button.
+    """
     print("Starting...")
     button2.setEnabled(True)
     button1.setEnabled(False)
     th.start()
 
 def set_image(image):
+    """
+    @brief Set the image.
+
+    This method sets the image to be displayed on the label.
+    """
     label.setPixmap(QPixmap.fromImage(image))
 
 app = QApplication(sys.argv)

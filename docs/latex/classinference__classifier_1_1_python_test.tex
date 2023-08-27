@@ -7,7 +7,7 @@ def \mbox{\hyperlink{classinference__classifier_1_1_python_test_ad7d3884a3c0e76b
 \item 
 def \mbox{\hyperlink{classinference__classifier_1_1_python_test_a005b6265106fab0ae2b11f88c29b67d3}{print\+\_\+hello}} ()
 \item 
-def \mbox{\hyperlink{classinference__classifier_1_1_python_test_acfb424239c6fab6f247e4c226f3259a2}{overlay}} (self)
+def \mbox{\hyperlink{classinference__classifier_1_1_python_test_a14ecba6778429b2f2101e96c05d53ffe}{sign\+\_\+identifier}} (self)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -34,6 +34,15 @@ def \mbox{\hyperlink{classinference__classifier_1_1_python_test_acfb424239c6fab6
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@brief A class representing sign language detection using webcam and trained model.
+
+This class provides functionalities for webcam-based sign language detection
+using the MediaPipe library for hand tracking and a trained model for sign
+language recognition.
+\end{DoxyVerb}
+ 
+
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classinference__classifier_1_1_python_test_ad7d3884a3c0e76b4a64e07cbd730e92a}\label{classinference__classifier_1_1_python_test_ad7d3884a3c0e76b4a64e07cbd730e92a}} 
 \index{inference\_classifier.PythonTest@{inference\_classifier.PythonTest}!\_\_init\_\_@{\_\_init\_\_}}
@@ -41,22 +50,33 @@ def \mbox{\hyperlink{classinference__classifier_1_1_python_test_acfb424239c6fab6
 \doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
 {\footnotesize\ttfamily def inference\+\_\+classifier.\+Python\+Test.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
+\begin{DoxyVerb}@brief Initialize the PythonTest class.
 
+This constructor initializes the necessary components for sign language detection.
+\end{DoxyVerb}
+ 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classinference__classifier_1_1_python_test_acfb424239c6fab6f247e4c226f3259a2}\label{classinference__classifier_1_1_python_test_acfb424239c6fab6f247e4c226f3259a2}} 
-\index{inference\_classifier.PythonTest@{inference\_classifier.PythonTest}!overlay@{overlay}}
-\index{overlay@{overlay}!inference\_classifier.PythonTest@{inference\_classifier.PythonTest}}
-\doxysubsubsection{\texorpdfstring{overlay()}{overlay()}}
-{\footnotesize\ttfamily def inference\+\_\+classifier.\+Python\+Test.\+overlay (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
-
 \mbox{\Hypertarget{classinference__classifier_1_1_python_test_a005b6265106fab0ae2b11f88c29b67d3}\label{classinference__classifier_1_1_python_test_a005b6265106fab0ae2b11f88c29b67d3}} 
 \index{inference\_classifier.PythonTest@{inference\_classifier.PythonTest}!print\_hello@{print\_hello}}
 \index{print\_hello@{print\_hello}!inference\_classifier.PythonTest@{inference\_classifier.PythonTest}}
 \doxysubsubsection{\texorpdfstring{print\_hello()}{print\_hello()}}
 {\footnotesize\ttfamily def inference\+\_\+classifier.\+Python\+Test.\+print\+\_\+hello (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{classinference__classifier_1_1_python_test_a14ecba6778429b2f2101e96c05d53ffe}\label{classinference__classifier_1_1_python_test_a14ecba6778429b2f2101e96c05d53ffe}} 
+\index{inference\_classifier.PythonTest@{inference\_classifier.PythonTest}!sign\_identifier@{sign\_identifier}}
+\index{sign\_identifier@{sign\_identifier}!inference\_classifier.PythonTest@{inference\_classifier.PythonTest}}
+\doxysubsubsection{\texorpdfstring{sign\_identifier()}{sign\_identifier()}}
+{\footnotesize\ttfamily def inference\+\_\+classifier.\+Python\+Test.\+sign\+\_\+identifier (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
+\begin{DoxyVerb}@brief Perform sign language identification on a frame.
+
+This method performs sign language identification on a given frame using hand
+landmarks and a trained model.
+
+@return The predicted sign language character.
+\end{DoxyVerb}
+ 
 
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classinference__classifier_1_1_python_test_af9bd02f0466b016e62655201b6297dd5}\label{classinference__classifier_1_1_python_test_af9bd02f0466b016e62655201b6297dd5}} 

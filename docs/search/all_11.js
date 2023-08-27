@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['readme_2emd_60',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['results_61',['results',['../namespaceinference__classifier.html#a4eea7fa2e4f395bc4f4156200a8e2ccb',1,'inference_classifier']]],
-  ['ret_62',['ret',['../namespaceinference__classifier.html#af8f2a644975b684c94d091d58dd3bf20',1,'inference_classifier']]],
-  ['right_5flayout_63',['right_layout',['../namespacewebcam__pattern__detection.html#a256573f25ab75f88582dc3ca79bd1f65',1,'webcam_pattern_detection']]],
-  ['run_64',['run',['../classwebcam__pattern__detection_1_1_thread.html#af76f0e2aef1c6beb9a6414ff853943c5',1,'webcam_pattern_detection::Thread']]]
+  ['readme_2emd_59',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['results_60',['results',['../namespaceinference__classifier.html#a4eea7fa2e4f395bc4f4156200a8e2ccb',1,'inference_classifier']]],
+  ['ret_61',['ret',['../namespaceinference__classifier.html#af8f2a644975b684c94d091d58dd3bf20',1,'inference_classifier']]],
+  ['right_5flayout_62',['right_layout',['../namespacewebcam__pattern__detection.html#a256573f25ab75f88582dc3ca79bd1f65',1,'webcam_pattern_detection']]],
+  ['run_63',['run',['../classwebcam__pattern__detection_1_1_thread.html#af76f0e2aef1c6beb9a6414ff853943c5',1,'webcam_pattern_detection::Thread']]]
 ];
