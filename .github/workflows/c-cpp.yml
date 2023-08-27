@@ -15,10 +15,24 @@ jobs:
       with:
         python-version: 3.11.4
         cache: 'pip'
-
-    - name: Install Python dependencies
+    - name: Cache Dependencies
+      id: cache-dependencies
+      uses: actions/cache@v2
+      with:
+        path: ~/AppData/Local/pip/Cache
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+          
+    - name: Install dependencies
+      if: setps.cache-dependencies.outputs.cache-hit != 'true'
       run: |
+        python -m pip install --upgrade pip
         pip install -r requirements.txt
+        
+    # - name: Install Python dependencies
+    #   run: |
+    #     pip install -r requirements.txt
     - name: Install CMake
       run: |
         choco install cmake
