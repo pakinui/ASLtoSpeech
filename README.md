@@ -68,8 +68,8 @@ QT Additional Library QT multimedia<br />
 git clone https://github.com/pakinui/cosc345.git
 cd cosc345
 pip install -r requirements.txt
-pip install pickle
-pip install python-dev-package
+pip install cmake
+pip install python-dev-tools
 mkdir build
 cd build
 cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
