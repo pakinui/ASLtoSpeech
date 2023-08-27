@@ -71,6 +71,7 @@ pip install -r requirements.txt
 pip install python-dev-tools
 choco install cmake
 choco install opencv
+choco install ninja
 mkdir build
 cd build
 cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
