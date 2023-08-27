@@ -50,7 +50,9 @@ class Thread(QThread):
     #  This constructor initializes the thread and captures the webcam input.
     def __init__(self, parent=None):
         QThread.__init__(self, parent)
+        ## Declare self.status as a boolean.
         self.status = True
+        ## Declare self.cap as a boolean.
         self.cap = True
 
     ## @brief Run the thread.

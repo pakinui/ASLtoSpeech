@@ -31,7 +31,13 @@ from io import BytesIO
 #  @param psink The PySide6 video sink to use.
 class PythonVideoSink(PySide6.QtCore.QObject):
   
+  ## @brief Initialize the PythonVideoSink class.
+  #
+  #  This constructor initializes the Python video sink.
+  #
+  #  @param psink The PySide6 video sink to use.
   def __init__(self, psink):
+    ## Call the parent constructor.
     self.psink = psink
 
   ## @brief Process a video frame.
@@ -80,9 +86,14 @@ class PythonTest:
 
         ## Setting opencv.
         self.fourcc = cv2.VideoWriter_fourcc(*'XVID')
+        ## Setting opencv.
         self.out = cv2.VideoWriter('output.avi', self.fourcc, 20.0, (640, 480))
 
-    # Testing method
+    ## @brief Test Method.
+    #
+    #  This method is used in testing the Python module.
+    #
+    #  @return A string.
     def print_hello():
             print("Hello from Python module!")
             return "heyyyy"
