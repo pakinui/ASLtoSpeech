@@ -9,6 +9,8 @@ resources/captures/*.jpg
 Testing/
 .vscode/
 src/text_to_speech/*.wav
+*/*.wav
+*.wav
 # This file is used to ignore files which are generated
 # ----------------------------------------------------------------------------
 

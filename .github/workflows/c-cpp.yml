@@ -82,7 +82,7 @@ jobs:
 
   code-coverage:
     needs: run
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps: 
       - name: Checkout code
         uses: actions/checkout@v3
@@ -92,10 +92,12 @@ jobs:
       #     python-version: 3.10
       - name: Install C++ compiler
         run: |
-          sudo apt-get update
-          sudo apt-get install -y g++
+          choco install visualcpp-build-tools -y
+        shell: powershell
       - name: Install gcovr
-        run: sudo apt-get install -y gcovr
+        run: |
+          choco install gcovr -y
+        shell: powershell
     
       - name: Tests
         run: |

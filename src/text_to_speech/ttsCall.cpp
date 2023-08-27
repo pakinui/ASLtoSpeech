@@ -9,7 +9,6 @@
 #include <iostream>
 #include <cstdlib>
 #include <Windows.h>
-#include <filesystem>
 
 
 /**
@@ -25,14 +24,10 @@
 bool tts(const std::string& text) {
 
     // Hard coded text for testing.
-    std::string test1 = "Testing The Text to Speech";
+    std::string test1 = "Testing The Text to Speech Oh Please Work";
 
-    std::filesystem::path currentPath = std::filesystem::current_path();
-    std::cout << "Current directory: " << currentPath << std::endl;
-    std::filesystem::path filePath = currentPath / ".." / ".." / "src" / "text_to_speech" / "speech.wav";
-    std::string savePath = filePath.string();
     // Construct the command using the passed text
-    std::string command = "tts --text \"" + text + "\" --model_name \"tts_models/en/ljspeech/glow-tts\" --out_path " + savePath;
+    std::string command = "tts --text \"" + text + "\" --model_name \"tts_models/en/ljspeech/glow-tts\" --out_path speech.wav";
 
     // Execute the command using system()
     int result = std::system(command.c_str());
@@ -41,11 +36,9 @@ bool tts(const std::string& text) {
 
         std::cout << "Text-to-speech completed successfully." << std::endl;
 
-        // Convert savePath to wide string (LPCWSTR)
-        std::wstring wideSavePath(savePath.begin(), savePath.end());
+        //Play the generated audio (you might need to use a suitable audio player command)
+        PlaySound(TEXT("speech.wav"), NULL, SND_FILENAME);
 
-        // Play the generated audio
-        PlaySoundW(wideSavePath.c_str(), NULL, SND_FILENAME);
 
     } else {
 
