@@ -1,2 +1,7 @@
 scikit-learn==1.2.2
 tts
+mediapipe
+opencv-python
+numpy
+pickle
+python-dev-package
