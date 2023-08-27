@@ -1,0 +1,85 @@
+\hypertarget{class_catch_1_1_i_mutable_registry_hub}{}\doxysection{Catch\+::IMutable\+Registry\+Hub Class Reference}
+\label{class_catch_1_1_i_mutable_registry_hub}\index{Catch::IMutableRegistryHub@{Catch::IMutableRegistryHub}}
+
+
+{\ttfamily \#include $<$catch\+\_\+amalgamated.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_catch_1_1_i_mutable_registry_hub_a91993b5de4d60adf3ecf9b8db203bde7}{$\sim$\+IMutable\+Registry\+Hub}} ()
+\item 
+virtual void \mbox{\hyperlink{class_catch_1_1_i_mutable_registry_hub_aa94a804d04ed6ca0dbd0553d6acd6257}{register\+Reporter}} (std\+::string const \&\mbox{\hyperlink{catch__amalgamated_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}, \mbox{\hyperlink{namespace_catch_ae3dfb69314dff5b79fcb517a9cb8803e}{IReporter\+Factory\+Ptr}} factory)=0
+\item 
+virtual void \mbox{\hyperlink{class_catch_1_1_i_mutable_registry_hub_a8c70c6e8f0d2ac0c83fe4e5c53d193f6}{register\+Listener}} (\mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail\+::unique\+\_\+ptr}}$<$ \mbox{\hyperlink{class_catch_1_1_event_listener_factory}{Event\+Listener\+Factory}} $>$ factory)=0
+\item 
+virtual void \mbox{\hyperlink{class_catch_1_1_i_mutable_registry_hub_a07ecec9d39a4ec17ee6a12c9a5a7c8a6}{register\+Test}} (\mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail\+::unique\+\_\+ptr}}$<$ \mbox{\hyperlink{struct_catch_1_1_test_case_info}{Test\+Case\+Info}} $>$ \&\&test\+Info, \mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail\+::unique\+\_\+ptr}}$<$ \mbox{\hyperlink{class_catch_1_1_i_test_invoker}{ITest\+Invoker}} $>$ \&\&invoker)=0
+\item 
+virtual void \mbox{\hyperlink{class_catch_1_1_i_mutable_registry_hub_aed579e45f9d9082d8e45f93fa028d11e}{register\+Translator}} (\mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail\+::unique\+\_\+ptr}}$<$ \mbox{\hyperlink{class_catch_1_1_i_exception_translator}{IException\+Translator}} $>$ \&\&translator)=0
+\item 
+virtual void \mbox{\hyperlink{class_catch_1_1_i_mutable_registry_hub_abf2e386b6f94f615719ada711adbf822}{register\+Tag\+Alias}} (std\+::string const \&alias, std\+::string const \&tag, \mbox{\hyperlink{struct_catch_1_1_source_line_info}{Source\+Line\+Info}} const \&line\+Info)=0
+\item 
+virtual void \mbox{\hyperlink{class_catch_1_1_i_mutable_registry_hub_a72a7d5386851ac3200f8da794a009c86}{register\+Startup\+Exception}} () noexcept=0
+\item 
+virtual \mbox{\hyperlink{class_catch_1_1_i_mutable_enum_values_registry}{IMutable\+Enum\+Values\+Registry}} \& \mbox{\hyperlink{class_catch_1_1_i_mutable_registry_hub_ab91c4fd63eeb0efd9bfb270e8bbd231d}{get\+Mutable\+Enum\+Values\+Registry}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_catch_1_1_i_mutable_registry_hub_a91993b5de4d60adf3ecf9b8db203bde7}\label{class_catch_1_1_i_mutable_registry_hub_a91993b5de4d60adf3ecf9b8db203bde7}} 
+\index{Catch::IMutableRegistryHub@{Catch::IMutableRegistryHub}!````~IMutableRegistryHub@{$\sim$IMutableRegistryHub}}
+\index{````~IMutableRegistryHub@{$\sim$IMutableRegistryHub}!Catch::IMutableRegistryHub@{Catch::IMutableRegistryHub}}
+\doxysubsubsection{\texorpdfstring{$\sim$IMutableRegistryHub()}{~IMutableRegistryHub()}}
+{\footnotesize\ttfamily Catch\+::\+IMutable\+Registry\+Hub\+::$\sim$\+IMutable\+Registry\+Hub (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_catch_1_1_i_mutable_registry_hub_ab91c4fd63eeb0efd9bfb270e8bbd231d}\label{class_catch_1_1_i_mutable_registry_hub_ab91c4fd63eeb0efd9bfb270e8bbd231d}} 
+\index{Catch::IMutableRegistryHub@{Catch::IMutableRegistryHub}!getMutableEnumValuesRegistry@{getMutableEnumValuesRegistry}}
+\index{getMutableEnumValuesRegistry@{getMutableEnumValuesRegistry}!Catch::IMutableRegistryHub@{Catch::IMutableRegistryHub}}
+\doxysubsubsection{\texorpdfstring{getMutableEnumValuesRegistry()}{getMutableEnumValuesRegistry()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_catch_1_1_i_mutable_enum_values_registry}{IMutable\+Enum\+Values\+Registry}}\& Catch\+::\+IMutable\+Registry\+Hub\+::get\+Mutable\+Enum\+Values\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_catch_1_1_i_mutable_registry_hub_a8c70c6e8f0d2ac0c83fe4e5c53d193f6}\label{class_catch_1_1_i_mutable_registry_hub_a8c70c6e8f0d2ac0c83fe4e5c53d193f6}} 
+\index{Catch::IMutableRegistryHub@{Catch::IMutableRegistryHub}!registerListener@{registerListener}}
+\index{registerListener@{registerListener}!Catch::IMutableRegistryHub@{Catch::IMutableRegistryHub}}
+\doxysubsubsection{\texorpdfstring{registerListener()}{registerListener()}}
+{\footnotesize\ttfamily virtual void Catch\+::\+IMutable\+Registry\+Hub\+::register\+Listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail\+::unique\+\_\+ptr}}$<$ \mbox{\hyperlink{class_catch_1_1_event_listener_factory}{Event\+Listener\+Factory}} $>$}]{factory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_catch_1_1_i_mutable_registry_hub_aa94a804d04ed6ca0dbd0553d6acd6257}\label{class_catch_1_1_i_mutable_registry_hub_aa94a804d04ed6ca0dbd0553d6acd6257}} 
+\index{Catch::IMutableRegistryHub@{Catch::IMutableRegistryHub}!registerReporter@{registerReporter}}
+\index{registerReporter@{registerReporter}!Catch::IMutableRegistryHub@{Catch::IMutableRegistryHub}}
+\doxysubsubsection{\texorpdfstring{registerReporter()}{registerReporter()}}
+{\footnotesize\ttfamily virtual void Catch\+::\+IMutable\+Registry\+Hub\+::register\+Reporter (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{name,  }\item[{\mbox{\hyperlink{namespace_catch_ae3dfb69314dff5b79fcb517a9cb8803e}{IReporter\+Factory\+Ptr}}}]{factory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_catch_1_1_i_mutable_registry_hub_a72a7d5386851ac3200f8da794a009c86}\label{class_catch_1_1_i_mutable_registry_hub_a72a7d5386851ac3200f8da794a009c86}} 
+\index{Catch::IMutableRegistryHub@{Catch::IMutableRegistryHub}!registerStartupException@{registerStartupException}}
+\index{registerStartupException@{registerStartupException}!Catch::IMutableRegistryHub@{Catch::IMutableRegistryHub}}
+\doxysubsubsection{\texorpdfstring{registerStartupException()}{registerStartupException()}}
+{\footnotesize\ttfamily virtual void Catch\+::\+IMutable\+Registry\+Hub\+::register\+Startup\+Exception (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_catch_1_1_i_mutable_registry_hub_abf2e386b6f94f615719ada711adbf822}\label{class_catch_1_1_i_mutable_registry_hub_abf2e386b6f94f615719ada711adbf822}} 
+\index{Catch::IMutableRegistryHub@{Catch::IMutableRegistryHub}!registerTagAlias@{registerTagAlias}}
+\index{registerTagAlias@{registerTagAlias}!Catch::IMutableRegistryHub@{Catch::IMutableRegistryHub}}
+\doxysubsubsection{\texorpdfstring{registerTagAlias()}{registerTagAlias()}}
+{\footnotesize\ttfamily virtual void Catch\+::\+IMutable\+Registry\+Hub\+::register\+Tag\+Alias (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{alias,  }\item[{std\+::string const \&}]{tag,  }\item[{\mbox{\hyperlink{struct_catch_1_1_source_line_info}{Source\+Line\+Info}} const \&}]{line\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_catch_1_1_i_mutable_registry_hub_a07ecec9d39a4ec17ee6a12c9a5a7c8a6}\label{class_catch_1_1_i_mutable_registry_hub_a07ecec9d39a4ec17ee6a12c9a5a7c8a6}} 
+\index{Catch::IMutableRegistryHub@{Catch::IMutableRegistryHub}!registerTest@{registerTest}}
+\index{registerTest@{registerTest}!Catch::IMutableRegistryHub@{Catch::IMutableRegistryHub}}
+\doxysubsubsection{\texorpdfstring{registerTest()}{registerTest()}}
+{\footnotesize\ttfamily virtual void Catch\+::\+IMutable\+Registry\+Hub\+::register\+Test (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail\+::unique\+\_\+ptr}}$<$ \mbox{\hyperlink{struct_catch_1_1_test_case_info}{Test\+Case\+Info}} $>$ \&\&}]{test\+Info,  }\item[{\mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail\+::unique\+\_\+ptr}}$<$ \mbox{\hyperlink{class_catch_1_1_i_test_invoker}{ITest\+Invoker}} $>$ \&\&}]{invoker }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_catch_1_1_i_mutable_registry_hub_aed579e45f9d9082d8e45f93fa028d11e}\label{class_catch_1_1_i_mutable_registry_hub_aed579e45f9d9082d8e45f93fa028d11e}} 
+\index{Catch::IMutableRegistryHub@{Catch::IMutableRegistryHub}!registerTranslator@{registerTranslator}}
+\index{registerTranslator@{registerTranslator}!Catch::IMutableRegistryHub@{Catch::IMutableRegistryHub}}
+\doxysubsubsection{\texorpdfstring{registerTranslator()}{registerTranslator()}}
+{\footnotesize\ttfamily virtual void Catch\+::\+IMutable\+Registry\+Hub\+::register\+Translator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail\+::unique\+\_\+ptr}}$<$ \mbox{\hyperlink{class_catch_1_1_i_exception_translator}{IException\+Translator}} $>$ \&\&}]{translator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8hpp}{catch\+\_\+amalgamated.\+hpp}}\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8cpp}{catch\+\_\+amalgamated.\+cpp}}\end{DoxyCompactItemize}

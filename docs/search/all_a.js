@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['label_31',['label',['../namespacewebcam__pattern__detection.html#a876f30a782c600625baf9c3fd9a7dfa6',1,'webcam_pattern_detection']]],
-  ['layout_32',['layout',['../namespacewebcam__pattern__detection.html#a763202468453a80c3ff9eff9ea5bd56d',1,'webcam_pattern_detection']]]
+  ['jackknife_919',['jackknife',['../namespace_catch_1_1_benchmark_1_1_detail.html#a1826a6e1e8081967f7637dcc4616a9ea',1,'Catch::Benchmark::Detail']]],
+  ['junitreporter_920',['JunitReporter',['../class_catch_1_1_junit_reporter.html',1,'Catch::JunitReporter'],['../class_catch_1_1_junit_reporter.html#ad367918f93081de6215d6382f4888c62',1,'Catch::JunitReporter::JunitReporter()']]],
+  ['justification_921',['justification',['../catch__amalgamated_8cpp.html#ac97cfc311188fc98d6a0f2b16e2b9bab',1,'catch_amalgamated.cpp']]]
 ];

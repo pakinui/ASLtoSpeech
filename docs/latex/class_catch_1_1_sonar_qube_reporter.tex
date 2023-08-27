@@ -1,0 +1,133 @@
+\hypertarget{class_catch_1_1_sonar_qube_reporter}{}\doxysection{Catch\+::Sonar\+Qube\+Reporter Class Reference}
+\label{class_catch_1_1_sonar_qube_reporter}\index{Catch::SonarQubeReporter@{Catch::SonarQubeReporter}}
+
+
+{\ttfamily \#include $<$catch\+\_\+amalgamated.\+hpp$>$}
+
+Inheritance diagram for Catch\+::Sonar\+Qube\+Reporter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_catch_1_1_sonar_qube_reporter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_a062b0f1e7dd01d6f59d1453438f14f6a}{Sonar\+Qube\+Reporter}} (\mbox{\hyperlink{struct_catch_1_1_reporter_config}{Reporter\+Config}} \&\&config)
+\item 
+\mbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_a207e3fa840bbc8abff5381d9b128535a}{$\sim$\+Sonar\+Qube\+Reporter}} () override=default
+\item 
+void \mbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_a58ed9dede9b58d4857567e5b9daf5837}{test\+Run\+Starting}} (\mbox{\hyperlink{struct_catch_1_1_test_run_info}{Test\+Run\+Info}} const \&test\+Run\+Info) override
+\item 
+void \mbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_a770aaa74035d32ca5b7cebeb64012516}{test\+Run\+Ended\+Cumulative}} () override
+\begin{DoxyCompactList}\small\item\em Customization point\+: called after last test finishes (test\+Run\+Ended has been handled) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_add4cd429339226485c97ec0ddf84f4ec}{write\+Run}} (\mbox{\hyperlink{class_catch_1_1_cumulative_reporter_base_a6a16c07c308b268d2d88d95c520ed27c}{Test\+Run\+Node}} const \&group\+Node)
+\item 
+void \mbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_af036e53a767f62bb717be5f44cf71d29}{write\+Test\+File}} (\mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} filename, std\+::vector$<$ \mbox{\hyperlink{class_catch_1_1_cumulative_reporter_base_aa9907e56ddf0f8114799f7147677dc1f}{Test\+Case\+Node}} const $\ast$ $>$ const \&test\+Case\+Nodes)
+\item 
+void \mbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_a28756eaa7e0bb22a8fdb6a66bf655f7a}{write\+Test\+Case}} (\mbox{\hyperlink{class_catch_1_1_cumulative_reporter_base_aa9907e56ddf0f8114799f7147677dc1f}{Test\+Case\+Node}} const \&test\+Case\+Node)
+\item 
+void \mbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_a6c3bf02bc36f29c9f58ac8261d903f53}{write\+Section}} (std\+::string const \&root\+Name, \mbox{\hyperlink{struct_catch_1_1_cumulative_reporter_base_1_1_section_node}{Section\+Node}} const \&section\+Node, bool ok\+To\+Fail)
+\item 
+void \mbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_ad7d49dcd6e1e753355b1a824b4805d98}{write\+Assertions}} (\mbox{\hyperlink{struct_catch_1_1_cumulative_reporter_base_1_1_section_node}{Section\+Node}} const \&section\+Node, bool ok\+To\+Fail)
+\item 
+void \mbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_a2e1771b233b45046c64e95fc0ea1ee49}{write\+Assertion}} (\mbox{\hyperlink{struct_catch_1_1_assertion_stats}{Assertion\+Stats}} const \&stats, bool ok\+To\+Fail)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_adbb724837cf39007349da0a5ebb7573e}{get\+Description}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_catch_1_1_sonar_qube_reporter_a062b0f1e7dd01d6f59d1453438f14f6a}\label{class_catch_1_1_sonar_qube_reporter_a062b0f1e7dd01d6f59d1453438f14f6a}} 
+\index{Catch::SonarQubeReporter@{Catch::SonarQubeReporter}!SonarQubeReporter@{SonarQubeReporter}}
+\index{SonarQubeReporter@{SonarQubeReporter}!Catch::SonarQubeReporter@{Catch::SonarQubeReporter}}
+\doxysubsubsection{\texorpdfstring{SonarQubeReporter()}{SonarQubeReporter()}}
+{\footnotesize\ttfamily Catch\+::\+Sonar\+Qube\+Reporter\+::\+Sonar\+Qube\+Reporter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_reporter_config}{Reporter\+Config}} \&\&}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_catch_1_1_sonar_qube_reporter_a207e3fa840bbc8abff5381d9b128535a}\label{class_catch_1_1_sonar_qube_reporter_a207e3fa840bbc8abff5381d9b128535a}} 
+\index{Catch::SonarQubeReporter@{Catch::SonarQubeReporter}!````~SonarQubeReporter@{$\sim$SonarQubeReporter}}
+\index{````~SonarQubeReporter@{$\sim$SonarQubeReporter}!Catch::SonarQubeReporter@{Catch::SonarQubeReporter}}
+\doxysubsubsection{\texorpdfstring{$\sim$SonarQubeReporter()}{~SonarQubeReporter()}}
+{\footnotesize\ttfamily Catch\+::\+Sonar\+Qube\+Reporter\+::$\sim$\+Sonar\+Qube\+Reporter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_catch_1_1_sonar_qube_reporter_adbb724837cf39007349da0a5ebb7573e}\label{class_catch_1_1_sonar_qube_reporter_adbb724837cf39007349da0a5ebb7573e}} 
+\index{Catch::SonarQubeReporter@{Catch::SonarQubeReporter}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!Catch::SonarQubeReporter@{Catch::SonarQubeReporter}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily static std\+::string Catch\+::\+Sonar\+Qube\+Reporter\+::get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_catch_1_1_sonar_qube_reporter_a770aaa74035d32ca5b7cebeb64012516}\label{class_catch_1_1_sonar_qube_reporter_a770aaa74035d32ca5b7cebeb64012516}} 
+\index{Catch::SonarQubeReporter@{Catch::SonarQubeReporter}!testRunEndedCumulative@{testRunEndedCumulative}}
+\index{testRunEndedCumulative@{testRunEndedCumulative}!Catch::SonarQubeReporter@{Catch::SonarQubeReporter}}
+\doxysubsubsection{\texorpdfstring{testRunEndedCumulative()}{testRunEndedCumulative()}}
+{\footnotesize\ttfamily void Catch\+::\+Sonar\+Qube\+Reporter\+::test\+Run\+Ended\+Cumulative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Customization point\+: called after last test finishes (test\+Run\+Ended has been handled) 
+
+
+
+Implements \mbox{\hyperlink{class_catch_1_1_cumulative_reporter_base_ad7c42af872ba0dcc1b33bca254f6f66b}{Catch\+::\+Cumulative\+Reporter\+Base}}.
+
+\mbox{\Hypertarget{class_catch_1_1_sonar_qube_reporter_a58ed9dede9b58d4857567e5b9daf5837}\label{class_catch_1_1_sonar_qube_reporter_a58ed9dede9b58d4857567e5b9daf5837}} 
+\index{Catch::SonarQubeReporter@{Catch::SonarQubeReporter}!testRunStarting@{testRunStarting}}
+\index{testRunStarting@{testRunStarting}!Catch::SonarQubeReporter@{Catch::SonarQubeReporter}}
+\doxysubsubsection{\texorpdfstring{testRunStarting()}{testRunStarting()}}
+{\footnotesize\ttfamily void Catch\+::\+Sonar\+Qube\+Reporter\+::test\+Run\+Starting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_test_run_info}{Test\+Run\+Info}} const \&}]{test\+Run\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called once in a testing run before tests are started
+
+Not called if tests won\textquotesingle{}t be run (e.\+g. only listing will happen) 
+
+Reimplemented from \mbox{\hyperlink{class_catch_1_1_cumulative_reporter_base_a662e58abd84046ac036417d9c533e42e}{Catch\+::\+Cumulative\+Reporter\+Base}}.
+
+\mbox{\Hypertarget{class_catch_1_1_sonar_qube_reporter_a2e1771b233b45046c64e95fc0ea1ee49}\label{class_catch_1_1_sonar_qube_reporter_a2e1771b233b45046c64e95fc0ea1ee49}} 
+\index{Catch::SonarQubeReporter@{Catch::SonarQubeReporter}!writeAssertion@{writeAssertion}}
+\index{writeAssertion@{writeAssertion}!Catch::SonarQubeReporter@{Catch::SonarQubeReporter}}
+\doxysubsubsection{\texorpdfstring{writeAssertion()}{writeAssertion()}}
+{\footnotesize\ttfamily void Catch\+::\+Sonar\+Qube\+Reporter\+::write\+Assertion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_assertion_stats}{Assertion\+Stats}} const \&}]{stats,  }\item[{bool}]{ok\+To\+Fail }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_catch_1_1_sonar_qube_reporter_ad7d49dcd6e1e753355b1a824b4805d98}\label{class_catch_1_1_sonar_qube_reporter_ad7d49dcd6e1e753355b1a824b4805d98}} 
+\index{Catch::SonarQubeReporter@{Catch::SonarQubeReporter}!writeAssertions@{writeAssertions}}
+\index{writeAssertions@{writeAssertions}!Catch::SonarQubeReporter@{Catch::SonarQubeReporter}}
+\doxysubsubsection{\texorpdfstring{writeAssertions()}{writeAssertions()}}
+{\footnotesize\ttfamily void Catch\+::\+Sonar\+Qube\+Reporter\+::write\+Assertions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_cumulative_reporter_base_1_1_section_node}{Section\+Node}} const \&}]{section\+Node,  }\item[{bool}]{ok\+To\+Fail }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_catch_1_1_sonar_qube_reporter_add4cd429339226485c97ec0ddf84f4ec}\label{class_catch_1_1_sonar_qube_reporter_add4cd429339226485c97ec0ddf84f4ec}} 
+\index{Catch::SonarQubeReporter@{Catch::SonarQubeReporter}!writeRun@{writeRun}}
+\index{writeRun@{writeRun}!Catch::SonarQubeReporter@{Catch::SonarQubeReporter}}
+\doxysubsubsection{\texorpdfstring{writeRun()}{writeRun()}}
+{\footnotesize\ttfamily void Catch\+::\+Sonar\+Qube\+Reporter\+::write\+Run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_cumulative_reporter_base_a6a16c07c308b268d2d88d95c520ed27c}{Test\+Run\+Node}} const \&}]{group\+Node }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_catch_1_1_sonar_qube_reporter_a6c3bf02bc36f29c9f58ac8261d903f53}\label{class_catch_1_1_sonar_qube_reporter_a6c3bf02bc36f29c9f58ac8261d903f53}} 
+\index{Catch::SonarQubeReporter@{Catch::SonarQubeReporter}!writeSection@{writeSection}}
+\index{writeSection@{writeSection}!Catch::SonarQubeReporter@{Catch::SonarQubeReporter}}
+\doxysubsubsection{\texorpdfstring{writeSection()}{writeSection()}}
+{\footnotesize\ttfamily void Catch\+::\+Sonar\+Qube\+Reporter\+::write\+Section (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{root\+Name,  }\item[{\mbox{\hyperlink{struct_catch_1_1_cumulative_reporter_base_1_1_section_node}{Section\+Node}} const \&}]{section\+Node,  }\item[{bool}]{ok\+To\+Fail }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_catch_1_1_sonar_qube_reporter_a28756eaa7e0bb22a8fdb6a66bf655f7a}\label{class_catch_1_1_sonar_qube_reporter_a28756eaa7e0bb22a8fdb6a66bf655f7a}} 
+\index{Catch::SonarQubeReporter@{Catch::SonarQubeReporter}!writeTestCase@{writeTestCase}}
+\index{writeTestCase@{writeTestCase}!Catch::SonarQubeReporter@{Catch::SonarQubeReporter}}
+\doxysubsubsection{\texorpdfstring{writeTestCase()}{writeTestCase()}}
+{\footnotesize\ttfamily void Catch\+::\+Sonar\+Qube\+Reporter\+::write\+Test\+Case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_cumulative_reporter_base_aa9907e56ddf0f8114799f7147677dc1f}{Test\+Case\+Node}} const \&}]{test\+Case\+Node }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_catch_1_1_sonar_qube_reporter_af036e53a767f62bb717be5f44cf71d29}\label{class_catch_1_1_sonar_qube_reporter_af036e53a767f62bb717be5f44cf71d29}} 
+\index{Catch::SonarQubeReporter@{Catch::SonarQubeReporter}!writeTestFile@{writeTestFile}}
+\index{writeTestFile@{writeTestFile}!Catch::SonarQubeReporter@{Catch::SonarQubeReporter}}
+\doxysubsubsection{\texorpdfstring{writeTestFile()}{writeTestFile()}}
+{\footnotesize\ttfamily void Catch\+::\+Sonar\+Qube\+Reporter\+::write\+Test\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{filename,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_catch_1_1_cumulative_reporter_base_aa9907e56ddf0f8114799f7147677dc1f}{Test\+Case\+Node}} const $\ast$ $>$ const \&}]{test\+Case\+Nodes }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8hpp}{catch\+\_\+amalgamated.\+hpp}}\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8cpp}{catch\+\_\+amalgamated.\+cpp}}\end{DoxyCompactItemize}

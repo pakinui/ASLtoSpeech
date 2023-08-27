@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['exit_5faction_128',['exit_action',['../namespacewebcam__pattern__detection.html#ace553945bbd7ac6f538d7cc8727f4c14',1,'webcam_pattern_detection']]]
+  ['elapsed_2898',['elapsed',['../struct_catch_1_1_benchmark_1_1_timing.html#a509b2f52910556c1b3edfe968d8a45dd',1,'Catch::Benchmark::Timing']]],
+  ['estimated_5fduration_2899',['estimated_duration',['../struct_catch_1_1_benchmark_1_1_execution_plan.html#adacf1528cc65befc69a8f55176257893',1,'Catch::Benchmark::ExecutionPlan']]],
+  ['estimatedduration_2900',['estimatedDuration',['../struct_catch_1_1_benchmark_info.html#ac3e87a646e9fb0771e495938ef878cd4',1,'Catch::BenchmarkInfo']]],
+  ['exit_5faction_2901',['exit_action',['../namespacewebcam__pattern__detection.html#ace553945bbd7ac6f538d7cc8727f4c14',1,'webcam_pattern_detection']]]
 ];

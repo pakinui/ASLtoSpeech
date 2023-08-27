@@ -1,0 +1,60 @@
+\hypertarget{class_catch_1_1_fatal_condition_handler}{}\doxysection{Catch\+::Fatal\+Condition\+Handler Class Reference}
+\label{class_catch_1_1_fatal_condition_handler}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+
+
+{\ttfamily \#include $<$catch\+\_\+amalgamated.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_catch_1_1_fatal_condition_handler_a4c3eaa6d0ebe8eceb36c71a47f7de060}{Fatal\+Condition\+Handler}} ()
+\item 
+\mbox{\hyperlink{class_catch_1_1_fatal_condition_handler_ad4092a1121a26c3fae5cac9b7ff24d8c}{$\sim$\+Fatal\+Condition\+Handler}} ()
+\item 
+void \mbox{\hyperlink{class_catch_1_1_fatal_condition_handler_a223969cc9e7f10f54f45bfd2348bd382}{engage}} ()
+\item 
+void \mbox{\hyperlink{class_catch_1_1_fatal_condition_handler_a6e19de699ad72bd50d5bd63b9526f3d8}{disengage}} () noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wrapper for platform-\/specific fatal error (signals/\+SEH) handlers
+
+Tries to be cooperative with other handlers, and not step over other handlers. This means that unknown structured exceptions are passed on, previous signal handlers are called, and so on.
+
+Can only be instantiated once, and assumes that once a signal is caught, the binary will end up terminating. Thus, there 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_catch_1_1_fatal_condition_handler_a4c3eaa6d0ebe8eceb36c71a47f7de060}\label{class_catch_1_1_fatal_condition_handler_a4c3eaa6d0ebe8eceb36c71a47f7de060}} 
+\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!FatalConditionHandler@{FatalConditionHandler}}
+\index{FatalConditionHandler@{FatalConditionHandler}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{FatalConditionHandler()}{FatalConditionHandler()}}
+{\footnotesize\ttfamily Catch\+::\+Fatal\+Condition\+Handler\+::\+Fatal\+Condition\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_catch_1_1_fatal_condition_handler_ad4092a1121a26c3fae5cac9b7ff24d8c}\label{class_catch_1_1_fatal_condition_handler_ad4092a1121a26c3fae5cac9b7ff24d8c}} 
+\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!````~FatalConditionHandler@{$\sim$FatalConditionHandler}}
+\index{````~FatalConditionHandler@{$\sim$FatalConditionHandler}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{$\sim$FatalConditionHandler()}{~FatalConditionHandler()}}
+{\footnotesize\ttfamily Catch\+::\+Fatal\+Condition\+Handler\+::$\sim$\+Fatal\+Condition\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_catch_1_1_fatal_condition_handler_a6e19de699ad72bd50d5bd63b9526f3d8}\label{class_catch_1_1_fatal_condition_handler_a6e19de699ad72bd50d5bd63b9526f3d8}} 
+\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!disengage@{disengage}}
+\index{disengage@{disengage}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{disengage()}{disengage()}}
+{\footnotesize\ttfamily void Catch\+::\+Fatal\+Condition\+Handler\+::disengage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_catch_1_1_fatal_condition_handler_a223969cc9e7f10f54f45bfd2348bd382}\label{class_catch_1_1_fatal_condition_handler_a223969cc9e7f10f54f45bfd2348bd382}} 
+\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!engage@{engage}}
+\index{engage@{engage}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{engage()}{engage()}}
+{\footnotesize\ttfamily void Catch\+::\+Fatal\+Condition\+Handler\+::engage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8hpp}{catch\+\_\+amalgamated.\+hpp}}\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8cpp}{catch\+\_\+amalgamated.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,88 @@
+\hypertarget{class_catch_1_1_reporter_spec}{}\doxysection{Catch\+::Reporter\+Spec Class Reference}
+\label{class_catch_1_1_reporter_spec}\index{Catch::ReporterSpec@{Catch::ReporterSpec}}
+
+
+{\ttfamily \#include $<$catch\+\_\+amalgamated.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_catch_1_1_reporter_spec_aac26108d5319d5522dc4da69c85ef78f}{Reporter\+Spec}} (std\+::string \mbox{\hyperlink{class_catch_1_1_reporter_spec_a57c1a86171dae7b0c410feef82345fd2}{name}}, \mbox{\hyperlink{class_catch_1_1_optional}{Optional}}$<$ std\+::string $>$ output\+File\+Name, \mbox{\hyperlink{class_catch_1_1_optional}{Optional}}$<$ \mbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025}{Colour\+Mode}} $>$ \mbox{\hyperlink{class_catch_1_1_reporter_spec_abf4a925061c1ea2b482f225d5c158e71}{colour\+Mode}}, std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{class_catch_1_1_reporter_spec_a5c3f1e0b5cf45777a97a2e2d37311166}{custom\+Options}})
+\item 
+std\+::string const  \& \mbox{\hyperlink{class_catch_1_1_reporter_spec_a57c1a86171dae7b0c410feef82345fd2}{name}} () const
+\item 
+\mbox{\hyperlink{class_catch_1_1_optional}{Optional}}$<$ std\+::string $>$ const  \& \mbox{\hyperlink{class_catch_1_1_reporter_spec_af959b956453a0a54bbd294480fe3ab25}{output\+File}} () const
+\item 
+\mbox{\hyperlink{class_catch_1_1_optional}{Optional}}$<$ \mbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025}{Colour\+Mode}} $>$ const  \& \mbox{\hyperlink{class_catch_1_1_reporter_spec_abf4a925061c1ea2b482f225d5c158e71}{colour\+Mode}} () const
+\item 
+std\+::map$<$ std\+::string, std\+::string $>$ const  \& \mbox{\hyperlink{class_catch_1_1_reporter_spec_a5c3f1e0b5cf45777a97a2e2d37311166}{custom\+Options}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_catch_1_1_reporter_spec_a5ed5c5634c667d64dfc4a18a9534404b}{operator==}} (\mbox{\hyperlink{class_catch_1_1_reporter_spec}{Reporter\+Spec}} const \&lhs, \mbox{\hyperlink{class_catch_1_1_reporter_spec}{Reporter\+Spec}} const \&rhs)
+\item 
+bool \mbox{\hyperlink{class_catch_1_1_reporter_spec_a71b0055588d164144557dbdfcc529ed4}{operator!=}} (\mbox{\hyperlink{class_catch_1_1_reporter_spec}{Reporter\+Spec}} const \&lhs, \mbox{\hyperlink{class_catch_1_1_reporter_spec}{Reporter\+Spec}} const \&rhs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structured reporter spec that a reporter can be created from
+
+Parsing has been validated, but semantics have not. This means e.\+g. that the colour mode is known to Catch2, but it might not be compiled into the binary, and the output filename might not be openable. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_catch_1_1_reporter_spec_aac26108d5319d5522dc4da69c85ef78f}\label{class_catch_1_1_reporter_spec_aac26108d5319d5522dc4da69c85ef78f}} 
+\index{Catch::ReporterSpec@{Catch::ReporterSpec}!ReporterSpec@{ReporterSpec}}
+\index{ReporterSpec@{ReporterSpec}!Catch::ReporterSpec@{Catch::ReporterSpec}}
+\doxysubsubsection{\texorpdfstring{ReporterSpec()}{ReporterSpec()}}
+{\footnotesize\ttfamily Catch\+::\+Reporter\+Spec\+::\+Reporter\+Spec (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{class_catch_1_1_optional}{Optional}}$<$ std\+::string $>$}]{output\+File\+Name,  }\item[{\mbox{\hyperlink{class_catch_1_1_optional}{Optional}}$<$ \mbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025}{Colour\+Mode}} $>$}]{colour\+Mode,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{custom\+Options }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_catch_1_1_reporter_spec_abf4a925061c1ea2b482f225d5c158e71}\label{class_catch_1_1_reporter_spec_abf4a925061c1ea2b482f225d5c158e71}} 
+\index{Catch::ReporterSpec@{Catch::ReporterSpec}!colourMode@{colourMode}}
+\index{colourMode@{colourMode}!Catch::ReporterSpec@{Catch::ReporterSpec}}
+\doxysubsubsection{\texorpdfstring{colourMode()}{colourMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_catch_1_1_optional}{Optional}}$<$\mbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025}{Colour\+Mode}}$>$ const\& Catch\+::\+Reporter\+Spec\+::colour\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_catch_1_1_reporter_spec_a5c3f1e0b5cf45777a97a2e2d37311166}\label{class_catch_1_1_reporter_spec_a5c3f1e0b5cf45777a97a2e2d37311166}} 
+\index{Catch::ReporterSpec@{Catch::ReporterSpec}!customOptions@{customOptions}}
+\index{customOptions@{customOptions}!Catch::ReporterSpec@{Catch::ReporterSpec}}
+\doxysubsubsection{\texorpdfstring{customOptions()}{customOptions()}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, std\+::string$>$ const\& Catch\+::\+Reporter\+Spec\+::custom\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_catch_1_1_reporter_spec_a57c1a86171dae7b0c410feef82345fd2}\label{class_catch_1_1_reporter_spec_a57c1a86171dae7b0c410feef82345fd2}} 
+\index{Catch::ReporterSpec@{Catch::ReporterSpec}!name@{name}}
+\index{name@{name}!Catch::ReporterSpec@{Catch::ReporterSpec}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string const\& Catch\+::\+Reporter\+Spec\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_catch_1_1_reporter_spec_af959b956453a0a54bbd294480fe3ab25}\label{class_catch_1_1_reporter_spec_af959b956453a0a54bbd294480fe3ab25}} 
+\index{Catch::ReporterSpec@{Catch::ReporterSpec}!outputFile@{outputFile}}
+\index{outputFile@{outputFile}!Catch::ReporterSpec@{Catch::ReporterSpec}}
+\doxysubsubsection{\texorpdfstring{outputFile()}{outputFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_catch_1_1_optional}{Optional}}$<$std\+::string$>$ const\& Catch\+::\+Reporter\+Spec\+::output\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_catch_1_1_reporter_spec_a71b0055588d164144557dbdfcc529ed4}\label{class_catch_1_1_reporter_spec_a71b0055588d164144557dbdfcc529ed4}} 
+\index{Catch::ReporterSpec@{Catch::ReporterSpec}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Catch::ReporterSpec@{Catch::ReporterSpec}}
+\doxysubsubsection{\texorpdfstring{operator"!=}{operator!=}}
+{\footnotesize\ttfamily bool operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_reporter_spec}{Reporter\+Spec}} const \&}]{lhs,  }\item[{\mbox{\hyperlink{class_catch_1_1_reporter_spec}{Reporter\+Spec}} const \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_catch_1_1_reporter_spec_a5ed5c5634c667d64dfc4a18a9534404b}\label{class_catch_1_1_reporter_spec_a5ed5c5634c667d64dfc4a18a9534404b}} 
+\index{Catch::ReporterSpec@{Catch::ReporterSpec}!operator==@{operator==}}
+\index{operator==@{operator==}!Catch::ReporterSpec@{Catch::ReporterSpec}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_reporter_spec}{Reporter\+Spec}} const \&}]{lhs,  }\item[{\mbox{\hyperlink{class_catch_1_1_reporter_spec}{Reporter\+Spec}} const \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8hpp}{catch\+\_\+amalgamated.\+hpp}}\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8cpp}{catch\+\_\+amalgamated.\+cpp}}\end{DoxyCompactItemize}

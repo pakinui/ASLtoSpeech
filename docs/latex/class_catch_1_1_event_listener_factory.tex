@@ -1,0 +1,61 @@
+\hypertarget{class_catch_1_1_event_listener_factory}{}\doxysection{Catch\+::Event\+Listener\+Factory Class Reference}
+\label{class_catch_1_1_event_listener_factory}\index{Catch::EventListenerFactory@{Catch::EventListenerFactory}}
+
+
+{\ttfamily \#include $<$catch\+\_\+amalgamated.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_catch_1_1_event_listener_factory_a15cbf26e1d83fd041be9ac90581ddbcf}{$\sim$\+Event\+Listener\+Factory}} ()
+\item 
+virtual \mbox{\hyperlink{namespace_catch_ae45505c15eb07c0087eba62c13a8ac71}{IEvent\+Listener\+Ptr}} \mbox{\hyperlink{class_catch_1_1_event_listener_factory_a5135d40381b9bfa7d46ac111e6ee2de5}{create}} (\mbox{\hyperlink{class_catch_1_1_i_config}{IConfig}} const $\ast$config) const =0
+\item 
+virtual \mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} \mbox{\hyperlink{class_catch_1_1_event_listener_factory_a98c55fc9088addd267cf7ef6e45a9981}{get\+Name}} () const =0
+\begin{DoxyCompactList}\small\item\em Return a meaningful name for the listener, e.\+g. its type name. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_catch_1_1_event_listener_factory_a3882f5b247df0a4b447b78b89c8789be}{get\+Description}} () const =0
+\begin{DoxyCompactList}\small\item\em Return listener\textquotesingle{}s description if available. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_catch_1_1_event_listener_factory_a15cbf26e1d83fd041be9ac90581ddbcf}\label{class_catch_1_1_event_listener_factory_a15cbf26e1d83fd041be9ac90581ddbcf}} 
+\index{Catch::EventListenerFactory@{Catch::EventListenerFactory}!````~EventListenerFactory@{$\sim$EventListenerFactory}}
+\index{````~EventListenerFactory@{$\sim$EventListenerFactory}!Catch::EventListenerFactory@{Catch::EventListenerFactory}}
+\doxysubsubsection{\texorpdfstring{$\sim$EventListenerFactory()}{~EventListenerFactory()}}
+{\footnotesize\ttfamily Catch\+::\+Event\+Listener\+Factory\+::$\sim$\+Event\+Listener\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_catch_1_1_event_listener_factory_a5135d40381b9bfa7d46ac111e6ee2de5}\label{class_catch_1_1_event_listener_factory_a5135d40381b9bfa7d46ac111e6ee2de5}} 
+\index{Catch::EventListenerFactory@{Catch::EventListenerFactory}!create@{create}}
+\index{create@{create}!Catch::EventListenerFactory@{Catch::EventListenerFactory}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespace_catch_ae45505c15eb07c0087eba62c13a8ac71}{IEvent\+Listener\+Ptr}} Catch\+::\+Event\+Listener\+Factory\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_i_config}{IConfig}} const $\ast$}]{config }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_catch_1_1_event_listener_factory_a3882f5b247df0a4b447b78b89c8789be}\label{class_catch_1_1_event_listener_factory_a3882f5b247df0a4b447b78b89c8789be}} 
+\index{Catch::EventListenerFactory@{Catch::EventListenerFactory}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!Catch::EventListenerFactory@{Catch::EventListenerFactory}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily virtual std\+::string Catch\+::\+Event\+Listener\+Factory\+::get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return listener\textquotesingle{}s description if available. 
+
+\mbox{\Hypertarget{class_catch_1_1_event_listener_factory_a98c55fc9088addd267cf7ef6e45a9981}\label{class_catch_1_1_event_listener_factory_a98c55fc9088addd267cf7ef6e45a9981}} 
+\index{Catch::EventListenerFactory@{Catch::EventListenerFactory}!getName@{getName}}
+\index{getName@{getName}!Catch::EventListenerFactory@{Catch::EventListenerFactory}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} Catch\+::\+Event\+Listener\+Factory\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return a meaningful name for the listener, e.\+g. its type name. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8hpp}{catch\+\_\+amalgamated.\+hpp}}\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8cpp}{catch\+\_\+amalgamated.\+cpp}}\end{DoxyCompactItemize}

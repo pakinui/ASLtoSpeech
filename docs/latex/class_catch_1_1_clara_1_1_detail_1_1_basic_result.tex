@@ -1,0 +1,152 @@
+\hypertarget{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{}\doxysection{Catch\+::Clara\+::Detail\+::Basic\+Result$<$ T $>$ Class Template Reference}
+\label{class_catch_1_1_clara_1_1_detail_1_1_basic_result}\index{Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}}
+
+
+{\ttfamily \#include $<$catch\+\_\+amalgamated.\+hpp$>$}
+
+Inheritance diagram for Catch\+::Clara\+::Detail\+::Basic\+Result$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_catch_1_1_clara_1_1_detail_1_1_basic_result}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a4fff47323e9c1d47912c8968719d97a0}{Basic\+Result}} (\mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Basic\+Result}}$<$ U $>$ const \&other)
+\item 
+\mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a015816d63f3b71d246d95142e3223e13}{operator bool}} () const
+\item 
+auto \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result_ac043c61d7ad6b9fe6660cb85e1380c16}{type}} () const -\/$>$ \mbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a58800f68faab69c44d58b2c0038875d1}{Result\+Type}}
+\item 
+auto \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a72212341d12d38b9ef6f8c3ecaae3d66}{error\+Message}} () const -\/$>$ std\+::string const \&
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename U $>$ }\\static auto \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result_aea4710c2006f74eb3e8b45face7856be}{ok}} (U const \&\mbox{\hyperlink{catch__amalgamated_8cpp_a5dcc1560b74135e065519bc3986c14b1}{value}}) -\/$>$ \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Basic\+Result}}
+\item 
+static auto \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a4d9c94c86f71eaa76356ab808a221b62}{ok}} () -\/$>$ \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Basic\+Result}}
+\item 
+static auto \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result_ae6c470af1becfc54d75df69104e45160}{logic\+Error}} (std\+::string \&\&message) -\/$>$ \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Basic\+Result}}
+\item 
+static auto \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a8adbd2c9cd517ae768a18b9d9dca2c01}{runtime\+Error}} (std\+::string \&\&message) -\/$>$ \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Basic\+Result}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a87690846616d49ba834603770909055d}{enforce\+Ok}} () const override
+\item 
+\mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a881617c5872c403eacc22966a046fc82}{Basic\+Result}} (\mbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a58800f68faab69c44d58b2c0038875d1}{Result\+Type}} \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result_ac043c61d7ad6b9fe6660cb85e1380c16}{type}}, std\+::string \&\&message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a84c9409f5c91ba6794ea9ea87a38fdf8}{m\+\_\+error\+Message}}
+\item 
+\mbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a58800f68faab69c44d58b2c0038875d1}{Result\+Type}} \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result_af794d366dd0035764edf572222725eb2}{m\+\_\+type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a4fff47323e9c1d47912c8968719d97a0}\label{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a4fff47323e9c1d47912c8968719d97a0}} 
+\index{Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}!BasicResult@{BasicResult}}
+\index{BasicResult@{BasicResult}!Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{BasicResult()}{BasicResult()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T  = void$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Catch\+::\+Clara\+::\+Detail\+::\+Basic\+Result}}$<$ T $>$\+::\mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Basic\+Result}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Basic\+Result}}$<$ U $>$ const \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a881617c5872c403eacc22966a046fc82}\label{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a881617c5872c403eacc22966a046fc82}} 
+\index{Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}!BasicResult@{BasicResult}}
+\index{BasicResult@{BasicResult}!Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{BasicResult()}{BasicResult()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T  = void$>$ \\
+\mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Catch\+::\+Clara\+::\+Detail\+::\+Basic\+Result}}$<$ T $>$\+::\mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Basic\+Result}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a58800f68faab69c44d58b2c0038875d1}{Result\+Type}}}]{type,  }\item[{std\+::string \&\&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a87690846616d49ba834603770909055d}\label{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a87690846616d49ba834603770909055d}} 
+\index{Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}!enforceOk@{enforceOk}}
+\index{enforceOk@{enforceOk}!Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{enforceOk()}{enforceOk()}}
+{\footnotesize\ttfamily template$<$typename T  = void$>$ \\
+void \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Catch\+::\+Clara\+::\+Detail\+::\+Basic\+Result}}$<$ T $>$\+::enforce\+Ok (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_result_base_aa745dfcd5ea1c94e93b57e5434a34177}{Catch\+::\+Clara\+::\+Detail\+::\+Result\+Base}}.
+
+\mbox{\Hypertarget{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a72212341d12d38b9ef6f8c3ecaae3d66}\label{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a72212341d12d38b9ef6f8c3ecaae3d66}} 
+\index{Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}!errorMessage@{errorMessage}}
+\index{errorMessage@{errorMessage}!Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{errorMessage()}{errorMessage()}}
+{\footnotesize\ttfamily template$<$typename T  = void$>$ \\
+auto \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Catch\+::\+Clara\+::\+Detail\+::\+Basic\+Result}}$<$ T $>$\+::error\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string const\& \hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_catch_1_1_clara_1_1_detail_1_1_basic_result_ae6c470af1becfc54d75df69104e45160}\label{class_catch_1_1_clara_1_1_detail_1_1_basic_result_ae6c470af1becfc54d75df69104e45160}} 
+\index{Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}!logicError@{logicError}}
+\index{logicError@{logicError}!Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{logicError()}{logicError()}}
+{\footnotesize\ttfamily template$<$typename T  = void$>$ \\
+static auto \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Catch\+::\+Clara\+::\+Detail\+::\+Basic\+Result}}$<$ T $>$\+::logic\+Error (\begin{DoxyParamCaption}\item[{std\+::string \&\&}]{message }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Basic\+Result}} \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a4d9c94c86f71eaa76356ab808a221b62}\label{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a4d9c94c86f71eaa76356ab808a221b62}} 
+\index{Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}!ok@{ok}}
+\index{ok@{ok}!Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ok()}{ok()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T  = void$>$ \\
+static auto \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Catch\+::\+Clara\+::\+Detail\+::\+Basic\+Result}}$<$ T $>$\+::ok (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Basic\+Result}} \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_catch_1_1_clara_1_1_detail_1_1_basic_result_aea4710c2006f74eb3e8b45face7856be}\label{class_catch_1_1_clara_1_1_detail_1_1_basic_result_aea4710c2006f74eb3e8b45face7856be}} 
+\index{Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}!ok@{ok}}
+\index{ok@{ok}!Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ok()}{ok()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T  = void$>$ \\
+template$<$typename U $>$ \\
+static auto \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Catch\+::\+Clara\+::\+Detail\+::\+Basic\+Result}}$<$ T $>$\+::ok (\begin{DoxyParamCaption}\item[{U const \&}]{value }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Basic\+Result}} \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a015816d63f3b71d246d95142e3223e13}\label{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a015816d63f3b71d246d95142e3223e13}} 
+\index{Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily template$<$typename T  = void$>$ \\
+\mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Catch\+::\+Clara\+::\+Detail\+::\+Basic\+Result}}$<$ T $>$\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a8adbd2c9cd517ae768a18b9d9dca2c01}\label{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a8adbd2c9cd517ae768a18b9d9dca2c01}} 
+\index{Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}!runtimeError@{runtimeError}}
+\index{runtimeError@{runtimeError}!Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{runtimeError()}{runtimeError()}}
+{\footnotesize\ttfamily template$<$typename T  = void$>$ \\
+static auto \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Catch\+::\+Clara\+::\+Detail\+::\+Basic\+Result}}$<$ T $>$\+::runtime\+Error (\begin{DoxyParamCaption}\item[{std\+::string \&\&}]{message }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Basic\+Result}} \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_catch_1_1_clara_1_1_detail_1_1_basic_result_ac043c61d7ad6b9fe6660cb85e1380c16}\label{class_catch_1_1_clara_1_1_detail_1_1_basic_result_ac043c61d7ad6b9fe6660cb85e1380c16}} 
+\index{Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}!type@{type}}
+\index{type@{type}!Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily template$<$typename T  = void$>$ \\
+auto \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Catch\+::\+Clara\+::\+Detail\+::\+Basic\+Result}}$<$ T $>$\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a58800f68faab69c44d58b2c0038875d1}{Result\+Type}} \hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a84c9409f5c91ba6794ea9ea87a38fdf8}\label{class_catch_1_1_clara_1_1_detail_1_1_basic_result_a84c9409f5c91ba6794ea9ea87a38fdf8}} 
+\index{Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}!m\_errorMessage@{m\_errorMessage}}
+\index{m\_errorMessage@{m\_errorMessage}!Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_errorMessage}{m\_errorMessage}}
+{\footnotesize\ttfamily template$<$typename T  = void$>$ \\
+std\+::string \mbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Catch\+::\+Clara\+::\+Detail\+::\+Basic\+Result}}$<$ T $>$\+::m\+\_\+error\+Message\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_catch_1_1_clara_1_1_detail_1_1_basic_result_af794d366dd0035764edf572222725eb2}\label{class_catch_1_1_clara_1_1_detail_1_1_basic_result_af794d366dd0035764edf572222725eb2}} 
+\index{Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}!m\_type@{m\_type}}
+\index{m\_type@{m\_type}!Catch::Clara::Detail::BasicResult$<$ T $>$@{Catch::Clara::Detail::BasicResult$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_type}{m\_type}}
+{\footnotesize\ttfamily template$<$typename T  = void$>$ \\
+\mbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a58800f68faab69c44d58b2c0038875d1}{Result\+Type}} Catch\+::\+Clara\+::\+Detail\+::\+Result\+Base\+::m\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8hpp}{catch\+\_\+amalgamated.\+hpp}}\end{DoxyCompactItemize}

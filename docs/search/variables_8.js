@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['label_138',['label',['../namespacewebcam__pattern__detection.html#a876f30a782c600625baf9c3fd9a7dfa6',1,'webcam_pattern_detection']]],
-  ['layout_139',['layout',['../namespacewebcam__pattern__detection.html#a763202468453a80c3ff9eff9ea5bd56d',1,'webcam_pattern_detection']]]
+  ['justification_2926',['justification',['../catch__amalgamated_8cpp.html#ac97cfc311188fc98d6a0f2b16e2b9bab',1,'catch_amalgamated.cpp']]]
 ];

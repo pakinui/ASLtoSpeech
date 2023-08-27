@@ -1,0 +1,360 @@
+\hypertarget{class_catch_1_1_i_config}{}\doxysection{Catch\+::IConfig Class Reference}
+\label{class_catch_1_1_i_config}\index{Catch::IConfig@{Catch::IConfig}}
+
+
+{\ttfamily \#include $<$catch\+\_\+amalgamated.\+hpp$>$}
+
+Inheritance diagram for Catch\+::IConfig\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_catch_1_1_i_config}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_catch_1_1_i_config_a001afe9548a978b25f048f889f98f65a}{$\sim$\+IConfig}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_catch_1_1_i_config_aadb95f849359de1e6eb915aab063e542}{allow\+Throws}} () const =0
+\item 
+virtual \mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} \mbox{\hyperlink{class_catch_1_1_i_config_ad67bb593486213c6918732f73177b7a5}{name}} () const =0
+\item 
+virtual bool \mbox{\hyperlink{class_catch_1_1_i_config_a2f1b0391019b9ce69921527a684eab23}{include\+Successful\+Results}} () const =0
+\item 
+virtual bool \mbox{\hyperlink{class_catch_1_1_i_config_a5b886c5aad9001e90f63a7cf0726af63}{should\+Debug\+Break}} () const =0
+\item 
+virtual bool \mbox{\hyperlink{class_catch_1_1_i_config_a75d970c495a28e46b8e9b04a1d32149f}{warn\+About\+Missing\+Assertions}} () const =0
+\item 
+virtual bool \mbox{\hyperlink{class_catch_1_1_i_config_a62498b40b04b87b721537f8e0e7d333e}{warn\+About\+Unmatched\+Test\+Specs}} () const =0
+\item 
+virtual bool \mbox{\hyperlink{class_catch_1_1_i_config_a6ff06a3e00a2002992d3139d9c21718d}{zero\+Tests\+Count\+As\+Success}} () const =0
+\item 
+virtual int \mbox{\hyperlink{class_catch_1_1_i_config_a363f3388a439d02217f37198eff96744}{abort\+After}} () const =0
+\item 
+virtual bool \mbox{\hyperlink{class_catch_1_1_i_config_aa288bf92ccd0aafd85409d8aefdf738c}{show\+Invisibles}} () const =0
+\item 
+virtual \mbox{\hyperlink{namespace_catch_afcb41c3350d3488c0efb02816a8867c8}{Show\+Durations}} \mbox{\hyperlink{class_catch_1_1_i_config_a5a9e2fbbb8150bd197d8abd9af18da14}{show\+Durations}} () const =0
+\item 
+virtual double \mbox{\hyperlink{class_catch_1_1_i_config_a160c6f6e19ed6ae946f7a9e737099189}{min\+Duration}} () const =0
+\item 
+virtual \mbox{\hyperlink{class_catch_1_1_test_spec}{Test\+Spec}} const  \& \mbox{\hyperlink{class_catch_1_1_i_config_a03a2fd8221d896d12bf3684ab2a03588}{test\+Spec}} () const =0
+\item 
+virtual bool \mbox{\hyperlink{class_catch_1_1_i_config_a49a475bbeb3180c06799d6d958914649}{has\+Test\+Filters}} () const =0
+\item 
+virtual std\+::vector$<$ std\+::string $>$ const  \& \mbox{\hyperlink{class_catch_1_1_i_config_a1b8a299344a493eb98c12faae48421d7}{get\+Tests\+Or\+Tags}} () const =0
+\item 
+virtual \mbox{\hyperlink{namespace_catch_aa820408cff40873fdf5c6662b6327100}{Test\+Run\+Order}} \mbox{\hyperlink{class_catch_1_1_i_config_afef98a620d17d1ef1cba91550146ca28}{run\+Order}} () const =0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{class_catch_1_1_i_config_a71994ea53eb66e353e5e195088f9bad7}{rng\+Seed}} () const =0
+\item 
+virtual unsigned int \mbox{\hyperlink{class_catch_1_1_i_config_ad286c00a41278a94e89791be29b920a1}{shard\+Count}} () const =0
+\item 
+virtual unsigned int \mbox{\hyperlink{class_catch_1_1_i_config_a7d7b5de3ff81f08e343b3b6266efbeba}{shard\+Index}} () const =0
+\item 
+virtual \mbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025}{Colour\+Mode}} \mbox{\hyperlink{class_catch_1_1_i_config_a1e50ac75407e1e7d808eae26a4e353dd}{default\+Colour\+Mode}} () const =0
+\item 
+virtual std\+::vector$<$ std\+::string $>$ const  \& \mbox{\hyperlink{class_catch_1_1_i_config_afc801995e115557f90e41f3d6e96908d}{get\+Sections\+To\+Run}} () const =0
+\item 
+virtual \mbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737}{Verbosity}} \mbox{\hyperlink{class_catch_1_1_i_config_a55aff5924bdbb3f558775821b1eb4b3d}{verbosity}} () const =0
+\item 
+virtual bool \mbox{\hyperlink{class_catch_1_1_i_config_acd7e1cb74682279ba1e460510d6b5859}{skip\+Benchmarks}} () const =0
+\item 
+virtual bool \mbox{\hyperlink{class_catch_1_1_i_config_aa9aa1eafdbe510e27bf319233969ee2c}{benchmark\+No\+Analysis}} () const =0
+\item 
+virtual unsigned int \mbox{\hyperlink{class_catch_1_1_i_config_a1634aa220fc1c822d1f4d54614443d47}{benchmark\+Samples}} () const =0
+\item 
+virtual double \mbox{\hyperlink{class_catch_1_1_i_config_ae1ec73d460a2b58c7c9b022a430a34dd}{benchmark\+Confidence\+Interval}} () const =0
+\item 
+virtual unsigned int \mbox{\hyperlink{class_catch_1_1_i_config_a3b8e5581be01f4773593f8b85eb7db98}{benchmark\+Resamples}} () const =0
+\item 
+virtual std\+::chrono\+::milliseconds \mbox{\hyperlink{class_catch_1_1_i_config_a516879e39f2e46f69bb4ef1f1fe7023c}{benchmark\+Warmup\+Time}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_catch_1_1_i_config_a001afe9548a978b25f048f889f98f65a}\label{class_catch_1_1_i_config_a001afe9548a978b25f048f889f98f65a}} 
+\index{Catch::IConfig@{Catch::IConfig}!````~IConfig@{$\sim$IConfig}}
+\index{````~IConfig@{$\sim$IConfig}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{$\sim$IConfig()}{~IConfig()}}
+{\footnotesize\ttfamily Catch\+::\+IConfig\+::$\sim$\+IConfig (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_catch_1_1_i_config_a363f3388a439d02217f37198eff96744}\label{class_catch_1_1_i_config_a363f3388a439d02217f37198eff96744}} 
+\index{Catch::IConfig@{Catch::IConfig}!abortAfter@{abortAfter}}
+\index{abortAfter@{abortAfter}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{abortAfter()}{abortAfter()}}
+{\footnotesize\ttfamily virtual int Catch\+::\+IConfig\+::abort\+After (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_acb7644621cf5d1f8221a6cb2cfe209a8}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_aadb95f849359de1e6eb915aab063e542}\label{class_catch_1_1_i_config_aadb95f849359de1e6eb915aab063e542}} 
+\index{Catch::IConfig@{Catch::IConfig}!allowThrows@{allowThrows}}
+\index{allowThrows@{allowThrows}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{allowThrows()}{allowThrows()}}
+{\footnotesize\ttfamily virtual bool Catch\+::\+IConfig\+::allow\+Throws (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_aeb09ac92356afabdd2adde43f188d80b}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_ae1ec73d460a2b58c7c9b022a430a34dd}\label{class_catch_1_1_i_config_ae1ec73d460a2b58c7c9b022a430a34dd}} 
+\index{Catch::IConfig@{Catch::IConfig}!benchmarkConfidenceInterval@{benchmarkConfidenceInterval}}
+\index{benchmarkConfidenceInterval@{benchmarkConfidenceInterval}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{benchmarkConfidenceInterval()}{benchmarkConfidenceInterval()}}
+{\footnotesize\ttfamily virtual double Catch\+::\+IConfig\+::benchmark\+Confidence\+Interval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_a221f859f37a43fbbad28b7cb7f429683}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_aa9aa1eafdbe510e27bf319233969ee2c}\label{class_catch_1_1_i_config_aa9aa1eafdbe510e27bf319233969ee2c}} 
+\index{Catch::IConfig@{Catch::IConfig}!benchmarkNoAnalysis@{benchmarkNoAnalysis}}
+\index{benchmarkNoAnalysis@{benchmarkNoAnalysis}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{benchmarkNoAnalysis()}{benchmarkNoAnalysis()}}
+{\footnotesize\ttfamily virtual bool Catch\+::\+IConfig\+::benchmark\+No\+Analysis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_a9b4ce10d290aec9d81b6f81bbee2abac}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_a3b8e5581be01f4773593f8b85eb7db98}\label{class_catch_1_1_i_config_a3b8e5581be01f4773593f8b85eb7db98}} 
+\index{Catch::IConfig@{Catch::IConfig}!benchmarkResamples@{benchmarkResamples}}
+\index{benchmarkResamples@{benchmarkResamples}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{benchmarkResamples()}{benchmarkResamples()}}
+{\footnotesize\ttfamily virtual unsigned int Catch\+::\+IConfig\+::benchmark\+Resamples (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_a5b411a91a0799f5f4e377ce4e1c4daf6}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_a1634aa220fc1c822d1f4d54614443d47}\label{class_catch_1_1_i_config_a1634aa220fc1c822d1f4d54614443d47}} 
+\index{Catch::IConfig@{Catch::IConfig}!benchmarkSamples@{benchmarkSamples}}
+\index{benchmarkSamples@{benchmarkSamples}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{benchmarkSamples()}{benchmarkSamples()}}
+{\footnotesize\ttfamily virtual unsigned int Catch\+::\+IConfig\+::benchmark\+Samples (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_a29df3e2ed944f9dd58638757656ceddb}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_a516879e39f2e46f69bb4ef1f1fe7023c}\label{class_catch_1_1_i_config_a516879e39f2e46f69bb4ef1f1fe7023c}} 
+\index{Catch::IConfig@{Catch::IConfig}!benchmarkWarmupTime@{benchmarkWarmupTime}}
+\index{benchmarkWarmupTime@{benchmarkWarmupTime}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{benchmarkWarmupTime()}{benchmarkWarmupTime()}}
+{\footnotesize\ttfamily virtual std\+::chrono\+::milliseconds Catch\+::\+IConfig\+::benchmark\+Warmup\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_a8ba83d69c3cacef6191027fd551d72ba}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_a1e50ac75407e1e7d808eae26a4e353dd}\label{class_catch_1_1_i_config_a1e50ac75407e1e7d808eae26a4e353dd}} 
+\index{Catch::IConfig@{Catch::IConfig}!defaultColourMode@{defaultColourMode}}
+\index{defaultColourMode@{defaultColourMode}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{defaultColourMode()}{defaultColourMode()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025}{Colour\+Mode}} Catch\+::\+IConfig\+::default\+Colour\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_a26266f99f3de3c5e2033a2ce50fdfade}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_afc801995e115557f90e41f3d6e96908d}\label{class_catch_1_1_i_config_afc801995e115557f90e41f3d6e96908d}} 
+\index{Catch::IConfig@{Catch::IConfig}!getSectionsToRun@{getSectionsToRun}}
+\index{getSectionsToRun@{getSectionsToRun}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{getSectionsToRun()}{getSectionsToRun()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::string$>$ const\& Catch\+::\+IConfig\+::get\+Sections\+To\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_a32e48a3b9bbf4ce933a154545de13b3f}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_a1b8a299344a493eb98c12faae48421d7}\label{class_catch_1_1_i_config_a1b8a299344a493eb98c12faae48421d7}} 
+\index{Catch::IConfig@{Catch::IConfig}!getTestsOrTags@{getTestsOrTags}}
+\index{getTestsOrTags@{getTestsOrTags}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{getTestsOrTags()}{getTestsOrTags()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::string$>$ const\& Catch\+::\+IConfig\+::get\+Tests\+Or\+Tags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_a0861c17ff4a01038f73eac5836d5c6fc}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_a49a475bbeb3180c06799d6d958914649}\label{class_catch_1_1_i_config_a49a475bbeb3180c06799d6d958914649}} 
+\index{Catch::IConfig@{Catch::IConfig}!hasTestFilters@{hasTestFilters}}
+\index{hasTestFilters@{hasTestFilters}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{hasTestFilters()}{hasTestFilters()}}
+{\footnotesize\ttfamily virtual bool Catch\+::\+IConfig\+::has\+Test\+Filters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_a25c21a50fd3ac97d55dd8a068d83a732}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_a2f1b0391019b9ce69921527a684eab23}\label{class_catch_1_1_i_config_a2f1b0391019b9ce69921527a684eab23}} 
+\index{Catch::IConfig@{Catch::IConfig}!includeSuccessfulResults@{includeSuccessfulResults}}
+\index{includeSuccessfulResults@{includeSuccessfulResults}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{includeSuccessfulResults()}{includeSuccessfulResults()}}
+{\footnotesize\ttfamily virtual bool Catch\+::\+IConfig\+::include\+Successful\+Results (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_a7f4f4c2b7bffa63026df5f47e845c526}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_a160c6f6e19ed6ae946f7a9e737099189}\label{class_catch_1_1_i_config_a160c6f6e19ed6ae946f7a9e737099189}} 
+\index{Catch::IConfig@{Catch::IConfig}!minDuration@{minDuration}}
+\index{minDuration@{minDuration}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{minDuration()}{minDuration()}}
+{\footnotesize\ttfamily virtual double Catch\+::\+IConfig\+::min\+Duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_aa7e4e11370e1aa911be305bad13dec59}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_ad67bb593486213c6918732f73177b7a5}\label{class_catch_1_1_i_config_ad67bb593486213c6918732f73177b7a5}} 
+\index{Catch::IConfig@{Catch::IConfig}!name@{name}}
+\index{name@{name}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} Catch\+::\+IConfig\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_ab0f3b902ccd7403d9e016ee7305aeab0}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_a71994ea53eb66e353e5e195088f9bad7}\label{class_catch_1_1_i_config_a71994ea53eb66e353e5e195088f9bad7}} 
+\index{Catch::IConfig@{Catch::IConfig}!rngSeed@{rngSeed}}
+\index{rngSeed@{rngSeed}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{rngSeed()}{rngSeed()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t Catch\+::\+IConfig\+::rng\+Seed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_af3f236719ddeb5e90ef4a019ddbe9536}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_afef98a620d17d1ef1cba91550146ca28}\label{class_catch_1_1_i_config_afef98a620d17d1ef1cba91550146ca28}} 
+\index{Catch::IConfig@{Catch::IConfig}!runOrder@{runOrder}}
+\index{runOrder@{runOrder}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{runOrder()}{runOrder()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespace_catch_aa820408cff40873fdf5c6662b6327100}{Test\+Run\+Order}} Catch\+::\+IConfig\+::run\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_ac61658e58a9ebcee936305f64ed01f7a}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_ad286c00a41278a94e89791be29b920a1}\label{class_catch_1_1_i_config_ad286c00a41278a94e89791be29b920a1}} 
+\index{Catch::IConfig@{Catch::IConfig}!shardCount@{shardCount}}
+\index{shardCount@{shardCount}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{shardCount()}{shardCount()}}
+{\footnotesize\ttfamily virtual unsigned int Catch\+::\+IConfig\+::shard\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_a00dfd8d83bec3e3fda355808b2fb17f3}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_a7d7b5de3ff81f08e343b3b6266efbeba}\label{class_catch_1_1_i_config_a7d7b5de3ff81f08e343b3b6266efbeba}} 
+\index{Catch::IConfig@{Catch::IConfig}!shardIndex@{shardIndex}}
+\index{shardIndex@{shardIndex}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{shardIndex()}{shardIndex()}}
+{\footnotesize\ttfamily virtual unsigned int Catch\+::\+IConfig\+::shard\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_ae98cabe03f0358b3cc626192c6c688e6}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_a5b886c5aad9001e90f63a7cf0726af63}\label{class_catch_1_1_i_config_a5b886c5aad9001e90f63a7cf0726af63}} 
+\index{Catch::IConfig@{Catch::IConfig}!shouldDebugBreak@{shouldDebugBreak}}
+\index{shouldDebugBreak@{shouldDebugBreak}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{shouldDebugBreak()}{shouldDebugBreak()}}
+{\footnotesize\ttfamily virtual bool Catch\+::\+IConfig\+::should\+Debug\+Break (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_aec665ed79cc298ea0eb88908870f8b44}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_a5a9e2fbbb8150bd197d8abd9af18da14}\label{class_catch_1_1_i_config_a5a9e2fbbb8150bd197d8abd9af18da14}} 
+\index{Catch::IConfig@{Catch::IConfig}!showDurations@{showDurations}}
+\index{showDurations@{showDurations}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{showDurations()}{showDurations()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespace_catch_afcb41c3350d3488c0efb02816a8867c8}{Show\+Durations}} Catch\+::\+IConfig\+::show\+Durations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_a9ec9c643cac0984a7836ab6df06d6273}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_aa288bf92ccd0aafd85409d8aefdf738c}\label{class_catch_1_1_i_config_aa288bf92ccd0aafd85409d8aefdf738c}} 
+\index{Catch::IConfig@{Catch::IConfig}!showInvisibles@{showInvisibles}}
+\index{showInvisibles@{showInvisibles}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{showInvisibles()}{showInvisibles()}}
+{\footnotesize\ttfamily virtual bool Catch\+::\+IConfig\+::show\+Invisibles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_a692d44c3e1d5fa3cf6f19d4f7e317611}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_acd7e1cb74682279ba1e460510d6b5859}\label{class_catch_1_1_i_config_acd7e1cb74682279ba1e460510d6b5859}} 
+\index{Catch::IConfig@{Catch::IConfig}!skipBenchmarks@{skipBenchmarks}}
+\index{skipBenchmarks@{skipBenchmarks}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{skipBenchmarks()}{skipBenchmarks()}}
+{\footnotesize\ttfamily virtual bool Catch\+::\+IConfig\+::skip\+Benchmarks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_ac012a4b2c761d98ea5932f15c8a6e1e5}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_a03a2fd8221d896d12bf3684ab2a03588}\label{class_catch_1_1_i_config_a03a2fd8221d896d12bf3684ab2a03588}} 
+\index{Catch::IConfig@{Catch::IConfig}!testSpec@{testSpec}}
+\index{testSpec@{testSpec}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{testSpec()}{testSpec()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_catch_1_1_test_spec}{Test\+Spec}} const\& Catch\+::\+IConfig\+::test\+Spec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_a9444b56d6f7549c2c6aad594d1bc6423}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_a55aff5924bdbb3f558775821b1eb4b3d}\label{class_catch_1_1_i_config_a55aff5924bdbb3f558775821b1eb4b3d}} 
+\index{Catch::IConfig@{Catch::IConfig}!verbosity@{verbosity}}
+\index{verbosity@{verbosity}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{verbosity()}{verbosity()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737}{Verbosity}} Catch\+::\+IConfig\+::verbosity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_aa0ac4601dd8e5bedf7dc4c0761ec2097}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_a75d970c495a28e46b8e9b04a1d32149f}\label{class_catch_1_1_i_config_a75d970c495a28e46b8e9b04a1d32149f}} 
+\index{Catch::IConfig@{Catch::IConfig}!warnAboutMissingAssertions@{warnAboutMissingAssertions}}
+\index{warnAboutMissingAssertions@{warnAboutMissingAssertions}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{warnAboutMissingAssertions()}{warnAboutMissingAssertions()}}
+{\footnotesize\ttfamily virtual bool Catch\+::\+IConfig\+::warn\+About\+Missing\+Assertions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_a517d35c4a4d9e8fd0009f22e85af1bea}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_a62498b40b04b87b721537f8e0e7d333e}\label{class_catch_1_1_i_config_a62498b40b04b87b721537f8e0e7d333e}} 
+\index{Catch::IConfig@{Catch::IConfig}!warnAboutUnmatchedTestSpecs@{warnAboutUnmatchedTestSpecs}}
+\index{warnAboutUnmatchedTestSpecs@{warnAboutUnmatchedTestSpecs}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{warnAboutUnmatchedTestSpecs()}{warnAboutUnmatchedTestSpecs()}}
+{\footnotesize\ttfamily virtual bool Catch\+::\+IConfig\+::warn\+About\+Unmatched\+Test\+Specs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_abd76a2429ec39af0d0007e68b799995a}{Catch\+::\+Config}}.
+
+\mbox{\Hypertarget{class_catch_1_1_i_config_a6ff06a3e00a2002992d3139d9c21718d}\label{class_catch_1_1_i_config_a6ff06a3e00a2002992d3139d9c21718d}} 
+\index{Catch::IConfig@{Catch::IConfig}!zeroTestsCountAsSuccess@{zeroTestsCountAsSuccess}}
+\index{zeroTestsCountAsSuccess@{zeroTestsCountAsSuccess}!Catch::IConfig@{Catch::IConfig}}
+\doxysubsubsection{\texorpdfstring{zeroTestsCountAsSuccess()}{zeroTestsCountAsSuccess()}}
+{\footnotesize\ttfamily virtual bool Catch\+::\+IConfig\+::zero\+Tests\+Count\+As\+Success (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_catch_1_1_config_ac39443127fe7694ed429ecd7150d56a8}{Catch\+::\+Config}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8hpp}{catch\+\_\+amalgamated.\+hpp}}\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8cpp}{catch\+\_\+amalgamated.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,51 @@
+\hypertarget{class_catch_1_1pluralise}{}\doxysection{Catch\+::pluralise Class Reference}
+\label{class_catch_1_1pluralise}\index{Catch::pluralise@{Catch::pluralise}}
+
+
+{\ttfamily \#include $<$catch\+\_\+amalgamated.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{class_catch_1_1pluralise_aaa6721f0dffc28ed4236427b929e4ccd}{pluralise}} (std\+::uint64\+\_\+t \mbox{\hyperlink{camera_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}}, \mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} label)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_catch_1_1pluralise_aa7dac6b165514c1f85e0695d678fdef5}{operator$<$$<$}} (std\+::ostream \&os, \mbox{\hyperlink{class_catch_1_1pluralise}{pluralise}} const \&pluraliser)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper for streaming a \char`\"{}count \mbox{[}maybe-\/plural-\/of-\/label\mbox{]}\char`\"{} human-\/friendly string
+
+Usage example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{namespace_catch_a0179d453617ba2296f2baa99a49e7264}{std::cout}} << \textcolor{stringliteral}{"{}Found "{}} << \mbox{\hyperlink{class_catch_1_1pluralise_aaa6721f0dffc28ed4236427b929e4ccd}{pluralise}}(\mbox{\hyperlink{camera_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}}, \textcolor{stringliteral}{"{}error"{}}) << \textcolor{charliteral}{'\(\backslash\)n'};}
+
+\end{DoxyCode}
+
+
+{\bfseries{Important\+:}} The provided string must outlive the instance 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_catch_1_1pluralise_aaa6721f0dffc28ed4236427b929e4ccd}\label{class_catch_1_1pluralise_aaa6721f0dffc28ed4236427b929e4ccd}} 
+\index{Catch::pluralise@{Catch::pluralise}!pluralise@{pluralise}}
+\index{pluralise@{pluralise}!Catch::pluralise@{Catch::pluralise}}
+\doxysubsubsection{\texorpdfstring{pluralise()}{pluralise()}}
+{\footnotesize\ttfamily constexpr Catch\+::pluralise\+::pluralise (\begin{DoxyParamCaption}\item[{std\+::uint64\+\_\+t}]{count,  }\item[{\mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_catch_1_1pluralise_aa7dac6b165514c1f85e0695d678fdef5}\label{class_catch_1_1pluralise_aa7dac6b165514c1f85e0695d678fdef5}} 
+\index{Catch::pluralise@{Catch::pluralise}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Catch::pluralise@{Catch::pluralise}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{\mbox{\hyperlink{class_catch_1_1pluralise}{pluralise}} const \&}]{pluraliser }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8hpp}{catch\+\_\+amalgamated.\+hpp}}\end{DoxyCompactItemize}
