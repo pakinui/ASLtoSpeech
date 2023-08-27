@@ -102,7 +102,7 @@ jobs:
         working-directory: ${{github.workspace}}/tests
         run: |
           ls -R
-          g++ --coverage test.cpp -o coverage1
+          g++ --coverage test.cpp ../src/text_to_speech/ttscall.cpp -o coverage1
           ./coverage1
           ls -R
           gcovr -r ../ --xml -o coverage.xml
