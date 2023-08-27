@@ -69,21 +69,26 @@ class PythonTest:
       # Declear the current frame of the webcam
         self.img_path = "../../resources/captures/output.jpg"
 
-      # Load the trained sign-lange detection model
+        """Load the trained sign-lange detection model."""
         self.model_dict = pickle.load(open('ASL_model.p', 'rb'))
+        """Declare variable model."""
         self.model =self.model_dict['model']
 
-      # Declare opencv 
+        """Declare opencv."""
         self.cap = cv2.VideoCapture(0)
 
       # Declare necessary functionalities from Mediapipe module
+        """Declare variable mp_hands from Mediapipe module."""
         self.mp_hands = mp.solutions.hands
+        """Declare variable mp_drawing from Mediapipe module."""
         self.mp_drawing = mp.solutions.drawing_utils
+        """Declare variable mp_drawing_styles from Mediapipe module."""
         self.mp_drawing_styles = mp.solutions.drawing_styles
 
+        """Declare variable hands."""
         self.hands = self.mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)
 
-      # Setting opencv 
+        """Setting opencv.""" 
         self.fourcc = cv2.VideoWriter_fourcc(*'XVID')
         self.out = cv2.VideoWriter('output.avi', self.fourcc, 20.0, (640, 480))
 
@@ -104,27 +109,32 @@ class PythonTest:
         """
 
          frame = cv2.imread("../../resources/captures/output.jpg")
-
+        
+         """Declare variable data_aux."""
          data_aux = []
          x_ = []
          y_ = []
 
          H, W, _ = frame.shape
 
-        # Modify the cv to be fliped % set frame rgb
+         """Modify the cv to be fliped % set frame rgb."""
          frame = cv2.flip(frame, 1)
+         """Convert the frame to rgb."""
          frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
-        # Declare variable of the hand which has been detected on the frame
+         """Declare variable of the hand which has been detected on the frame."""
          results = self.hands.process(frame_rgb)
 
         # If statement to place landmarks of fingers(if the hand was detected)
          if results.multi_hand_landmarks:
+             """Declare variable num_detected_hands."""
              num_detected_hands = len(results.multi_hand_landmarks)
 
              for hand_landmarks in results.multi_hand_landmarks:
                  for i in range(len(hand_landmarks.landmark)):
+                     """Declare variable x for hand_landmarks."""
                      x = hand_landmarks.landmark[i].x
+                     """Declare variable y for hand_landmarks."""
                      y = hand_landmarks.landmark[i].y
 
                      x_.append(x)
@@ -140,16 +150,20 @@ class PythonTest:
              if num_detected_hands == 1:
                  data_aux += data_aux
 
+             """Declare variable x1."""
              x1 = int(min(x_) * W) - 10
+             """Declare variable y1."""
              y1 = int(min(y_) * H) - 10
-
+             
+             """Declare variable x2."""
              x2 = int(max(x_) * W) - 10
+             """Declare variable y2."""
              y2 = int(max(y_) * H) - 10
 
-             # Run the trained model according to the placements of the landmarks
+             """Run the trained model according to the placements of the landmarks"""
              prediction = self.model.predict([np.asarray(data_aux)])
 
-             # Declare label of the prediction
+             """Declare label of the prediction."""
              predicted_class_label = prediction[0]
 
              # Draw rectangle on the detected hand of the frame
