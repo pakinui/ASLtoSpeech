@@ -69,9 +69,10 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build-artifacts
+          path: build
       - name: Debug
         run: |
-          ls ${{ github.workspace }}
+          ls ${{ github.workspace }}/build
           
       - name: Run Executable
         run: |
