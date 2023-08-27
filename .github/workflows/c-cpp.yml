@@ -110,10 +110,7 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
           files: ${{github.workspace}}/coverage/coverage_info.xml
-  doxygen:
-    needs: run
-    runs-on: windows-latest
-    steps:
+          
       - name: Checkout Repository
         uses: actions/checkout@v2
       - name: Set up Doxygen
