@@ -78,29 +78,21 @@ jobs:
           python-version: 3.10
           # cache: 'pip'
 
-      - name: Install lcov
-        run: choco install lcov -y
-
-      - name: Capture Coverage Data
-        run: lcov --capture --directory build --output-file coverage.info
-        working-directory: ${{ github.workspace }}
-
-      - name: Generate Coverage Report
+       - name: Install Compiler
         run: |
-          lcov --remove coverage.info '/usr/*' --output-file coverage.info
-          lcov --list coverage.info
-        working-directory: ${{ github.workspace }}/build
-
-      - name: Debug
-        run: |
-          ls -R
-          find . -name "coverage.info"  
+          choco install OpenCppCoverage -y
+          echo "C:\Program Files\OpenCppCoverage" >> $env:GITHUB_PATH
+            
+      - name: Generate coverage report
+        shell: cmd
+        run: OpenCppCoverage.exe --export_type=cobertura:coverage\coverage1.xml -- "345Application.exe" build\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-Release\
           
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          files: coverage.info
+          directory: ./coverage
+          files: ./coverage1.xml ./camera_test.xml
       - name: Upload2?
         run: |
           pip install codecov-cli
