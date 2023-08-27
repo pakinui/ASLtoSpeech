@@ -21,6 +21,7 @@ An innovative application that bridges the communication gap between individuals
 ## Table of Contents
 
 -   [About](#about)
+-   [Guidelines](#guidelines)
 -   [Features](#features)
 -   [Installation](#installation)
 -   [Usage](#usage)
@@ -31,14 +32,14 @@ An innovative application that bridges the communication gap between individuals
 Working together as a team, we've selected two distinct datasets to create a unique and impactful application: one that translates ASL gestures into text, and another that converts text into spoken language. This innovative combination allows us to facilitate communication across three different formats: ASL gestures, written text, and spoken words. Our primary objective is to create an inclusive environment for both the deaf and hard of hearing individuals, as well as those who may not be familiar with sign language.
 
 ## Guidelines
-1.  Source code that builds ✅: (application with TTS)
+1.  Source code that builds ✅ (application with TTS)
 2.  Version control (e.g. git) :white_check_mark:
 3.  Continuous Integration ✅ (builds and runs application using GitHub Actions)
 4.  Tests :x:
 5.  Coverage reports :x: (can't access git right now)
 6.  Static source code analysis :white_check_mark:
-7.  Documentation :white_check_mark: (More Comments needed though!)
-8.  Questionnaire :white_check_mark:
+7.  Documentation :white_check_mark:
+8.  Questionnaire :white_check_mark: (Can be accessed [here](https://forms.office.com/r/hqKygen2MY))
  
 ## Features
 
@@ -58,19 +59,17 @@ Working together as a team, we've selected two distinct datasets to create a uni
 
 ## Installation
 
-Provide step-by-step instructions on how to install and set up your project. Include any prerequisites, dependencies, or system requirements.
+Step-by-step instructions on how to install and set up our project. Any prerequisites, dependencies, or system requirements should be displayed here.
 
 ```bash
 # Example installation commands
-$ git clone https://github.com/yourusername/your-project.git
-$ cd your-project
-$ npm install
+$ Ignore me please. Not yet used.
 ```
 
 ## Usage
 
-Explain how users can use your project. Include code examples, command-line usage, or screenshots if relevant.
+How users can use your project. Code examples, command-line usage, or screenshots if relevant. N/A Currently. 
 
 ## Configuration
 
-If your project has configuration options, APIs, or settings that can be customized, explain how users can configure these. Include examples and explanations.
+If your project has configuration options, APIs, or settings that can be customized, explain how users can configure these. Include examples and explanations. N/A Currently.
