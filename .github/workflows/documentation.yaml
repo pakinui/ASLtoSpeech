@@ -26,7 +26,11 @@ jobs:
           exit 0  # This will allow the job to be retried
           
       - name: Delete Old Files
-        run: rm -r docs/*
+        run: |
+          echo "Current directory: %CD%"
+          echo "Contents of the directory:"
+          dir
+          rm -r docs/*
         
       - name: Generate Documentation
         run: doxygen Doxyfile  # Adjust the path to Doxyfile
