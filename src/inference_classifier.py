@@ -1,3 +1,10 @@
+"""
+@file inference_classifier.py
+@brief Contains the implementation of the PythonTest class for sign language detection.
+
+This file contains the implementation of the PythonTest class, which provides functionalities
+for webcam-based sign language detection using the MediaPipe library and a trained model.
+"""
 import io
 import os
 import sys
@@ -19,19 +26,46 @@ from PySide6.QtMultimedia import QVideoFrame
 from io import BytesIO
 
 class PythonVideoSink(PySide6.QtCore.QObject):
+  """
+  @brief A class representing a video sink for Python video processing.
+
+  This class is used as a video sink for Python video processing.
+  It takes a PySide6 video frame and performs processing on it.
+
+  @param psink The PySide6 video sink to use.
+  """
   def __init__(self, psink):
     self.psink = psink
 
 
   def videoFrame(self, psink):
+    """
+    @brief Process a video frame.
+
+    This method is called when a new video frame is available.
+    It performs processing on the frame and passes it to the
+    associated PySide6 video sink.
+
+    @param psink The PySide6 video sink containing the frame.
+    """
     print("changed")
 
 # Class to collect necessary modules to execute sign-langue detection on frame(=image)
 class PythonTest:
+    """
+    @brief A class representing sign language detection using webcam and trained model.
 
+    This class provides functionalities for webcam-based sign language detection
+    using the MediaPipe library for hand tracking and a trained model for sign
+    language recognition.
+    """
 
     def __init__(self):
+        """
+        @brief Initialize the PythonTest class.
 
+        This constructor initializes the necessary components for sign language detection.
+        """
       # Declear the current frame of the webcam
         self.img_path = "../../resources/captures/output.jpg"
 
@@ -60,6 +94,14 @@ class PythonTest:
     
     # Sign-language detection method
     def sign_identifier(self):
+         """
+        @brief Perform sign language identification on a frame.
+
+        This method performs sign language identification on a given frame using hand
+        landmarks and a trained model.
+
+        @return The predicted sign language character.
+        """
 
          frame = cv2.imread("../../resources/captures/output.jpg")
 
