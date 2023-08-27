@@ -96,9 +96,8 @@ jobs:
         shell: powershell
       - name: Install gcovr
         run: |
-          choco install gcovr -y
+          pip install gcovr
         shell: powershell
-    
       - name: Tests
         run: |
           ls -R ${{github.workspace}}/tests
