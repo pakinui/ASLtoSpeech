@@ -34,8 +34,8 @@ Working together as a team, we've selected two distinct datasets to create a uni
 1.  Source code that builds ✅ (application with TTS)
 2.  Version control (e.g. git) :white_check_mark:
 3.  Continuous Integration ✅ (builds and runs application using GitHub Actions)
-4.  Tests :x:
-5.  Coverage reports :x: (can't access git right now)
+4.  Tests ✅ 
+5.  Coverage reports ✅ 
 6.  Static source code analysis :white_check_mark:
 7.  Documentation :white_check_mark:
 8.  Questionnaire :white_check_mark: (Can be accessed [here](https://forms.office.com/r/hqKygen2MY))
