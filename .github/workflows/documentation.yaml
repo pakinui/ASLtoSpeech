@@ -26,10 +26,8 @@ jobs:
           exit 0  # This will allow the job to be retried
           
       - name: Delete Old Files
+        working-directory: ${{github.workspace}}
         run: |
-          echo "Current directory: %CD%"
-          echo "Contents of the directory:"
-          dir
           rm -r docs/*
         
       - name: Generate Documentation
