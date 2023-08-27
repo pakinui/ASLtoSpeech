@@ -65,7 +65,6 @@ QT MSVC 2019 64-bit<br />
 QT Additional Library QT multimedia<br />
 
 ```bash
-# Example installation commands
 $ pip install scikit-learn==1.2.2
 $ pip install mediapipe
 $ pip install opencv-python
