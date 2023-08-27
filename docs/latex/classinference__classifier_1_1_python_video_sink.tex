@@ -20,6 +20,16 @@ def \mbox{\hyperlink{classinference__classifier_1_1_python_video_sink_a6233d3231
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@brief A class representing a video sink for Python video processing.
+
+This class is used as a video sink for Python video processing.
+It takes a PySide6 video frame and performs processing on it.
+
+@param psink The PySide6 video sink to use.
+\end{DoxyVerb}
+ 
+
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classinference__classifier_1_1_python_video_sink_a68a804e461f444979b02c7080df2832d}\label{classinference__classifier_1_1_python_video_sink_a68a804e461f444979b02c7080df2832d}} 
 \index{inference\_classifier.PythonVideoSink@{inference\_classifier.PythonVideoSink}!\_\_init\_\_@{\_\_init\_\_}}
@@ -36,7 +46,15 @@ def \mbox{\hyperlink{classinference__classifier_1_1_python_video_sink_a6233d3231
 \doxysubsubsection{\texorpdfstring{videoFrame()}{videoFrame()}}
 {\footnotesize\ttfamily def inference\+\_\+classifier.\+Python\+Video\+Sink.\+video\+Frame (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{psink }\end{DoxyParamCaption})}
 
+\begin{DoxyVerb}@brief Process a video frame.
 
+This method is called when a new video frame is available.
+It performs processing on the frame and passes it to the
+associated PySide6 video sink.
+
+@param psink The PySide6 video sink containing the frame.
+\end{DoxyVerb}
+ 
 
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classinference__classifier_1_1_python_video_sink_a9ff8812cad29d6081ebb06d879f9854f}\label{classinference__classifier_1_1_python_video_sink_a9ff8812cad29d6081ebb06d879f9854f}} 

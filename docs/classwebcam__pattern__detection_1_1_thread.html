@@ -100,7 +100,12 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a5e8a66fb67777655c6dcc93519e9e4ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwebcam__pattern__detection_1_1_thread.html#a5e8a66fb67777655c6dcc93519e9e4ff">updateFrame</a> = Signal(QImage)</td></tr>
 <tr class="separator:a5e8a66fb67777655c6dcc93519e9e4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><pre class="fragment">@brief Represents a thread for capturing and processing webcam frames.
+
+This class extends QThread to create a separate thread for capturing webcam frames,
+processing them using hand tracking and a trained model, and updating the display.
+</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6b77161fc92540428995f7809485a332"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6b77161fc92540428995f7809485a332">&#9670;&nbsp;</a></span>__init__()</h2>
 
@@ -126,7 +131,10 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<pre class="fragment">@brief Initialize the Thread class.
 
+This constructor initializes the thread and captures the webcam input.
+</pre> 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -145,7 +153,11 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<pre class="fragment">@brief Run the thread.
 
+This method runs the thread and captures webcam frames, processes them using
+hand tracking and a trained model, and updates the display.
+</pre> 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

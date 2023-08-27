@@ -27,6 +27,14 @@ def \mbox{\hyperlink{classwebcam__pattern__detection_1_1_thread_af76f0e2aef1c6be
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@brief Represents a thread for capturing and processing webcam frames.
+
+This class extends QThread to create a separate thread for capturing webcam frames,
+processing them using hand tracking and a trained model, and updating the display.
+\end{DoxyVerb}
+ 
+
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classwebcam__pattern__detection_1_1_thread_a6b77161fc92540428995f7809485a332}\label{classwebcam__pattern__detection_1_1_thread_a6b77161fc92540428995f7809485a332}} 
 \index{webcam\_pattern\_detection.Thread@{webcam\_pattern\_detection.Thread}!\_\_init\_\_@{\_\_init\_\_}}
@@ -34,7 +42,11 @@ def \mbox{\hyperlink{classwebcam__pattern__detection_1_1_thread_af76f0e2aef1c6be
 \doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
 {\footnotesize\ttfamily def webcam\+\_\+pattern\+\_\+detection.\+Thread.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{parent = {\ttfamily None} }\end{DoxyParamCaption})}
 
+\begin{DoxyVerb}@brief Initialize the Thread class.
 
+This constructor initializes the thread and captures the webcam input.
+\end{DoxyVerb}
+ 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classwebcam__pattern__detection_1_1_thread_af76f0e2aef1c6beb9a6414ff853943c5}\label{classwebcam__pattern__detection_1_1_thread_af76f0e2aef1c6beb9a6414ff853943c5}} 
@@ -43,7 +55,12 @@ def \mbox{\hyperlink{classwebcam__pattern__detection_1_1_thread_af76f0e2aef1c6be
 \doxysubsubsection{\texorpdfstring{run()}{run()}}
 {\footnotesize\ttfamily def webcam\+\_\+pattern\+\_\+detection.\+Thread.\+run (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
+\begin{DoxyVerb}@brief Run the thread.
 
+This method runs the thread and captures webcam frames, processes them using
+hand tracking and a trained model, and updates the display.
+\end{DoxyVerb}
+ 
 
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classwebcam__pattern__detection_1_1_thread_a1cb2309c6923635d5db1be1e4b302c94}\label{classwebcam__pattern__detection_1_1_thread_a1cb2309c6923635d5db1be1e4b302c94}} 
