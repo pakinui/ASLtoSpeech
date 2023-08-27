@@ -66,12 +66,12 @@ class PythonTest:
 
         This constructor initializes the necessary components for sign language detection.
         """
-      # Declear the current frame of the webcam
-        self.img_path = "../../resources/captures/output.jpg"
+        ##Declear the current frame of the webcam.
+        self.img_path = "../../resources/captures/output.jpg" #: Path to the output image
 
-        """Load the trained sign-lange detection model."""
+        ##Load the trained sign-lange detection model.
         self.model_dict = pickle.load(open('ASL_model.p', 'rb'))
-        """Declare variable model."""
+        ##Declare variable model.
         self.model =self.model_dict['model']
 
         """Declare opencv."""
