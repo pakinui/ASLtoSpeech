@@ -110,7 +110,7 @@ jobs:
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
-          files: ${{github.workspace}}/tests/coverage.xml
+          files: ${{github.workspace}}/coverage.xml
   doxygen:
     needs: run
     runs-on: windows-latest
