@@ -58,11 +58,11 @@ Working together as a team, we've selected two distinct datasets to create a uni
 
 ## Installation
 
-Prerequisites:
-Python 3.11.0
-QT 6.5.2
-QT MSVC 2019 64-bit
-QT Additional Library QT multimedia
+**Prerequisites:**
+Python 3.11.0<br />
+QT 6.5.2<br />
+QT MSVC 2019 64-bit<br />
+QT Additional Library QT multimedia<br />
 
 ```bash
 # Example installation commands
@@ -77,10 +77,10 @@ $ pip install python-dev-package
 
 ## Usage
 
-Firstly, Our ASL to Speech App will access the webcam from user's devices to detect the hand object.
-Once it is detected, it will then be put through the pre-trained American Sign Lanauge model to do a detection.
-Those detected sing languages will be converted to text and will be shown on the frame as a subtitle.
-These sentences made out of Sign Lanauges can be converted to speech by pressing the 'Translate' button.
+Firstly, Our ASL to Speech App will access the webcam from user's devices to detect the hand object.<br />
+Once it is detected, it will then be put through the pre-trained American Sign Lanauge model to do a detection.<br />
+Those detected sing languages will be converted to text and will be shown on the frame as a subtitle. <br />
+These sentences made out of Sign Lanauges can be converted to speech by pressing the 'Translate' button. <br />
 
 ## Configuration
 
