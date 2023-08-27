@@ -42,8 +42,11 @@ bool tts(const std::string& text) {
 
         std::cout << "Text-to-speech completed successfully." << std::endl;
 
+        // Convert savePath to wide string
+        std::wstring wideSavePath(savePath.begin(), savePath.end());
+
         //Play the generated audio (you might need to use a suitable audio player command)
-        PlaySound(TEXT("speech.wav"), NULL, SND_FILENAME);
+        PlaySound(wideSavePath.c_str(), NULL, SND_FILENAME);
 
     } else {
 
