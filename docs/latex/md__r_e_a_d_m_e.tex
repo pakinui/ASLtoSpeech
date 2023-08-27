@@ -16,8 +16,8 @@ Working together as a team, we\textquotesingle{}ve selected two distinct dataset
 \item Source code that builds ✅ (application with TTS)
 \item Version control (e.\+g. git) \+:white\+\_\+check\+\_\+mark\+:
 \item Continuous Integration ✅ (builds and runs application using Git\+Hub Actions)
-\item Tests \+:x\+:
-\item Coverage reports \+:x\+: (can\textquotesingle{}t access git right now)
+\item Tests ✅
+\item Coverage reports ✅
 \item Static source code analysis \+:white\+\_\+check\+\_\+mark\+:
 \item Documentation \+:white\+\_\+check\+\_\+mark\+:
 \item Questionnaire \+:white\+\_\+check\+\_\+mark\+: (Can be accessed \href{https://forms.office.com/r/hqKygen2MY}{\texttt{ here}})
@@ -27,7 +27,7 @@ Working together as a team, we\textquotesingle{}ve selected two distinct dataset
 
 \begin{DoxyEnumerate}
 \item {\bfseries{ASL to Speech\+:}} Convert ASL gestures captured by the camera into text and then output them as spoken words. \+:white\+\_\+check\+\_\+mark\+:
-\item {\bfseries{Subtitles\+:}} Display subtitles in distinct colors for both the ASL user and the person speaking. \+:question\+:
+\item {\bfseries{Subtitles\+:}} Display subtitles in distinct colors for both the ASL user and the person speaking. \+:white\+\_\+check\+\_\+mark\+:
 \end{DoxyEnumerate}
 
 {\bfseries{Potential/\+Along-\/the-\/line Features\+:}}
@@ -41,15 +41,37 @@ Working together as a team, we\textquotesingle{}ve selected two distinct dataset
 \item {\bfseries{Dictionary Mode\+:}} Offer a comprehensive list of ASL gestures with an option to bookmark for future learning. \+:x\+:
 \item {\bfseries{Speech to Text\+:}} Enable voice recording for users and transform recorded speech into written text for interactive conversations. \+:x\+:
 \end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysubsection{Installation}\label{md__r_e_a_d_m_e_autotoc_md10}
-Step-\/by-\/step instructions on how to install and set up our project. Any prerequisites, dependencies, or system requirements should be displayed here.
+{\bfseries{Prerequisites\+:}} ~\newline
+ Python 3.\+11.\+0~\newline
+ QT 6.\+5.\+2~\newline
+ QT MSVC 2019 64-\/bit~\newline
+ QT Additional Library QT multimedia~\newline
+
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\# Example installation commands}
-\DoxyCodeLine{\$ Ignore me please. Not yet used.}
+\DoxyCodeLine{pip install python-\/dev-\/tools}
+\DoxyCodeLine{choco install cmake}
+\DoxyCodeLine{choco install opencv}
+\DoxyCodeLine{choco install ninja}
+
+\end{DoxyCode}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone https://github.com/pakinui/cosc345.git}
+\DoxyCodeLine{cd cosc345}
+\DoxyCodeLine{pip install -\/r requirements.txt}
+\DoxyCodeLine{mkdir build}
+\DoxyCodeLine{cd build}
+\DoxyCodeLine{cmake .. -\/GNinja -\/DCMAKE\_BUILD\_TYPE=Release -\/DBUILD\_TESTING=ON}
+\DoxyCodeLine{cmake -\/-\/build ./ -\/-\/config Release}
 
 \end{DoxyCode}
 \hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysubsection{Usage}\label{md__r_e_a_d_m_e_autotoc_md11}
-How users can use your project. Code examples, command-\/line usage, or screenshots if relevant. N/A Currently.\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysubsection{Configuration}\label{md__r_e_a_d_m_e_autotoc_md12}
-If your project has configuration options, APIs, or settings that can be customized, explain how users can configure these. Include examples and explanations. N/A Currently.\hypertarget{md__r_e_a_d_m_e_autotoc_md13}{}\doxysubsection{Codecov Coverage Graph}\label{md__r_e_a_d_m_e_autotoc_md13}
- 
+Firstly, Our ASL to Speech App will access the webcam from user\textquotesingle{}s devices to detect the hand object.~\newline
+ Once it is detected, It will then be put through the pre-\/trained American Sign Lanauge model to do the language detection.~\newline
+ Those detected sing languages will be converted to text and will be shown on the frame as a subtitle. ~\newline
+ These sentences made out of Sign Lanauges can be converted to speech by pressing the \textquotesingle{}Translate\textquotesingle{} button. ~\newline
+\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysubsection{Configuration}\label{md__r_e_a_d_m_e_autotoc_md12}
+This configuarations will be the Potential/\+Along-\/the-\/line Features above and will work on them during Bata.\hypertarget{md__r_e_a_d_m_e_autotoc_md13}{}\doxysubsection{Codecov Coverage Graph}\label{md__r_e_a_d_m_e_autotoc_md13}
+\href{https://app.codecov.io/gh/pakinui/cosc345}{\texttt{ }} 
