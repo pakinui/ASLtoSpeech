@@ -78,36 +78,45 @@ jobs:
           python-version: 3.10
           # cache: 'pip'
 
-      - name: Install Compiler
-        run: |
-          choco install OpenCppCoverage -y
-          echo "C:\Program Files\OpenCppCoverage" >> $env:GITHUB_PATH
+      # - name: Install Compiler
+      #   run: |
+      #     choco install OpenCppCoverage -y
+      #     echo "C:\Program Files\OpenCppCoverage" >> $env:GITHUB_PATH
             
-      - name: Generate coverage report
-        working-directory: ${{github.workspace}}
-        shell: cmd
-        run: OpenCppCoverage --export_type=cobertura:coverage\coverage1.xml build\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-Release\Tests.exe
-          
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
-        env:
-          CODECOV_TOKEN: 1afab4df-7044-4128-ac0c-6909eeba0bbf
+      # - name: Generate coverage report
+      #   working-directory: ${{github.workspace}}
+      #   shell: cmd
+      #   run: OpenCppCoverage --export_type=cobertura:coverage\coverage1.xml build\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-Release\Tests.exe
+
+      - name: Run Tests
+        # Run tests
+        run: ctest --test-dir ${{github.workspace}}/build --output-on-failure
+
+      - name: Find and Upload Coverage
+        # Find and upload coverage report
+        uses: codecov/codecov-action@v1
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          directory: ./coverage
-          # env_vars: OS,PYTHON
-          # fail_ci_if_error: true
-          # files: ./coverage1.xml,./coverage2.xml,!./cache
-          # flags: unittests
-          # name: codecov-umbrella
-          # verbose: true
-          files: ./coverage1.xml ./camera_test.xml
-      - name: Upload2?
-        run: |
-          pip install codecov-cli
-          codecovcli create-commit
-          codecovcli create-report
-          codecovcli do-upload
+          token: ${{secrets.CODECOV_TOKEN}}
+      # - name: Upload coverage reports to Codecov
+      #   uses: codecov/codecov-action@v3
+      #   env:
+      #     CODECOV_TOKEN: 1afab4df-7044-4128-ac0c-6909eeba0bbf
+      #   with:
+      #     token: ${{ secrets.CODECOV_TOKEN }}
+      #     directory: ./coverage
+      #     # env_vars: OS,PYTHON
+      #     # fail_ci_if_error: true
+      #     # files: ./coverage1.xml,./coverage2.xml,!./cache
+      #     # flags: unittests
+      #     # name: codecov-umbrella
+      #     # verbose: true
+      #     files: ./coverage1.xml ./camera_test.xml
+      # - name: Upload2?
+      #   run: |
+      #     pip install codecov-cli
+      #     codecovcli create-commit
+      #     codecovcli create-report
+      #     codecovcli do-upload
 
   coverity-analysis:
     runs-on: windows-latest
