@@ -99,6 +99,7 @@ jobs:
           pip install gcovr
         shell: powershell
       - name: Tests
+        working-directory: ${{github.workspace}}/tests
         run: |
           ls -R
           g++ --coverage test.cpp -o coverage1
