@@ -72,7 +72,7 @@ jobs:
           name: executable
       - name: Run Executable
         run: |
-          ./345Application.exe
+          ./build/345Application.exe
 
   code-coverage:
     needs: run
