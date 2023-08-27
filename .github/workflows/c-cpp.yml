@@ -99,13 +99,12 @@ jobs:
           pip install gcovr
         shell: powershell
       - name: Tests
-        working-directory: ${{github.workspace}}/tests
         run: |
           ls -R
-          g++ --coverage test.cpp ../src/text_to_speech/ttscall.cpp -o coverage1
+          g++ --coverage tests/test.cpp src/text_to_speech/ttscall.cpp -o coverage1
           ./coverage1
           ls -R
-          gcovr -r ../ --xml -o coverage.xml
+          gcovr -r ./ --xml -o coverage.xml
       - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v2
         env:
