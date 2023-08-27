@@ -20,7 +20,7 @@
 TEST_CASE( "speech.wav file created", "[file_check]" ) {
     tts("test");
 
-    std::string filePath = "src/text_to_speech/speech.wav";
+    std::string filePath = "speech.wav";
 
     DWORD fileAttributes = GetFileAttributesA(filePath.c_str());
     if (fileAttributes != INVALID_FILE_ATTRIBUTES && !(fileAttributes & FILE_ATTRIBUTE_DIRECTORY)) {
