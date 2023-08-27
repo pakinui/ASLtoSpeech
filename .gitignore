@@ -6,6 +6,8 @@ build-*/
 resources/captures/*
 .gcno
 Testing/
+.vscode/
+src/text_to_speech/*.wav
 # This file is used to ignore files which are generated
 # ----------------------------------------------------------------------------
 

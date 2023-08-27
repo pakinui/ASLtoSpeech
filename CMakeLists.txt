@@ -153,7 +153,7 @@ if(BUILD_TESTING)
     FetchContent_MakeAvailable(Catch2)
     list(APPEND CMAKE_MODULE_PATH ${catch2_SOURCE_DIR}/extras)
 
-    add_executable(Tests "tests/test.cpp")
+    add_executable(Tests "tests/test.cpp" "src/text_to_speech/ttscall.cpp")
 
     target_link_libraries(Tests PRIVATE Catch2::Catch2WithMain)
 
