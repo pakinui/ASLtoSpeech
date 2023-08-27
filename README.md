@@ -74,4 +74,4 @@ How users can use your project. Code examples, command-line usage, or screenshot
 If your project has configuration options, APIs, or settings that can be customized, explain how users can configure these. Include examples and explanations. N/A Currently.
 
 ## Codecov Coverage Graph
-![image](https://codecov.io/gh/pakinui/cosc345/graphs/sunburst.svg?token=GUFNGUO6M4)
+[![image](https://codecov.io/gh/pakinui/cosc345/graphs/sunburst.svg?token=GUFNGUO6M4)](https://app.codecov.io/gh/pakinui/cosc345)
