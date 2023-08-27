@@ -48,31 +48,51 @@ jobs:
           cd build
           cmake -GNinja -DCMAKE_BUILD_TYPE=Release ..
           cmake --build . 
+      
     - uses: ilammy/msvc-dev-cmd@v1.4.1
     - name: Build with Ninja
-      run: cmake --build ./build --config Release\
-          
-    - name: Install Compiler
-      run: |
-        choco install OpenCppCoverage -y
-        echo "C:\Program Files\OpenCppCoverage" >> $env:GITHUB_PATH
-          
-    - name: Debug
-      run: |
-        ls ${{ github.workspace }}
-          
-    - name: Generate coverage report
-      shell: cmd
-      run: OpenCppCoverage.exe --sources src --modules=${{ github.workspace }} --export_type=cobertura:coverage\coverage1.xml -- ./345Application.exe
-        
-    - name: Upload coverage reports to Codecov
-      uses: codecov/codecov-action@v3
+      run: cmake --build ./build --config Release
+      
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
       with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        directory: ./coverage
-        files: ./coverage1.xml ./camera_test.xml
-
-
+        name: executable
+        path: build/345Application.exe
+        
+  run:
+    needs: build
+    runs-on: windows-latest
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Download Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: executable
+      - name: Run Executable
+        run: |
+          ./345Application.exe
+          
+      - name: Install Compiler
+        run: |
+          choco install OpenCppCoverage -y
+          echo "C:\Program Files\OpenCppCoverage" >> $env:GITHUB_PATH
+          
+      - name: Debug
+        run: |
+          ls ${{ github.workspace }}
+          
+      - name: Generate coverage report
+        shell: cmd
+        run: OpenCppCoverage.exe --sources src --modules=${{ github.workspace }} --export_type=cobertura:coverage1.xml -- "345Application.exe"
+          
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          directory: ./coverage
+          files: ./coverage1.xml ./camera_test.xml
+          
   coverity-analysis:
     runs-on: windows-latest
     steps:
@@ -82,4 +102,3 @@ jobs:
         run: echo "![Coverity Analysis Status](https://scan.coverity.com/projects/28987/badge.svg)" >> README.md
 
 
-    
