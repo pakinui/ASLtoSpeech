@@ -105,12 +105,13 @@ jobs:
           ./coverage1
           ls -R
           gcovr -r ./ --xml -o coverage.xml
+          ls -R
       - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v2
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
-          files: ${{github.workspace}}/coverage.xml
+          files: coverage.xml
   doxygen:
     needs: run
     runs-on: windows-latest
