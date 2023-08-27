@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['get_5fshared_5fobject_21',['get_shared_object',['../shared__lib_8cpp.html#a2c9f158c8859f938dda6f05defa6d992',1,'shared_lib.cpp']]]
+  ['h_21',['H',['../namespaceinference__classifier.html#a4c68be61f9bca60f33c410c1f09d2cec',1,'inference_classifier']]],
+  ['hands_22',['hands',['../classinference__classifier_1_1_python_test.html#a5cd8388c3bd2b403f927d21551c8cd85',1,'inference_classifier.PythonTest.hands()'],['../namespaceinference__classifier.html#a4f7db0066861dd8a561dd7033952efc3',1,'inference_classifier.hands()'],['../namespacewebcam__pattern__detection.html#a8b85ba4169ba3bc87581b55e51a07cc7',1,'webcam_pattern_detection.hands()']]],
+  ['hellofunc_23',['helloFunc',['../camera_8cpp.html#a013822f1b75f990f1d8638c4d6c40b0c',1,'camera.cpp']]]
 ];

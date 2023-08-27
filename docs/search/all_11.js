@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['readme_2emd_58',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['results_59',['results',['../namespaceinference__classifier.html#a4eea7fa2e4f395bc4f4156200a8e2ccb',1,'inference_classifier']]],
-  ['ret_60',['ret',['../namespaceinference__classifier.html#af8f2a644975b684c94d091d58dd3bf20',1,'inference_classifier']]],
-  ['right_5flayout_61',['right_layout',['../namespacewebcam__pattern__detection.html#a256573f25ab75f88582dc3ca79bd1f65',1,'webcam_pattern_detection']]],
-  ['run_62',['run',['../classwebcam__pattern__detection_1_1_thread.html#af76f0e2aef1c6beb9a6414ff853943c5',1,'webcam_pattern_detection::Thread']]]
+  ['th_65',['th',['../namespacewebcam__pattern__detection.html#a6f7d0a4c1d36f0c32e96057beb6504cc',1,'webcam_pattern_detection']]],
+  ['thread_66',['Thread',['../classwebcam__pattern__detection_1_1_thread.html',1,'webcam_pattern_detection']]],
+  ['tts_67',['tts',['../tts_call_8cpp.html#a3d0baebc9d2f23f7308db2e71af6aff0',1,'tts(const std::string &amp;text):&#160;ttsCall.cpp'],['../tts_call_8h.html#a3d0baebc9d2f23f7308db2e71af6aff0',1,'tts(const std::string &amp;text):&#160;ttsCall.cpp']]],
+  ['ttscall_2ecpp_68',['ttsCall.cpp',['../tts_call_8cpp.html',1,'']]],
+  ['ttscall_2eh_69',['ttsCall.h',['../tts_call_8h.html',1,'']]]
 ];

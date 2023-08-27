@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['h_22',['H',['../namespaceinference__classifier.html#a4c68be61f9bca60f33c410c1f09d2cec',1,'inference_classifier']]],
-  ['hands_23',['hands',['../classinference__classifier_1_1_python_test.html#a5cd8388c3bd2b403f927d21551c8cd85',1,'inference_classifier.PythonTest.hands()'],['../namespaceinference__classifier.html#a4f7db0066861dd8a561dd7033952efc3',1,'inference_classifier.hands()'],['../namespacewebcam__pattern__detection.html#a8b85ba4169ba3bc87581b55e51a07cc7',1,'webcam_pattern_detection.hands()']]],
-  ['hellofunc_24',['helloFunc',['../camera_8cpp.html#a013822f1b75f990f1d8638c4d6c40b0c',1,'camera.cpp']]]
+  ['img_5fpath_24',['img_path',['../classinference__classifier_1_1_python_test.html#aeb8fc6b2e37ac5f4e32f12d319e3b4ce',1,'inference_classifier::PythonTest']]],
+  ['imgoutputpath_25',['imgOutputPath',['../camera_8cpp.html#a4f663c585b133e04c0167b276d576346',1,'camera.cpp']]],
+  ['inference_5fclassifier_26',['inference_classifier',['../namespaceinference__classifier.html',1,'']]],
+  ['inference_5fclassifier_2epy_27',['inference_classifier.py',['../img__recognition_2inference__classifier_8py.html',1,'(Global Namespace)'],['../inference__classifier_8py.html',1,'(Global Namespace)']]],
+  ['instance_28',['instance',['../camera_8cpp.html#a042bdaef342f7cc6b44fe013af07fdab',1,'camera.cpp']]],
+  ['intropage_2emd_29',['intropage.md',['../intropage_8md.html',1,'']]]
 ];

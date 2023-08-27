@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['get_5fshared_5fobject_116',['get_shared_object',['../shared__lib_8cpp.html#a2c9f158c8859f938dda6f05defa6d992',1,'shared_lib.cpp']]]
+  ['kill_5fthread_108',['kill_thread',['../namespacewebcam__pattern__detection.html#a4603f70cc3ea809a529d39d6fbd129c1',1,'webcam_pattern_detection']]]
 ];
