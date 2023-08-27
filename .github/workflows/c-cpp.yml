@@ -68,15 +68,36 @@ jobs:
 
   code-coverage:
     needs: run
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps: 
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Setup Python
-        uses: actions/setup-python@v4.7.0
+      # - name: Setup Python
+      #   uses: actions/setup-python@v4.7.0
+      #   with:
+      #     python-version: 3.10
+      - name: Install C++ compiler
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y g++
+      - name: Install gcovr
+        run: sudo apt-get install -y gcovr
+    
+      - name: Tests
+        working-directory: ${{github.workspace}}/tests
+        run: |
+          ls -R
+          g++ --coverage camera_tests.cpp -o coverage1
+          ./coverage1
+          ls -R
+          gcovr -r ../ --xml -o coverage.xml
+
+      - name: Upload coverage report to Codecov
+        uses: codecov/codecov-action@v2
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
-          python-version: 3.10
-          # cache: 'pip'
+          files: ${{github.workspace}}/tests/coverage.xml
 
       # - name: Install Compiler
       #   run: |
@@ -88,15 +109,15 @@ jobs:
       #   shell: cmd
       #   run: OpenCppCoverage --export_type=cobertura:coverage\coverage1.xml build\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-Release\Tests.exe
 
-      - name: Run Tests
-        # Run tests
-        run: ctest --test-dir ${{github.workspace}}/build --output-on-failure
+      # - name: Run Tests
+      #   # Run tests
+      #   run: ctest --test-dir ${{github.workspace}}/build --output-on-failure
 
-      - name: Find and Upload Coverage
-        # Find and upload coverage report
-        uses: codecov/codecov-action@v1
-        with:
-          token: ${{secrets.CODECOV_TOKEN}}
+      # - name: Find and Upload Coverage
+      #   # Find and upload coverage report
+      #   uses: codecov/codecov-action@v1
+      #   with:
+      #     token: ${{secrets.CODECOV_TOKEN}}
       # - name: Upload coverage reports to Codecov
       #   uses: codecov/codecov-action@v3
       #   env:
