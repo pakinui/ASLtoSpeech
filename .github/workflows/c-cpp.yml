@@ -100,12 +100,9 @@ jobs:
         shell: powershell
       - name: Tests
         run: |
-          ls -R
           g++ --coverage tests/test.cpp src/text_to_speech/ttscall.cpp -o coverage1 -lwinmm
           ./coverage1
-          ls -R
-          gcovr -r ./ --xml -o coverage.xml
-          ls -R
+          gcovr -r ./src --xml -o coverage.xml
       - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v2
         env:
