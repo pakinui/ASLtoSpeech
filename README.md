@@ -76,7 +76,7 @@ cd cosc345
 pip install -r requirements.txt
 mkdir build
 cd build
-cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
+cmake -GNinja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
 cmake --build ./ --config Release
 ```
 
