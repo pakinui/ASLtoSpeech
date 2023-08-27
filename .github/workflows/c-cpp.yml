@@ -41,13 +41,21 @@ jobs:
         modules: 'qtmultimedia'
     - uses: ilammy/msvc-dev-cmd@v1.4.1
     - name: Setup build environment
+      # run: |
+      #   mkdir build
+      #   cd build
+      #   cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
       run: |
         mkdir build
-        cd build
-        cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
+        cmake -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
     - uses: ilammy/msvc-dev-cmd@v1.4.1
     - name: Build with Ninja
-      run: cmake --build ./build --config Release
+      # run: cmake --build ./build --config Release
+      run: cmake --build build --config Release
+    - name: Test
+      run: |
+        cd build
+        ctest -C build --verbose
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:

@@ -45,7 +45,6 @@ set(PROJECT_SOURCES
         src/camera.ui
         src/text_to_speech/ttsCall.h
         src/text_to_speech/ttsCall.cpp
-        tests/camera_tests.cpp
         tests/test.cpp
 )
 
