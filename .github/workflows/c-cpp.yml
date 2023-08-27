@@ -100,7 +100,7 @@ jobs:
         shell: powershell
       - name: Tests
         run: |
-          g++ --coverage tests/test.cpp src/text_to_speech/ttscall.cpp -o coverage1 -lwinmm
+          for /r .\src %i in (*.cpp) do g++ --coverage tests\test.cpp "%i" -o coverage1 -lwinmm
           ./coverage1
           gcovr -r ./src --xml -o coverage.xml
       - name: Upload coverage report to Codecov
