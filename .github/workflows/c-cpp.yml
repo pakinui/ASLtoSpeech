@@ -99,17 +99,18 @@ jobs:
           pip install gcovr
         shell: powershell
       - name: Tests
-        working-directory: ${{github.workspace}}/tests
         run: |
           ls -R
-          g++ --coverage test.cpp ../src/text_to_speech/ttscall.cpp -o ../coverage/coverage_info -lwinmm
-          gcovr -r ../src --xml -o ../coverage/coverage_info.xml
+          g++ --coverage tests/test.cpp src/text_to_speech/ttscall.cpp -o coverage1 -lwinmm
+          ./coverage1
+          ls -R
+          gcovr -r --xml -o coverage1.xml
       - name: Upload coverage report to Codecov
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v3
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
-          files: ${{github.workspace}}/coverage/coverage_info.xml
+          files: ${{github.workspace}}coverage1.xml
   doxygen:
     needs: run
     runs-on: windows-latest
