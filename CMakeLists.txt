@@ -12,6 +12,9 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# Option for enabling building of tests
+option(BUILD_TESTING "Builds test executable." OFF)
+
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Widgets)
 find_package(Qt6 COMPONENTS Core Widgets Multimedia MultimediaWidgets Gui Quick QuickControls2 Test REQUIRED)
 
@@ -42,6 +45,8 @@ set(PROJECT_SOURCES
         src/camera.ui
         src/text_to_speech/ttsCall.h
         src/text_to_speech/ttsCall.cpp
+        tests/camera_tests.cpp
+        tests/test.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -85,21 +90,21 @@ target_link_libraries(345Application PRIVATE
 )
 
 
-add_executable(Tests
-    tests/camera_tests.cpp
+#add_executable(Tests
+#    tests/camera_tests.cpp
 
-)
-target_link_libraries(Tests PRIVATE
-    Qt6::Test
-    Qt6::Widgets
-    Qt6::Core
-    Qt6::Multimedia
-    Qt6::MultimediaWidgets
-    Qt6::QuickControls2
-    Qt6::Quick
-    Qt6::Gui
-    Python::Python
-)
+#)
+#target_link_libraries(Tests PRIVATE
+#    Qt6::Test
+#    Qt6::Widgets
+#    Qt6::Core
+#    Qt6::Multimedia
+#    Qt6::MultimediaWidgets
+#    Qt6::QuickControls2
+#    Qt6::Quick
+#    Qt6::Gui
+#    Python::Python
+#)
 
 
 #target_link_libraries(345Application PRIVATE Qt6::Gui)
@@ -131,5 +136,36 @@ install(TARGETS 345Application
 
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(345Application)
+endif()
+
+##################################################################################
+# Build Testing below
+##################################################################################
+
+if(BUILD_TESTING)
+
+    include(FetchContent)
+
+    FetchContent_Declare(
+        Catch2
+        GIT_REPOSITORY https://github.com/catchorg/Catch2.git
+        GIT_TAG        v3.0.1 # or a later release
+    )
+
+    FetchContent_MakeAvailable(Catch2)
+    list(APPEND CMAKE_MODULE_PATH ${catch2_SOURCE_DIR}/extras)
+
+    add_executable(Tests "tests/test.cpp")
+
+    target_link_libraries(Tests PRIVATE Catch2::Catch2WithMain)
+
+    include(CTest)
+    include(Catch)
+
+    enable_testing()
+
+    catch_discover_tests(Tests)
+
+
 endif()
 
