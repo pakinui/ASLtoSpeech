@@ -72,6 +72,8 @@ jobs:
     needs: build
     runs-on: windows-latest
     steps: 
+      - name: Checkout code
+        uses: actions/checkout@v3
       - name: Download Artifact
         uses: actions/download-artifact@v3
         with:
@@ -99,10 +101,10 @@ jobs:
     
       - name: Tests
         run: |
-          ls -R ${{github.workspace}}/tests
-          g++ --coverage ${{github.workspace}}/tests/test.cpp -o ${{github.workspace}}/coverage1
+          ls -R ${{github.workspace}}
+          g++ --coverage ${{github.workspace}}/345Application.exe -o ${{github.workspace}}/coverage1
           ${{github.workspace}}/coverage1
-          ls -R ${{github.workspace}}/tests
+          ls -R ${{github.workspace}}
           gcovr -r ${{github.workspace}}/.. --xml -o ${{github.workspace}}/coverage.xml
 
 
