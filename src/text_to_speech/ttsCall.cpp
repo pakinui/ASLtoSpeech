@@ -39,6 +39,7 @@ bool tts(const std::string& text) {
         //Play the generated audio (you might need to use a suitable audio player command)
         PlaySound(TEXT("speech.wav"), NULL, SND_FILENAME);
 
+
     } else {
 
         std::cerr << "Error occurred during text-to-speech." << std::endl;
