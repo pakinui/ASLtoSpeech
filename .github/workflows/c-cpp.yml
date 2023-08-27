@@ -71,7 +71,7 @@ jobs:
           name: build-artifacts
       - name: Debug
         run: |
-          ls ${{ github.workspace }}/build
+          ls ${{ github.workspace }}
           
       - name: Run Executable
         run: |
