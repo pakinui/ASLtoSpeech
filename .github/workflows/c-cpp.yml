@@ -40,18 +40,14 @@ jobs:
         cache-key-prefix: 'install-qt-action'
         modules: 'qtmultimedia'
     - uses: ilammy/msvc-dev-cmd@v1.4.1
-    - name: Setup build environment
-      # run: |
-      #   mkdir build
-      #   cd build
-      #   cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
+    - name: Setup build environment with Ninja
       run: |
         mkdir build
-        cmake -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
+        cd build
+        cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
     - uses: ilammy/msvc-dev-cmd@v1.4.1
     - name: Build with Ninja
-      # run: cmake --build ./build --config Release
-      run: cmake --build build --config Release
+      run: cmake --build ./build --config Release
     - name: Test
       run: |
         cd build
@@ -72,7 +68,7 @@ jobs:
           name: executable
       - name: Run Executable
         run: |
-          ./build/345Application.exe
+          ./345Application.exe
 
   code-coverage:
     needs: run
