@@ -9,9 +9,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <Windows.h>
-#include <QDir>
-#include <QString>
-#include <QDebug>
+#include <filesystem>
+
 
 /**
  * @brief Converts the given text to speech using an external tool.
@@ -28,10 +27,10 @@ bool tts(const std::string& text) {
     // Hard coded text for testing.
     std::string test1 = "Testing The Text to Speech";
 
-    QString currentPath = QDir::currentPath();
-    qDebug() << currentPath;
-    std::string savePath = currentPath.toStdString() + "/../../src/text_to_speech/speech.wav";
-    qDebug() << savePath;
+    std::filesystem::path currentPath = std::filesystem::current_path();
+    std::cout << "Current directory: " << currentPath << std::endl;
+    std::filesystem::path filePath = currentPath / ".." / ".." / "src" / "text_to_speech" / "speech.wav";
+    std::string savePath = filePath.string();
     // Construct the command using the passed text
     std::string command = "tts --text \"" + text + "\" --model_name \"tts_models/en/ljspeech/glow-tts\" --out_path " + savePath;
 
@@ -42,11 +41,11 @@ bool tts(const std::string& text) {
 
         std::cout << "Text-to-speech completed successfully." << std::endl;
 
-        // Convert savePath to wide string
+        // Convert savePath to wide string (LPCWSTR)
         std::wstring wideSavePath(savePath.begin(), savePath.end());
 
-        //Play the generated audio (you might need to use a suitable audio player command)
-        PlaySound(wideSavePath.c_str(), NULL, SND_FILENAME);
+        // Play the generated audio
+        PlaySoundW(wideSavePath.c_str(), NULL, SND_FILENAME);
 
     } else {
 
