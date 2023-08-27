@@ -103,7 +103,7 @@ jobs:
           ls -R 
           g++ --coverage ${{github.workspace}}/tests/test.cpp  ${{github.workspace}}/src/text_to_speech/ttsCall.cpp -o ${{github.workspace}}/coverage/coverage_info -lwinmm
           ls -R 
-          gcovr -r ${{github.workspace}}/.. --xml -o ${{github.workspace}}/coverage/coverage_info.xml
+          gcovr -r ${{github.workspace}} --xml -o ${{github.workspace}}/coverage/coverage_info.xml
       - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v2
         env:
