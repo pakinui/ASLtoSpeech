@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>COSC345 Cool Group ASL to Speech: src/text_to_speech/ttsCall.h Source File</title>
+<title>COSC345 Cool Group ASL to Speech: src/text_to_speech/ttsCall.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -66,21 +66,59 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">ttsCall.h</div>  </div>
+<div class="title">ttsCall.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="src_2text__to__speech_2tts_call_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef TTSCALL_H</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define TTSCALL_H</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="app_2345_application_2text__to__speech_2tts_call_8h.html#a3d0baebc9d2f23f7308db2e71af6aff0">tts</a>(<span class="keyword">const</span> std::string&amp; text);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// TTSCALL_H</span></div>
-<div class="ttc" id="aapp_2345_application_2text__to__speech_2tts_call_8h_html_a3d0baebc9d2f23f7308db2e71af6aff0"><div class="ttname"><a href="app_2345_application_2text__to__speech_2tts_call_8h.html#a3d0baebc9d2f23f7308db2e71af6aff0">tts</a></div><div class="ttdeci">bool tts(const std::string &amp;text)</div><div class="ttdoc">Converts the given text to speech using an external tool.</div><div class="ttdef"><b>Definition:</b> ttsCall.cpp:24</div></div>
-</div><!-- fragment --></div><!-- contents -->
+
+<p>Contains the function for text-to-speech conversion using an external tool.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="tts_call_8h_source.html">ttsCall.h</a>&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;Windows.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a3d0baebc9d2f23f7308db2e71af6aff0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tts_call_8cpp.html#a3d0baebc9d2f23f7308db2e71af6aff0">tts</a> (const std::string &amp;text)</td></tr>
+<tr class="memdesc:a3d0baebc9d2f23f7308db2e71af6aff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the given text to speech using an external tool.  <a href="tts_call_8cpp.html#a3d0baebc9d2f23f7308db2e71af6aff0">More...</a><br /></td></tr>
+<tr class="separator:a3d0baebc9d2f23f7308db2e71af6aff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Contains the function for text-to-speech conversion using an external tool. </p>
+<p>This file contains the function for text-to-speech conversion using an external tool. </p>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a3d0baebc9d2f23f7308db2e71af6aff0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d0baebc9d2f23f7308db2e71af6aff0">&#9670;&nbsp;</a></span>tts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool tts </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts the given text to speech using an external tool. </p>
+<p>This function takes a text input, constructs a command using the input text, and executes the command using an external text-to-speech tool. The resulting audio is saved as "speech.wav" and can be played using PlaySound.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>The input text to convert to speech. Currently the text is hardcoded. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns 0 if the text-to-speech process is completed successfully. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

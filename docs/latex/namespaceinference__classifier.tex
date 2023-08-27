@@ -7,17 +7,14 @@ class \mbox{\hyperlink{classinference__classifier_1_1_python_video_sink}{Python\
 \begin{DoxyCompactList}\small\item\em A class representing a video sink for Python video processing. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classinference__classifier_1_1_python_test}{Python\+Test}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Functions}
-\begin{DoxyCompactItemize}
-\item 
-def \mbox{\hyperlink{namespaceinference__classifier_a116e71a14eeefdddc50b0c1c4d21f230}{overlay}} (frame\+\_\+data)
-\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{namespaceinference__classifier_aaba7d4d8fdab515be7a297536a682d47}{model\+\_\+dict}} = pickle.\+load(open(\textquotesingle{}ASL\+\_\+model.\+p\textquotesingle{}, \textquotesingle{}rb\textquotesingle{}))
+\mbox{\hyperlink{namespaceinference__classifier_aaba7d4d8fdab515be7a297536a682d47}{model\+\_\+dict}} = pickle.\+load(open(\textquotesingle{}./ASL\+\_\+model.\+p\textquotesingle{}, \textquotesingle{}rb\textquotesingle{}))
 \item 
 \mbox{\hyperlink{namespaceinference__classifier_aa135dc5054503e252fd8560c3a28017e}{model}} = \mbox{\hyperlink{namespaceinference__classifier_aaba7d4d8fdab515be7a297536a682d47}{model\+\_\+dict}}\mbox{[}\textquotesingle{}model\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceinference__classifier_a528deb456d1dcf0a15f1c39bb2503617}{cap}} = cv2.\+Video\+Capture(0)
 \item 
 \mbox{\hyperlink{namespaceinference__classifier_a8b19fe04e5e4bddcd96bca08469b9812}{mp\+\_\+hands}} = mp.\+solutions.\+hands
 \item 
@@ -26,8 +23,6 @@ def \mbox{\hyperlink{namespaceinference__classifier_a116e71a14eeefdddc50b0c1c4d2
 \mbox{\hyperlink{namespaceinference__classifier_a0d057330ca2edcaabf86759b3186701c}{mp\+\_\+drawing\+\_\+styles}} = mp.\+solutions.\+drawing\+\_\+styles
 \item 
 \mbox{\hyperlink{namespaceinference__classifier_a4f7db0066861dd8a561dd7033952efc3}{hands}} = mp\+\_\+hands.\+Hands(static\+\_\+image\+\_\+mode=True, min\+\_\+detection\+\_\+confidence=0.\+3)
-\item 
-\mbox{\hyperlink{namespaceinference__classifier_a528deb456d1dcf0a15f1c39bb2503617}{cap}} = cv2.\+Video\+Capture(0)
 \item 
 \mbox{\hyperlink{namespaceinference__classifier_aee228a39e4164af6c0bba471a2317ba9}{fourcc}} = cv2.\+Video\+Writer\+\_\+fourcc($\ast$\textquotesingle{}XVID\textquotesingle{})
 \item 
@@ -69,15 +64,6 @@ int \mbox{\hyperlink{namespaceinference__classifier_a6086685d79be3bcc4b78bf97c90
 \item 
 \mbox{\hyperlink{namespaceinference__classifier_a6d19b5363e0889431e539512182b0ede}{predicted\+\_\+class\+\_\+label}} = \mbox{\hyperlink{namespaceinference__classifier_ab100d39039f23ca684e7cdb2b2e536ea}{prediction}}\mbox{[}0\mbox{]}
 \end{DoxyCompactItemize}
-
-
-\doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespaceinference__classifier_a116e71a14eeefdddc50b0c1c4d21f230}\label{namespaceinference__classifier_a116e71a14eeefdddc50b0c1c4d21f230}} 
-\index{inference\_classifier@{inference\_classifier}!overlay@{overlay}}
-\index{overlay@{overlay}!inference\_classifier@{inference\_classifier}}
-\doxysubsubsection{\texorpdfstring{overlay()}{overlay()}}
-{\footnotesize\ttfamily def inference\+\_\+classifier.\+overlay (\begin{DoxyParamCaption}\item[{}]{frame\+\_\+data }\end{DoxyParamCaption})}
-
 
 
 \doxysubsection{Variable Documentation}
@@ -133,7 +119,7 @@ int \mbox{\hyperlink{namespaceinference__classifier_a6086685d79be3bcc4b78bf97c90
 \index{inference\_classifier@{inference\_classifier}!model\_dict@{model\_dict}}
 \index{model\_dict@{model\_dict}!inference\_classifier@{inference\_classifier}}
 \doxysubsubsection{\texorpdfstring{model\_dict}{model\_dict}}
-{\footnotesize\ttfamily inference\+\_\+classifier.\+model\+\_\+dict = pickle.\+load(open(\textquotesingle{}ASL\+\_\+model.\+p\textquotesingle{}, \textquotesingle{}rb\textquotesingle{}))}
+{\footnotesize\ttfamily inference\+\_\+classifier.\+model\+\_\+dict = pickle.\+load(open(\textquotesingle{}./ASL\+\_\+model.\+p\textquotesingle{}, \textquotesingle{}rb\textquotesingle{}))}
 
 \mbox{\Hypertarget{namespaceinference__classifier_ab0bb49f77b81aa89d916b76aad210d5f}\label{namespaceinference__classifier_ab0bb49f77b81aa89d916b76aad210d5f}} 
 \index{inference\_classifier@{inference\_classifier}!mp\_drawing@{mp\_drawing}}

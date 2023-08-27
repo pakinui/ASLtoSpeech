@@ -64,7 +64,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">inference_classifier Namespace Reference</div>  </div>
@@ -79,17 +78,14 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinference__classifier_1_1_python_test.html">PythonTest</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a116e71a14eeefdddc50b0c1c4d21f230"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#a116e71a14eeefdddc50b0c1c4d21f230">overlay</a> (frame_data)</td></tr>
-<tr class="separator:a116e71a14eeefdddc50b0c1c4d21f230"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aaba7d4d8fdab515be7a297536a682d47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#aaba7d4d8fdab515be7a297536a682d47">model_dict</a> = pickle.load(open('ASL_model.p', 'rb'))</td></tr>
+<tr class="memitem:aaba7d4d8fdab515be7a297536a682d47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#aaba7d4d8fdab515be7a297536a682d47">model_dict</a> = pickle.load(open('./ASL_model.p', 'rb'))</td></tr>
 <tr class="separator:aaba7d4d8fdab515be7a297536a682d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa135dc5054503e252fd8560c3a28017e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#aa135dc5054503e252fd8560c3a28017e">model</a> = <a class="el" href="namespaceinference__classifier.html#aaba7d4d8fdab515be7a297536a682d47">model_dict</a>['model']</td></tr>
 <tr class="separator:aa135dc5054503e252fd8560c3a28017e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a528deb456d1dcf0a15f1c39bb2503617"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#a528deb456d1dcf0a15f1c39bb2503617">cap</a> = cv2.VideoCapture(0)</td></tr>
+<tr class="separator:a528deb456d1dcf0a15f1c39bb2503617"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b19fe04e5e4bddcd96bca08469b9812"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#a8b19fe04e5e4bddcd96bca08469b9812">mp_hands</a> = mp.solutions.hands</td></tr>
 <tr class="separator:a8b19fe04e5e4bddcd96bca08469b9812"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0bb49f77b81aa89d916b76aad210d5f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#ab0bb49f77b81aa89d916b76aad210d5f">mp_drawing</a> = mp.solutions.drawing_utils</td></tr>
@@ -98,8 +94,6 @@ Variables</h2></td></tr>
 <tr class="separator:a0d057330ca2edcaabf86759b3186701c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f7db0066861dd8a561dd7033952efc3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#a4f7db0066861dd8a561dd7033952efc3">hands</a> = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)</td></tr>
 <tr class="separator:a4f7db0066861dd8a561dd7033952efc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a528deb456d1dcf0a15f1c39bb2503617"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#a528deb456d1dcf0a15f1c39bb2503617">cap</a> = cv2.VideoCapture(0)</td></tr>
-<tr class="separator:a528deb456d1dcf0a15f1c39bb2503617"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee228a39e4164af6c0bba471a2317ba9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#aee228a39e4164af6c0bba471a2317ba9">fourcc</a> = cv2.VideoWriter_fourcc(*'XVID')</td></tr>
 <tr class="separator:aee228a39e4164af6c0bba471a2317ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3845e63bf437d473948b3c65705993e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#a3845e63bf437d473948b3c65705993e7">out</a> = cv2.VideoWriter('output.avi', <a class="el" href="namespaceinference__classifier.html#aee228a39e4164af6c0bba471a2317ba9">fourcc</a>, 20.0, (640, 480))</td></tr>
@@ -141,25 +135,6 @@ Variables</h2></td></tr>
 <tr class="memitem:a6d19b5363e0889431e539512182b0ede"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#a6d19b5363e0889431e539512182b0ede">predicted_class_label</a> = <a class="el" href="namespaceinference__classifier.html#ab100d39039f23ca684e7cdb2b2e536ea">prediction</a>[0]</td></tr>
 <tr class="separator:a6d19b5363e0889431e539512182b0ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a116e71a14eeefdddc50b0c1c4d21f230"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a116e71a14eeefdddc50b0c1c4d21f230">&#9670;&nbsp;</a></span>overlay()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def inference_classifier.overlay </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>frame_data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a id="a528deb456d1dcf0a15f1c39bb2503617"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a528deb456d1dcf0a15f1c39bb2503617">&#9670;&nbsp;</a></span>cap</h2>
@@ -280,7 +255,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">inference_classifier.model_dict = pickle.load(open('ASL_model.p', 'rb'))</td>
+          <td class="memname">inference_classifier.model_dict = pickle.load(open('./ASL_model.p', 'rb'))</td>
         </tr>
       </table>
 </div><div class="memdoc">
