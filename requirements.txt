@@ -3,5 +3,4 @@ tts
 mediapipe
 opencv-python
 numpy
-pickle
 python-dev-package
