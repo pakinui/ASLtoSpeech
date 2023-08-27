@@ -102,7 +102,7 @@ jobs:
         working-directory: ${{github.workspace}}/tests
         run: |
           ls -R
-          g++ --coverage test.cpp ../src/text_to_speech/ttscall.cpp -o ../coverage/coverage_info -lwinm
+          g++ --coverage test.cpp ../src/text_to_speech/ttscall.cpp -o ../coverage/coverage_info -lwinmm
           gcovr -r ../src --xml -o ../coverage/coverage_info.xml
       - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v2
