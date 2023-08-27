@@ -67,7 +67,7 @@ jobs:
           ./345Application.exe
 
   code-coverage:
-    # needs: run
+    needs: run
     runs-on: windows-latest
     steps: 
       - name: Checkout code
