@@ -101,7 +101,7 @@ jobs:
       - name: Tests
         run: |
           ls -R
-          g++ --coverage tests/test.cpp src/text_to_speech/ttscall.cpp -o coverage1
+          g++ --coverage tests/test.cpp src/text_to_speech/ttscall.cpp -o coverage1 -lwinmm
           ./coverage1
           ls -R
           gcovr -r ./ --xml -o coverage.xml
