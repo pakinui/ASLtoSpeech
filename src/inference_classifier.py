@@ -1,10 +1,8 @@
-"""
-@file inference_classifier.py
-@brief Contains the implementation of the PythonTest class for sign language detection.
-
-This file contains the implementation of the PythonTest class, which provides functionalities
-for webcam-based sign language detection using the MediaPipe library and a trained model.
-"""
+## @file inference_classifier.py
+# @brief Contains the implementation of the PythonTest class for sign language detection.
+#
+#This file contains the implementation of the PythonTest class, which provides functionalities
+#for webcam-based sign language detection using the MediaPipe library and a trained model.
 import io
 import os
 import sys
@@ -25,15 +23,14 @@ from PySide6.QtMultimedia import QVideoSink
 from PySide6.QtMultimedia import QVideoFrame
 from io import BytesIO
 
+## @brief A class representing a video sink for Python video processing.
+#
+#This class is used as a video sink for Python video processing.
+#It takes a PySide6 video frame and performs processing on it.
+#
+#@param psink The PySide6 video sink to use.
 class PythonVideoSink(PySide6.QtCore.QObject):
-  """
-  @brief A class representing a video sink for Python video processing.
-
-  This class is used as a video sink for Python video processing.
-  It takes a PySide6 video frame and performs processing on it.
-
-  @param psink The PySide6 video sink to use.
-  """
+  
   def __init__(self, psink):
     self.psink = psink
 
