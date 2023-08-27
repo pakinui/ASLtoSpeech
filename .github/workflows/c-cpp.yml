@@ -101,9 +101,8 @@ jobs:
       - name: Tests
         run: |
           ls -R 
-          g++ --coverage ${{github.workspace}}/tests/test.cpp  ${{github.workspace}}/src/text_to_speech/ttsCall.cpp -o ${{github.workspace}}/coverage/coverage_info -lwinmm
-          ls -R 
-          gcovr -r ${{github.workspace}} --xml -o ${{github.workspace}}/coverage/coverage_info.xml
+          g++ --coverage ./tests/test.cpp  ./src/text_to_speech/ttsCall.cpp -o ./coverage/coverage_info -lwinmm
+          gcovr -r ./ --xml -o ./coverage/coverage_info.xml
       - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v2
         env:
