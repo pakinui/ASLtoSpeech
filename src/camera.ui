@@ -181,6 +181,7 @@ QLabel {
          <property name="styleSheet">
           <string notr="true">background-color: #E8E3E1;
 border-style: none;
+color: black;
 
 </string>
          </property>
@@ -206,6 +207,12 @@ border-style: none;
                 <height>321</height>
                </rect>
               </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: #D9D1CE</string>
+              </property>
+              <property name="lineWidth">
+               <number>3</number>
+              </property>
               <property name="sizeAdjustPolicy">
                <enum>QAbstractScrollArea::AdjustIgnored</enum>
               </property>
@@ -219,10 +226,21 @@ border-style: none;
             <widget class="QWidget" name="bottomArea" native="true">
              <layout class="QVBoxLayout" name="verticalLayout_3" stretch="6,1">
               <item>
-               <widget class="QTextEdit" name="translateInput"/>
+               <widget class="QTextEdit" name="translateInput">
+                <property name="styleSheet">
+                 <string notr="true">background-color: #F5F1F0</string>
+                </property>
+                <property name="placeholderText">
+                 <string>Text to Translate ...</string>
+                </property>
+               </widget>
               </item>
               <item>
                <widget class="QPushButton" name="translateButton">
+                <property name="styleSheet">
+                 <string notr="true">background-color: #D9D1CE;
+color: black;</string>
+                </property>
                 <property name="text">
                  <string>Translate</string>
                 </property>
@@ -249,8 +267,11 @@ border-style: none;
               </item>
               <item>
                <widget class="QPushButton" name="dictionaryButton">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
                 <property name="text">
-                 <string>PushButton</string>
+                 <string>Coming Soon</string>
                 </property>
                </widget>
               </item>
@@ -259,23 +280,22 @@ border-style: none;
            </item>
            <item>
             <widget class="QWidget" name="dictDisplayArea" native="true">
-             <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,4,3">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1">
               <item>
                <widget class="QTextEdit" name="dictionaryTextOutput">
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
                 <property name="readOnly">
                  <bool>true</bool>
                 </property>
                </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="dictionaryPhoto">
-                <property name="text">
-                 <string>TextLabel</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QVideoWidget" name="videoDisplay" native="true"/>
               </item>
              </layout>
             </widget>
@@ -295,8 +315,14 @@ border-style: none;
              <height>421</height>
             </rect>
            </property>
+           <property name="documentTitle">
+            <string>Coming Soon</string>
+           </property>
            <property name="readOnly">
             <bool>true</bool>
+           </property>
+           <property name="placeholderText">
+            <string>Coming Soon</string>
            </property>
           </widget>
          </widget>

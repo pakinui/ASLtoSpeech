@@ -75,7 +75,7 @@ private:
     QScopedPointer<QAudioInput> m_audioInput;
     QScopedPointer<QMediaRecorder> m_mediaRecorder;
 
-
+    //Menu bar objects
     QMenu *fileMenu;
     QMenu *devicesMenu;
     QMenu *cameraMenu;

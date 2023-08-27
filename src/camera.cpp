@@ -302,23 +302,28 @@ void Camera::updateCameraDevice(QAction * action)
  * @brief Starts the current camera.
  * 
  * This function starts the current camera.
+ *
+ * @note Not currently active.
  */
 void Camera::startCamera()
 {
-    qDebug() << "starting camera";
+    //qDebug() << "starting camera";
 
     m_camera.start();
+    Py_Initialize();
 }
 
 /**
  * @brief Stops the current camera.
  * 
  * This function stops the current camera.
+ *
+ * @note Not currently active.
  */
 void Camera::stopCamera()
 {
     m_camera.stop();
-    qDebug() << "stopping camera";
+    //qDebug() << "stopping camera";
     Py_Finalize(); // Stop the Python
 }
 
@@ -386,8 +391,8 @@ void Camera::setupMenus()
     cameraMenu->addAction(cameraSettingsAction);
 
     // Adding start and stop camera button connections
-    connect(startCameraAction, &QAction::triggered, this, &Camera::startCamera);
-    connect(stopCameraAction, &QAction::triggered, this, &Camera::stopCamera);
+    //connect(startCameraAction, &QAction::triggered, this, &Camera::startCamera);
+    //connect(stopCameraAction, &QAction::triggered, this, &Camera::stopCamera);
 
     menuBar()->addMenu(cameraMenu);
 }
