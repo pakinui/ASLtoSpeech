@@ -25,7 +25,7 @@ jobs:
           ${{ runner.os }}-pip-
           
     - name: Install dependencies
-      if: setps.cache-dependencies.outputs.cache-hit != 'true'
+      if: steps.cache-dependencies.outputs.cache-hit != 'true'
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
