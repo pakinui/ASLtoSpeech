@@ -1,4 +1,4 @@
-name: Retry Example
+name: Doxygen
 
 on:
   push:
