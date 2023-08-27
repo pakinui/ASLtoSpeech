@@ -1,5 +1,10 @@
 \hypertarget{classwebcam__pattern__detection_1_1_thread}{}\doxysection{webcam\+\_\+pattern\+\_\+detection.\+Thread Class Reference}
 \label{classwebcam__pattern__detection_1_1_thread}\index{webcam\_pattern\_detection.Thread@{webcam\_pattern\_detection.Thread}}
+
+
+Represents a thread for capturing and processing webcam frames.  
+
+
 Inheritance diagram for webcam\+\_\+pattern\+\_\+detection.\+Thread\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,9 +15,9 @@ Inheritance diagram for webcam\+\_\+pattern\+\_\+detection.\+Thread\+:\begin{fig
 \begin{DoxyCompactItemize}
 \item 
 def \mbox{\hyperlink{classwebcam__pattern__detection_1_1_thread_a6b77161fc92540428995f7809485a332}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, parent=None)
-\item 
+\begin{DoxyCompactList}\small\item\em Initialize the \mbox{\hyperlink{classwebcam__pattern__detection_1_1_thread}{Thread}} class. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classwebcam__pattern__detection_1_1_thread_af76f0e2aef1c6beb9a6414ff853943c5}{run}} (self)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Run the thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -28,12 +33,9 @@ def \mbox{\hyperlink{classwebcam__pattern__detection_1_1_thread_af76f0e2aef1c6be
 
 
 \doxysubsection{Detailed Description}
-\begin{DoxyVerb}@brief Represents a thread for capturing and processing webcam frames.
+Represents a thread for capturing and processing webcam frames. 
 
-This class extends QThread to create a separate thread for capturing webcam frames,
-processing them using hand tracking and a trained model, and updating the display.
-\end{DoxyVerb}
- 
+This class extends QThread to create a separate thread for capturing webcam frames, processing them using hand tracking and a trained model, and updating the display. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classwebcam__pattern__detection_1_1_thread_a6b77161fc92540428995f7809485a332}\label{classwebcam__pattern__detection_1_1_thread_a6b77161fc92540428995f7809485a332}} 
@@ -42,11 +44,11 @@ processing them using hand tracking and a trained model, and updating the displa
 \doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
 {\footnotesize\ttfamily def webcam\+\_\+pattern\+\_\+detection.\+Thread.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{parent = {\ttfamily None} }\end{DoxyParamCaption})}
 
-\begin{DoxyVerb}@brief Initialize the Thread class.
 
-This constructor initializes the thread and captures the webcam input.
-\end{DoxyVerb}
- 
+
+Initialize the \mbox{\hyperlink{classwebcam__pattern__detection_1_1_thread}{Thread}} class. 
+
+This constructor initializes the thread and captures the webcam input. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classwebcam__pattern__detection_1_1_thread_af76f0e2aef1c6beb9a6414ff853943c5}\label{classwebcam__pattern__detection_1_1_thread_af76f0e2aef1c6beb9a6414ff853943c5}} 
@@ -55,12 +57,11 @@ This constructor initializes the thread and captures the webcam input.
 \doxysubsubsection{\texorpdfstring{run()}{run()}}
 {\footnotesize\ttfamily def webcam\+\_\+pattern\+\_\+detection.\+Thread.\+run (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
-\begin{DoxyVerb}@brief Run the thread.
 
-This method runs the thread and captures webcam frames, processes them using
-hand tracking and a trained model, and updates the display.
-\end{DoxyVerb}
- 
+
+Run the thread. 
+
+This method runs the thread and captures webcam frames, processes them using hand tracking and a trained model, and updates the display. 
 
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classwebcam__pattern__detection_1_1_thread_a1cb2309c6923635d5db1be1e4b302c94}\label{classwebcam__pattern__detection_1_1_thread_a1cb2309c6923635d5db1be1e4b302c94}} 

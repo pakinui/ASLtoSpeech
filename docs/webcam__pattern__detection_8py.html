@@ -75,10 +75,14 @@ $(function() {
 <div class="title">webcam_pattern_detection.py File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Contains the implementation of the ASL detection application using webcam and trained model.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwebcam__pattern__detection_1_1_thread.html">webcam_pattern_detection.Thread</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a thread for capturing and processing webcam frames.  <a href="classwebcam__pattern__detection_1_1_thread.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -89,58 +93,85 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a4603f70cc3ea809a529d39d6fbd129c1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#a4603f70cc3ea809a529d39d6fbd129c1">webcam_pattern_detection.kill_thread</a> ()</td></tr>
+<tr class="memdesc:a4603f70cc3ea809a529d39d6fbd129c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kill the thread.  <a href="namespacewebcam__pattern__detection.html#a4603f70cc3ea809a529d39d6fbd129c1">More...</a><br /></td></tr>
 <tr class="separator:a4603f70cc3ea809a529d39d6fbd129c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dbfcd1cd7b974b7f4901a6dbc698762"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#a8dbfcd1cd7b974b7f4901a6dbc698762">webcam_pattern_detection.start</a> ()</td></tr>
+<tr class="memdesc:a8dbfcd1cd7b974b7f4901a6dbc698762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the thread.  <a href="namespacewebcam__pattern__detection.html#a8dbfcd1cd7b974b7f4901a6dbc698762">More...</a><br /></td></tr>
 <tr class="separator:a8dbfcd1cd7b974b7f4901a6dbc698762"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa76046843959ae961ae7b1f8127bebad"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#aa76046843959ae961ae7b1f8127bebad">webcam_pattern_detection.set_image</a> (image)</td></tr>
+<tr class="memdesc:aa76046843959ae961ae7b1f8127bebad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the image.  <a href="namespacewebcam__pattern__detection.html#aa76046843959ae961ae7b1f8127bebad">More...</a><br /></td></tr>
 <tr class="separator:aa76046843959ae961ae7b1f8127bebad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:aa8bc071df76c45bc21e5acdd145ed95c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#aa8bc071df76c45bc21e5acdd145ed95c">webcam_pattern_detection.model_dict</a> = pickle.load(open('ASL_model.p', 'rb'))</td></tr>
+<tr class="memdesc:aa8bc071df76c45bc21e5acdd145ed95c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the trained sign language detection model.  <a href="namespacewebcam__pattern__detection.html#aa8bc071df76c45bc21e5acdd145ed95c">More...</a><br /></td></tr>
 <tr class="separator:aa8bc071df76c45bc21e5acdd145ed95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d6a3dc2da11faa8959607c1ee20b02c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#a0d6a3dc2da11faa8959607c1ee20b02c">webcam_pattern_detection.model</a> = model_dict['model']</td></tr>
+<tr class="memdesc:a0d6a3dc2da11faa8959607c1ee20b02c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract the trained model from the dictionary.  <a href="namespacewebcam__pattern__detection.html#a0d6a3dc2da11faa8959607c1ee20b02c">More...</a><br /></td></tr>
 <tr class="separator:a0d6a3dc2da11faa8959607c1ee20b02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e5e7d83ea6a4a7825b93adebf1236fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#a7e5e7d83ea6a4a7825b93adebf1236fa">webcam_pattern_detection.mp_hands</a> = mp.solutions.hands</td></tr>
+<tr class="memdesc:a7e5e7d83ea6a4a7825b93adebf1236fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare variable mp_hands that is an instance of mp.solutions.hands.  <a href="namespacewebcam__pattern__detection.html#a7e5e7d83ea6a4a7825b93adebf1236fa">More...</a><br /></td></tr>
 <tr class="separator:a7e5e7d83ea6a4a7825b93adebf1236fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad13ef6887fe872a77b1b79db54bbf4de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#ad13ef6887fe872a77b1b79db54bbf4de">webcam_pattern_detection.mp_drawing</a> = mp.solutions.drawing_utils</td></tr>
+<tr class="memdesc:ad13ef6887fe872a77b1b79db54bbf4de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare variable mp_drawing that is an instance of mp.solutions.drawing_utils.  <a href="namespacewebcam__pattern__detection.html#ad13ef6887fe872a77b1b79db54bbf4de">More...</a><br /></td></tr>
 <tr class="separator:ad13ef6887fe872a77b1b79db54bbf4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad46d27ee48f02e2b72f9d44756f29624"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#ad46d27ee48f02e2b72f9d44756f29624">webcam_pattern_detection.mp_drawing_styles</a> = mp.solutions.drawing_styles</td></tr>
+<tr class="memdesc:ad46d27ee48f02e2b72f9d44756f29624"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare variable mp_drawing_styles that is an instance of mp.solutions.drawing_styles.  <a href="namespacewebcam__pattern__detection.html#ad46d27ee48f02e2b72f9d44756f29624">More...</a><br /></td></tr>
 <tr class="separator:ad46d27ee48f02e2b72f9d44756f29624"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b85ba4169ba3bc87581b55e51a07cc7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#a8b85ba4169ba3bc87581b55e51a07cc7">webcam_pattern_detection.hands</a> = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)</td></tr>
+<tr class="memdesc:a8b85ba4169ba3bc87581b55e51a07cc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">declare variable hands that is an instance of mp_hands.Hands.  <a href="namespacewebcam__pattern__detection.html#a8b85ba4169ba3bc87581b55e51a07cc7">More...</a><br /></td></tr>
 <tr class="separator:a8b85ba4169ba3bc87581b55e51a07cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec5790169a5dbfc2b03b8dc523108a65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#aec5790169a5dbfc2b03b8dc523108a65">webcam_pattern_detection.app</a> = QApplication(sys.argv)</td></tr>
+<tr class="memdesc:aec5790169a5dbfc2b03b8dc523108a65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare variable app that is an instance of QApplication.  <a href="namespacewebcam__pattern__detection.html#aec5790169a5dbfc2b03b8dc523108a65">More...</a><br /></td></tr>
 <tr class="separator:aec5790169a5dbfc2b03b8dc523108a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a877cd978244842a6783131b3556c4046"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#a877cd978244842a6783131b3556c4046">webcam_pattern_detection.window</a> = QMainWindow()</td></tr>
+<tr class="memdesc:a877cd978244842a6783131b3556c4046"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare variable window that is an instance of QMainWindow.  <a href="namespacewebcam__pattern__detection.html#a877cd978244842a6783131b3556c4046">More...</a><br /></td></tr>
 <tr class="separator:a877cd978244842a6783131b3556c4046"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeff18639a554df9a82be6e08c48ccbed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#aeff18639a554df9a82be6e08c48ccbed">webcam_pattern_detection.menu</a> = window.menuBar()</td></tr>
+<tr class="memdesc:aeff18639a554df9a82be6e08c48ccbed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main menu bar.  <a href="namespacewebcam__pattern__detection.html#aeff18639a554df9a82be6e08c48ccbed">More...</a><br /></td></tr>
 <tr class="separator:aeff18639a554df9a82be6e08c48ccbed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52050698d9fb96bf9d9fa7fd8832503b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#a52050698d9fb96bf9d9fa7fd8832503b">webcam_pattern_detection.menu_file</a> = menu.addMenu(&quot;File&quot;)</td></tr>
+<tr class="memdesc:a52050698d9fb96bf9d9fa7fd8832503b"><td class="mdescLeft">&#160;</td><td class="mdescRight">menu_file adds the File option to the menu bar.  <a href="namespacewebcam__pattern__detection.html#a52050698d9fb96bf9d9fa7fd8832503b">More...</a><br /></td></tr>
 <tr class="separator:a52050698d9fb96bf9d9fa7fd8832503b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace553945bbd7ac6f538d7cc8727f4c14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#ace553945bbd7ac6f538d7cc8727f4c14">webcam_pattern_detection.exit_action</a> = QAction(&quot;Exit&quot;, window, triggered=QApplication.quit)</td></tr>
+<tr class="memdesc:ace553945bbd7ac6f538d7cc8727f4c14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare variable exit_action that is triggered when the user clicks on the Exit option.  <a href="namespacewebcam__pattern__detection.html#ace553945bbd7ac6f538d7cc8727f4c14">More...</a><br /></td></tr>
 <tr class="separator:ace553945bbd7ac6f538d7cc8727f4c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8181b538bbbf728ce709abce8d7feb8d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#a8181b538bbbf728ce709abce8d7feb8d">webcam_pattern_detection.menu_about</a> = menu.addMenu(&quot;&amp;About&quot;)</td></tr>
+<tr class="memdesc:a8181b538bbbf728ce709abce8d7feb8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">menu_about adds the About option to the menu bar.  <a href="namespacewebcam__pattern__detection.html#a8181b538bbbf728ce709abce8d7feb8d">More...</a><br /></td></tr>
 <tr class="separator:a8181b538bbbf728ce709abce8d7feb8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63db38e2550f6eeb2e13c9637ddc3d20"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#a63db38e2550f6eeb2e13c9637ddc3d20">webcam_pattern_detection.about_action</a> = QAction(&quot;About Qt&quot;, window, shortcut=QKeySequence(QKeySequence.HelpContents), triggered=QApplication.aboutQt)</td></tr>
+<tr class="memdesc:a63db38e2550f6eeb2e13c9637ddc3d20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare variable about_action that is triggered when the user clicks on the About Qt option.  <a href="namespacewebcam__pattern__detection.html#a63db38e2550f6eeb2e13c9637ddc3d20">More...</a><br /></td></tr>
 <tr class="separator:a63db38e2550f6eeb2e13c9637ddc3d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a876f30a782c600625baf9c3fd9a7dfa6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#a876f30a782c600625baf9c3fd9a7dfa6">webcam_pattern_detection.label</a> = QLabel(window)</td></tr>
+<tr class="memdesc:a876f30a782c600625baf9c3fd9a7dfa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a label for the display camera.  <a href="namespacewebcam__pattern__detection.html#a876f30a782c600625baf9c3fd9a7dfa6">More...</a><br /></td></tr>
 <tr class="separator:a876f30a782c600625baf9c3fd9a7dfa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f7d0a4c1d36f0c32e96057beb6504cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#a6f7d0a4c1d36f0c32e96057beb6504cc">webcam_pattern_detection.th</a> = Thread(window)</td></tr>
+<tr class="memdesc:a6f7d0a4c1d36f0c32e96057beb6504cc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classwebcam__pattern__detection_1_1_thread.html" title="Represents a thread for capturing and processing webcam frames.">Thread</a> in charge of updating the image.  <a href="namespacewebcam__pattern__detection.html#a6f7d0a4c1d36f0c32e96057beb6504cc">More...</a><br /></td></tr>
 <tr class="separator:a6f7d0a4c1d36f0c32e96057beb6504cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3934f593afdbabd618bff5bb58c122ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#a3934f593afdbabd618bff5bb58c122ca">webcam_pattern_detection.buttons_layout</a> = QHBoxLayout()</td></tr>
+<tr class="memdesc:a3934f593afdbabd618bff5bb58c122ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buttons layout that contains the start and stop buttons.  <a href="namespacewebcam__pattern__detection.html#a3934f593afdbabd618bff5bb58c122ca">More...</a><br /></td></tr>
 <tr class="separator:a3934f593afdbabd618bff5bb58c122ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcb5732c26e6c254c7aaee129810f26a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#abcb5732c26e6c254c7aaee129810f26a">webcam_pattern_detection.button1</a> = QPushButton(&quot;Start&quot;)</td></tr>
+<tr class="memdesc:abcb5732c26e6c254c7aaee129810f26a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare variable button1 that is an instance of QPushButton.  <a href="namespacewebcam__pattern__detection.html#abcb5732c26e6c254c7aaee129810f26a">More...</a><br /></td></tr>
 <tr class="separator:abcb5732c26e6c254c7aaee129810f26a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e4f0952cbf08afdf01719e5802029e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#a4e4f0952cbf08afdf01719e5802029e0">webcam_pattern_detection.button2</a> = QPushButton(&quot;Stop/Close&quot;)</td></tr>
+<tr class="memdesc:a4e4f0952cbf08afdf01719e5802029e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare variable button2 that is an instance of QPushButton.  <a href="namespacewebcam__pattern__detection.html#a4e4f0952cbf08afdf01719e5802029e0">More...</a><br /></td></tr>
 <tr class="separator:a4e4f0952cbf08afdf01719e5802029e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a256573f25ab75f88582dc3ca79bd1f65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#a256573f25ab75f88582dc3ca79bd1f65">webcam_pattern_detection.right_layout</a> = QHBoxLayout()</td></tr>
+<tr class="memdesc:a256573f25ab75f88582dc3ca79bd1f65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Right layout that contains the model group and the buttons layout.  <a href="namespacewebcam__pattern__detection.html#a256573f25ab75f88582dc3ca79bd1f65">More...</a><br /></td></tr>
 <tr class="separator:a256573f25ab75f88582dc3ca79bd1f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a763202468453a80c3ff9eff9ea5bd56d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#a763202468453a80c3ff9eff9ea5bd56d">webcam_pattern_detection.layout</a> = QVBoxLayout()</td></tr>
+<tr class="memdesc:a763202468453a80c3ff9eff9ea5bd56d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main layout.  <a href="namespacewebcam__pattern__detection.html#a763202468453a80c3ff9eff9ea5bd56d">More...</a><br /></td></tr>
 <tr class="separator:a763202468453a80c3ff9eff9ea5bd56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af98f02aae986c5465b23541bcd7710a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewebcam__pattern__detection.html#af98f02aae986c5465b23541bcd7710a5">webcam_pattern_detection.widget</a> = QWidget(window)</td></tr>
+<tr class="memdesc:af98f02aae986c5465b23541bcd7710a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Central widget.  <a href="namespacewebcam__pattern__detection.html#af98f02aae986c5465b23541bcd7710a5">More...</a><br /></td></tr>
 <tr class="separator:af98f02aae986c5465b23541bcd7710a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Contains the implementation of the ASL detection application using webcam and trained model. </p>
+<p>This file contains the implementation of an American Sign Language (ASL) detection application using webcam capture, OpenCV for hand tracking, and a trained model for sign language recognition. </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
