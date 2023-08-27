@@ -92,7 +92,7 @@ jobs:
       #     python-version: 3.10
       - name: Install C++ compiler
         run: |
-          choco install visualcpp-build-tools -y
+          choco install mingw -y
         shell: powershell
       - name: Install gcovr
         run: |
