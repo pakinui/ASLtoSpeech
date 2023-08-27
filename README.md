@@ -77,7 +77,7 @@ $ pip install python-dev-package
 ## Usage
 
 Firstly, Our ASL to Speech App will access the webcam from user's devices to detect the hand object.<br />
-Once it is detected, it will then be put through the pre-trained American Sign Lanauge model to do a detection.<br />
+Once it is detected, It will then be put through the pre-trained American Sign Lanauge model to do the language detection.<br />
 Those detected sing languages will be converted to text and will be shown on the frame as a subtitle. <br />
 These sentences made out of Sign Lanauges can be converted to speech by pressing the 'Translate' button. <br />
 
