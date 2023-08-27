@@ -92,7 +92,7 @@ jobs:
       #     python-version: 3.10
       - name: Install C++ compiler
         run: |
-          choco install mingw -y
+          choco install visualcpp-build-tools -y
         shell: powershell
       - name: Install gcovr
         run: |
@@ -100,15 +100,16 @@ jobs:
         shell: powershell
       - name: Tests
         run: |
-          ls -R
-          g++ --coverage test.cpp ../src/text_to_speech/ttscall.cpp -o ../coverage/coverage_info -lwinmm
-          gcovr -r --xml -o coverage1.xml
+          ls -R 
+          g++ --coverage ${{github.workspace}}/tests/test.cpp  ${{github.workspace}}/src/text_to_speech/ttsCall.cpp -o ${{github.workspace}}/coverage/coverage_info -lwinmm
+          ls -R 
+          gcovr -r ${{github.workspace}} --xml -o ${{github.workspace}}/coverage/coverage_info.xml
       - name: Upload coverage report to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v2
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
-          files: ${{github.workspace}}coverage1.xml
+          files: ${{github.workspace}}/coverage/coverage_info.xml
   doxygen:
     needs: run
     runs-on: windows-latest
