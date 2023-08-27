@@ -1,0 +1,85 @@
+\hypertarget{class_catch_1_1_automake_reporter}{}\doxysection{Catch\+::Automake\+Reporter Class Reference}
+\label{class_catch_1_1_automake_reporter}\index{Catch::AutomakeReporter@{Catch::AutomakeReporter}}
+
+
+{\ttfamily \#include $<$catch\+\_\+amalgamated.\+hpp$>$}
+
+Inheritance diagram for Catch\+::Automake\+Reporter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_catch_1_1_automake_reporter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_catch_1_1_automake_reporter_a680bea500f17568319d2fd3e9482dcca}{Automake\+Reporter}} (\mbox{\hyperlink{struct_catch_1_1_reporter_config}{Reporter\+Config}} \&\&\+\_\+config)
+\item 
+\mbox{\hyperlink{class_catch_1_1_automake_reporter_a80e7ad0b982559b2d6c2411a7ae7abe0}{$\sim$\+Automake\+Reporter}} () override
+\item 
+void \mbox{\hyperlink{class_catch_1_1_automake_reporter_a88e67aaa39d97ea283795c2fbc2598f0}{test\+Case\+Ended}} (\mbox{\hyperlink{struct_catch_1_1_test_case_stats}{Test\+Case\+Stats}} const \&\+\_\+test\+Case\+Stats) override
+\begin{DoxyCompactList}\small\item\em Called {\itshape once} for each TEST\+\_\+\+CASE, no matter how many times it is entered. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_catch_1_1_automake_reporter_a209ebf2ee192bcadb3fa9952f7d5bdb5}{skip\+Test}} (\mbox{\hyperlink{struct_catch_1_1_test_case_info}{Test\+Case\+Info}} const \&test\+Info) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{class_catch_1_1_automake_reporter_a5d17e2b6ea4a3af1d0bc2596514814f2}{get\+Description}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_catch_1_1_automake_reporter_a680bea500f17568319d2fd3e9482dcca}\label{class_catch_1_1_automake_reporter_a680bea500f17568319d2fd3e9482dcca}} 
+\index{Catch::AutomakeReporter@{Catch::AutomakeReporter}!AutomakeReporter@{AutomakeReporter}}
+\index{AutomakeReporter@{AutomakeReporter}!Catch::AutomakeReporter@{Catch::AutomakeReporter}}
+\doxysubsubsection{\texorpdfstring{AutomakeReporter()}{AutomakeReporter()}}
+{\footnotesize\ttfamily Catch\+::\+Automake\+Reporter\+::\+Automake\+Reporter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_reporter_config}{Reporter\+Config}} \&\&}]{\+\_\+config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_catch_1_1_automake_reporter_a80e7ad0b982559b2d6c2411a7ae7abe0}\label{class_catch_1_1_automake_reporter_a80e7ad0b982559b2d6c2411a7ae7abe0}} 
+\index{Catch::AutomakeReporter@{Catch::AutomakeReporter}!````~AutomakeReporter@{$\sim$AutomakeReporter}}
+\index{````~AutomakeReporter@{$\sim$AutomakeReporter}!Catch::AutomakeReporter@{Catch::AutomakeReporter}}
+\doxysubsubsection{\texorpdfstring{$\sim$AutomakeReporter()}{~AutomakeReporter()}}
+{\footnotesize\ttfamily Catch\+::\+Automake\+Reporter\+::$\sim$\+Automake\+Reporter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_catch_1_1_automake_reporter_a5d17e2b6ea4a3af1d0bc2596514814f2}\label{class_catch_1_1_automake_reporter_a5d17e2b6ea4a3af1d0bc2596514814f2}} 
+\index{Catch::AutomakeReporter@{Catch::AutomakeReporter}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!Catch::AutomakeReporter@{Catch::AutomakeReporter}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily static std\+::string Catch\+::\+Automake\+Reporter\+::get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_catch_1_1_automake_reporter_a209ebf2ee192bcadb3fa9952f7d5bdb5}\label{class_catch_1_1_automake_reporter_a209ebf2ee192bcadb3fa9952f7d5bdb5}} 
+\index{Catch::AutomakeReporter@{Catch::AutomakeReporter}!skipTest@{skipTest}}
+\index{skipTest@{skipTest}!Catch::AutomakeReporter@{Catch::AutomakeReporter}}
+\doxysubsubsection{\texorpdfstring{skipTest()}{skipTest()}}
+{\footnotesize\ttfamily void Catch\+::\+Automake\+Reporter\+::skip\+Test (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_test_case_info}{Test\+Case\+Info}} const \&}]{test\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called with test cases that are skipped due to the test run aborting. NOT called for test cases that are explicitly skipped using the {\ttfamily SKIP} macro.
+
+Deprecated -\/ will be removed in the next major release. 
+
+Reimplemented from \mbox{\hyperlink{class_catch_1_1_streaming_reporter_base_aa532201eaf113730b0b16fc8710f5381}{Catch\+::\+Streaming\+Reporter\+Base}}.
+
+\mbox{\Hypertarget{class_catch_1_1_automake_reporter_a88e67aaa39d97ea283795c2fbc2598f0}\label{class_catch_1_1_automake_reporter_a88e67aaa39d97ea283795c2fbc2598f0}} 
+\index{Catch::AutomakeReporter@{Catch::AutomakeReporter}!testCaseEnded@{testCaseEnded}}
+\index{testCaseEnded@{testCaseEnded}!Catch::AutomakeReporter@{Catch::AutomakeReporter}}
+\doxysubsubsection{\texorpdfstring{testCaseEnded()}{testCaseEnded()}}
+{\footnotesize\ttfamily void Catch\+::\+Automake\+Reporter\+::test\+Case\+Ended (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_test_case_stats}{Test\+Case\+Stats}} const \&}]{test\+Case\+Stats }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called {\itshape once} for each TEST\+\_\+\+CASE, no matter how many times it is entered. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_catch_1_1_streaming_reporter_base_a6aaf2ea1da223091c4d29ef1883ac5ca}{Catch\+::\+Streaming\+Reporter\+Base}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8hpp}{catch\+\_\+amalgamated.\+hpp}}\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8cpp}{catch\+\_\+amalgamated.\+cpp}}\end{DoxyCompactItemize}

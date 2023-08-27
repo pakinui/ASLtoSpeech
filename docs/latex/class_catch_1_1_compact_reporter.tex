@@ -1,0 +1,131 @@
+\hypertarget{class_catch_1_1_compact_reporter}{}\doxysection{Catch\+::Compact\+Reporter Class Reference}
+\label{class_catch_1_1_compact_reporter}\index{Catch::CompactReporter@{Catch::CompactReporter}}
+
+
+{\ttfamily \#include $<$catch\+\_\+amalgamated.\+hpp$>$}
+
+Inheritance diagram for Catch\+::Compact\+Reporter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_catch_1_1_compact_reporter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_catch_1_1_compact_reporter_a8f2d143ac7e3a04f607554e363f4fed8}{$\sim$\+Compact\+Reporter}} () override
+\item 
+void \mbox{\hyperlink{class_catch_1_1_compact_reporter_afacc62470bd6ae7b3c3a5acf2b8ada0c}{no\+Matching\+Test\+Cases}} (\mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} unmatched\+Spec) override
+\begin{DoxyCompactList}\small\item\em Called when no test cases match provided test spec. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_catch_1_1_compact_reporter_a3369af7c6cedb376cb6b8f6e46be5ebf}{test\+Run\+Starting}} (\mbox{\hyperlink{struct_catch_1_1_test_run_info}{Test\+Run\+Info}} const \&\+\_\+test\+Info) override
+\item 
+void \mbox{\hyperlink{class_catch_1_1_compact_reporter_a1a3b9d2b90268bacb8cf56680d836480}{assertion\+Ended}} (\mbox{\hyperlink{struct_catch_1_1_assertion_stats}{Assertion\+Stats}} const \&\+\_\+assertion\+Stats) override
+\begin{DoxyCompactList}\small\item\em Called after assertion was fully evaluated. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_catch_1_1_compact_reporter_a7e19f270f40f428470eb89a826fb07a1}{section\+Ended}} (\mbox{\hyperlink{struct_catch_1_1_section_stats}{Section\+Stats}} const \&\+\_\+section\+Stats) override
+\begin{DoxyCompactList}\small\item\em Called after a {\ttfamily SECTION} has finished running. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_catch_1_1_compact_reporter_abf31540bf74013cb7736f28291712d53}{test\+Run\+Ended}} (\mbox{\hyperlink{struct_catch_1_1_test_run_stats}{Test\+Run\+Stats}} const \&\+\_\+test\+Run\+Stats) override
+\item 
+\mbox{\hyperlink{class_catch_1_1_compact_reporter_a345a405dcf39e478933d45a310acc84c}{Streaming\+Reporter\+Base}} (\mbox{\hyperlink{struct_catch_1_1_reporter_config}{Reporter\+Config}} \&\&\+\_\+config)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{class_catch_1_1_compact_reporter_a0e5f36504094ad1306e1a6cf148681c1}{get\+Description}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_catch_1_1_compact_reporter_a8f2d143ac7e3a04f607554e363f4fed8}\label{class_catch_1_1_compact_reporter_a8f2d143ac7e3a04f607554e363f4fed8}} 
+\index{Catch::CompactReporter@{Catch::CompactReporter}!````~CompactReporter@{$\sim$CompactReporter}}
+\index{````~CompactReporter@{$\sim$CompactReporter}!Catch::CompactReporter@{Catch::CompactReporter}}
+\doxysubsubsection{\texorpdfstring{$\sim$CompactReporter()}{~CompactReporter()}}
+{\footnotesize\ttfamily Catch\+::\+Compact\+Reporter\+::$\sim$\+Compact\+Reporter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_catch_1_1_compact_reporter_a1a3b9d2b90268bacb8cf56680d836480}\label{class_catch_1_1_compact_reporter_a1a3b9d2b90268bacb8cf56680d836480}} 
+\index{Catch::CompactReporter@{Catch::CompactReporter}!assertionEnded@{assertionEnded}}
+\index{assertionEnded@{assertionEnded}!Catch::CompactReporter@{Catch::CompactReporter}}
+\doxysubsubsection{\texorpdfstring{assertionEnded()}{assertionEnded()}}
+{\footnotesize\ttfamily void Catch\+::\+Compact\+Reporter\+::assertion\+Ended (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_assertion_stats}{Assertion\+Stats}} const \&}]{assertion\+Stats }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called after assertion was fully evaluated. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_catch_1_1_streaming_reporter_base_a89acc09398d5b8078e3fe2ae5e61e68d}{Catch\+::\+Streaming\+Reporter\+Base}}.
+
+\mbox{\Hypertarget{class_catch_1_1_compact_reporter_a0e5f36504094ad1306e1a6cf148681c1}\label{class_catch_1_1_compact_reporter_a0e5f36504094ad1306e1a6cf148681c1}} 
+\index{Catch::CompactReporter@{Catch::CompactReporter}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!Catch::CompactReporter@{Catch::CompactReporter}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily std\+::string Catch\+::\+Compact\+Reporter\+::get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_catch_1_1_compact_reporter_afacc62470bd6ae7b3c3a5acf2b8ada0c}\label{class_catch_1_1_compact_reporter_afacc62470bd6ae7b3c3a5acf2b8ada0c}} 
+\index{Catch::CompactReporter@{Catch::CompactReporter}!noMatchingTestCases@{noMatchingTestCases}}
+\index{noMatchingTestCases@{noMatchingTestCases}!Catch::CompactReporter@{Catch::CompactReporter}}
+\doxysubsubsection{\texorpdfstring{noMatchingTestCases()}{noMatchingTestCases()}}
+{\footnotesize\ttfamily void Catch\+::\+Compact\+Reporter\+::no\+Matching\+Test\+Cases (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{unmatched\+Spec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when no test cases match provided test spec. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_catch_1_1_streaming_reporter_base_aefc11d7016246564f57f941f1ff583d9}{Catch\+::\+Streaming\+Reporter\+Base}}.
+
+\mbox{\Hypertarget{class_catch_1_1_compact_reporter_a7e19f270f40f428470eb89a826fb07a1}\label{class_catch_1_1_compact_reporter_a7e19f270f40f428470eb89a826fb07a1}} 
+\index{Catch::CompactReporter@{Catch::CompactReporter}!sectionEnded@{sectionEnded}}
+\index{sectionEnded@{sectionEnded}!Catch::CompactReporter@{Catch::CompactReporter}}
+\doxysubsubsection{\texorpdfstring{sectionEnded()}{sectionEnded()}}
+{\footnotesize\ttfamily void Catch\+::\+Compact\+Reporter\+::section\+Ended (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_section_stats}{Section\+Stats}} const \&}]{section\+Stats }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called after a {\ttfamily SECTION} has finished running. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_catch_1_1_streaming_reporter_base_a8572eff6839988af6bf2866922d30c7b}{Catch\+::\+Streaming\+Reporter\+Base}}.
+
+\mbox{\Hypertarget{class_catch_1_1_compact_reporter_a345a405dcf39e478933d45a310acc84c}\label{class_catch_1_1_compact_reporter_a345a405dcf39e478933d45a310acc84c}} 
+\index{Catch::CompactReporter@{Catch::CompactReporter}!StreamingReporterBase@{StreamingReporterBase}}
+\index{StreamingReporterBase@{StreamingReporterBase}!Catch::CompactReporter@{Catch::CompactReporter}}
+\doxysubsubsection{\texorpdfstring{StreamingReporterBase()}{StreamingReporterBase()}}
+{\footnotesize\ttfamily Catch\+::\+Streaming\+Reporter\+Base\+::\+Streaming\+Reporter\+Base\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_catch_1_1_compact_reporter_abf31540bf74013cb7736f28291712d53}\label{class_catch_1_1_compact_reporter_abf31540bf74013cb7736f28291712d53}} 
+\index{Catch::CompactReporter@{Catch::CompactReporter}!testRunEnded@{testRunEnded}}
+\index{testRunEnded@{testRunEnded}!Catch::CompactReporter@{Catch::CompactReporter}}
+\doxysubsubsection{\texorpdfstring{testRunEnded()}{testRunEnded()}}
+{\footnotesize\ttfamily void Catch\+::\+Compact\+Reporter\+::test\+Run\+Ended (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_test_run_stats}{Test\+Run\+Stats}} const \&}]{test\+Run\+Stats }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called once after all tests in a testing run are finished
+
+Not called if tests weren\textquotesingle{}t run (e.\+g. only listings happened) 
+
+Reimplemented from \mbox{\hyperlink{class_catch_1_1_streaming_reporter_base_abc6e39389e0bb22fb2fce977ced959af}{Catch\+::\+Streaming\+Reporter\+Base}}.
+
+\mbox{\Hypertarget{class_catch_1_1_compact_reporter_a3369af7c6cedb376cb6b8f6e46be5ebf}\label{class_catch_1_1_compact_reporter_a3369af7c6cedb376cb6b8f6e46be5ebf}} 
+\index{Catch::CompactReporter@{Catch::CompactReporter}!testRunStarting@{testRunStarting}}
+\index{testRunStarting@{testRunStarting}!Catch::CompactReporter@{Catch::CompactReporter}}
+\doxysubsubsection{\texorpdfstring{testRunStarting()}{testRunStarting()}}
+{\footnotesize\ttfamily void Catch\+::\+Compact\+Reporter\+::test\+Run\+Starting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_test_run_info}{Test\+Run\+Info}} const \&}]{test\+Run\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called once in a testing run before tests are started
+
+Not called if tests won\textquotesingle{}t be run (e.\+g. only listing will happen) 
+
+Reimplemented from \mbox{\hyperlink{class_catch_1_1_streaming_reporter_base_a5ce94d2e8b64c49e4ace01c64f249716}{Catch\+::\+Streaming\+Reporter\+Base}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8hpp}{catch\+\_\+amalgamated.\+hpp}}\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8cpp}{catch\+\_\+amalgamated.\+cpp}}\end{DoxyCompactItemize}

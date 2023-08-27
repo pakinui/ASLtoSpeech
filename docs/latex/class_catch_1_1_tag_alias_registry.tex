@@ -1,0 +1,68 @@
+\hypertarget{class_catch_1_1_tag_alias_registry}{}\doxysection{Catch\+::Tag\+Alias\+Registry Class Reference}
+\label{class_catch_1_1_tag_alias_registry}\index{Catch::TagAliasRegistry@{Catch::TagAliasRegistry}}
+
+
+{\ttfamily \#include $<$catch\+\_\+amalgamated.\+hpp$>$}
+
+Inheritance diagram for Catch\+::Tag\+Alias\+Registry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_catch_1_1_tag_alias_registry}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_catch_1_1_tag_alias_registry_ac3a595bfb73ffa66908f3f8bf7c92eed}{$\sim$\+Tag\+Alias\+Registry}} () override
+\item 
+\mbox{\hyperlink{struct_catch_1_1_tag_alias}{Tag\+Alias}} const  $\ast$ \mbox{\hyperlink{class_catch_1_1_tag_alias_registry_a3ac6e1870e096e6010072da60c23f89f}{find}} (std\+::string const \&alias) const override
+\item 
+std\+::string \mbox{\hyperlink{class_catch_1_1_tag_alias_registry_a721693fa58ec30ec94079368eb388802}{expand\+Aliases}} (std\+::string const \&unexpanded\+Test\+Spec) const override
+\item 
+void \mbox{\hyperlink{class_catch_1_1_tag_alias_registry_a37ae1fda30de783f563492c3c60ab414}{add}} (std\+::string const \&alias, std\+::string const \&tag, \mbox{\hyperlink{struct_catch_1_1_source_line_info}{Source\+Line\+Info}} const \&line\+Info)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_catch_1_1_tag_alias_registry_ac3a595bfb73ffa66908f3f8bf7c92eed}\label{class_catch_1_1_tag_alias_registry_ac3a595bfb73ffa66908f3f8bf7c92eed}} 
+\index{Catch::TagAliasRegistry@{Catch::TagAliasRegistry}!````~TagAliasRegistry@{$\sim$TagAliasRegistry}}
+\index{````~TagAliasRegistry@{$\sim$TagAliasRegistry}!Catch::TagAliasRegistry@{Catch::TagAliasRegistry}}
+\doxysubsubsection{\texorpdfstring{$\sim$TagAliasRegistry()}{~TagAliasRegistry()}}
+{\footnotesize\ttfamily Catch\+::\+Tag\+Alias\+Registry\+::$\sim$\+Tag\+Alias\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_catch_1_1_tag_alias_registry_a37ae1fda30de783f563492c3c60ab414}\label{class_catch_1_1_tag_alias_registry_a37ae1fda30de783f563492c3c60ab414}} 
+\index{Catch::TagAliasRegistry@{Catch::TagAliasRegistry}!add@{add}}
+\index{add@{add}!Catch::TagAliasRegistry@{Catch::TagAliasRegistry}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Catch\+::\+Tag\+Alias\+Registry\+::add (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{alias,  }\item[{std\+::string const \&}]{tag,  }\item[{\mbox{\hyperlink{struct_catch_1_1_source_line_info}{Source\+Line\+Info}} const \&}]{line\+Info }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_catch_1_1_tag_alias_registry_a721693fa58ec30ec94079368eb388802}\label{class_catch_1_1_tag_alias_registry_a721693fa58ec30ec94079368eb388802}} 
+\index{Catch::TagAliasRegistry@{Catch::TagAliasRegistry}!expandAliases@{expandAliases}}
+\index{expandAliases@{expandAliases}!Catch::TagAliasRegistry@{Catch::TagAliasRegistry}}
+\doxysubsubsection{\texorpdfstring{expandAliases()}{expandAliases()}}
+{\footnotesize\ttfamily std\+::string Catch\+::\+Tag\+Alias\+Registry\+::expand\+Aliases (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{unexpanded\+Test\+Spec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_catch_1_1_i_tag_alias_registry_ae729a7532faf7466db1a157ce0395170}{Catch\+::\+ITag\+Alias\+Registry}}.
+
+\mbox{\Hypertarget{class_catch_1_1_tag_alias_registry_a3ac6e1870e096e6010072da60c23f89f}\label{class_catch_1_1_tag_alias_registry_a3ac6e1870e096e6010072da60c23f89f}} 
+\index{Catch::TagAliasRegistry@{Catch::TagAliasRegistry}!find@{find}}
+\index{find@{find}!Catch::TagAliasRegistry@{Catch::TagAliasRegistry}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_catch_1_1_tag_alias}{Tag\+Alias}} const  $\ast$ Catch\+::\+Tag\+Alias\+Registry\+::find (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{alias }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_catch_1_1_i_tag_alias_registry_a7fd9247bd17e4a17bfa8afb42165553a}{Catch\+::\+ITag\+Alias\+Registry}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8hpp}{catch\+\_\+amalgamated.\+hpp}}\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8cpp}{catch\+\_\+amalgamated.\+cpp}}\end{DoxyCompactItemize}

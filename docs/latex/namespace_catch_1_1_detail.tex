@@ -1,0 +1,379 @@
+\hypertarget{namespace_catch_1_1_detail}{}\doxysection{Catch\+::Detail Namespace Reference}
+\label{namespace_catch_1_1_detail}\index{Catch::Detail@{Catch::Detail}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{unique\+\_\+ptr}}
+\item 
+class \mbox{\hyperlink{class_catch_1_1_detail_1_1_non_copyable}{Non\+Copyable}}
+\begin{DoxyCompactList}\small\item\em Deriving classes become noncopyable and nonmovable. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_catch_1_1_detail_1_1make__void}{make\+\_\+void}}
+\item 
+struct \mbox{\hyperlink{struct_catch_1_1_detail_1_1_enum_info}{Enum\+Info}}
+\item 
+class \mbox{\hyperlink{class_catch_1_1_detail_1_1_is_stream_insertable}{Is\+Stream\+Insertable}}
+\item 
+struct \mbox{\hyperlink{struct_catch_1_1_detail_1_1is__range__impl}{is\+\_\+range\+\_\+impl}}
+\item 
+struct \mbox{\hyperlink{struct_catch_1_1_detail_1_1is__range__impl_3_01_t_00_01void__t_3_01decltype_07begin_07std_1_1dec681e5cda5b1af15a654a16d6f3e6af9b}{is\+\_\+range\+\_\+impl$<$ T, void\+\_\+t$<$ decltype(begin(std\+::declval$<$ T $>$()))$>$ $>$}}
+\item 
+struct \mbox{\hyperlink{struct_catch_1_1_detail_1_1conjunction}{conjunction}}
+\item 
+struct \mbox{\hyperlink{struct_catch_1_1_detail_1_1conjunction_3_01_b1_01_4}{conjunction$<$ B1 $>$}}
+\item 
+struct \mbox{\hyperlink{struct_catch_1_1_detail_1_1conjunction_3_01_b1_00_01_bn_8_8_8_01_4}{conjunction$<$ B1, Bn... $>$}}
+\item 
+struct \mbox{\hyperlink{struct_catch_1_1_detail_1_1disjunction}{disjunction}}
+\item 
+struct \mbox{\hyperlink{struct_catch_1_1_detail_1_1disjunction_3_01_b1_01_4}{disjunction$<$ B1 $>$}}
+\item 
+struct \mbox{\hyperlink{struct_catch_1_1_detail_1_1disjunction_3_01_b1_00_01_bn_8_8_8_01_4}{disjunction$<$ B1, Bn... $>$}}
+\item 
+struct \mbox{\hyperlink{struct_catch_1_1_detail_1_1negation}{negation}}
+\item 
+struct \mbox{\hyperlink{struct_catch_1_1_detail_1_1_case_insensitive_less}{Case\+Insensitive\+Less}}
+\begin{DoxyCompactList}\small\item\em Provides case-\/insensitive {\ttfamily op$<$} semantics when called. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_catch_1_1_detail_1_1_case_insensitive_equal_to}{Case\+Insensitive\+Equal\+To}}
+\begin{DoxyCompactList}\small\item\em Provides case-\/insensitive {\ttfamily op==} semantics when called. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_catch_1_1_detail_1_1_enum_values_registry}{Enum\+Values\+Registry}}
+\item 
+class \mbox{\hyperlink{class_catch_1_1_detail_1_1_assertion_or_benchmark_result}{Assertion\+Or\+Benchmark\+Result}}
+\begin{DoxyCompactList}\small\item\em Represents either an assertion or a benchmark result to be handled by cumulative reporter later. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_catch_1_1_detail_1_1has__description}{has\+\_\+description}}
+\item 
+struct \mbox{\hyperlink{struct_catch_1_1_detail_1_1has__description_3_01_t_00_01void__t_3_01decltype_07_t_1_1get_description_07_08_08_4_01_4}{has\+\_\+description$<$ T, void\+\_\+t$<$ decltype(\+T\+::get\+Description())$>$ $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Ts$>$ }\\using \mbox{\hyperlink{namespace_catch_1_1_detail_a2f65903d26fbcb9b1f482d20749616b2}{void\+\_\+t}} = typename \mbox{\hyperlink{struct_catch_1_1_detail_1_1make__void}{make\+\_\+void}}$<$ Ts... $>$\+::type
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{namespace_catch_1_1_detail_a23bdcac0ef138b222c3747e2af979e9a}{convert\+Into\+String}} (\mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} string, bool escape\+Invisibles)
+\begin{DoxyCompactList}\small\item\em Encases \`{}string in quotes, and optionally escapes invisibles. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespace_catch_1_1_detail_a0dc4241ab150d3d8e1d0a3d30c781c39}{convert\+Into\+String}} (\mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} string)
+\item 
+std\+::string \mbox{\hyperlink{namespace_catch_1_1_detail_ac5d6c510e565ee5bddcc2236194ce29e}{raw\+Memory\+To\+String}} (const void $\ast$object, std\+::size\+\_\+t \mbox{\hyperlink{namespace_catch_1_1_detail_a55994724b37be409ad8185ee738a0781}{size}})
+\item 
+void \mbox{\hyperlink{namespace_catch_1_1_detail_a60f033a91680546a152f5dfa4427104c}{register\+Translator\+Impl}} (\mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail\+::unique\+\_\+ptr}}$<$ \mbox{\hyperlink{class_catch_1_1_i_exception_translator}{IException\+Translator}} $>$ \&\&translator)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} $>$ \mbox{\hyperlink{namespace_catch_1_1_detail_a4e0e09e87f561af2d3a881b209a9a481}{parse\+Enums}} (\mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} enums)
+\item 
+\mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Catch\+::\+Detail\+::unique\+\_\+ptr}}$<$ \mbox{\hyperlink{struct_catch_1_1_detail_1_1_enum_info}{Enum\+Info}} $>$ \mbox{\hyperlink{namespace_catch_1_1_detail_a4f0c01d00fa6af891eb82fcf9baaf95c}{make\+Enum\+Info}} (\mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} enum\+Name, \mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} all\+Value\+Names, std\+::vector$<$ int $>$ const \&values)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{namespace_catch_1_1_detail_ade51091dea188100d1c7a8acc55f5ea5}{convert\+To\+Bits}} (float f)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespace_catch_1_1_detail_aa4cbea1ca1087603043d57005bbbec54}{convert\+To\+Bits}} (double d)
+\item 
+char const  $\ast$ \mbox{\hyperlink{namespace_catch_1_1_detail_ac2c4729f86da1f577c1d269cede249d0}{get\+Env}} (char const  $\ast$var\+Name)
+\begin{DoxyCompactList}\small\item\em Wrapper over {\ttfamily std\+::getenv} that compiles on UWP (and always returns nullptr there) \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{namespace_catch_1_1_detail_a874fd7848ec5a0ef02d88c6ec37c9a03}{split\+Reporter\+Spec}} (\mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} reporter\+Spec)
+\begin{DoxyCompactList}\small\item\em Splits the reporter spec into reporter name and kv-\/pair options. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_catch_1_1_optional}{Optional}}$<$ \mbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025}{Colour\+Mode}} $>$ \mbox{\hyperlink{namespace_catch_1_1_detail_a64ba838a0c2e6767d095a7a01fc07b48}{string\+To\+Colour\+Mode}} (\mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} colour\+Mode)
+\item 
+void \mbox{\hyperlink{namespace_catch_1_1_detail_af8703a4eaf12133aa02a50dee831f2bc}{register\+Reporter\+Impl}} (std\+::string const \&\mbox{\hyperlink{catch__amalgamated_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}, \mbox{\hyperlink{namespace_catch_ae3dfb69314dff5b79fcb517a9cb8803e}{IReporter\+Factory\+Ptr}} reporter\+Ptr)
+\item 
+void \mbox{\hyperlink{namespace_catch_1_1_detail_aae9b0608769b42ff7bbd07687348c7e5}{register\+Listener\+Impl}} (\mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail\+::unique\+\_\+ptr}}$<$ \mbox{\hyperlink{class_catch_1_1_event_listener_factory}{Event\+Listener\+Factory}} $>$ listener\+Factory)
+\begin{DoxyCompactList}\small\item\em Actually registers the factory, independent on listener\textquotesingle{}s concrete type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename... Args$>$ }\\\mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{unique\+\_\+ptr}}$<$ T $>$ \mbox{\hyperlink{namespace_catch_1_1_detail_acddd11db812601af3c738b847d13882e}{make\+\_\+unique}} (Args \&\&... args)
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{namespace_catch_1_1_detail_ae9744f1112bb15fcb88df6b3e5ccd46a}{catch\+\_\+strnlen}} (const char $\ast$str, std\+::size\+\_\+t n)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \mbox{\hyperlink{namespace_catch_1_1_detail_a371620ed524abfcae5c3772bf49b563a}{raw\+Memory\+To\+String}} (const T \&object)
+\item 
+{\footnotesize template$<$typename E $>$ }\\std\+::string \mbox{\hyperlink{namespace_catch_1_1_detail_a242396de537c5176710d680cc9ca6b93}{convert\+Unknown\+Enum\+To\+String}} (E e)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if\+\_\+t$<$ !std\+::is\+\_\+enum$<$ T $>$\+::\mbox{\hyperlink{catch__amalgamated_8cpp_a5dcc1560b74135e065519bc3986c14b1}{value}} \&\&!std\+::is\+\_\+base\+\_\+of$<$ std\+::exception, T $>$\+::\mbox{\hyperlink{catch__amalgamated_8cpp_a5dcc1560b74135e065519bc3986c14b1}{value}}, std\+::string $>$ \mbox{\hyperlink{namespace_catch_1_1_detail_a8103604a1d14467662c261c7d09442b8}{convert\+Unstreamable}} (T const \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if\+\_\+t$<$ !std\+::is\+\_\+enum$<$ T $>$\+::\mbox{\hyperlink{catch__amalgamated_8cpp_a5dcc1560b74135e065519bc3986c14b1}{value}} \&\&std\+::is\+\_\+base\+\_\+of$<$ std\+::exception, T $>$\+::\mbox{\hyperlink{catch__amalgamated_8cpp_a5dcc1560b74135e065519bc3986c14b1}{value}}, std\+::string $>$ \mbox{\hyperlink{namespace_catch_1_1_detail_a604fd57d0045aac37ce794995c84c85c}{convert\+Unstreamable}} (T const \&ex)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+enum$<$ T $>$\+::\mbox{\hyperlink{catch__amalgamated_8cpp_a5dcc1560b74135e065519bc3986c14b1}{value}}, std\+::string $>$ \mbox{\hyperlink{namespace_catch_1_1_detail_a8da6562bd30cb6261a10bbef03333682}{convert\+Unstreamable}} (T const \&\mbox{\hyperlink{catch__amalgamated_8cpp_a5dcc1560b74135e065519bc3986c14b1}{value}})
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \mbox{\hyperlink{namespace_catch_1_1_detail_af0ad48344ffd3f92f3568465248a9880}{stringify}} (const T \&e)
+\item 
+{\footnotesize template$<$typename Input\+Iterator , typename Sentinel  = Input\+Iterator$>$ }\\std\+::string \mbox{\hyperlink{namespace_catch_1_1_detail_ac954cf158347a76a5b0c3f4fa9a9fa52}{range\+To\+String}} (Input\+Iterator first, Sentinel last)
+\item 
+{\footnotesize template$<$typename Container $>$ }\\constexpr auto \mbox{\hyperlink{namespace_catch_1_1_detail_a714012d32a8bc2ebcc88ec12e0aab80c}{empty}} (Container const \&cont) -\/$>$ decltype(cont.\+empty())
+\item 
+{\footnotesize template$<$typename T , std\+::size\+\_\+t N$>$ }\\constexpr bool \mbox{\hyperlink{namespace_catch_1_1_detail_a57d9f786acc199a4ce58d04b2b4a9373}{empty}} (const T(\&)\mbox{[}N\mbox{]}) noexcept
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr bool \mbox{\hyperlink{namespace_catch_1_1_detail_afea8d69a22a391c2991fa4fb3e5559c0}{empty}} (std\+::initializer\+\_\+list$<$ T $>$ \mbox{\hyperlink{namespace_catch_a11c40de0d3593160a350d9e4323311b2}{list}}) noexcept
+\item 
+{\footnotesize template$<$typename Container $>$ }\\constexpr auto \mbox{\hyperlink{namespace_catch_1_1_detail_a55994724b37be409ad8185ee738a0781}{size}} (Container const \&cont) -\/$>$ decltype(cont.\+size())
+\item 
+{\footnotesize template$<$typename T , std\+::size\+\_\+t N$>$ }\\constexpr std\+::size\+\_\+t \mbox{\hyperlink{namespace_catch_1_1_detail_ac8e838ad80279339fb2da0c47cdcc5c4}{size}} (const T(\&)\mbox{[}N\mbox{]}) noexcept
+\item 
+{\footnotesize template$<$typename Forward\+Iter , typename Sentinel , typename T , typename Comparator $>$ }\\Forward\+Iter \mbox{\hyperlink{namespace_catch_1_1_detail_a9d9a43a33e46b656d59087e399784c58}{find\+\_\+sentinel}} (Forward\+Iter start, Sentinel sentinel, T const \&\mbox{\hyperlink{catch__amalgamated_8cpp_a5dcc1560b74135e065519bc3986c14b1}{value}}, Comparator cmp)
+\item 
+{\footnotesize template$<$typename Forward\+Iter , typename Sentinel , typename T , typename Comparator $>$ }\\std\+::ptrdiff\+\_\+t \mbox{\hyperlink{namespace_catch_1_1_detail_a26dbaf5c5939e55f901ba7a79f8c5e84}{count\+\_\+sentinel}} (Forward\+Iter start, Sentinel sentinel, T const \&\mbox{\hyperlink{catch__amalgamated_8cpp_a5dcc1560b74135e065519bc3986c14b1}{value}}, Comparator cmp)
+\item 
+{\footnotesize template$<$typename Forward\+Iter , typename Sentinel $>$ }\\std\+::enable\+\_\+if\+\_\+t$<$!std\+::is\+\_\+same$<$ Forward\+Iter, Sentinel $>$\+::\mbox{\hyperlink{catch__amalgamated_8cpp_a5dcc1560b74135e065519bc3986c14b1}{value}}, std\+::ptrdiff\+\_\+t $>$ \mbox{\hyperlink{namespace_catch_1_1_detail_a169d6c61107c08d82136e8de70ec6011}{sentinel\+\_\+distance}} (Forward\+Iter iter, const Sentinel sentinel)
+\item 
+{\footnotesize template$<$typename Forward\+Iter $>$ }\\std\+::ptrdiff\+\_\+t \mbox{\hyperlink{namespace_catch_1_1_detail_a289d4570e89af006088c7412eca853d7}{sentinel\+\_\+distance}} (Forward\+Iter first, Forward\+Iter last)
+\item 
+{\footnotesize template$<$typename Forward\+Iter1 , typename Sentinel1 , typename Forward\+Iter2 , typename Sentinel2 , typename Comparator $>$ }\\bool \mbox{\hyperlink{namespace_catch_1_1_detail_a193acdd4648de21dedd44dbd9c9afdb6}{check\+\_\+element\+\_\+counts}} (Forward\+Iter1 first\+\_\+1, const Sentinel1 end\+\_\+1, Forward\+Iter2 first\+\_\+2, const Sentinel2 end\+\_\+2, Comparator cmp)
+\item 
+{\footnotesize template$<$typename Forward\+Iter1 , typename Sentinel1 , typename Forward\+Iter2 , typename Sentinel2 , typename Comparator $>$ }\\bool \mbox{\hyperlink{namespace_catch_1_1_detail_a26c9950cc2dbf5dfc93c554eca114e50}{is\+\_\+permutation}} (Forward\+Iter1 first\+\_\+1, const Sentinel1 end\+\_\+1, Forward\+Iter2 first\+\_\+2, const Sentinel2 end\+\_\+2, Comparator cmp)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} \mbox{\hyperlink{namespace_catch_1_1_detail_aa8b72c37b9b6fb01fc898ce47136576f}{unprintable\+String}} = \char`\"{}\{?\}\char`\"{}\+\_\+sr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespace_catch_1_1_detail_a2f65903d26fbcb9b1f482d20749616b2}\label{namespace_catch_1_1_detail_a2f65903d26fbcb9b1f482d20749616b2}} 
+\index{Catch::Detail@{Catch::Detail}!void\_t@{void\_t}}
+\index{void\_t@{void\_t}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{void\_t}{void\_t}}
+{\footnotesize\ttfamily template$<$typename... Ts$>$ \\
+using \mbox{\hyperlink{namespace_catch_1_1_detail_a2f65903d26fbcb9b1f482d20749616b2}{Catch\+::\+Detail\+::void\+\_\+t}} = typedef typename \mbox{\hyperlink{struct_catch_1_1_detail_1_1make__void}{make\+\_\+void}}$<$Ts...$>$\+::type}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespace_catch_1_1_detail_ae9744f1112bb15fcb88df6b3e5ccd46a}\label{namespace_catch_1_1_detail_ae9744f1112bb15fcb88df6b3e5ccd46a}} 
+\index{Catch::Detail@{Catch::Detail}!catch\_strnlen@{catch\_strnlen}}
+\index{catch\_strnlen@{catch\_strnlen}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{catch\_strnlen()}{catch\_strnlen()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Catch\+::\+Detail\+::catch\+\_\+strnlen (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{std\+::size\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_a193acdd4648de21dedd44dbd9c9afdb6}\label{namespace_catch_1_1_detail_a193acdd4648de21dedd44dbd9c9afdb6}} 
+\index{Catch::Detail@{Catch::Detail}!check\_element\_counts@{check\_element\_counts}}
+\index{check\_element\_counts@{check\_element\_counts}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{check\_element\_counts()}{check\_element\_counts()}}
+{\footnotesize\ttfamily template$<$typename Forward\+Iter1 , typename Sentinel1 , typename Forward\+Iter2 , typename Sentinel2 , typename Comparator $>$ \\
+bool Catch\+::\+Detail\+::check\+\_\+element\+\_\+counts (\begin{DoxyParamCaption}\item[{Forward\+Iter1}]{first\+\_\+1,  }\item[{const Sentinel1}]{end\+\_\+1,  }\item[{Forward\+Iter2}]{first\+\_\+2,  }\item[{const Sentinel2}]{end\+\_\+2,  }\item[{Comparator}]{cmp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_a0dc4241ab150d3d8e1d0a3d30c781c39}\label{namespace_catch_1_1_detail_a0dc4241ab150d3d8e1d0a3d30c781c39}} 
+\index{Catch::Detail@{Catch::Detail}!convertIntoString@{convertIntoString}}
+\index{convertIntoString@{convertIntoString}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{convertIntoString()}{convertIntoString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string Catch\+::\+Detail\+::convert\+Into\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{string }\end{DoxyParamCaption})}
+
+Encases {\ttfamily string} in quotes, and escapes invisibles if user requested it via CLI \mbox{\Hypertarget{namespace_catch_1_1_detail_a23bdcac0ef138b222c3747e2af979e9a}\label{namespace_catch_1_1_detail_a23bdcac0ef138b222c3747e2af979e9a}} 
+\index{Catch::Detail@{Catch::Detail}!convertIntoString@{convertIntoString}}
+\index{convertIntoString@{convertIntoString}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{convertIntoString()}{convertIntoString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string Catch\+::\+Detail\+::convert\+Into\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{string,  }\item[{bool}]{escape\+\_\+invisibles }\end{DoxyParamCaption})}
+
+
+
+Encases \`{}string in quotes, and optionally escapes invisibles. 
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_aa4cbea1ca1087603043d57005bbbec54}\label{namespace_catch_1_1_detail_aa4cbea1ca1087603043d57005bbbec54}} 
+\index{Catch::Detail@{Catch::Detail}!convertToBits@{convertToBits}}
+\index{convertToBits@{convertToBits}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{convertToBits()}{convertToBits()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint64\+\_\+t Catch\+::\+Detail\+::convert\+To\+Bits (\begin{DoxyParamCaption}\item[{double}]{d }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_ade51091dea188100d1c7a8acc55f5ea5}\label{namespace_catch_1_1_detail_ade51091dea188100d1c7a8acc55f5ea5}} 
+\index{Catch::Detail@{Catch::Detail}!convertToBits@{convertToBits}}
+\index{convertToBits@{convertToBits}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{convertToBits()}{convertToBits()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint32\+\_\+t Catch\+::\+Detail\+::convert\+To\+Bits (\begin{DoxyParamCaption}\item[{float}]{f }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_a242396de537c5176710d680cc9ca6b93}\label{namespace_catch_1_1_detail_a242396de537c5176710d680cc9ca6b93}} 
+\index{Catch::Detail@{Catch::Detail}!convertUnknownEnumToString@{convertUnknownEnumToString}}
+\index{convertUnknownEnumToString@{convertUnknownEnumToString}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{convertUnknownEnumToString()}{convertUnknownEnumToString()}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+std\+::string Catch\+::\+Detail\+::convert\+Unknown\+Enum\+To\+String (\begin{DoxyParamCaption}\item[{E}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_a8103604a1d14467662c261c7d09442b8}\label{namespace_catch_1_1_detail_a8103604a1d14467662c261c7d09442b8}} 
+\index{Catch::Detail@{Catch::Detail}!convertUnstreamable@{convertUnstreamable}}
+\index{convertUnstreamable@{convertUnstreamable}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{convertUnstreamable()}{convertUnstreamable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::enable\+\_\+if\+\_\+t$<$ !std\+::is\+\_\+enum$<$T$>$\+::\mbox{\hyperlink{catch__amalgamated_8cpp_a5dcc1560b74135e065519bc3986c14b1}{value}} \&\& !std\+::is\+\_\+base\+\_\+of$<$std\+::exception, T$>$\+::\mbox{\hyperlink{catch__amalgamated_8cpp_a5dcc1560b74135e065519bc3986c14b1}{value}}, std\+::string$>$ Catch\+::\+Detail\+::convert\+Unstreamable (\begin{DoxyParamCaption}\item[{T const \&}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_a604fd57d0045aac37ce794995c84c85c}\label{namespace_catch_1_1_detail_a604fd57d0045aac37ce794995c84c85c}} 
+\index{Catch::Detail@{Catch::Detail}!convertUnstreamable@{convertUnstreamable}}
+\index{convertUnstreamable@{convertUnstreamable}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{convertUnstreamable()}{convertUnstreamable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::enable\+\_\+if\+\_\+t$<$ !std\+::is\+\_\+enum$<$T$>$\+::\mbox{\hyperlink{catch__amalgamated_8cpp_a5dcc1560b74135e065519bc3986c14b1}{value}} \&\& std\+::is\+\_\+base\+\_\+of$<$std\+::exception, T$>$\+::\mbox{\hyperlink{catch__amalgamated_8cpp_a5dcc1560b74135e065519bc3986c14b1}{value}}, std\+::string$>$ Catch\+::\+Detail\+::convert\+Unstreamable (\begin{DoxyParamCaption}\item[{T const \&}]{ex }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_a8da6562bd30cb6261a10bbef03333682}\label{namespace_catch_1_1_detail_a8da6562bd30cb6261a10bbef03333682}} 
+\index{Catch::Detail@{Catch::Detail}!convertUnstreamable@{convertUnstreamable}}
+\index{convertUnstreamable@{convertUnstreamable}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{convertUnstreamable()}{convertUnstreamable()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+enum$<$T$>$\+::\mbox{\hyperlink{catch__amalgamated_8cpp_a5dcc1560b74135e065519bc3986c14b1}{value}}, std\+::string$>$ Catch\+::\+Detail\+::convert\+Unstreamable (\begin{DoxyParamCaption}\item[{T const \&}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_a26dbaf5c5939e55f901ba7a79f8c5e84}\label{namespace_catch_1_1_detail_a26dbaf5c5939e55f901ba7a79f8c5e84}} 
+\index{Catch::Detail@{Catch::Detail}!count\_sentinel@{count\_sentinel}}
+\index{count\_sentinel@{count\_sentinel}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{count\_sentinel()}{count\_sentinel()}}
+{\footnotesize\ttfamily template$<$typename Forward\+Iter , typename Sentinel , typename T , typename Comparator $>$ \\
+std\+::ptrdiff\+\_\+t Catch\+::\+Detail\+::count\+\_\+sentinel (\begin{DoxyParamCaption}\item[{Forward\+Iter}]{start,  }\item[{Sentinel}]{sentinel,  }\item[{T const \&}]{value,  }\item[{Comparator}]{cmp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_a57d9f786acc199a4ce58d04b2b4a9373}\label{namespace_catch_1_1_detail_a57d9f786acc199a4ce58d04b2b4a9373}} 
+\index{Catch::Detail@{Catch::Detail}!empty@{empty}}
+\index{empty@{empty}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t N$>$ \\
+constexpr bool Catch\+::\+Detail\+::empty (\begin{DoxyParamCaption}\item[{const }]{T(\&)\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_a714012d32a8bc2ebcc88ec12e0aab80c}\label{namespace_catch_1_1_detail_a714012d32a8bc2ebcc88ec12e0aab80c}} 
+\index{Catch::Detail@{Catch::Detail}!empty@{empty}}
+\index{empty@{empty}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Container $>$ \\
+constexpr auto Catch\+::\+Detail\+::empty (\begin{DoxyParamCaption}\item[{Container const \&}]{cont }\end{DoxyParamCaption}) -\/$>$ decltype(cont.\+empty()) \hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_afea8d69a22a391c2991fa4fb3e5559c0}\label{namespace_catch_1_1_detail_afea8d69a22a391c2991fa4fb3e5559c0}} 
+\index{Catch::Detail@{Catch::Detail}!empty@{empty}}
+\index{empty@{empty}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool Catch\+::\+Detail\+::empty (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ T $>$}]{list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_a9d9a43a33e46b656d59087e399784c58}\label{namespace_catch_1_1_detail_a9d9a43a33e46b656d59087e399784c58}} 
+\index{Catch::Detail@{Catch::Detail}!find\_sentinel@{find\_sentinel}}
+\index{find\_sentinel@{find\_sentinel}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{find\_sentinel()}{find\_sentinel()}}
+{\footnotesize\ttfamily template$<$typename Forward\+Iter , typename Sentinel , typename T , typename Comparator $>$ \\
+Forward\+Iter Catch\+::\+Detail\+::find\+\_\+sentinel (\begin{DoxyParamCaption}\item[{Forward\+Iter}]{start,  }\item[{Sentinel}]{sentinel,  }\item[{T const \&}]{value,  }\item[{Comparator}]{cmp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_ac2c4729f86da1f577c1d269cede249d0}\label{namespace_catch_1_1_detail_ac2c4729f86da1f577c1d269cede249d0}} 
+\index{Catch::Detail@{Catch::Detail}!getEnv@{getEnv}}
+\index{getEnv@{getEnv}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{getEnv()}{getEnv()}}
+{\footnotesize\ttfamily char const  $\ast$ Catch\+::\+Detail\+::get\+Env (\begin{DoxyParamCaption}\item[{char const $\ast$}]{var\+Name }\end{DoxyParamCaption})}
+
+
+
+Wrapper over {\ttfamily std\+::getenv} that compiles on UWP (and always returns nullptr there) 
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_a26c9950cc2dbf5dfc93c554eca114e50}\label{namespace_catch_1_1_detail_a26c9950cc2dbf5dfc93c554eca114e50}} 
+\index{Catch::Detail@{Catch::Detail}!is\_permutation@{is\_permutation}}
+\index{is\_permutation@{is\_permutation}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{is\_permutation()}{is\_permutation()}}
+{\footnotesize\ttfamily template$<$typename Forward\+Iter1 , typename Sentinel1 , typename Forward\+Iter2 , typename Sentinel2 , typename Comparator $>$ \\
+bool Catch\+::\+Detail\+::is\+\_\+permutation (\begin{DoxyParamCaption}\item[{Forward\+Iter1}]{first\+\_\+1,  }\item[{const Sentinel1}]{end\+\_\+1,  }\item[{Forward\+Iter2}]{first\+\_\+2,  }\item[{const Sentinel2}]{end\+\_\+2,  }\item[{Comparator}]{cmp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_acddd11db812601af3c738b847d13882e}\label{namespace_catch_1_1_detail_acddd11db812601af3c738b847d13882e}} 
+\index{Catch::Detail@{Catch::Detail}!make\_unique@{make\_unique}}
+\index{make\_unique@{make\_unique}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{make\_unique()}{make\_unique()}}
+{\footnotesize\ttfamily template$<$typename T , typename... Args$>$ \\
+\mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{unique\+\_\+ptr}}$<$T$>$ Catch\+::\+Detail\+::make\+\_\+unique (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_a4f0c01d00fa6af891eb82fcf9baaf95c}\label{namespace_catch_1_1_detail_a4f0c01d00fa6af891eb82fcf9baaf95c}} 
+\index{Catch::Detail@{Catch::Detail}!makeEnumInfo@{makeEnumInfo}}
+\index{makeEnumInfo@{makeEnumInfo}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{makeEnumInfo()}{makeEnumInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Catch\+::\+Detail\+::unique\+\_\+ptr}}$<$ \mbox{\hyperlink{struct_catch_1_1_detail_1_1_enum_info}{Enum\+Info}} $>$ Catch\+::\+Detail\+::make\+Enum\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{enum\+Name,  }\item[{\mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{all\+Value\+Names,  }\item[{std\+::vector$<$ int $>$ const \&}]{values }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_a4e0e09e87f561af2d3a881b209a9a481}\label{namespace_catch_1_1_detail_a4e0e09e87f561af2d3a881b209a9a481}} 
+\index{Catch::Detail@{Catch::Detail}!parseEnums@{parseEnums}}
+\index{parseEnums@{parseEnums}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{parseEnums()}{parseEnums()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} $>$ Catch\+::\+Detail\+::parse\+Enums (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{enums }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_ac954cf158347a76a5b0c3f4fa9a9fa52}\label{namespace_catch_1_1_detail_ac954cf158347a76a5b0c3f4fa9a9fa52}} 
+\index{Catch::Detail@{Catch::Detail}!rangeToString@{rangeToString}}
+\index{rangeToString@{rangeToString}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{rangeToString()}{rangeToString()}}
+{\footnotesize\ttfamily template$<$typename Input\+Iterator , typename Sentinel  = Input\+Iterator$>$ \\
+std\+::string Catch\+::\+Detail\+::range\+To\+String (\begin{DoxyParamCaption}\item[{Input\+Iterator}]{first,  }\item[{Sentinel}]{last }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_a371620ed524abfcae5c3772bf49b563a}\label{namespace_catch_1_1_detail_a371620ed524abfcae5c3772bf49b563a}} 
+\index{Catch::Detail@{Catch::Detail}!rawMemoryToString@{rawMemoryToString}}
+\index{rawMemoryToString@{rawMemoryToString}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{rawMemoryToString()}{rawMemoryToString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::string Catch\+::\+Detail\+::raw\+Memory\+To\+String (\begin{DoxyParamCaption}\item[{const T \&}]{object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_ac5d6c510e565ee5bddcc2236194ce29e}\label{namespace_catch_1_1_detail_ac5d6c510e565ee5bddcc2236194ce29e}} 
+\index{Catch::Detail@{Catch::Detail}!rawMemoryToString@{rawMemoryToString}}
+\index{rawMemoryToString@{rawMemoryToString}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{rawMemoryToString()}{rawMemoryToString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string Catch\+::\+Detail\+::raw\+Memory\+To\+String (\begin{DoxyParamCaption}\item[{const void $\ast$}]{object,  }\item[{std\+::size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_aae9b0608769b42ff7bbd07687348c7e5}\label{namespace_catch_1_1_detail_aae9b0608769b42ff7bbd07687348c7e5}} 
+\index{Catch::Detail@{Catch::Detail}!registerListenerImpl@{registerListenerImpl}}
+\index{registerListenerImpl@{registerListenerImpl}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{registerListenerImpl()}{registerListenerImpl()}}
+{\footnotesize\ttfamily void Catch\+::\+Detail\+::register\+Listener\+Impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail\+::unique\+\_\+ptr}}$<$ \mbox{\hyperlink{class_catch_1_1_event_listener_factory}{Event\+Listener\+Factory}} $>$}]{listener\+Factory }\end{DoxyParamCaption})}
+
+
+
+Actually registers the factory, independent on listener\textquotesingle{}s concrete type. 
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_af8703a4eaf12133aa02a50dee831f2bc}\label{namespace_catch_1_1_detail_af8703a4eaf12133aa02a50dee831f2bc}} 
+\index{Catch::Detail@{Catch::Detail}!registerReporterImpl@{registerReporterImpl}}
+\index{registerReporterImpl@{registerReporterImpl}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{registerReporterImpl()}{registerReporterImpl()}}
+{\footnotesize\ttfamily void Catch\+::\+Detail\+::register\+Reporter\+Impl (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{name,  }\item[{\mbox{\hyperlink{namespace_catch_ae3dfb69314dff5b79fcb517a9cb8803e}{IReporter\+Factory\+Ptr}}}]{reporter\+Ptr }\end{DoxyParamCaption})}
+
+Indirection for reporter registration, so that the error handling is independent on the reporter\textquotesingle{}s concrete type \mbox{\Hypertarget{namespace_catch_1_1_detail_a60f033a91680546a152f5dfa4427104c}\label{namespace_catch_1_1_detail_a60f033a91680546a152f5dfa4427104c}} 
+\index{Catch::Detail@{Catch::Detail}!registerTranslatorImpl@{registerTranslatorImpl}}
+\index{registerTranslatorImpl@{registerTranslatorImpl}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{registerTranslatorImpl()}{registerTranslatorImpl()}}
+{\footnotesize\ttfamily void Catch\+::\+Detail\+::register\+Translator\+Impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail\+::unique\+\_\+ptr}}$<$ \mbox{\hyperlink{class_catch_1_1_i_exception_translator}{IException\+Translator}} $>$ \&\&}]{translator }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_a289d4570e89af006088c7412eca853d7}\label{namespace_catch_1_1_detail_a289d4570e89af006088c7412eca853d7}} 
+\index{Catch::Detail@{Catch::Detail}!sentinel\_distance@{sentinel\_distance}}
+\index{sentinel\_distance@{sentinel\_distance}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{sentinel\_distance()}{sentinel\_distance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Forward\+Iter $>$ \\
+std\+::ptrdiff\+\_\+t Catch\+::\+Detail\+::sentinel\+\_\+distance (\begin{DoxyParamCaption}\item[{Forward\+Iter}]{first,  }\item[{Forward\+Iter}]{last }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_a169d6c61107c08d82136e8de70ec6011}\label{namespace_catch_1_1_detail_a169d6c61107c08d82136e8de70ec6011}} 
+\index{Catch::Detail@{Catch::Detail}!sentinel\_distance@{sentinel\_distance}}
+\index{sentinel\_distance@{sentinel\_distance}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{sentinel\_distance()}{sentinel\_distance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Forward\+Iter , typename Sentinel $>$ \\
+std\+::enable\+\_\+if\+\_\+t$<$!std\+::is\+\_\+same$<$Forward\+Iter, Sentinel$>$\+::\mbox{\hyperlink{catch__amalgamated_8cpp_a5dcc1560b74135e065519bc3986c14b1}{value}}, std\+::ptrdiff\+\_\+t$>$ Catch\+::\+Detail\+::sentinel\+\_\+distance (\begin{DoxyParamCaption}\item[{Forward\+Iter}]{iter,  }\item[{const Sentinel}]{sentinel }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_ac8e838ad80279339fb2da0c47cdcc5c4}\label{namespace_catch_1_1_detail_ac8e838ad80279339fb2da0c47cdcc5c4}} 
+\index{Catch::Detail@{Catch::Detail}!size@{size}}
+\index{size@{size}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t N$>$ \\
+constexpr std\+::size\+\_\+t Catch\+::\+Detail\+::size (\begin{DoxyParamCaption}\item[{const }]{T(\&)\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_a55994724b37be409ad8185ee738a0781}\label{namespace_catch_1_1_detail_a55994724b37be409ad8185ee738a0781}} 
+\index{Catch::Detail@{Catch::Detail}!size@{size}}
+\index{size@{size}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Container $>$ \\
+constexpr auto Catch\+::\+Detail\+::size (\begin{DoxyParamCaption}\item[{Container const \&}]{cont }\end{DoxyParamCaption}) -\/$>$ decltype(cont.\+size()) \hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_a874fd7848ec5a0ef02d88c6ec37c9a03}\label{namespace_catch_1_1_detail_a874fd7848ec5a0ef02d88c6ec37c9a03}} 
+\index{Catch::Detail@{Catch::Detail}!splitReporterSpec@{splitReporterSpec}}
+\index{splitReporterSpec@{splitReporterSpec}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{splitReporterSpec()}{splitReporterSpec()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Catch\+::\+Detail\+::split\+Reporter\+Spec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{reporter\+Spec }\end{DoxyParamCaption})}
+
+
+
+Splits the reporter spec into reporter name and kv-\/pair options. 
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_af0ad48344ffd3f92f3568465248a9880}\label{namespace_catch_1_1_detail_af0ad48344ffd3f92f3568465248a9880}} 
+\index{Catch::Detail@{Catch::Detail}!stringify@{stringify}}
+\index{stringify@{stringify}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{stringify()}{stringify()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::string Catch\+::\+Detail\+::stringify (\begin{DoxyParamCaption}\item[{const T \&}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_catch_1_1_detail_a64ba838a0c2e6767d095a7a01fc07b48}\label{namespace_catch_1_1_detail_a64ba838a0c2e6767d095a7a01fc07b48}} 
+\index{Catch::Detail@{Catch::Detail}!stringToColourMode@{stringToColourMode}}
+\index{stringToColourMode@{stringToColourMode}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{stringToColourMode()}{stringToColourMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_catch_1_1_optional}{Optional}}$<$ \mbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025}{Colour\+Mode}} $>$ Catch\+::\+Detail\+::string\+To\+Colour\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{colour\+Mode }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespace_catch_1_1_detail_aa8b72c37b9b6fb01fc898ce47136576f}\label{namespace_catch_1_1_detail_aa8b72c37b9b6fb01fc898ce47136576f}} 
+\index{Catch::Detail@{Catch::Detail}!unprintableString@{unprintableString}}
+\index{unprintableString@{unprintableString}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{unprintableString}{unprintableString}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} Catch\+::\+Detail\+::unprintable\+String = \char`\"{}\{?\}\char`\"{}\+\_\+sr\hspace{0.3cm}{\ttfamily [constexpr]}}
+

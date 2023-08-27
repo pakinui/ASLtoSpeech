@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ui_93',['Ui',['../namespace_ui.html',1,'']]]
+  ['inference_5fclassifier_2108',['inference_classifier',['../namespaceinference__classifier.html',1,'']]]
 ];

@@ -1,0 +1,65 @@
+\hypertarget{class_catch_1_1_generators_1_1_iterator_generator}{}\doxysection{Catch\+::Generators\+::Iterator\+Generator$<$ T $>$ Class Template Reference}
+\label{class_catch_1_1_generators_1_1_iterator_generator}\index{Catch::Generators::IteratorGenerator$<$ T $>$@{Catch::Generators::IteratorGenerator$<$ T $>$}}
+
+
+{\ttfamily \#include $<$catch\+\_\+amalgamated.\+hpp$>$}
+
+Inheritance diagram for Catch\+::Generators\+::Iterator\+Generator$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_catch_1_1_generators_1_1_iterator_generator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Input\+Iterator , typename Input\+Sentinel $>$ }\\\mbox{\hyperlink{class_catch_1_1_generators_1_1_iterator_generator_a1f795b1bbd515274673115c0a9fc2e54}{Iterator\+Generator}} (Input\+Iterator first, Input\+Sentinel last)
+\item 
+T const  \& \mbox{\hyperlink{class_catch_1_1_generators_1_1_iterator_generator_a61688118e5caba23340b4b949c3bb7e4}{get}} () const override
+\item 
+bool \mbox{\hyperlink{class_catch_1_1_generators_1_1_iterator_generator_acafb4fa1eebe5e1db571621a35a3f137}{next}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_catch_1_1_generators_1_1_iterator_generator_a1f795b1bbd515274673115c0a9fc2e54}\label{class_catch_1_1_generators_1_1_iterator_generator_a1f795b1bbd515274673115c0a9fc2e54}} 
+\index{Catch::Generators::IteratorGenerator$<$ T $>$@{Catch::Generators::IteratorGenerator$<$ T $>$}!IteratorGenerator@{IteratorGenerator}}
+\index{IteratorGenerator@{IteratorGenerator}!Catch::Generators::IteratorGenerator$<$ T $>$@{Catch::Generators::IteratorGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IteratorGenerator()}{IteratorGenerator()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename Input\+Iterator , typename Input\+Sentinel $>$ \\
+\mbox{\hyperlink{class_catch_1_1_generators_1_1_iterator_generator}{Catch\+::\+Generators\+::\+Iterator\+Generator}}$<$ T $>$\+::\mbox{\hyperlink{class_catch_1_1_generators_1_1_iterator_generator}{Iterator\+Generator}} (\begin{DoxyParamCaption}\item[{Input\+Iterator}]{first,  }\item[{Input\+Sentinel}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_catch_1_1_generators_1_1_iterator_generator_a61688118e5caba23340b4b949c3bb7e4}\label{class_catch_1_1_generators_1_1_iterator_generator_a61688118e5caba23340b4b949c3bb7e4}} 
+\index{Catch::Generators::IteratorGenerator$<$ T $>$@{Catch::Generators::IteratorGenerator$<$ T $>$}!get@{get}}
+\index{get@{get}!Catch::Generators::IteratorGenerator$<$ T $>$@{Catch::Generators::IteratorGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T const\& \mbox{\hyperlink{class_catch_1_1_generators_1_1_iterator_generator}{Catch\+::\+Generators\+::\+Iterator\+Generator}}$<$ T $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_catch_1_1_generators_1_1_i_generator_a525d381fc9249a885b075a0632a8579a}{Catch\+::\+Generators\+::\+IGenerator$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_catch_1_1_generators_1_1_iterator_generator_acafb4fa1eebe5e1db571621a35a3f137}\label{class_catch_1_1_generators_1_1_iterator_generator_acafb4fa1eebe5e1db571621a35a3f137}} 
+\index{Catch::Generators::IteratorGenerator$<$ T $>$@{Catch::Generators::IteratorGenerator$<$ T $>$}!next@{next}}
+\index{next@{next}!Catch::Generators::IteratorGenerator$<$ T $>$@{Catch::Generators::IteratorGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_catch_1_1_generators_1_1_iterator_generator}{Catch\+::\+Generators\+::\+Iterator\+Generator}}$<$ T $>$\+::next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Attempts to move the generator to the next element
+
+Returns true iff the move succeeded (and a valid element can be retrieved). 
+
+Implements \mbox{\hyperlink{class_catch_1_1_generators_1_1_generator_untyped_base}{Catch\+::\+Generators\+::\+Generator\+Untyped\+Base}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8hpp}{catch\+\_\+amalgamated.\+hpp}}\end{DoxyCompactItemize}
