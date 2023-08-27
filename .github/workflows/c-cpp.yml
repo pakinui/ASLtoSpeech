@@ -56,8 +56,8 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
-        name: executable
-        path: build/345Application.exe
+        name: build-artifacts
+        path: build
         
   run:
     needs: build
@@ -68,23 +68,23 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@v3
         with:
-          name: executable
+          name: build-artifacts
+      - name: Debug
+        run: |
+          ls ${{ github.workspace }}/build
+          
       - name: Run Executable
         run: |
-          ./345Application.exe
+          ./build/345Application.exe
           
       - name: Install Compiler
         run: |
           choco install OpenCppCoverage -y
           echo "C:\Program Files\OpenCppCoverage" >> $env:GITHUB_PATH
           
-      - name: Debug
-        run: |
-          ls ${{ github.workspace }}
-          
       - name: Generate coverage report
         shell: cmd
-        run: OpenCppCoverage.exe --sources src --modules=${{ github.workspace }} --export_type=cobertura:coverage1.xml -- "345Application.exe"
+        run: OpenCppCoverage.exe --sources src --modules=${{ github.workspace }} --export_type=cobertura:coverage1.xml -- "345Application.exe" ./build/
           
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
