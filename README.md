@@ -65,10 +65,15 @@ QT MSVC 2019 64-bit<br />
 QT Additional Library QT multimedia<br />
 
 ```bash
+pip install python-dev-tools
+choco install cmake
+choco install opencv
+choco install ninja
+```
+```bash
 git clone https://github.com/pakinui/cosc345.git
 cd cosc345
 pip install -r requirements.txt
-pip install pickle
 mkdir build
 cd build
 cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
