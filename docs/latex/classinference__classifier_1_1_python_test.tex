@@ -1,14 +1,19 @@
 \hypertarget{classinference__classifier_1_1_python_test}{}\doxysection{inference\+\_\+classifier.\+Python\+Test Class Reference}
 \label{classinference__classifier_1_1_python_test}\index{inference\_classifier.PythonTest@{inference\_classifier.PythonTest}}
+
+
+A class representing sign language detection using webcam and trained model.  
+
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 def \mbox{\hyperlink{classinference__classifier_1_1_python_test_ad7d3884a3c0e76b4a64e07cbd730e92a}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
-\item 
+\begin{DoxyCompactList}\small\item\em Initialize the \mbox{\hyperlink{classinference__classifier_1_1_python_test}{Python\+Test}} class. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classinference__classifier_1_1_python_test_a005b6265106fab0ae2b11f88c29b67d3}{print\+\_\+hello}} ()
 \item 
 def \mbox{\hyperlink{classinference__classifier_1_1_python_test_a14ecba6778429b2f2101e96c05d53ffe}{sign\+\_\+identifier}} (self)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Perform sign language identification on a frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -19,29 +24,25 @@ def \mbox{\hyperlink{classinference__classifier_1_1_python_test_a14ecba6778429b2
 \mbox{\hyperlink{classinference__classifier_1_1_python_test_ac707188c04afe0d5704545f6fc85ae3f}{model}}
 \begin{DoxyCompactList}\small\item\em Declare variable model. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classinference__classifier_1_1_python_test_af9bd02f0466b016e62655201b6297dd5}{cap}}
-\item 
+\begin{DoxyCompactList}\small\item\em Declare opencv. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classinference__classifier_1_1_python_test_a7e0bc2b7f209bfb007dd71c67e2f40e7}{mp\+\_\+hands}}
-\item 
+\begin{DoxyCompactList}\small\item\em Declare variable mp\+\_\+hands from Mediapipe module. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classinference__classifier_1_1_python_test_ad096e03339dfadb5e3cb52bee9cd3dc2}{mp\+\_\+drawing}}
-\item 
+\begin{DoxyCompactList}\small\item\em Declare variable mp\+\_\+drawing from Mediapipe module. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classinference__classifier_1_1_python_test_a697080f414e7a2f5ec6cb05cbc4415db}{mp\+\_\+drawing\+\_\+styles}}
-\item 
+\begin{DoxyCompactList}\small\item\em Declare variable mp\+\_\+drawing\+\_\+styles from Mediapipe module. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classinference__classifier_1_1_python_test_a5cd8388c3bd2b403f927d21551c8cd85}{hands}}
-\item 
+\begin{DoxyCompactList}\small\item\em Declare variable hands. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classinference__classifier_1_1_python_test_aef0f60edb8b97bc9450cbb616d875aaf}{fourcc}}
-\item 
+\begin{DoxyCompactList}\small\item\em Setting opencv. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classinference__classifier_1_1_python_test_adc0c07694cc1842974c570e330c6fbef}{out}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-\begin{DoxyVerb}@brief A class representing sign language detection using webcam and trained model.
+A class representing sign language detection using webcam and trained model. 
 
-This class provides functionalities for webcam-based sign language detection
-using the MediaPipe library for hand tracking and a trained model for sign
-language recognition.
-\end{DoxyVerb}
- 
+This class provides functionalities for webcam-\/based sign language detection using the Media\+Pipe library for hand tracking and a trained model for sign language recognition. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classinference__classifier_1_1_python_test_ad7d3884a3c0e76b4a64e07cbd730e92a}\label{classinference__classifier_1_1_python_test_ad7d3884a3c0e76b4a64e07cbd730e92a}} 
@@ -50,11 +51,11 @@ language recognition.
 \doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
 {\footnotesize\ttfamily def inference\+\_\+classifier.\+Python\+Test.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
-\begin{DoxyVerb}@brief Initialize the PythonTest class.
 
-This constructor initializes the necessary components for sign language detection.
-\end{DoxyVerb}
- 
+
+Initialize the \mbox{\hyperlink{classinference__classifier_1_1_python_test}{Python\+Test}} class. 
+
+This constructor initializes the necessary components for sign language detection. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classinference__classifier_1_1_python_test_a005b6265106fab0ae2b11f88c29b67d3}\label{classinference__classifier_1_1_python_test_a005b6265106fab0ae2b11f88c29b67d3}} 
@@ -69,14 +70,16 @@ This constructor initializes the necessary components for sign language detectio
 \doxysubsubsection{\texorpdfstring{sign\_identifier()}{sign\_identifier()}}
 {\footnotesize\ttfamily def inference\+\_\+classifier.\+Python\+Test.\+sign\+\_\+identifier (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
-\begin{DoxyVerb}@brief Perform sign language identification on a frame.
 
-This method performs sign language identification on a given frame using hand
-landmarks and a trained model.
 
-@return The predicted sign language character.
-\end{DoxyVerb}
- 
+Perform sign language identification on a frame. 
+
+This method performs sign language identification on a given frame using hand landmarks and a trained model.
+
+\begin{DoxyReturn}{Returns}
+The predicted sign language character. 
+\end{DoxyReturn}
+
 
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classinference__classifier_1_1_python_test_af9bd02f0466b016e62655201b6297dd5}\label{classinference__classifier_1_1_python_test_af9bd02f0466b016e62655201b6297dd5}} 
@@ -85,17 +88,29 @@ landmarks and a trained model.
 \doxysubsubsection{\texorpdfstring{cap}{cap}}
 {\footnotesize\ttfamily inference\+\_\+classifier.\+Python\+Test.\+cap}
 
+
+
+Declare opencv. 
+
 \mbox{\Hypertarget{classinference__classifier_1_1_python_test_aef0f60edb8b97bc9450cbb616d875aaf}\label{classinference__classifier_1_1_python_test_aef0f60edb8b97bc9450cbb616d875aaf}} 
 \index{inference\_classifier.PythonTest@{inference\_classifier.PythonTest}!fourcc@{fourcc}}
 \index{fourcc@{fourcc}!inference\_classifier.PythonTest@{inference\_classifier.PythonTest}}
 \doxysubsubsection{\texorpdfstring{fourcc}{fourcc}}
 {\footnotesize\ttfamily inference\+\_\+classifier.\+Python\+Test.\+fourcc}
 
+
+
+Setting opencv. 
+
 \mbox{\Hypertarget{classinference__classifier_1_1_python_test_a5cd8388c3bd2b403f927d21551c8cd85}\label{classinference__classifier_1_1_python_test_a5cd8388c3bd2b403f927d21551c8cd85}} 
 \index{inference\_classifier.PythonTest@{inference\_classifier.PythonTest}!hands@{hands}}
 \index{hands@{hands}!inference\_classifier.PythonTest@{inference\_classifier.PythonTest}}
 \doxysubsubsection{\texorpdfstring{hands}{hands}}
 {\footnotesize\ttfamily inference\+\_\+classifier.\+Python\+Test.\+hands}
+
+
+
+Declare variable hands. 
 
 \mbox{\Hypertarget{classinference__classifier_1_1_python_test_aeb8fc6b2e37ac5f4e32f12d319e3b4ce}\label{classinference__classifier_1_1_python_test_aeb8fc6b2e37ac5f4e32f12d319e3b4ce}} 
 \index{inference\_classifier.PythonTest@{inference\_classifier.PythonTest}!img\_path@{img\_path}}
@@ -133,17 +148,29 @@ Load the trained sign-\/lange detection model.
 \doxysubsubsection{\texorpdfstring{mp\_drawing}{mp\_drawing}}
 {\footnotesize\ttfamily inference\+\_\+classifier.\+Python\+Test.\+mp\+\_\+drawing}
 
+
+
+Declare variable mp\+\_\+drawing from Mediapipe module. 
+
 \mbox{\Hypertarget{classinference__classifier_1_1_python_test_a697080f414e7a2f5ec6cb05cbc4415db}\label{classinference__classifier_1_1_python_test_a697080f414e7a2f5ec6cb05cbc4415db}} 
 \index{inference\_classifier.PythonTest@{inference\_classifier.PythonTest}!mp\_drawing\_styles@{mp\_drawing\_styles}}
 \index{mp\_drawing\_styles@{mp\_drawing\_styles}!inference\_classifier.PythonTest@{inference\_classifier.PythonTest}}
 \doxysubsubsection{\texorpdfstring{mp\_drawing\_styles}{mp\_drawing\_styles}}
 {\footnotesize\ttfamily inference\+\_\+classifier.\+Python\+Test.\+mp\+\_\+drawing\+\_\+styles}
 
+
+
+Declare variable mp\+\_\+drawing\+\_\+styles from Mediapipe module. 
+
 \mbox{\Hypertarget{classinference__classifier_1_1_python_test_a7e0bc2b7f209bfb007dd71c67e2f40e7}\label{classinference__classifier_1_1_python_test_a7e0bc2b7f209bfb007dd71c67e2f40e7}} 
 \index{inference\_classifier.PythonTest@{inference\_classifier.PythonTest}!mp\_hands@{mp\_hands}}
 \index{mp\_hands@{mp\_hands}!inference\_classifier.PythonTest@{inference\_classifier.PythonTest}}
 \doxysubsubsection{\texorpdfstring{mp\_hands}{mp\_hands}}
 {\footnotesize\ttfamily inference\+\_\+classifier.\+Python\+Test.\+mp\+\_\+hands}
+
+
+
+Declare variable mp\+\_\+hands from Mediapipe module. 
 
 \mbox{\Hypertarget{classinference__classifier_1_1_python_test_adc0c07694cc1842974c570e330c6fbef}\label{classinference__classifier_1_1_python_test_adc0c07694cc1842974c570e330c6fbef}} 
 \index{inference\_classifier.PythonTest@{inference\_classifier.PythonTest}!out@{out}}
