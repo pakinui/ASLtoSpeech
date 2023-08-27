@@ -58,7 +58,7 @@ Working together as a team, we've selected two distinct datasets to create a uni
 
 ## Installation
 
-**Prerequisites:**
+**Prerequisites:** <br />
 Python 3.11.0<br />
 QT 6.5.2<br />
 QT MSVC 2019 64-bit<br />
