@@ -3,8 +3,7 @@ build/*
 CMakeLists.txt.user
 build-*/
 *.jpg
-resources/captures/*.wav
-resources/captures/*.jpg
+*.wav
 .gcno
 Testing/
 .vscode/
