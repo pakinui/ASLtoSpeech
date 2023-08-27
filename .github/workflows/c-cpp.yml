@@ -77,8 +77,8 @@ jobs:
         with:
           python-version: 3.10
           # cache: 'pip'
-
-       - name: Install Compiler
+          
+      - name: Install Compiler
         run: |
           choco install OpenCppCoverage -y
           echo "C:\Program Files\OpenCppCoverage" >> $env:GITHUB_PATH
