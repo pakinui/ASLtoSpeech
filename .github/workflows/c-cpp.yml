@@ -98,45 +98,17 @@ jobs:
         run: |
           pip install gcovr
         shell: powershell
-      - name: Build and Test
+      - name: Tests
         run: |
-          g++ --coverage -c -o test.o tests/test.cpp
-          g++ --coverage -c -o ttscall.o src/text_to_speech/ttscall.cpp
-          g++ --coverage -o coverage1 test.o ttscall.o -lwinmm
-          ./coverage1
-      - name: Generate Coverage Report
-        run: gcovr -r src --xml -o coverage.xml
+          g++ --coverage ${{github.workspace}}/tests/test.cpp  ${{github.workspace}}/src/text_to_speech/ttsCall.cpp -o ${{github.workspace}}/coverage/execoverage -lwinmm
+          ${{github.workspace}}/coverage/execoverage
+          gcovr -r ${{github.workspace}} --xml -o ${{github.workspace}}/coverage/coverage_info.xml
       - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v3
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
-          files: coverage.xml
-  doxygen:
-    needs: run
-    runs-on: windows-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      - name: Set up Doxygen
-        run: choco install doxygen.install -y
-
-      - name: Delete Old Files
-        run: rm -r docs/*
-        
-      - name: Generate Documentation
-        run: doxygen Doxyfile  # Adjust the path to Doxyfile
-      
-
-      - name: Move files to /docs
-        run: mv docs/html/* docs/
-        
-      - name: Commit and Push Changes
-        run: |
-          git config --local user.name "GitHub Actions"
-          git config --local user.email "actions@github.com"
-          git add docs/
-          git commit -m "Update documentation"
-          git push
+          files: ${{github.workspace}}/coverage/coverage_info.xml
+          
 
     
