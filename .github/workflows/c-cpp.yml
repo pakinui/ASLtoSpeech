@@ -98,13 +98,16 @@ jobs:
         run: |
           pip install gcovr
         shell: powershell
-      - name: Tests
+      - name: Build and Test
         run: |
-          for /r .\src %i in (*.cpp) do g++ --coverage tests\test.cpp "%i" -o coverage1 -lwinmm
+          g++ -fprofile-arcs -ftest-coverage tests/test.cpp src/text_to_speech/ttscall.cpp -o coverage1 -lwinmm
           ./coverage1
-          gcovr -r ./src --xml -o coverage.xml
+
+      - name: Generate Coverage Report
+        run: gcovr -r ./src --xml -o coverage.xml
+
       - name: Upload coverage report to Codecov
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v3
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
