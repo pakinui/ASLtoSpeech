@@ -100,12 +100,12 @@ jobs:
         shell: powershell
       - name: Build and Test
         run: |
-          g++ -fprofile-arcs -ftest-coverage tests/test.cpp src/text_to_speech/ttscall.cpp -o coverage1 -lwinmm
+          g++ --coverage -c -o test.o tests/test.cpp
+          g++ --coverage -c -o ttscall.o src/text_to_speech/ttscall.cpp
+          g++ --coverage -o coverage1 test.o ttscall.o -lwinmm
           ./coverage1
-
       - name: Generate Coverage Report
-        run: gcovr -r ./src --xml -o coverage.xml
-
+        run: gcovr -r src --xml -o coverage.xml
       - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v3
         env:
