@@ -15,17 +15,17 @@ jobs:
       with:
         python-version: 3.11.4
         cache: 'pip'
-    - name: Cache Dependencies
-      id: cache-dependencies
-      uses: actions/cache@v2
-      with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
-        restore-keys: |
-          ${{ runner.os }}-pip-
+    # - name: Cache Dependencies
+    #   id: cache-dependencies
+    #   uses: actions/cache@v2
+    #   with:
+    #     path: ~/.cache/pip
+    #     key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+    #     restore-keys: |
+    #       ${{ runner.os }}-pip-
           
     - name: Install dependencies
-      if: steps.cache-dependencies.outputs.cache-hit != 'true'
+      # if: steps.cache-dependencies.outputs.cache-hit != 'true'
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
@@ -82,7 +82,7 @@ jobs:
 
   code-coverage:
     needs: run
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps: 
       - name: Checkout code
         uses: actions/checkout@v3
@@ -92,51 +92,24 @@ jobs:
       #     python-version: 3.10
       - name: Install C++ compiler
         run: |
-          sudo apt-get update
-          sudo apt-get install -y g++
+          choco install visualcpp-build-tools -y
+        shell: powershell
       - name: Install gcovr
-        run: sudo apt-get install -y gcovr
-    
+        run: |
+          pip install gcovr
+        shell: powershell
       - name: Tests
         run: |
-          ls -R ${{github.workspace}}/tests
-          g++ --coverage ${{github.workspace}}/tests/test.cpp -o ${{github.workspace}}/coverage1
-          ${{github.workspace}}/coverage1
-          ls -R ${{github.workspace}}/tests
-          gcovr -r ${{github.workspace}}/.. --xml -o ${{github.workspace}}/coverage.xml
-
-
+          ls -R 
+          g++ --coverage ${{github.workspace}}/tests/test.cpp  ${{github.workspace}}/src/text_to_speech/ttsCall.cpp -o ${{github.workspace}}/coverage/coverage_info -lwinmm
+          ls -R 
+          gcovr -r ${{github.workspace}} --xml -o ${{github.workspace}}/coverage/coverage_info.xml
       - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v2
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
-          files: ${{github.workspace}}/tests/coverage.xml
-  doxygen:
-    needs: run
-    runs-on: windows-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      - name: Set up Doxygen
-        run: choco install doxygen.install -y
-
-      - name: Delete Old Files
-        run: rm -r docs/*
-        
-      - name: Generate Documentation
-        run: doxygen Doxyfile  # Adjust the path to Doxyfile
-      
-
-      - name: Move files to /docs
-        run: mv docs/html/* docs/
-        
-      - name: Commit and Push Changes
-        run: |
-          git config --local user.name "GitHub Actions"
-          git config --local user.email "actions@github.com"
-          git add docs/
-          git commit -m "Update documentation"
-          git push
+          files: ${{github.workspace}}/coverage/coverage_info.xml
+          
 
     

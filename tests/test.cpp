@@ -25,11 +25,8 @@
 TEST_CASE( "speech.wav file created", "[file_check]" ) {
     tts("testing");
 
-    //std::string filePath = "../src/text_to_speech/speech.wav";
-    std::filesystem::path currentPath = std::filesystem::current_path();
-    std::cout << "Current directory: " << currentPath << std::endl;
-    std::filesystem::path file = currentPath / ".." / ".." / "src" / "text_to_speech" / "speech.wav";
-    std::string filePath = file.string();
+    std::string filePath = "speech.wav";
+
 
     DWORD fileAttributes = GetFileAttributesA(filePath.c_str());
 
