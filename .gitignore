@@ -11,6 +11,8 @@ Testing/
 src/text_to_speech/*.wav
 */*.wav
 *.wav
+.vs
+out/
 # This file is used to ignore files which are generated
 # ----------------------------------------------------------------------------
 

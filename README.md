@@ -76,8 +76,11 @@ cd cosc345
 pip install -r requirements.txt
 mkdir build
 cd build
-cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF
-cmake --build ./ --config Release
+cmake ..
+cmake --build .
+cd Debug
+path/to/Qt/6.5.2/mxvc2019_64/bin/windeployqt.exe ./345Application.exe
+./345Application.exe
 ```
 
 ## Usage
