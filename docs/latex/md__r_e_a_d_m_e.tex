@@ -63,8 +63,11 @@ Working together as a team, we\textquotesingle{}ve selected two distinct dataset
 \DoxyCodeLine{pip install -\/r requirements.txt}
 \DoxyCodeLine{mkdir build}
 \DoxyCodeLine{cd build}
-\DoxyCodeLine{cmake .. -\/GNinja -\/DCMAKE\_BUILD\_TYPE=Release -\/DBUILD\_TESTING=OFF}
-\DoxyCodeLine{cmake -\/-\/build ./ -\/-\/config Release}
+\DoxyCodeLine{cmake ..}
+\DoxyCodeLine{cmake -\/-\/build .}
+\DoxyCodeLine{cd Debug}
+\DoxyCodeLine{path/to/Qt/6.5.2/mxvc2019\_64/bin/windeployqt.exe ./345Application.exe}
+\DoxyCodeLine{./345Application.exe}
 
 \end{DoxyCode}
 \hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysubsection{Usage}\label{md__r_e_a_d_m_e_autotoc_md11}
