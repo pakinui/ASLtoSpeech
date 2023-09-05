@@ -1,23 +1,35 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(345Application VERSION 0.1 LANGUAGES CXX)
+cmake_minimum_required(VERSION 3.5)
+
+project(345Application VERSION 0.1 LANGUAGES C CXX)
 
 ADD_DEFINITIONS(-DQT_NO_KEYWORDS)
+if (MSVC)
+    # Check if the compiler is MSVC (Microsoft Visual C++ Compiler)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /Zi")
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /Zi")
+endif()
+
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
+
+
 #comment these out
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+#set(CMAKE_CXX_STANDARD 17)
+#set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Option for enabling building of tests
 option(BUILD_TESTING "Builds test executable." OFF)
 
-set(OpenCV_DIR "C:/opencv")
-set(CMAKE_PREFIX_PATH "C:/opencv/build/x64/vc16/lib" "C:/Qt/6.5.2/msvc2019_64" "C:/Qt/6.5.2/msvc2019_64/include" "C:Qt/6.5.2/msvc2019_64/bin")
+#set(OpenCV_DIR "C:/opencv")
+set(CMAKE_PREFIX_PATH "C:/Qt/6.5.2/msvc2019_64" "C:/Qt/6.5.2/msvc2019_64/include" "C:Qt/6.5.2/msvc2019_64/bin")
 set(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "C:/Qt/6.5.2/msvc2019_64/include" "C:Qt/6.5.2/msvc2019_64/bin")
+#set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules)
+
 
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Widgets)
 find_package(Qt6 COMPONENTS Core Widgets Multimedia MultimediaWidgets Gui Quick QuickControls2 Test REQUIRED)
@@ -31,6 +43,7 @@ else()
     message(STATUS "Running in standard user environment")
     set(OpenCV_DIR "C:/opencv")  # Adjust to your standard user path
     set(CMAKE_PREFIX_PATH "C:/opencv/build/x64/vc16/lib")  # Adjust to your standard user path
+    set(CMAKE_PREFIX_PATH "C:/opencv/build/x64/vc16/lib" "C:Qt/6.5.2/msvc2019_64/bin" "C:/Qt/6.5.2/msvc2019_64" "C:/Qt/6.5.2/msvc2019_64/include")
 endif()
 
 #comment these out
@@ -48,12 +61,16 @@ set(PROJECT_SOURCES
         tests/test.cpp
 )
 
+
+
+
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(345Application
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         src/inference_classifier.py
 )
+
 
 
 # Define target properties for Android with Qt 6 as:
@@ -74,7 +91,11 @@ else()
     endif()
 endif()
 
+
+set(BASE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
+
 target_link_libraries(345Application PRIVATE
+    
     Qt6::Widgets
     Qt6::Core
     Qt6::Multimedia
@@ -88,25 +109,8 @@ target_link_libraries(345Application PRIVATE
 )
 
 
-#add_executable(Tests
-#    tests/camera_tests.cpp
-
-#)
-#target_link_libraries(Tests PRIVATE
-#    Qt6::Test
-#    Qt6::Widgets
-#    Qt6::Core
-#    Qt6::Multimedia
-#    Qt6::MultimediaWidgets
-#    Qt6::QuickControls2
-#    Qt6::Quick
-#    Qt6::Gui
-#    Python::Python
-#)
 
 
-#target_link_libraries(345Application PRIVATE Qt6::Gui)
-#target_link_libraries(345Application PRIVATE Qt6::TextToSpeech)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
@@ -134,6 +138,13 @@ install(TARGETS 345Application
 
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(345Application)
+
+    qt_generate_deploy_app_script(
+        TARGET 345Application
+        OUTPUT_SCRIPT deploy_script
+        NO_UNSUPPORTED_PLATFORM_ERROR
+    )
+    install(SCRIPT ${deploy_script})
 endif()
 
 ##################################################################################
@@ -166,4 +177,3 @@ if(BUILD_TESTING)
 
 
 endif()
-
