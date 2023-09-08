@@ -201,7 +201,7 @@ void Camera::imageAvailable(QVideoFrame frame) {
  */
 void Camera::translateText()
 {
-
+    TextToSpeech text2Speech;
     QString inputText = ui->translateInput->toPlainText();
     // Translation logic
     if(inputText != ""){ // if there is text to give to tts
@@ -211,7 +211,9 @@ void Camera::translateText()
         // Create standard string of input text
         std::string inputTextStdString = inputText.toStdString();
         // Call the text-to-speech function with the standard string of input text
-        tts(inputTextStdString);
+
+
+        text2Speech.TextToSpeech::tts(inputTextStdString);
 
         //ui->translationDisplay->setPlainText(inputText);
         // Store translation in history data structure

@@ -10,8 +10,9 @@
 #include <cstdlib>
 #include <Windows.h>
 
+std::string currentString = "";
 
-/**
+    /**
  * @brief Converts the given text to speech using an external tool.
  *
  * This function takes a text input, constructs a command using the input text,
@@ -21,13 +22,16 @@
  * @param text The input text to convert to speech. Currently the text is hardcoded.
  * @return Returns 0 if the text-to-speech process is completed successfully.
  */
-bool tts(const std::string& text) {
+bool TextToSpeech::tts(const std::string& text) {
 
     // Hard coded text for testing.
     std::string test1 = "Testing The Text to Speech Oh Please Work";
+    currentString = text;
 
     // Construct the command using the passed text
-    std::string command = "tts --text \"" + text + "\" --model_name \"tts_models/en/ljspeech/glow-tts\" --out_path speech.wav";
+    std::string command = "start \"\" cmd /c tts --text \"" + text + "\" --model_name \"tts_models/en/ljspeech/glow-tts\" --out_path speech.wav";
+
+
 
     // Execute the command using system()
     int result = std::system(command.c_str());
@@ -49,3 +53,14 @@ bool tts(const std::string& text) {
     // Always return success for this example
     return 0;
 }
+
+std::string TextToSpeech::getString(){
+    return currentString;
+}
+
+
+
+
+
+
+

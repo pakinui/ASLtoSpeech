@@ -23,7 +23,9 @@
  }
 
 TEST_CASE( "speech.wav file created", "[file_check]" ) {
-    tts("testing");
+     TextToSpeech test;
+     test.TextToSpeech::tts("testing");
+    //tts("testing");
 
     std::string filePath = "speech.wav";
 
@@ -36,3 +38,19 @@ TEST_CASE( "speech.wav file created", "[file_check]" ) {
         REQUIRE(false);
     }
 }
+
+TEST_CASE("matching strings", "[strings]") {
+    TextToSpeech test;
+    test.tts("testing");
+
+    SECTION("string matching"){
+        if (test.getString() == "testing"){
+            REQUIRE(true);
+        }else{
+            REQUIRE(false);
+        }
+    }
+    REQUIRE(true);
+}
+
+
