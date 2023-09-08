@@ -67,7 +67,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">ttsCall.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -80,41 +80,26 @@ $(function() {
 <code>#include &lt;cstdlib&gt;</code><br />
 <code>#include &lt;Windows.h&gt;</code><br />
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a3d0baebc9d2f23f7308db2e71af6aff0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tts_call_8cpp.html#a3d0baebc9d2f23f7308db2e71af6aff0">tts</a> (const std::string &amp;text)</td></tr>
-<tr class="memdesc:a3d0baebc9d2f23f7308db2e71af6aff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the given text to speech using an external tool.  <a href="tts_call_8cpp.html#a3d0baebc9d2f23f7308db2e71af6aff0">More...</a><br /></td></tr>
-<tr class="separator:a3d0baebc9d2f23f7308db2e71af6aff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a2f170ad18ecd4208c730e8d08a880ceb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tts_call_8cpp.html#a2f170ad18ecd4208c730e8d08a880ceb">currentString</a> = &quot;&quot;</td></tr>
+<tr class="separator:a2f170ad18ecd4208c730e8d08a880ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains the function for text-to-speech conversion using an external tool. </p>
 <p>This file contains the function for text-to-speech conversion using an external tool. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="a3d0baebc9d2f23f7308db2e71af6aff0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d0baebc9d2f23f7308db2e71af6aff0">&#9670;&nbsp;</a></span>tts()</h2>
+</div><h2 class="groupheader">Variable Documentation</h2>
+<a id="a2f170ad18ecd4208c730e8d08a880ceb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f170ad18ecd4208c730e8d08a880ceb">&#9670;&nbsp;</a></span>currentString</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool tts </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>text</em></td><td>)</td>
-          <td></td>
+          <td class="memname">std::string currentString = &quot;&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Converts the given text to speech using an external tool. </p>
-<p>This function takes a text input, constructs a command using the input text, and executes the command using an external text-to-speech tool. The resulting audio is saved as "speech.wav" and can be played using PlaySound.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">text</td><td>The input text to convert to speech. Currently the text is hardcoded. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns 0 if the text-to-speech process is completed successfully. </dd></dl>
 
 </div>
 </div>

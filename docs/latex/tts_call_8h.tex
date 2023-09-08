@@ -6,46 +6,14 @@ Contains the declaration of the text-\/to-\/speech function.
 
 
 {\ttfamily \#include $<$string$>$}\newline
-\doxysubsection*{Functions}
+\doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{tts_call_8h_a3d0baebc9d2f23f7308db2e71af6aff0}{tts}} (const std\+::string \&text)
-\begin{DoxyCompactList}\small\item\em Converts the given text to speech using an external tool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+class \mbox{\hyperlink{class_text_to_speech}{Text\+To\+Speech}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Contains the declaration of the text-\/to-\/speech function. 
 
 This file contains the declaration of the text-\/to-\/speech function. 
-
-\doxysubsection{Function Documentation}
-\mbox{\Hypertarget{tts_call_8h_a3d0baebc9d2f23f7308db2e71af6aff0}\label{tts_call_8h_a3d0baebc9d2f23f7308db2e71af6aff0}} 
-\index{ttsCall.h@{ttsCall.h}!tts@{tts}}
-\index{tts@{tts}!ttsCall.h@{ttsCall.h}}
-\doxysubsubsection{\texorpdfstring{tts()}{tts()}}
-{\footnotesize\ttfamily bool tts (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text }\end{DoxyParamCaption})}
-
-
-
-Converts the given text to speech using an external tool. 
-
-This function takes a text input, constructs a command using the input text, and executes the command using an external text-\/to-\/speech tool. The resulting audio can be played using appropriate audio playback functions.
-
-
-\begin{DoxyParams}{Parameters}
-{\em text} & The input text to convert to speech. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Returns true if the text-\/to-\/speech process is completed successfully, false otherwise.
-\end{DoxyReturn}
-This function takes a text input, constructs a command using the input text, and executes the command using an external text-\/to-\/speech tool. The resulting audio is saved as \char`\"{}speech.\+wav\char`\"{} and can be played using Play\+Sound.
-
-
-\begin{DoxyParams}{Parameters}
-{\em text} & The input text to convert to speech. Currently the text is hardcoded. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Returns 0 if the text-\/to-\/speech process is completed successfully. 
-\end{DoxyReturn}
