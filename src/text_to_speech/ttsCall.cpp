@@ -29,25 +29,18 @@ bool TextToSpeech::tts(const std::string& text) {
     currentString = text;
 
     // Construct the command using the passed text
-    std::string command = "start \"\" cmd /c tts --text \"" + text + "\" --model_name \"tts_models/en/ljspeech/glow-tts\" --out_path speech.wav";
+    std::string command = "espeak-ng \"" + text + "\"";
 
+    STARTUPINFOA startupInfo = { sizeof(STARTUPINFOA) };
+    PROCESS_INFORMATION processInfo;
 
-
-    // Execute the command using system()
-    int result = std::system(command.c_str());
-
-    if (result == 0) {
-
-        std::cout << "Text-to-speech completed successfully." << std::endl;
-
-        //Play the generated audio (you might need to use a suitable audio player command)
-        PlaySound(TEXT("speech.wav"), NULL, SND_FILENAME);
-
-
+    if (CreateProcessA(NULL, const_cast<char*>(command.c_str()), NULL, NULL, FALSE, CREATE_NO_WINDOW | DETACHED_PROCESS, NULL, NULL, &startupInfo, &processInfo)) {
+        CloseHandle(processInfo.hThread);
+        CloseHandle(processInfo.hProcess);
+        return true;
     } else {
-
-        std::cerr << "Error occurred during text-to-speech." << std::endl;
-
+        // Handle error
+        return false;
     }
 
     // Always return success for this example
