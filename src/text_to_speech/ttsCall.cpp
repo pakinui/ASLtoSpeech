@@ -12,7 +12,7 @@
 
 std::string currentString = "";
 
-    /**
+/**
  * @brief Converts the given text to speech using an external tool.
  *
  * This function takes a text input, constructs a command using the input text,
@@ -47,13 +47,13 @@ bool TextToSpeech::tts(const std::string& text) {
     return 0;
 }
 
+/**
+ * @brief Returns the current string that is being converted to speech.
+ *
+ * This function is used to return the current string that is going to be converted to speech.
+ *
+ * @return Returns the current string that is being converted to speech.
+ */
 std::string TextToSpeech::getString(){
     return currentString;
 }
-
-
-
-
-
-
-
