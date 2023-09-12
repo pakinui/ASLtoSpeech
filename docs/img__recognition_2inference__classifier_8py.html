@@ -73,6 +73,9 @@ $(function() {
 <div class="title">inference_classifier.py File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Contains further implementation of the PythonTest class for sign language detection.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -82,61 +85,90 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:aaba7d4d8fdab515be7a297536a682d47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#aaba7d4d8fdab515be7a297536a682d47">inference_classifier.model_dict</a> = pickle.load(open('./ASL_model.p', 'rb'))</td></tr>
+<tr class="memdesc:aaba7d4d8fdab515be7a297536a682d47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the trained sign-lange detection model.  <a href="namespaceinference__classifier.html#aaba7d4d8fdab515be7a297536a682d47">More...</a><br /></td></tr>
 <tr class="separator:aaba7d4d8fdab515be7a297536a682d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa135dc5054503e252fd8560c3a28017e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#aa135dc5054503e252fd8560c3a28017e">inference_classifier.model</a> = model_dict['model']</td></tr>
+<tr class="memdesc:aa135dc5054503e252fd8560c3a28017e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare variable model.  <a href="namespaceinference__classifier.html#aa135dc5054503e252fd8560c3a28017e">More...</a><br /></td></tr>
 <tr class="separator:aa135dc5054503e252fd8560c3a28017e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a528deb456d1dcf0a15f1c39bb2503617"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#a528deb456d1dcf0a15f1c39bb2503617">inference_classifier.cap</a> = cv2.VideoCapture(0)</td></tr>
+<tr class="memdesc:a528deb456d1dcf0a15f1c39bb2503617"><td class="mdescLeft">&#160;</td><td class="mdescRight">capture is a variable that is used to capture the video  <a href="namespaceinference__classifier.html#a528deb456d1dcf0a15f1c39bb2503617">More...</a><br /></td></tr>
 <tr class="separator:a528deb456d1dcf0a15f1c39bb2503617"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b19fe04e5e4bddcd96bca08469b9812"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#a8b19fe04e5e4bddcd96bca08469b9812">inference_classifier.mp_hands</a> = mp.solutions.hands</td></tr>
+<tr class="memdesc:a8b19fe04e5e4bddcd96bca08469b9812"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare variable mp_hands from Mediapipe module.  <a href="namespaceinference__classifier.html#a8b19fe04e5e4bddcd96bca08469b9812">More...</a><br /></td></tr>
 <tr class="separator:a8b19fe04e5e4bddcd96bca08469b9812"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0bb49f77b81aa89d916b76aad210d5f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#ab0bb49f77b81aa89d916b76aad210d5f">inference_classifier.mp_drawing</a> = mp.solutions.drawing_utils</td></tr>
+<tr class="memdesc:ab0bb49f77b81aa89d916b76aad210d5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare variable mp_drawing from Mediapipe module.  <a href="namespaceinference__classifier.html#ab0bb49f77b81aa89d916b76aad210d5f">More...</a><br /></td></tr>
 <tr class="separator:ab0bb49f77b81aa89d916b76aad210d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d057330ca2edcaabf86759b3186701c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#a0d057330ca2edcaabf86759b3186701c">inference_classifier.mp_drawing_styles</a> = mp.solutions.drawing_styles</td></tr>
+<tr class="memdesc:a0d057330ca2edcaabf86759b3186701c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare variable mp_drawing_styles from Mediapipe module.  <a href="namespaceinference__classifier.html#a0d057330ca2edcaabf86759b3186701c">More...</a><br /></td></tr>
 <tr class="separator:a0d057330ca2edcaabf86759b3186701c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f7db0066861dd8a561dd7033952efc3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#a4f7db0066861dd8a561dd7033952efc3">inference_classifier.hands</a> = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)</td></tr>
+<tr class="memdesc:a4f7db0066861dd8a561dd7033952efc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare variable hands.  <a href="namespaceinference__classifier.html#a4f7db0066861dd8a561dd7033952efc3">More...</a><br /></td></tr>
 <tr class="separator:a4f7db0066861dd8a561dd7033952efc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee228a39e4164af6c0bba471a2317ba9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#aee228a39e4164af6c0bba471a2317ba9">inference_classifier.fourcc</a> = cv2.VideoWriter_fourcc(*'XVID')</td></tr>
+<tr class="memdesc:aee228a39e4164af6c0bba471a2317ba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">fourcc is used to create a video writer object for writing video files, specifying the codec for video compression.  <a href="namespaceinference__classifier.html#aee228a39e4164af6c0bba471a2317ba9">More...</a><br /></td></tr>
 <tr class="separator:aee228a39e4164af6c0bba471a2317ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3845e63bf437d473948b3c65705993e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#a3845e63bf437d473948b3c65705993e7">inference_classifier.out</a> = cv2.VideoWriter('output.avi', fourcc, 20.0, (640, 480))</td></tr>
+<tr class="memdesc:a3845e63bf437d473948b3c65705993e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">out is a variable used to create a VideoWriter object for writing video frames to a video file with specified settings.  <a href="namespaceinference__classifier.html#a3845e63bf437d473948b3c65705993e7">More...</a><br /></td></tr>
 <tr class="separator:a3845e63bf437d473948b3c65705993e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2b384856e53b3c5c4002c2d2896f8d8"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#aa2b384856e53b3c5c4002c2d2896f8d8">inference_classifier.data_aux</a> = []</td></tr>
+<tr class="memdesc:aa2b384856e53b3c5c4002c2d2896f8d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare variable data_aux as a list.  <a href="namespaceinference__classifier.html#aa2b384856e53b3c5c4002c2d2896f8d8">More...</a><br /></td></tr>
 <tr class="separator:aa2b384856e53b3c5c4002c2d2896f8d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0cf913b571feab465be3edccf81c4b4"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#ae0cf913b571feab465be3edccf81c4b4">inference_classifier.x_</a> = []</td></tr>
+<tr class="memdesc:ae0cf913b571feab465be3edccf81c4b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare variable x_ as a list.  <a href="namespaceinference__classifier.html#ae0cf913b571feab465be3edccf81c4b4">More...</a><br /></td></tr>
 <tr class="separator:ae0cf913b571feab465be3edccf81c4b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad10cd80ed1f8e42ece85a71475330c6"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#aad10cd80ed1f8e42ece85a71475330c6">inference_classifier.y_</a> = []</td></tr>
+<tr class="memdesc:aad10cd80ed1f8e42ece85a71475330c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare variable y_ as a list.  <a href="namespaceinference__classifier.html#aad10cd80ed1f8e42ece85a71475330c6">More...</a><br /></td></tr>
 <tr class="separator:aad10cd80ed1f8e42ece85a71475330c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8f2a644975b684c94d091d58dd3bf20"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#af8f2a644975b684c94d091d58dd3bf20">inference_classifier.ret</a></td></tr>
+<tr class="memdesc:af8f2a644975b684c94d091d58dd3bf20"><td class="mdescLeft">&#160;</td><td class="mdescRight">ret and frame are used to read the capture.  <a href="namespaceinference__classifier.html#af8f2a644975b684c94d091d58dd3bf20">More...</a><br /></td></tr>
 <tr class="separator:af8f2a644975b684c94d091d58dd3bf20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae25d3c2c7f74e2160ed8ed3f5373fe21"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#ae25d3c2c7f74e2160ed8ed3f5373fe21">inference_classifier.frame</a> = cv2.flip(frame, 1)</td></tr>
+<tr class="memdesc:ae25d3c2c7f74e2160ed8ed3f5373fe21"><td class="mdescLeft">&#160;</td><td class="mdescRight">frame is a variable used to flip the frame.  <a href="namespaceinference__classifier.html#ae25d3c2c7f74e2160ed8ed3f5373fe21">More...</a><br /></td></tr>
 <tr class="separator:ae25d3c2c7f74e2160ed8ed3f5373fe21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c68be61f9bca60f33c410c1f09d2cec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#a4c68be61f9bca60f33c410c1f09d2cec">inference_classifier.H</a></td></tr>
+<tr class="memdesc:a4c68be61f9bca60f33c410c1f09d2cec"><td class="mdescLeft">&#160;</td><td class="mdescRight">H, W, _ are used to get the height and width of the frame.  <a href="namespaceinference__classifier.html#a4c68be61f9bca60f33c410c1f09d2cec">More...</a><br /></td></tr>
 <tr class="separator:a4c68be61f9bca60f33c410c1f09d2cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0fa7a3568aa1c6986cac688cae7ca54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#ae0fa7a3568aa1c6986cac688cae7ca54">inference_classifier.W</a></td></tr>
 <tr class="separator:ae0fa7a3568aa1c6986cac688cae7ca54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8832c07b6a4d16b7f47de6a0c535a69b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#a8832c07b6a4d16b7f47de6a0c535a69b">inference_classifier.frame_rgb</a> = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)</td></tr>
+<tr class="memdesc:a8832c07b6a4d16b7f47de6a0c535a69b"><td class="mdescLeft">&#160;</td><td class="mdescRight">frame_rgb is a variable used to convert the frame from BGR to RGB.  <a href="namespaceinference__classifier.html#a8832c07b6a4d16b7f47de6a0c535a69b">More...</a><br /></td></tr>
 <tr class="separator:a8832c07b6a4d16b7f47de6a0c535a69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4eea7fa2e4f395bc4f4156200a8e2ccb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#a4eea7fa2e4f395bc4f4156200a8e2ccb">inference_classifier.results</a> = hands.process(frame_rgb)</td></tr>
+<tr class="memdesc:a4eea7fa2e4f395bc4f4156200a8e2ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">results is a variable to process the frame of the hands.  <a href="namespaceinference__classifier.html#a4eea7fa2e4f395bc4f4156200a8e2ccb">More...</a><br /></td></tr>
 <tr class="separator:a4eea7fa2e4f395bc4f4156200a8e2ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68007a4ae0ff4cc15ee093dbe31bf510"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#a68007a4ae0ff4cc15ee093dbe31bf510">inference_classifier.num_detected_hands</a> = len(results.multi_hand_landmarks)</td></tr>
+<tr class="memdesc:a68007a4ae0ff4cc15ee093dbe31bf510"><td class="mdescLeft">&#160;</td><td class="mdescRight">num_detected_hands is a variable equal the length of the results.multi_hand_landmarks, meaning the number of hands detected.  <a href="namespaceinference__classifier.html#a68007a4ae0ff4cc15ee093dbe31bf510">More...</a><br /></td></tr>
 <tr class="separator:a68007a4ae0ff4cc15ee093dbe31bf510"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a730e348866d0cdc8a20e6ed0d10b6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#a7a730e348866d0cdc8a20e6ed0d10b6f">inference_classifier.x</a> = hand_landmarks.landmark[i].x</td></tr>
+<tr class="memdesc:a7a730e348866d0cdc8a20e6ed0d10b6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare variable x for hand_landmarks.  <a href="namespaceinference__classifier.html#a7a730e348866d0cdc8a20e6ed0d10b6f">More...</a><br /></td></tr>
 <tr class="separator:a7a730e348866d0cdc8a20e6ed0d10b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3437c407116ea453eaf13aefb21a2c6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#a3437c407116ea453eaf13aefb21a2c6d">inference_classifier.y</a> = hand_landmarks.landmark[i].y</td></tr>
+<tr class="memdesc:a3437c407116ea453eaf13aefb21a2c6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare variable y for hand_landmarks.  <a href="namespaceinference__classifier.html#a3437c407116ea453eaf13aefb21a2c6d">More...</a><br /></td></tr>
 <tr class="separator:a3437c407116ea453eaf13aefb21a2c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6212a6e64c8a21e4e9ea12c35899e730"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#a6212a6e64c8a21e4e9ea12c35899e730">inference_classifier.x1</a> = int(min(x_) * W) - 10</td></tr>
+<tr class="memdesc:a6212a6e64c8a21e4e9ea12c35899e730"><td class="mdescLeft">&#160;</td><td class="mdescRight">x1 is set to the minimum int value of x_ multiplied by the width of the frame, minus 10.  <a href="namespaceinference__classifier.html#a6212a6e64c8a21e4e9ea12c35899e730">More...</a><br /></td></tr>
 <tr class="separator:a6212a6e64c8a21e4e9ea12c35899e730"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabb40ddc7a806645ee6222775e99c2b8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#aabb40ddc7a806645ee6222775e99c2b8">inference_classifier.y1</a> = int(min(y_) * H) - 10</td></tr>
+<tr class="memdesc:aabb40ddc7a806645ee6222775e99c2b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">y1 is set to the minimum int value of y_ multiplied by the height of the frame, minus 10.  <a href="namespaceinference__classifier.html#aabb40ddc7a806645ee6222775e99c2b8">More...</a><br /></td></tr>
 <tr class="separator:aabb40ddc7a806645ee6222775e99c2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeae9102df96aebbbf821c673ae1ba012"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#aeae9102df96aebbbf821c673ae1ba012">inference_classifier.x2</a> = int(max(x_) * W) - 10</td></tr>
+<tr class="memdesc:aeae9102df96aebbbf821c673ae1ba012"><td class="mdescLeft">&#160;</td><td class="mdescRight">x2 is set to the maximum int value of x_ multiplied by the width of the frame, minus 10.  <a href="namespaceinference__classifier.html#aeae9102df96aebbbf821c673ae1ba012">More...</a><br /></td></tr>
 <tr class="separator:aeae9102df96aebbbf821c673ae1ba012"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6086685d79be3bcc4b78bf97c90ab174"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#a6086685d79be3bcc4b78bf97c90ab174">inference_classifier.y2</a> = int(max(y_) * H) - 10</td></tr>
+<tr class="memdesc:a6086685d79be3bcc4b78bf97c90ab174"><td class="mdescLeft">&#160;</td><td class="mdescRight">y2 is set to the maximum int value of y_ multiplied by the height of the frame, minus 10.  <a href="namespaceinference__classifier.html#a6086685d79be3bcc4b78bf97c90ab174">More...</a><br /></td></tr>
 <tr class="separator:a6086685d79be3bcc4b78bf97c90ab174"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab100d39039f23ca684e7cdb2b2e536ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#ab100d39039f23ca684e7cdb2b2e536ea">inference_classifier.prediction</a> = model.predict([np.asarray(data_aux)])</td></tr>
+<tr class="memdesc:ab100d39039f23ca684e7cdb2b2e536ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">prediction is set to the prediction of the model on a set of input data (data_aux).  <a href="namespaceinference__classifier.html#ab100d39039f23ca684e7cdb2b2e536ea">More...</a><br /></td></tr>
 <tr class="separator:ab100d39039f23ca684e7cdb2b2e536ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d19b5363e0889431e539512182b0ede"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinference__classifier.html#a6d19b5363e0889431e539512182b0ede">inference_classifier.predicted_class_label</a> = prediction[0]</td></tr>
+<tr class="memdesc:a6d19b5363e0889431e539512182b0ede"><td class="mdescLeft">&#160;</td><td class="mdescRight">predicted_class_label is set to the first element in the list of prediction.  <a href="namespaceinference__classifier.html#a6d19b5363e0889431e539512182b0ede">More...</a><br /></td></tr>
 <tr class="separator:a6d19b5363e0889431e539512182b0ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Contains further implementation of the PythonTest class for sign language detection. </p>
+<p>This file is used in the prediction of the sign language character from the frames. It is used to detect the hand landmarks and predict the sign language character from the trained model. It is also used to draw the rectangle around the hand and display the predicted sign language character. </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

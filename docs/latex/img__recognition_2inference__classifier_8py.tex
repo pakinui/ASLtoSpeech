@@ -1,5 +1,10 @@
 \hypertarget{img__recognition_2inference__classifier_8py}{}\doxysection{src/img\+\_\+recognition/inference\+\_\+classifier.py File Reference}
 \label{img__recognition_2inference__classifier_8py}\index{src/img\_recognition/inference\_classifier.py@{src/img\_recognition/inference\_classifier.py}}
+
+
+Contains further implementation of the Python\+Test class for sign language detection.  
+
+
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -9,56 +14,62 @@
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{namespaceinference__classifier_aaba7d4d8fdab515be7a297536a682d47}{inference\+\_\+classifier.\+model\+\_\+dict}} = pickle.\+load(open(\textquotesingle{}./ASL\+\_\+model.\+p\textquotesingle{}, \textquotesingle{}rb\textquotesingle{}))
-\item 
+\begin{DoxyCompactList}\small\item\em Load the trained sign-\/lange detection model. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceinference__classifier_aa135dc5054503e252fd8560c3a28017e}{inference\+\_\+classifier.\+model}} = model\+\_\+dict\mbox{[}\textquotesingle{}model\textquotesingle{}\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em Declare variable model. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceinference__classifier_a528deb456d1dcf0a15f1c39bb2503617}{inference\+\_\+classifier.\+cap}} = cv2.\+Video\+Capture(0)
-\item 
+\begin{DoxyCompactList}\small\item\em capture is a variable that is used to capture the video \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceinference__classifier_a8b19fe04e5e4bddcd96bca08469b9812}{inference\+\_\+classifier.\+mp\+\_\+hands}} = mp.\+solutions.\+hands
-\item 
+\begin{DoxyCompactList}\small\item\em Declare variable mp\+\_\+hands from Mediapipe module. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceinference__classifier_ab0bb49f77b81aa89d916b76aad210d5f}{inference\+\_\+classifier.\+mp\+\_\+drawing}} = mp.\+solutions.\+drawing\+\_\+utils
-\item 
+\begin{DoxyCompactList}\small\item\em Declare variable mp\+\_\+drawing from Mediapipe module. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceinference__classifier_a0d057330ca2edcaabf86759b3186701c}{inference\+\_\+classifier.\+mp\+\_\+drawing\+\_\+styles}} = mp.\+solutions.\+drawing\+\_\+styles
-\item 
+\begin{DoxyCompactList}\small\item\em Declare variable mp\+\_\+drawing\+\_\+styles from Mediapipe module. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceinference__classifier_a4f7db0066861dd8a561dd7033952efc3}{inference\+\_\+classifier.\+hands}} = mp\+\_\+hands.\+Hands(static\+\_\+image\+\_\+mode=True, min\+\_\+detection\+\_\+confidence=0.\+3)
-\item 
+\begin{DoxyCompactList}\small\item\em Declare variable hands. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceinference__classifier_aee228a39e4164af6c0bba471a2317ba9}{inference\+\_\+classifier.\+fourcc}} = cv2.\+Video\+Writer\+\_\+fourcc($\ast$\textquotesingle{}XVID\textquotesingle{})
-\item 
+\begin{DoxyCompactList}\small\item\em fourcc is used to create a video writer object for writing video files, specifying the codec for video compression. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceinference__classifier_a3845e63bf437d473948b3c65705993e7}{inference\+\_\+classifier.\+out}} = cv2.\+Video\+Writer(\textquotesingle{}output.\+avi\textquotesingle{}, fourcc, 20.\+0, (640, 480))
-\item 
+\begin{DoxyCompactList}\small\item\em out is a variable used to create a Video\+Writer object for writing video frames to a video file with specified settings. \end{DoxyCompactList}\item 
 list \mbox{\hyperlink{namespaceinference__classifier_aa2b384856e53b3c5c4002c2d2896f8d8}{inference\+\_\+classifier.\+data\+\_\+aux}} = \mbox{[}$\,$\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em Declare variable data\+\_\+aux as a list. \end{DoxyCompactList}\item 
 list \mbox{\hyperlink{namespaceinference__classifier_ae0cf913b571feab465be3edccf81c4b4}{inference\+\_\+classifier.\+x\+\_\+}} = \mbox{[}$\,$\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em Declare variable x\+\_\+ as a list. \end{DoxyCompactList}\item 
 list \mbox{\hyperlink{namespaceinference__classifier_aad10cd80ed1f8e42ece85a71475330c6}{inference\+\_\+classifier.\+y\+\_\+}} = \mbox{[}$\,$\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em Declare variable y\+\_\+ as a list. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceinference__classifier_af8f2a644975b684c94d091d58dd3bf20}{inference\+\_\+classifier.\+ret}}
-\item 
+\begin{DoxyCompactList}\small\item\em ret and frame are used to read the capture. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceinference__classifier_ae25d3c2c7f74e2160ed8ed3f5373fe21}{inference\+\_\+classifier.\+frame}} = cv2.\+flip(frame, 1)
-\item 
+\begin{DoxyCompactList}\small\item\em frame is a variable used to flip the frame. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceinference__classifier_a4c68be61f9bca60f33c410c1f09d2cec}{inference\+\_\+classifier.\+H}}
-\item 
+\begin{DoxyCompactList}\small\item\em H, W, \+\_\+ are used to get the height and width of the frame. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceinference__classifier_ae0fa7a3568aa1c6986cac688cae7ca54}{inference\+\_\+classifier.\+W}}
 \item 
 \mbox{\hyperlink{namespaceinference__classifier_a8832c07b6a4d16b7f47de6a0c535a69b}{inference\+\_\+classifier.\+frame\+\_\+rgb}} = cv2.\+cvt\+Color(frame, cv2.\+COLOR\+\_\+\+BGR2\+RGB)
-\item 
+\begin{DoxyCompactList}\small\item\em frame\+\_\+rgb is a variable used to convert the frame from BGR to RGB. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceinference__classifier_a4eea7fa2e4f395bc4f4156200a8e2ccb}{inference\+\_\+classifier.\+results}} = hands.\+process(frame\+\_\+rgb)
-\item 
+\begin{DoxyCompactList}\small\item\em results is a variable to process the frame of the hands. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceinference__classifier_a68007a4ae0ff4cc15ee093dbe31bf510}{inference\+\_\+classifier.\+num\+\_\+detected\+\_\+hands}} = len(results.\+multi\+\_\+hand\+\_\+landmarks)
-\item 
+\begin{DoxyCompactList}\small\item\em num\+\_\+detected\+\_\+hands is a variable equal the length of the results.\+multi\+\_\+hand\+\_\+landmarks, meaning the number of hands detected. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceinference__classifier_a7a730e348866d0cdc8a20e6ed0d10b6f}{inference\+\_\+classifier.\+x}} = hand\+\_\+landmarks.\+landmark\mbox{[}i\mbox{]}.x
-\item 
+\begin{DoxyCompactList}\small\item\em Declare variable x for hand\+\_\+landmarks. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceinference__classifier_a3437c407116ea453eaf13aefb21a2c6d}{inference\+\_\+classifier.\+y}} = hand\+\_\+landmarks.\+landmark\mbox{[}i\mbox{]}.y
-\item 
+\begin{DoxyCompactList}\small\item\em Declare variable y for hand\+\_\+landmarks. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespaceinference__classifier_a6212a6e64c8a21e4e9ea12c35899e730}{inference\+\_\+classifier.\+x1}} = int(min(x\+\_\+) $\ast$ W) -\/ 10
-\item 
+\begin{DoxyCompactList}\small\item\em x1 is set to the minimum int value of x\+\_\+ multiplied by the width of the frame, minus 10. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespaceinference__classifier_aabb40ddc7a806645ee6222775e99c2b8}{inference\+\_\+classifier.\+y1}} = int(min(y\+\_\+) $\ast$ H) -\/ 10
-\item 
+\begin{DoxyCompactList}\small\item\em y1 is set to the minimum int value of y\+\_\+ multiplied by the height of the frame, minus 10. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespaceinference__classifier_aeae9102df96aebbbf821c673ae1ba012}{inference\+\_\+classifier.\+x2}} = int(max(x\+\_\+) $\ast$ W) -\/ 10
-\item 
+\begin{DoxyCompactList}\small\item\em x2 is set to the maximum int value of x\+\_\+ multiplied by the width of the frame, minus 10. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespaceinference__classifier_a6086685d79be3bcc4b78bf97c90ab174}{inference\+\_\+classifier.\+y2}} = int(max(y\+\_\+) $\ast$ H) -\/ 10
-\item 
+\begin{DoxyCompactList}\small\item\em y2 is set to the maximum int value of y\+\_\+ multiplied by the height of the frame, minus 10. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceinference__classifier_ab100d39039f23ca684e7cdb2b2e536ea}{inference\+\_\+classifier.\+prediction}} = model.\+predict(\mbox{[}np.\+asarray(data\+\_\+aux)\mbox{]})
-\item 
+\begin{DoxyCompactList}\small\item\em prediction is set to the prediction of the model on a set of input data (data\+\_\+aux). \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceinference__classifier_a6d19b5363e0889431e539512182b0ede}{inference\+\_\+classifier.\+predicted\+\_\+class\+\_\+label}} = prediction\mbox{[}0\mbox{]}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em predicted\+\_\+class\+\_\+label is set to the first element in the list of prediction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains further implementation of the Python\+Test class for sign language detection. 
+
+This file is used in the prediction of the sign language character from the frames. It is used to detect the hand landmarks and predict the sign language character from the trained model. It is also used to draw the rectangle around the hand and display the predicted sign language character. 
