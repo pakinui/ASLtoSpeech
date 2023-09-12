@@ -2,6 +2,11 @@
 \label{class_text_to_speech}\index{TextToSpeech@{TextToSpeech}}
 
 
+The \mbox{\hyperlink{class_text_to_speech}{Text\+To\+Speech}} class represents the text-\/to-\/speech functionality.  
+
+
+
+
 {\ttfamily \#include $<$tts\+Call.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
@@ -12,6 +17,11 @@ bool \mbox{\hyperlink{class_text_to_speech_a2e4349402ebac693a75b0ef4e5cc8939}{tt
 std\+::string \mbox{\hyperlink{class_text_to_speech_a05de86642ade784965907aa6028da878}{get\+String}} ()
 \begin{DoxyCompactList}\small\item\em Returns the current string that is being converted to speech. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_text_to_speech}{Text\+To\+Speech}} class represents the text-\/to-\/speech functionality. 
+
+This class represents the text-\/to-\/speech functionality. It provides a function to convert text to speech using an external tool. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_text_to_speech_a05de86642ade784965907aa6028da878}\label{class_text_to_speech_a05de86642ade784965907aa6028da878}} 
@@ -47,17 +57,7 @@ This function takes a text input, constructs a command using the input text, and
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Returns true if the text-\/to-\/speech process is completed successfully, false otherwise.
-\end{DoxyReturn}
-This function takes a text input, constructs a command using the input text, and executes the command using an external text-\/to-\/speech tool. The resulting audio is saved as \char`\"{}speech.\+wav\char`\"{} and can be played using Play\+Sound.
-
-
-\begin{DoxyParams}{Parameters}
-{\em text} & The input text to convert to speech. Currently the text is hardcoded. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Returns 0 if the text-\/to-\/speech process is completed successfully. 
+Returns true if the text-\/to-\/speech process is completed successfully, false otherwise. 
 \end{DoxyReturn}
 
 
