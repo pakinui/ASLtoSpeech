@@ -12,16 +12,7 @@
 
 std::string currentString = ""; ///< The placeholder string that will be used in TTS.
 
-/**
- * @brief Converts the given text to speech using an external tool.
- *
- * This function takes a text input, constructs a command using the input text,
- * and executes the command using an external text-to-speech tool. The resulting
- * audio is saved as "speech.wav" and can be played using PlaySound.
- *
- * @param text The input text to convert to speech. Currently the text is hardcoded.
- * @return Returns 0 if the text-to-speech process is completed successfully.
- */
+
 bool TextToSpeech::tts(const std::string& text) {
 
     // Hard coded text for testing.

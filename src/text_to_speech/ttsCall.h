@@ -11,6 +11,13 @@
 
 #include <string>
 
+/**
+ * @class TextToSpeech
+ * @brief The TextToSpeech class represents the text-to-speech functionality.
+ *
+ * This class represents the text-to-speech functionality. It provides a function
+ * to convert text to speech using an external tool.
+ */
 class TextToSpeech{
 public:
     /**

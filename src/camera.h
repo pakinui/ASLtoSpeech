@@ -28,7 +28,14 @@
 #include <QVideoSink>
 #include <QtCore>
 
-
+/**
+ * @namespace Ui
+ * @brief Contains user interface classes for the Camera application.
+ *
+ * The Ui namespace contains user interface classes specifically designed for
+ * the Camera application. These classes define the graphical user interface
+ * elements and forms used within the application.
+ */
 QT_BEGIN_NAMESPACE
 namespace Ui {
 
