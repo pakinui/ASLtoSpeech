@@ -39,7 +39,6 @@ endif()
 find_package(OpenCV REQUIRED)
 find_package(Python REQUIRED Development)
 
-
 set(PROJECT_SOURCES
         src/main.cpp
         src/camera.cpp
@@ -47,7 +46,6 @@ set(PROJECT_SOURCES
         src/camera.ui
         src/text_to_speech/ttsCall.h
         src/text_to_speech/ttsCall.cpp
-        tests/test.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -94,17 +92,7 @@ target_link_libraries(345Application PRIVATE
 #    tests/camera_tests.cpp
 
 #)
-#target_link_libraries(Tests PRIVATE
-#    Qt6::Test
-#    Qt6::Widgets
-#    Qt6::Core
-#    Qt6::Multimedia
-#    Qt6::MultimediaWidgets
-#    Qt6::QuickControls2
-#    Qt6::Quick
-#    Qt6::Gui
-#    Python::Python
-#)
+
 
 
 #target_link_libraries(345Application PRIVATE Qt6::Gui)
@@ -157,27 +145,23 @@ add_dependencies(345Application move_file)
 
 if(BUILD_TESTING)
 
-    include(FetchContent)
+    add_executable(Tests "tests/test.cpp"  "src/text_to_speech/ttscall.cpp")
 
-    FetchContent_Declare(
-        Catch2
-        GIT_REPOSITORY https://github.com/catchorg/Catch2.git
-        GIT_TAG        v3.0.1 # or a later release
+    find_package(Qt6 REQUIRED COMPONENTS Test)
+    find_package(Python REQUIRED Development)
+    enable_testing(true)
+
+    target_link_libraries(Tests PRIVATE
+        Qt6::Test
+        Qt6::Widgets
+        Qt6::Core
+        Qt6::Multimedia
+        Qt6::MultimediaWidgets
+        Qt6::QuickControls2
+        Qt6::Quick
+        Qt6::Gui
+        Python::Python
     )
-
-    FetchContent_MakeAvailable(Catch2)
-    list(APPEND CMAKE_MODULE_PATH ${catch2_SOURCE_DIR}/extras)
-
-    add_executable(Tests "tests/test.cpp" "src/text_to_speech/ttscall.cpp")
-
-    target_link_libraries(Tests PRIVATE Catch2::Catch2WithMain)
-
-    include(CTest)
-    include(Catch)
-
-    enable_testing()
-
-    catch_discover_tests(Tests)
 
 
 endif()
