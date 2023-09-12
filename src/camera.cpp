@@ -77,10 +77,11 @@ QString captures_path; ///< Path to where images are saved
 QString imgOutputPath; ///< Path where camera frames are saved
 
 /**
- * @brief Construct a new Camera:: Camera object
+ * @brief Camera::Camera() : ui(new Ui::Camera) constructs a new Camera:: Camera object
  *
- * This constructor initializes the Camera object and sets up various connections
- * for button clicks and video frame updates. It also initializes camera resources.
+ * The Camera::Camera() : ui(new Ui::Camera) constructor initializes the Camera object 
+ * and sets up various connections for button clicks and video frame updates. It also 
+ * initializes camera resources.
  */
 Camera::Camera() : ui(new Ui::Camera)
 {

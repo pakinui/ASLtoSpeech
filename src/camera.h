@@ -54,9 +54,9 @@ class Camera : public QMainWindow
 
 public:
     /**
-     * @brief Constructor for the Camera class.
+     * @brief Camera() is the constructor for the Camera class.
      *
-     * This constructor initializes the Camera class and sets up the UI and camera-related components.
+     * The Camera() constructor initializes the Camera class and sets up the UI and camera-related components.
      */
     Camera();
 
