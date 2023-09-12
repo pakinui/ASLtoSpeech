@@ -10,7 +10,7 @@
 #include <cstdlib>
 #include <Windows.h>
 
-std::string currentString = "";
+std::string currentString = ""; ///< The placeholder string that will be used in TTS.
 
 /**
  * @brief Converts the given text to speech using an external tool.

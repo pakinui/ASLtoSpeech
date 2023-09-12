@@ -1,9 +1,9 @@
 ## @file inference_classifier.py
 #  @brief Contains further implementation of the PythonTest class for sign language detection.
 #
-# This file is used in the prediction of the sign language character from the frames.
-# It is used to detect the hand landmarks and predict the sign language character from the trained model.
-# It is also used to draw the rectangle around the hand and display the predicted sign language character.
+#  This file is used in the prediction of the sign language character from the frames.
+#  It is used to detect the hand landmarks and predict the sign language character from the trained model.
+#  It is also used to draw the rectangle around the hand and display the predicted sign language character.
 
 import pickle
 import cv2
