@@ -75,7 +75,7 @@ PyObject *class_object; ///< the python class object from inference_classifier
 PyObject *instance; ///< the python instance of the class object
 QString captures_path; ///< Path to where images are saved
 QString imgOutputPath; ///< Path where camera frames are saved
-
+QString detectedText; /// < Path wehre detected texts are saved
 /**
  * @brief Camera::Camera() : ui(new Ui::Camera) constructs a new Camera:: Camera object
  *
@@ -178,12 +178,22 @@ void Camera::imageAvailable(QVideoFrame frame) {
         {
             qDebug() << "Failed to save image.";
         }
-
-        PyObject *result = PyObject_CallObject(pFunc, NULL);
-        Py_DECREF(result);
-        if(result){
-            QString resultString = QString::fromUtf8(PyUnicode_AsUTF8(result));
-            sink->setSubtitleText(resultString);
+        if(count%4 == 0){
+            PyObject *result = PyObject_CallObject(pFunc, NULL);
+            Py_DECREF(result);
+            if(result){
+                QString resultString = QString::fromUtf8(PyUnicode_AsUTF8(result));
+                if(resultString =="del" && detectedText.length() != 0){
+                    detectedText.remove(detectedText.length() - 1, 1);
+                }else{
+                    sink->setSubtitleText(resultString);
+                    if(resultString == "space"){
+                        resultString = " ";
+                    }
+                    detectedText.append(resultString);
+                    ui->translateInput->setPlainText(detectedText);
+                }
+            }
         }
     }
     count ++;
@@ -203,8 +213,8 @@ void Camera::imageAvailable(QVideoFrame frame) {
 void Camera::translateText()
 {
     TextToSpeech text2Speech;
-    QString inputText = ui->translateInput->toPlainText();
     // Translation logic
+    QString inputText = ui->translateInput->toPlainText();
     if(inputText != ""){ // if there is text to give to tts
         // QString translatedText = performTranslation(inputText);
         // ui->translationDisplay->setPlainText(translatedText);
