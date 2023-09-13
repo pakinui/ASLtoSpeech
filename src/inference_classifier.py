@@ -45,7 +45,7 @@ class PythonTest:
         self.fourcc = cv2.VideoWriter_fourcc(*'XVID')
         ## Setting opencv.
         self.out = cv2.VideoWriter('output.avi', self.fourcc, 20.0, (640, 480))
-    
+
     ## @brief Perform sign language identification on a frame.
     #
     #  This method performs sign language identification on a given frame using hand
@@ -53,9 +53,9 @@ class PythonTest:
     #
     #  @return The predicted sign language character.
     def sign_identifier(self):
-        
+
         frame = cv2.imread("../../resources/captures/output.jpg")
-        
+
         ## Declare variable data_aux.
         data_aux = []
         x_ = []
@@ -100,7 +100,7 @@ class PythonTest:
             x1 = int(min(x_) * W) - 10
             ## Declare variable y1.
             y1 = int(min(y_) * H) - 10
-             
+
             ## Declare variable x2.
             x2 = int(max(x_) * W) - 10
             ## Declare variable y2.

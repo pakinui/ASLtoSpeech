@@ -1,7 +1,7 @@
 /**
  * @file test.cpp
  * @brief Contains the unit tests for the application.
- * 
+ *
  * This file contains thorough and extensive unit tests for the application.
  */
 #include "../src/text_to_speech/ttsCall.h"
@@ -18,8 +18,8 @@
 
 /**
  * @class Test
- * @brief The Test class for our application.
- * 
+ * @brief This is the class implemented for testing of our application.
+ *
  * This class contains the unit tests for our application.
  * It contains tests for the text-to-speech functionality,
  * the Python functionality, and the GUI functionality.
