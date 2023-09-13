@@ -98,12 +98,21 @@ jobs:
         run: |
           pip install gcovr
         shell: powershell
-      - name: Tests
+      - name: Generate Code Coverage Report (Debug)
         run: |
-          ls -R 
+          mkdir build
+          cd build
+          cmake .. -GNinja  -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTING=ON -DCMAKE_CXX_FLAGS="-g"
+        working-directory: ${{github.workspace}}
+      
+      - name: Build with Ninja (Debug)
+        run: cmake --build ${{github.workspace}}/tests
+        working-directory: ${{github.workspace}}
+      - name: Tests (Debug)
+        run: |
           g++ --coverage ${{github.workspace}}/tests/test.cpp  ${{github.workspace}}/src/text_to_speech/ttsCall.cpp -o ${{github.workspace}}/coverage/coverage_info -lwinmm
-          ls -R 
           gcovr -r ${{github.workspace}} --xml -o ${{github.workspace}}/coverage/coverage_info.xml
+          working-directory: ${{github.workspace}}
       - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v2
         env:
@@ -111,5 +120,4 @@ jobs:
         with:
           files: ${{github.workspace}}/coverage/coverage_info.xml
           
-
     
