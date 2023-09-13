@@ -159,10 +159,11 @@ Camera::Camera() : ui(new Ui::Camera)
  */
 void Camera::imageAvailable(QVideoFrame frame) {
 
+    frame.setMirrored(true);
+
     if(count%9 == 0){ // Only call the Python function every 9 frames
 
         QImage image = frame.toImage();
-
         if (image.isNull())
         {
             qDebug() << "Failed to load image.";

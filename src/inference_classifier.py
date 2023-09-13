@@ -64,7 +64,7 @@ class PythonTest:
         H, W, _ = frame.shape
 
         ## Modify the cv to be fliped % set frame rgb.
-        frame = cv2.flip(frame, 1)
+#        frame = cv2.flip(frame, 1)
         ## Convert the frame to rgb.
         frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 

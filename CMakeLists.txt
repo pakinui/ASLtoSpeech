@@ -112,7 +112,7 @@ set_target_properties(345Application PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
-include(GNUInstallDirs)
+#include(GNUInstallDirs)
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 
 
