@@ -67,8 +67,8 @@ jobs:
       with:
         name: executable
         path: build/345Application.exe
-        
-  run:
+
+  code-coverage:
     needs: build
     runs-on: windows-latest
     steps: 
@@ -79,11 +79,6 @@ jobs:
       - name: Run Executable
         run: |
           ./345Application.exe
-
-  code-coverage:
-    needs: build
-    runs-on: windows-latest
-    steps: 
       - name: Checkout code
         uses: actions/checkout@v3
       # - name: Setup Python
