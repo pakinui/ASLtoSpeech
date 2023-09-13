@@ -55,7 +55,7 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake .. -GNinja -DCMAKE_BUILD_TYPE=Relese 
+        cmake .. -GNinja -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTING=ON
     - uses: ilammy/msvc-dev-cmd@v1.4.1
     - name: Build with Ninja
       run: cmake --build ./build --config Release
@@ -67,8 +67,8 @@ jobs:
       with:
         name: executable
         path: build/345Application.exe
-
-  code-coverage:
+        
+  run:
     needs: build
     runs-on: windows-latest
     steps: 
@@ -79,6 +79,11 @@ jobs:
       - name: Run Executable
         run: |
           ./345Application.exe
+
+  code-coverage:
+    needs: run
+    runs-on: windows-latest
+    steps: 
       - name: Checkout code
         uses: actions/checkout@v3
       # - name: Setup Python
@@ -97,7 +102,7 @@ jobs:
         run: |
           mkdir build
           cd build
-          cmake .. -GNinja -DBUILD_TESTING=ON -DCMAKE_CXX_FLAGS="-g"
+          cmake .. -GNinja  -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTING=ON -DCMAKE_CXX_FLAGS="-g"
         working-directory: ${{github.workspace}}
       
       - name: Build with Ninja (Debug)
@@ -115,5 +120,4 @@ jobs:
         with:
           files: ${{github.workspace}}/coverage/coverage_info.xml
           
-
     
