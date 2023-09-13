@@ -16,7 +16,7 @@ std::string currentString = ""; ///< The placeholder string that will be used in
 bool TextToSpeech::tts(const std::string& text) {
 
     // Hard coded text for testing.
-    std::string test1 = "Testing The Text to Speech Oh Please Work";
+    //std::string test1 = "Testing The Text to Speech Oh Please Work"; COMMENTED OUT FOR STATIC ANALYSIS
     currentString = text;
 
     // Construct the command using the passed text

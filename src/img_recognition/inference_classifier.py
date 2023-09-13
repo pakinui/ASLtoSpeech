@@ -30,7 +30,7 @@ hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)
 
 ## fourcc is used to create a video writer object for writing video files, specifying the codec for video compression.
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-## out is a variable used to create a VideoWriter object for writing video frames to a video file with specified settings. 
+## out is a variable used to create a VideoWriter object for writing video frames to a video file with specified settings.
 out = cv2.VideoWriter('output.avi', fourcc, 20.0, (640, 480))
 
 while True:

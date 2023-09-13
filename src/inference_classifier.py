@@ -19,7 +19,7 @@ class PythonTest:
     #
     #  This constructor initializes the necessary components for sign language detection.
     def __init__(self):
-        
+
         ## Declear the current frame of the webcam.
         self.img_path = "../../resources/captures/output.jpg"
 
