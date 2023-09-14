@@ -5,6 +5,10 @@ An innovative application that bridges the communication gap between individuals
 <p align="center">
   <img src="https://i.imgflip.com/4t8rsf.jpg" />
 </p>
+<p align="center">
+  Pretty <b>Cool</b> meme
+</p>
+
 
 ## Badges
 [![C/C++ CI](https://github.com/pakinui/cosc345/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/pakinui/cosc345/actions/workflows/c-cpp.yml)
@@ -28,21 +32,42 @@ An innovative application that bridges the communication gap between individuals
 -   [Features](#features)
 -   [Installation](#installation)
 -   [Usage](#usage)
--   [Configuration](#configuration)
 
 ## About
 
 Working together as a team, we've selected two distinct datasets to create a unique and impactful application: one that translates ASL gestures into text, and another that converts text into spoken language. This innovative combination allows us to facilitate communication across three different formats: ASL gestures, written text, and spoken words. Our primary objective is to create an inclusive environment for both the deaf and hard of hearing individuals, as well as those who may not be familiar with sign language.
 
 ## Guidelines
-1.  Source code that builds ✅ (application with TTS)
+**Alpha:**
+1.  Source code that builds :white_check_mark: (application with TTS)
 2.  Version control (e.g. git) :white_check_mark:
-3.  Continuous Integration ✅ (builds and runs application using GitHub Actions)
-4.  Tests ✅ 
-5.  Coverage reports ✅ 
+3.  Continuous Integration :white_check_mark: (builds and runs application using GitHub Actions)
+4.  Tests :white_check_mark:
+5.  Coverage reports :white_check_mark:
 6.  Static source code analysis :white_check_mark:
 7.  Documentation :white_check_mark:
 8.  Questionnaire :white_check_mark: (Can be accessed [here](https://forms.office.com/r/hqKygen2MY))
+
+**Beta:**
+1. Source code that builds (on your computer in the lab in front of me) :white_check_mark:
+2. Full working CI pipeline (see Assignment 2’s requirements) :question:
+3. Program that is nearly finished :white_check_mark:
+4. Through and extensive testing :question:
+5. Increased coverage reports :question:
+6. Fewer static analysis warnings (We have none! Thats pretty cool) :white_check_mark:
+7. More documentation :white_check_mark:
+
+**Cool Points:**
+
+We received zero marks for cool points from the Alpha.<br />
+What we believe was cool from the <b>Alpha</b> that was no acknowledged:<br />
+1. <br />
+2. <br />
+3. <br />
+For the <b>Beta</b>, we believe the following could be considered for cool points:<br />
+1. <br />
+2. <br />
+3. <br />
  
 ## Features
 
@@ -53,12 +78,12 @@ Working together as a team, we've selected two distinct datasets to create a uni
 
 **Potential/Along-the-line Features:**
 
-1.  **Record Transcript:** Optional feature to save conversation transcripts as .txt files. :x:
-2.  **Add Gestures:** Allow users to add custom gestures to expand the vocabulary of the app. :x:
-3.  **Change Voice:** Provide users with the flexibility to select and customize the synthesized voice. :question:
-4.  **Emotion Detector:** Utilize facial emotion recognition to infuse emotion into the generated speech. :x:
-5.  **Dictionary Mode:** Offer a comprehensive list of ASL gestures with an option to bookmark for future learning. :x:
-6.  **Speech to Text:** Enable voice recording for users and transform recorded speech into written text for interactive conversations. :x:
+1.  **Record Transcript:** Optional feature to save conversation transcripts as .txt files.
+2.  **Add Gestures:** Allow users to add custom gestures to expand the vocabulary of the app.
+3.  **Change Voice:** Provide users with the flexibility to select and customize the synthesized voice.
+4.  **Emotion Detector:** Utilize facial emotion recognition to infuse emotion into the generated speech.
+5.  **Dictionary Mode:** Offer a comprehensive list of ASL gestures with an option to bookmark for future learning.
+6.  **Speech to Text:** Enable voice recording for users and transform recorded speech into written text for interactive conversations.
 
 ## Installation
 
@@ -89,14 +114,11 @@ path/to/Qt/6.5.2/mxvc2019_64/bin/windeployqt.exe ./345Application.exe
 
 ## Usage
 
-Firstly, Our ASL to Speech App will access the webcam from user's devices to detect the hand object.<br />
-Once it is detected, It will then be put through the pre-trained American Sign Lanauge model to do the language detection.<br />
-Those detected sing languages will be converted to text and will be shown on the frame as a subtitle. <br />
-These sentences made out of Sign Lanauges can be converted to speech by pressing the 'Translate' button. <br />
+Firstly, our ASL to Speech App will access the webcam from user's devices to detect the hand object.<br />
+Once it is detected, it will then be put through our pre-trained American Sign Lanauge model to do the language detection.<br />
+Those detected sign language symbols will be converted to text, and said text will be shown on the frame as a subtitle. <br />
+The subtitle text will form sentences made out of Sign Lanauge Symbols displayed in the translate box, which can be converted to speech by pressing the 'Translate' button. <br />
 
-## Configuration
-
-This configuarations will be the Potential/Along-the-line Features above and will work on them during Bata. 
 
 ## Codecov Coverage Graph
 [![image](https://codecov.io/gh/pakinui/cosc345/graphs/sunburst.svg?token=GUFNGUO6M4.svg)](https://app.codecov.io/gh/pakinui/cosc345)
