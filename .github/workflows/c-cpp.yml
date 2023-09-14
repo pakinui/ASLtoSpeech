@@ -55,10 +55,10 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
+        cmake .. -GNinja -DCMAKE_BUILD_TYPE=RelWithDebInfo -DBUILD_TESTING=ON
     - uses: ilammy/msvc-dev-cmd@v1.4.1
     - name: Build with Ninja
-      run: cmake --build ./build --config Release
+      run: cmake --build ./build --config RelWithDebInfo
     - name: Test
       run: |
         ctest -C build --verbose --test-dir build
@@ -90,6 +90,12 @@ jobs:
       #   uses: actions/setup-python@v4.7.0
       #   with:
       #     python-version: 3.10
+      - name: Setup OpenCppCoverage and add to Path
+        id: setup_opencppcoverage
+        run: |
+          choco install OpenCppCoverage -y
+          echo "C:\Program Files\OpenCppCoverage" >> $env:GITHUB_PATH
+          
       - name: Install C++ compiler
         run: |
           choco install visualcpp-build-tools -y
@@ -99,16 +105,19 @@ jobs:
           pip install gcovr
         shell: powershell
       - name: Tests
+        working-directory: ${{github.workspace}}
         run: |
-          g++ --coverage ${{github.workspace}}/tests/test.cpp  ${{github.workspace}}/src/text_to_speech/ttsCall.cpp -o ${{github.workspace}}/coverage/execoverage -lwinmm
-          ${{github.workspace}}/coverage/execoverage
-          gcovr -r ${{github.workspace}} --xml -o ${{github.workspace}}/coverage/coverage_info.xml
+          "C:\Program Files\OpenCppCoverage\OpenCppCoverage.exe" --export_type cobertura:coverage\coverage1.xml build\build-cosc345-Desktop_x86_windows_msvc2022_pe_64bit-RelWithDebInfo\345Application.exe --modules build\build-cosc345-Desktop_x86_windows_msvc2022_pe_64bit-RelWithDebInfo\345Application.exe --sources=cosc345\src   
+          
+          # g++ --coverage ${{github.workspace}}/tests/test.cpp  ${{github.workspace}}/src/text_to_speech/ttsCall.cpp -o ${{github.workspace}}/coverage/execoverage -lwinmm
+          # ${{github.workspace}}/coverage/execoverage
+          # gcovr -r ${{github.workspace}} --xml -o ${{github.workspace}}/coverage/coverage_info.xml
       - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v3
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
-          files: ${{github.workspace}}/coverage/coverage_info.xml
+          files: ${{github.workspace}}/coverage/coverage1.xml
           
 
     
