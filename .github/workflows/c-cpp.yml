@@ -55,10 +55,10 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
+        cmake .. -GNinja -DCMAKE_BUILD_TYPE=RelWithDebInfo -DBUILD_TESTING=ON
     - uses: ilammy/msvc-dev-cmd@v1.4.1
     - name: Build with Ninja
-      run: cmake --build ./build --config Release
+      run: cmake --build ./build --config RelWithDebInfo
     - name: Test
       run: |
         ctest -C build --verbose --test-dir build
@@ -86,30 +86,26 @@ jobs:
     steps: 
       - name: Checkout code
         uses: actions/checkout@v3
-      # - name: Setup Python
-      #   uses: actions/setup-python@v4.7.0
-      #   with:
-      #     python-version: 3.10
-      - name: Install C++ compiler
+      - name: Download Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: executable
+      - name: Run Executable (testing to see if it works)
         run: |
-          choco install visualcpp-build-tools -y
-        shell: powershell
-      - name: Install gcovr
+            ./345Application.exe
+      - name: Setup OpenCppCoverage and add to Path
+        id: setup_opencppcoverage
         run: |
-          pip install gcovr
-        shell: powershell
+          choco install OpenCppCoverage -y
+          echo "C:\Program Files\OpenCppCoverage" >> $env:GITHUB_PATH
       - name: Tests
         run: |
-          ls -R 
-          g++ --coverage ${{github.workspace}}/tests/test.cpp  ${{github.workspace}}/src/text_to_speech/ttsCall.cpp -o ${{github.workspace}}/coverage/coverage_info -lwinmm
-          ls -R 
-          gcovr -r ${{github.workspace}} --xml -o ${{github.workspace}}/coverage/coverage_info.xml
+              & "C:\Program Files\OpenCppCoverage\OpenCppCoverage.exe" --export cobertura:coverage\coverage1.xml ./345Application.exe --modules ./345Application.exe --sources=cosc345\src   
       - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v2
         env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+            CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
-          files: ${{github.workspace}}/coverage/coverage_info.xml
-          
-
-    
+            files: coverage\coverage1.xml
+  
+      
