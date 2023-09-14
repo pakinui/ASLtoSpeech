@@ -77,11 +77,11 @@ class PythonTest:
             num_detected_hands = len(results.multi_hand_landmarks)
 
             for hand_landmarks in results.multi_hand_landmarks:
-                for i in range(len(hand_landmarks.landmark)):
+                for i, landmark in enumerate(hand_landmarks.landmark):
                     ## Declare variable x for hand_landmarks.
-                    x = hand_landmarks.landmark[i].x
+                    x = landmark.x
                     ## Declare variable y for hand_landmarks.
-                    y = hand_landmarks.landmark[i].y
+                    y = landmark.y
 
                     x_.append(x)
                     y_.append(y)

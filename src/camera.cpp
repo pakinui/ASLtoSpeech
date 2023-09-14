@@ -191,6 +191,9 @@ void Camera::imageAvailable(QVideoFrame frame) {
                     if(resultString == "space"){
                         resultString = " ";
                     }
+                    if(detectedText.size() >= 1){
+                        resultString = resultString.toLower();
+                    }
                     detectedText.append(resultString);
                     ui->translateInput->setPlainText(detectedText);
                 }
