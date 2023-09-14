@@ -186,14 +186,15 @@ void Camera::imageAvailable(QVideoFrame frame) {
                 QString resultString = QString::fromUtf8(PyUnicode_AsUTF8(result));
                 if(resultString =="del" && detectedText.length() != 0){
                     detectedText.remove(detectedText.length() - 1, 1);
-                }else{
-                    sink->setSubtitleText(resultString);
+                    ui->translateInput->setPlainText(detectedText);
+                }else if(resultString != "del"){
                     if(resultString == "space"){
                         resultString = " ";
                     }
                     detectedText.append(resultString);
                     ui->translateInput->setPlainText(detectedText);
                 }
+                sink->setSubtitleText(resultString);
             }
         }
     }
