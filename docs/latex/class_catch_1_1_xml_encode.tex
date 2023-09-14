@@ -1,0 +1,82 @@
+\hypertarget{class_catch_1_1_xml_encode}{}\doxysection{Catch\+::Xml\+Encode Class Reference}
+\label{class_catch_1_1_xml_encode}\index{Catch::XmlEncode@{Catch::XmlEncode}}
+
+
+{\ttfamily \#include $<$catch\+\_\+amalgamated.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_catch_1_1_xml_encode_a81ed50fe458d1aae3481781b4d599b7a}{For\+What}} \{ \mbox{\hyperlink{class_catch_1_1_xml_encode_a81ed50fe458d1aae3481781b4d599b7aafebf4db23809cd7925a3bdaaa4249de1}{For\+Text\+Nodes}}
+, \mbox{\hyperlink{class_catch_1_1_xml_encode_a81ed50fe458d1aae3481781b4d599b7aa3cdd995cc66ae405a4793a98db186005}{For\+Attributes}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_catch_1_1_xml_encode_ad4bf8ef6158ae9c8da0359e7d9f88327}{Xml\+Encode}} (\mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} str, \mbox{\hyperlink{class_catch_1_1_xml_encode_a81ed50fe458d1aae3481781b4d599b7a}{For\+What}} for\+What=\mbox{\hyperlink{class_catch_1_1_xml_encode_a81ed50fe458d1aae3481781b4d599b7aafebf4db23809cd7925a3bdaaa4249de1}{For\+Text\+Nodes}})
+\item 
+void \mbox{\hyperlink{class_catch_1_1_xml_encode_a030fe9de7193fcdbdc06ade38f0113ce}{encode\+To}} (std\+::ostream \&os) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_catch_1_1_xml_encode_a71a0843679dd0e5742b4e0a0cbfcb8c8}{operator$<$$<$}} (std\+::ostream \&os, \mbox{\hyperlink{class_catch_1_1_xml_encode}{Xml\+Encode}} const \&xml\+Encode)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper for XML-\/encoding text (escaping angle brackets, quotes, etc)
+
+Note\+: doesn\textquotesingle{}t take ownership of passed strings, and thus the encoded string must outlive the encoding instance. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_catch_1_1_xml_encode_a81ed50fe458d1aae3481781b4d599b7a}\label{class_catch_1_1_xml_encode_a81ed50fe458d1aae3481781b4d599b7a}} 
+\index{Catch::XmlEncode@{Catch::XmlEncode}!ForWhat@{ForWhat}}
+\index{ForWhat@{ForWhat}!Catch::XmlEncode@{Catch::XmlEncode}}
+\doxysubsubsection{\texorpdfstring{ForWhat}{ForWhat}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_catch_1_1_xml_encode_a81ed50fe458d1aae3481781b4d599b7a}{Catch\+::\+Xml\+Encode\+::\+For\+What}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ForTextNodes@{ForTextNodes}!Catch::XmlEncode@{Catch::XmlEncode}}\index{Catch::XmlEncode@{Catch::XmlEncode}!ForTextNodes@{ForTextNodes}}}\mbox{\Hypertarget{class_catch_1_1_xml_encode_a81ed50fe458d1aae3481781b4d599b7aafebf4db23809cd7925a3bdaaa4249de1}\label{class_catch_1_1_xml_encode_a81ed50fe458d1aae3481781b4d599b7aafebf4db23809cd7925a3bdaaa4249de1}} 
+For\+Text\+Nodes&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ForAttributes@{ForAttributes}!Catch::XmlEncode@{Catch::XmlEncode}}\index{Catch::XmlEncode@{Catch::XmlEncode}!ForAttributes@{ForAttributes}}}\mbox{\Hypertarget{class_catch_1_1_xml_encode_a81ed50fe458d1aae3481781b4d599b7aa3cdd995cc66ae405a4793a98db186005}\label{class_catch_1_1_xml_encode_a81ed50fe458d1aae3481781b4d599b7aa3cdd995cc66ae405a4793a98db186005}} 
+For\+Attributes&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_catch_1_1_xml_encode_ad4bf8ef6158ae9c8da0359e7d9f88327}\label{class_catch_1_1_xml_encode_ad4bf8ef6158ae9c8da0359e7d9f88327}} 
+\index{Catch::XmlEncode@{Catch::XmlEncode}!XmlEncode@{XmlEncode}}
+\index{XmlEncode@{XmlEncode}!Catch::XmlEncode@{Catch::XmlEncode}}
+\doxysubsubsection{\texorpdfstring{XmlEncode()}{XmlEncode()}}
+{\footnotesize\ttfamily Catch\+::\+Xml\+Encode\+::\+Xml\+Encode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{str,  }\item[{\mbox{\hyperlink{class_catch_1_1_xml_encode_a81ed50fe458d1aae3481781b4d599b7a}{For\+What}}}]{for\+What = {\ttfamily \mbox{\hyperlink{class_catch_1_1_xml_encode_a81ed50fe458d1aae3481781b4d599b7aafebf4db23809cd7925a3bdaaa4249de1}{For\+Text\+Nodes}}} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_catch_1_1_xml_encode_a030fe9de7193fcdbdc06ade38f0113ce}\label{class_catch_1_1_xml_encode_a030fe9de7193fcdbdc06ade38f0113ce}} 
+\index{Catch::XmlEncode@{Catch::XmlEncode}!encodeTo@{encodeTo}}
+\index{encodeTo@{encodeTo}!Catch::XmlEncode@{Catch::XmlEncode}}
+\doxysubsubsection{\texorpdfstring{encodeTo()}{encodeTo()}}
+{\footnotesize\ttfamily void Catch\+::\+Xml\+Encode\+::encode\+To (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_catch_1_1_xml_encode_a71a0843679dd0e5742b4e0a0cbfcb8c8}\label{class_catch_1_1_xml_encode_a71a0843679dd0e5742b4e0a0cbfcb8c8}} 
+\index{Catch::XmlEncode@{Catch::XmlEncode}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Catch::XmlEncode@{Catch::XmlEncode}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{\mbox{\hyperlink{class_catch_1_1_xml_encode}{Xml\+Encode}} const \&}]{xml\+Encode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8hpp}{catch\+\_\+amalgamated.\+hpp}}\item 
+tests/\mbox{\hyperlink{catch__amalgamated_8cpp}{catch\+\_\+amalgamated.\+cpp}}\end{DoxyCompactItemize}

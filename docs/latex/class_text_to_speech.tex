@@ -1,0 +1,67 @@
+\hypertarget{class_text_to_speech}{}\doxysection{Text\+To\+Speech Class Reference}
+\label{class_text_to_speech}\index{TextToSpeech@{TextToSpeech}}
+
+
+The \mbox{\hyperlink{class_text_to_speech}{Text\+To\+Speech}} class represents the text-\/to-\/speech functionality.  
+
+
+
+
+{\ttfamily \#include $<$tts\+Call.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_text_to_speech_a2e4349402ebac693a75b0ef4e5cc8939}{tts}} (const std\+::string \&text)
+\begin{DoxyCompactList}\small\item\em Converts the given text to speech using an external tool. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_text_to_speech_a05de86642ade784965907aa6028da878}{get\+String}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current string that is being converted to speech. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_text_to_speech}{Text\+To\+Speech}} class represents the text-\/to-\/speech functionality. 
+
+This class represents the text-\/to-\/speech functionality. It provides a function to convert text to speech using an external tool. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_text_to_speech_a05de86642ade784965907aa6028da878}\label{class_text_to_speech_a05de86642ade784965907aa6028da878}} 
+\index{TextToSpeech@{TextToSpeech}!getString@{getString}}
+\index{getString@{getString}!TextToSpeech@{TextToSpeech}}
+\doxysubsubsection{\texorpdfstring{getString()}{getString()}}
+{\footnotesize\ttfamily std\+::string Text\+To\+Speech\+::get\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the current string that is being converted to speech. 
+
+This function is used to return the current string that is going to be converted to speech.
+
+\begin{DoxyReturn}{Returns}
+Returns the current string that is being converted to speech. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_text_to_speech_a2e4349402ebac693a75b0ef4e5cc8939}\label{class_text_to_speech_a2e4349402ebac693a75b0ef4e5cc8939}} 
+\index{TextToSpeech@{TextToSpeech}!tts@{tts}}
+\index{tts@{tts}!TextToSpeech@{TextToSpeech}}
+\doxysubsubsection{\texorpdfstring{tts()}{tts()}}
+{\footnotesize\ttfamily bool Text\+To\+Speech\+::tts (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Converts the given text to speech using an external tool. 
+
+This function takes a text input, constructs a command using the input text, and executes the command using an external text-\/to-\/speech tool. The resulting audio can be played using appropriate audio playback functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & The input text to convert to speech. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the text-\/to-\/speech process is completed successfully, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/text\+\_\+to\+\_\+speech/\mbox{\hyperlink{tts_call_8h}{tts\+Call.\+h}}\item 
+src/text\+\_\+to\+\_\+speech/\mbox{\hyperlink{tts_call_8cpp}{tts\+Call.\+cpp}}\end{DoxyCompactItemize}
