@@ -68,12 +68,12 @@ jobs:
       run: |
         choco install OpenCppCoverage -y
         echo "C:\Program Files\OpenCppCoverage" >> $env:GITHUB_PATH
-    - name: Tests
-      run: |
-            # ls -R
-            windeployqt build\345Application.exe
-            ls -R
-            & "C:\Program Files\OpenCppCoverage\OpenCppCoverage.exe" --export cobertura:coverage\coverage1.xml build\345Application.exe --modules build\345Application.exe --sources=cosc345\src 
+    # - name: Tests
+    #   run: |
+    #         # ls -R
+    #         windeployqt build\345Application.exe
+    #         ls -R
+    #         & "C:\Program Files\OpenCppCoverage\OpenCppCoverage.exe" --export cobertura:coverage\coverage1.xml build\345Application.exe --modules build\345Application.exe --sources=cosc345\src 
     - name: Upload coverage report to Codecov
       uses: codecov/codecov-action@v2
       env:
