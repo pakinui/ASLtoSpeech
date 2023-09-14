@@ -114,7 +114,7 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
           files: |
-              ${{github.workspace}}\coverage\coverage_info.xml
-              ${{github.workspace}}\coverage\coverage_tests.xml
+              coverage\coverage_info.xml
+              coverage\coverage_tests.xml
 
               
