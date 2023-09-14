@@ -49,25 +49,25 @@ Working together as a team, we've selected two distinct datasets to create a uni
 8.  Questionnaire :white_check_mark: (Can be accessed [here](https://forms.office.com/r/hqKygen2MY))
 
 **Beta:**
-1. Source code that builds (on your computer in the lab in front of me) :white_check_mark:
-2. Full working CI pipeline (see Assignment 2’s requirements) :question:
-3. Program that is nearly finished :white_check_mark:
-4. Through and extensive testing :question:
-5. Increased coverage reports :question:
-6. Fewer static analysis warnings (We have none! Thats pretty cool) :white_check_mark:
-7. More documentation :white_check_mark:
+1.  Source code that builds (on your computer in the lab in front of me) :white_check_mark:
+2.  Full working CI pipeline (see Assignment 2’s requirements) :question:
+3.  Program that is nearly finished :white_check_mark:
+4.  Through and extensive testing :question:
+5.  Increased coverage reports :question:
+6.  Fewer static analysis warnings (We have none! Thats pretty cool) :white_check_mark:
+7.  More documentation :white_check_mark:
 
 **Cool Points:**
 
 We received zero marks for cool points from the Alpha.<br />
 What we believe was cool from the <b>Alpha</b> that was no acknowledged:<br />
-1. <br />
-2. <br />
-3. <br />
+1.  <br />
+2.  <br />
+3.  <br />
 For the <b>Beta</b>, we believe the following could be considered for cool points:<br />
-1. <br />
-2. <br />
-3. <br />
+1.  <br />
+2.  <br />
+3.  <br />
  
 ## Features
 
