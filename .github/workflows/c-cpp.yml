@@ -107,17 +107,17 @@ jobs:
       - name: Tests
         working-directory: ${{github.workspace}}
         run: |
-          "C:\Program Files\OpenCppCoverage\OpenCppCoverage.exe" --export_type cobertura:coverage\coverage1.xml build\build-cosc345-Desktop_x86_windows_msvc2022_pe_64bit-RelWithDebInfo\345Application.exe --modules build\build-cosc345-Desktop_x86_windows_msvc2022_pe_64bit-RelWithDebInfo\345Application.exe --sources=cosc345\src   
+          #"C:\Program Files\OpenCppCoverage\OpenCppCoverage.exe" --export_type cobertura:coverage\coverage1.xml build\build-cosc345-Desktop_x86_windows_msvc2022_pe_64bit-RelWithDebInfo\345Application.exe --modules build\build-cosc345-Desktop_x86_windows_msvc2022_pe_64bit-RelWithDebInfo\345Application.exe --sources=cosc345\src   
           
-          # g++ --coverage ${{github.workspace}}/tests/test.cpp  ${{github.workspace}}/src/text_to_speech/ttsCall.cpp -o ${{github.workspace}}/coverage/execoverage -lwinmm
-          # ${{github.workspace}}/coverage/execoverage
-          # gcovr -r ${{github.workspace}} --xml -o ${{github.workspace}}/coverage/coverage_info.xml
+          g++ --coverage ${{github.workspace}}/tests/test.cpp  ${{github.workspace}}/src/text_to_speech/ttsCall.cpp -o ${{github.workspace}}/coverage/execoverage -lwinmm
+          ${{github.workspace}}/coverage/execoverage
+          gcovr -r ${{github.workspace}} --xml -o ${{github.workspace}}/coverage/coverage_info.xml
       - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v3
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
-          files: ${{github.workspace}}/coverage/coverage1.xml
+          files: ${{github.workspace}}/coverage/coverage_info.xml
           
 
     
