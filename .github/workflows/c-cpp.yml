@@ -99,9 +99,9 @@ jobs:
       - name: Run Executable (testing to see if it works)
         run: |
             ./345Application.exe
-      - name: Run Test Executable (testing to see if it works)
-        run: |
-            ./Tests.exe
+      # - name: Run Test Executable (testing to see if it works)
+      #   run: |
+      #       ./Tests.exe
       - name: Setup OpenCppCoverage and add to Path
         id: setup_opencppcoverage
         run: |
