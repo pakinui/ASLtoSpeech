@@ -77,7 +77,7 @@ class PythonTest:
             num_detected_hands = len(results.multi_hand_landmarks)
 
             for hand_landmarks in results.multi_hand_landmarks:
-                for i, landmark in enumerate(hand_landmarks.landmark):
+                for _, landmark in enumerate(hand_landmarks.landmark):
                     ## Declare variable x for hand_landmarks.
                     x = landmark.x
                     ## Declare variable y for hand_landmarks.
@@ -86,7 +86,7 @@ class PythonTest:
                     x_.append(x)
                     y_.append(y)
 
-                for i, landmark in enumerate(hand_landmarks.landmark):
+                for _, landmark in enumerate(hand_landmarks.landmark):
                     x = landmark.x
                     y = landmark.y
                     data_aux.append(x - min(x_))
