@@ -115,8 +115,9 @@ jobs:
       - name: Tests
         #working-directory: ${{github.workspace}}
         run: |
-              ls -R
-              & "C:\Program Files\OpenCppCoverage\OpenCppCoverage.exe" --export cobertura:coverage\coverage1.xml .\345Application.exe --modules .\345Application.exe --sources=cosc345\src   
+              ls
+              & "C:\Program Files\OpenCppCoverage\OpenCppCoverage.exe" --export cobertura:coverage\coverage1.xml 345Application.exe --modules 345Application.exe --sources=cosc345\src   
+              & "C:\Program Files\OpenCppCoverage\OpenCppCoverage.exe" --export cobertura:coverage\coverage2.xml executable --modules executable --sources=cosc345\src   
             # ls -R
             # g++ --coverage tests/test.cpp src/text_to_speech/ttscall.cpp -o coverage1 -lwinmm
             # ./coverage1
