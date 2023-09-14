@@ -31,6 +31,7 @@ class Test: public QObject
     private Q_SLOTS:
     void testPython();
     void importScript();
+    void testTTS();
 };
 
 void Test::testPython(){
@@ -75,6 +76,14 @@ void Test::importScript()
 
 
     Py_Finalize();
+}
+
+void Test::testTTS(){
+    TextToSpeech test;
+
+    test.tts("testing");
+
+    QVERIFY(test.getString() == "testing");
 }
 
 //TEST_CASE( "speech.wav file created", "[file_check]" ) {
