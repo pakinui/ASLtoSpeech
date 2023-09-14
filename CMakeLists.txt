@@ -139,6 +139,30 @@ add_custom_target(move_file
 # Add a dependency on the custom target to ensure the file is moved after the build
 add_dependencies(345Application move_file)
 
+message("1 ${CMAKE_SOURCE_DIR} 2 ${CMAKE_BINARY_DIR}")
+
+if(CMAKE_BUILD_TYPE STREQUAL "RelWithDebInfo")
+    if(BUILD_TESTING)
+        add_custom_target(coverage_report_tests
+            COMMAND powershell -ExecutionPolicy Bypass -File "${CMAKE_SOURCE_DIR}/coverage/generate_coverage_tests.ps1"
+            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+            COMMENT "Generating code coverage report for tests"
+        )
+        add_dependencies(345Application coverage_report_tests)
+    endif()
+    add_custom_target(coverage_report
+        COMMAND powershell -ExecutionPolicy Bypass -File "${CMAKE_SOURCE_DIR}/coverage/generate_coverage.ps1"
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+        COMMENT "Generating code coverage report"
+    )
+    add_dependencies(345Application coverage_report)
+else()
+    message(WARNING "Code coverage report generation is only supported in RelWithDebInfo build type.")
+endif()
+
+
+
+
 ##################################################################################
 # Build Testing below
 ##################################################################################

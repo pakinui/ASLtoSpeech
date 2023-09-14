@@ -12,6 +12,9 @@ src/text_to_speech/*.wav
 *.wav
 .vs
 out/
+*.log
+CMake*.json
+.codedocs
 # This file is used to ignore files which are generated
 # ----------------------------------------------------------------------------
 

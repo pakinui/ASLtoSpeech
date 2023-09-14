@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<coverage line-rate="0.3651685393258427" branch-rate="0" complexity="0" branches-covered="0" branches-valid="0" timestamp="1694727903" lines-covered="65" lines-valid="178" version="0">
+  <sources>
+    <source>C:</source>
+  </sources>
+  <packages>
+    <package name="C:\Users\poppy\Documents\GitHub\cosc345\build\build-cosc345-Desktop_x86_windows_msvc2022_pe_64bit-RelWithDebInfo\345Application.exe" line-rate="0.3651685393258427" branch-rate="0" complexity="0">
+      <classes>
+        <class name="camera.cpp" filename="Users\poppy\Documents\GitHub\cosc345\src\camera.cpp" line-rate="0.36708860759493672" branch-rate="0" complexity="0">
+          <methods/>
+          <lines>
+            <line number="73" hits="1"/>
+            <line number="76" hits="1"/>
+            <line number="77" hits="1"/>
+            <line number="78" hits="1"/>
+            <line number="86" hits="1"/>
+            <line number="87" hits="1"/>
+            <line number="89" hits="1"/>
+            <line number="92" hits="1"/>
+            <line number="95" hits="1"/>
+            <line number="97" hits="1"/>
+            <line number="98" hits="1"/>
+            <line number="100" hits="1"/>
+            <line number="101" hits="1"/>
+            <line number="103" hits="1"/>
+            <line number="104" hits="1"/>
+            <line number="107" hits="1"/>
+            <line number="108" hits="1"/>
+            <line number="109" hits="1"/>
+            <line number="110" hits="1"/>
+            <line number="111" hits="1"/>
+            <line number="113" hits="1"/>
+            <line number="114" hits="1"/>
+            <line number="116" hits="1"/>
+            <line number="117" hits="1"/>
+            <line number="118" hits="1"/>
+            <line number="121" hits="1"/>
+            <line number="122" hits="0"/>
+            <line number="123" hits="0"/>
+            <line number="126" hits="0"/>
+            <line number="127" hits="0"/>
+            <line number="128" hits="0"/>
+            <line number="131" hits="0"/>
+            <line number="132" hits="0"/>
+            <line number="133" hits="0"/>
+            <line number="136" hits="0"/>
+            <line number="137" hits="0"/>
+            <line number="138" hits="0"/>
+            <line number="145" hits="0"/>
+            <line number="147" hits="0"/>
+            <line number="160" hits="0"/>
+            <line number="162" hits="0"/>
+            <line number="164" hits="0"/>
+            <line number="166" hits="0"/>
+            <line number="167" hits="0"/>
+            <line number="169" hits="0"/>
+            <line number="172" hits="0"/>
+            <line number="174" hits="0"/>
+            <line number="175" hits="0"/>
+            <line number="176" hits="0"/>
+            <line number="178" hits="0"/>
+            <line number="180" hits="0"/>
+            <line number="182" hits="0"/>
+            <line number="183" hits="0"/>
+            <line number="184" hits="0"/>
+            <line number="186" hits="0"/>
+            <line number="187" hits="0"/>
+            <line number="188" hits="0"/>
+            <line number="189" hits="0"/>
+            <line number="190" hits="0"/>
+            <line number="191" hits="0"/>
+            <line number="192" hits="0"/>
+            <line number="194" hits="0"/>
+            <line number="195" hits="0"/>
+            <line number="197" hits="0"/>
+            <line number="200" hits="0"/>
+            <line number="201" hits="0"/>
+            <line number="203" hits="0"/>
+            <line number="204" hits="0"/>
+            <line number="205" hits="0"/>
+            <line number="219" hits="0"/>
+            <line number="222" hits="0"/>
+            <line number="223" hits="0"/>
+            <line number="228" hits="0"/>
+            <line number="232" hits="0"/>
+            <line number="237" hits="0"/>
+            <line number="239" hits="0"/>
+            <line number="240" hits="0"/>
+            <line number="241" hits="0"/>
+            <line number="243" hits="0"/>
+            <line number="258" hits="0"/>
+            <line number="259" hits="0"/>
+            <line number="260" hits="0"/>
+            <line number="261" hits="0"/>
+            <line number="276" hits="0"/>
+            <line number="277" hits="0"/>
+            <line number="278" hits="0"/>
+            <line number="280" hits="0"/>
+            <line number="281" hits="0"/>
+            <line number="283" hits="0"/>
+            <line number="284" hits="0"/>
+            <line number="295" hits="0"/>
+            <line number="296" hits="0"/>
+            <line number="310" hits="0"/>
+            <line number="311" hits="0"/>
+            <line number="321" hits="0"/>
+            <line number="322" hits="0"/>
+            <line number="323" hits="0"/>
+            <line number="333" hits="0"/>
+            <line number="336" hits="0"/>
+            <line number="337" hits="0"/>
+            <line number="338" hits="0"/>
+            <line number="348" hits="0"/>
+            <line number="349" hits="0"/>
+            <line number="351" hits="0"/>
+            <line number="352" hits="0"/>
+            <line number="362" hits="0"/>
+            <line number="363" hits="0"/>
+            <line number="365" hits="0"/>
+            <line number="366" hits="0"/>
+            <line number="367" hits="0"/>
+            <line number="370" hits="0"/>
+            <line number="371" hits="0"/>
+            <line number="373" hits="0"/>
+            <line number="383" hits="1"/>
+            <line number="384" hits="1"/>
+            <line number="386" hits="1"/>
+            <line number="387" hits="1"/>
+            <line number="388" hits="1"/>
+            <line number="391" hits="1"/>
+            <line number="392" hits="1"/>
+            <line number="393" hits="1"/>
+            <line number="394" hits="1"/>
+            <line number="397" hits="1"/>
+            <line number="401" hits="1"/>
+            <line number="404" hits="1"/>
+            <line number="407" hits="1"/>
+            <line number="409" hits="1"/>
+            <line number="410" hits="1"/>
+            <line number="411" hits="1"/>
+            <line number="413" hits="1"/>
+            <line number="414" hits="1"/>
+            <line number="415" hits="1"/>
+            <line number="421" hits="1"/>
+            <line number="422" hits="1"/>
+            <line number="431" hits="0"/>
+            <line number="432" hits="0"/>
+            <line number="433" hits="0"/>
+            <line number="434" hits="0"/>
+            <line number="446" hits="0"/>
+            <line number="453" hits="0"/>
+            <line number="455" hits="0"/>
+            <line number="456" hits="0"/>
+            <line number="459" hits="0"/>
+            <line number="461" hits="0"/>
+            <line number="466" hits="0"/>
+            <line number="468" hits="0"/>
+            <line number="469" hits="0"/>
+            <line number="478" hits="1"/>
+            <line number="479" hits="1"/>
+            <line number="485" hits="1"/>
+            <line number="486" hits="1"/>
+            <line number="488" hits="1"/>
+            <line number="489" hits="1"/>
+            <line number="490" hits="1"/>
+            <line number="491" hits="1"/>
+            <line number="492" hits="1"/>
+            <line number="494" hits="1"/>
+            <line number="496" hits="1"/>
+          </lines>
+        </class>
+        <class name="camera.h" filename="Users\poppy\Documents\GitHub\cosc345\src\camera.h" line-rate="1" branch-rate="0" complexity="0">
+          <methods/>
+          <lines>
+            <line number="74" hits="1"/>
+            <line number="90" hits="1"/>
+            <line number="92" hits="1"/>
+          </lines>
+        </class>
+        <class name="main.cpp" filename="Users\poppy\Documents\GitHub\cosc345\src\main.cpp" line-rate="0.5" branch-rate="0" complexity="0">
+          <methods/>
+          <lines>
+            <line number="33" hits="1"/>
+            <line number="36" hits="1"/>
+            <line number="39" hits="1"/>
+            <line number="40" hits="0"/>
+            <line number="43" hits="0"/>
+            <line number="44" hits="0"/>
+          </lines>
+        </class>
+        <class name="ttsCall.cpp" filename="Users\poppy\Documents\GitHub\cosc345\src\text_to_speech\ttsCall.cpp" line-rate="0.090909090909090912" branch-rate="0" complexity="0">
+          <methods/>
+          <lines>
+            <line number="13" hits="1"/>
+            <line number="16" hits="0"/>
+            <line number="20" hits="0"/>
+            <line number="23" hits="0"/>
+            <line number="25" hits="0"/>
+            <line number="28" hits="0"/>
+            <line number="29" hits="0"/>
+            <line number="30" hits="0"/>
+            <line number="34" hits="0"/>
+            <line number="38" hits="0"/>
+            <line number="39" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>
