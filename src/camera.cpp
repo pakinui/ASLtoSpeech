@@ -232,6 +232,9 @@ void Camera::translateText()
         // Store translation in history data structure
         // addToHistory(inputText, translatedText);
         addToHistory(inputText, inputText);
+
+        detectedText = "";
+        ui->translateInput->setPlainText(detectedText);
     }
 
 }
