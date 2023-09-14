@@ -1,3 +1,4 @@
+
 name: C/C++ CI
 
 on:
@@ -59,62 +60,25 @@ jobs:
     - uses: ilammy/msvc-dev-cmd@v1.4.1
     - name: Build with Ninja
       run: cmake --build ./build --config RelWithDebInfo
+    - name: Test
+      run: |
+        ctest -C build --verbose --test-dir build
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
         name: executable
         path: build/345Application.exe
-    - name: Upload Test Artifact
-      uses: actions/upload-artifact@v3
+    - name: Setup OpenCppCoverage and add to Path
+      id: setup_opencppcoverage
+      run: |
+        choco install OpenCppCoverage -y
+        echo "C:\Program Files\OpenCppCoverage" >> $env:GITHUB_PATH
+    - name: Tests
+      run: |
+            & "C:\Program Files\OpenCppCoverage\OpenCppCoverage.exe" --export cobertura:coverage\coverage1.xml 345Application.exe --modules 345Application.exe --sources=cosc345\src 
+    - name: Upload coverage report to Codecov
+      uses: codecov/codecov-action@v2
+      env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       with:
-        name: test-executable
-        path: build/Tests.exe
-        
-  run:
-    needs: build
-    runs-on: windows-latest
-    steps: 
-      - name: Download Artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: executable
-      - name: Run Executable
-        run: |
-          ./345Application.exe
-
-  code-coverage:
-    needs: run
-    runs-on: windows-latest
-    steps: 
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Download Artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: executable
-      - name: Download Test Executable
-        uses: actions/download-artifact@v3
-        with:
-          name: test-executable
-      - name: Run Executable (testing to see if it works)
-        run: |
-            ./345Application.exe
-      # - name: Run Test Executable (testing to see if it works)
-      #   run: |
-      #       ./Tests.exe
-      - name: Setup OpenCppCoverage and add to Path
-        id: setup_opencppcoverage
-        run: |
-          choco install OpenCppCoverage -y
-          echo "C:\Program Files\OpenCppCoverage" >> $env:GITHUB_PATH
-      - name: Tests
-        run: |
-              & "C:\Program Files\OpenCppCoverage\OpenCppCoverage.exe" --export cobertura:coverage\coverage1.xml 345Application.exe --modules=D:\a\cosc345\cosc345 --sources=cosc345\src 
-      - name: Upload coverage report to Codecov
-        uses: codecov/codecov-action@v2
-        env:
-            CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-        with:
-            files: coverage\coverage1.xml
-  
-      
+          files: coverage\coverage1.xml
