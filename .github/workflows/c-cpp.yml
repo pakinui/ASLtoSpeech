@@ -100,7 +100,7 @@ jobs:
           echo "C:\Program Files\OpenCppCoverage" >> $env:GITHUB_PATH
       - name: Tests
         run: |
-              & "C:\Program Files\OpenCppCoverage\OpenCppCoverage.exe" --export cobertura:coverage\coverage1.xml ./345Application.exe --modules ./345Application.exe --sources=cosc345\src   
+              & "C:\Program Files\OpenCppCoverage\OpenCppCoverage.exe" --export cobertura:coverage\coverage1.xml ./345Application.exe --modules ./345Application.exe --sources=cosc345 
       - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v2
         env:
