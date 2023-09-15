@@ -73,7 +73,7 @@ jobs:
       env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       with:
-          files: coverage\coverage_info.xml
+          files: coverage\coverage_tests.xml
               
               #coverage\coverage_tests.xml
     
