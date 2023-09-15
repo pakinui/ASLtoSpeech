@@ -63,7 +63,9 @@ We received zero marks for cool points from the Alpha.<br />
 What we believe was cool from the <b>Alpha</b> that was no acknowledged:<br />
 1.  GitHub integrated through using a webhook in Discord<br />
 2.  Artifact generation<br />
-A more detailed document with evidence can be found [here](https://github.com/pakinui/cosc345/blob/main/PDFs/PotentialAlphaCoolPoints.pdf)<br /> 
+
+A more detailed document with evidence can be found [here](https://github.com/pakinui/cosc345/blob/main/PDFs/PotentialAlphaCoolPoints.pdf)<br />
+
 For the <b>Beta</b>, we believe the following could be considered for cool points:<br />
 1.  <br />
 2.  <br />
