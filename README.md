@@ -59,7 +59,7 @@ Working together as a team, we've selected two distinct datasets to create a uni
 
 **Cool Points:**
 
-We received zero marks for cool points from the Alpha.<br />
+We received zero marks for cool points from the <b>Alpha</b>.<br />
 What we believe was cool from the <b>Alpha</b> that was no acknowledged:<br />
 1.  GitHub integrated through using a webhook in Discord<br />
 2.  Artifact generation<br />
@@ -67,9 +67,8 @@ What we believe was cool from the <b>Alpha</b> that was no acknowledged:<br />
 A more detailed document with evidence can be found [here](https://github.com/pakinui/cosc345/blob/main/PDFs/PotentialAlphaCoolPoints.pdf)<br />
 
 For the <b>Beta</b>, we believe the following could be considered for cool points:<br />
-1.  <br />
+1.  A retrospective, [here](https://github.com/pakinui/cosc345/blob/main/PDFs/retrospective%26actions.png), along with the follow up to it, [here](https://github.com/pakinui/cosc345/blob/main/PDFs/retrospective_follow_up.png)<br />
 2.  <br />
-3.  <br />
  
 ## Features
 
@@ -94,6 +93,7 @@ Python 3.11.0<br />
 QT 6.5.2<br />
 QT MSVC 2019 64-bit<br />
 QT Additional Library QT multimedia<br />
+espeak-ng<br />
 
 ```bash
 pip install python-dev-tools
