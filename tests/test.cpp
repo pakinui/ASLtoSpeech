@@ -5,6 +5,8 @@
  * This file contains thorough and extensive unit tests for the application.
  */
 #include "../src/text_to_speech/ttsCall.h"
+#include "../src/camera.h"
+//#include "../src/camera.cpp"
 #include <QTest>
 #include <QString>
 #include <Python.h>
@@ -29,9 +31,13 @@ class Test: public QObject
     Q_OBJECT
     QString currentPath = QDir::currentPath();
     private Q_SLOTS:
-    void testPython();
-    void importScript();
-    void testTTS();
+        void testPython();
+        void importScript();
+        void testTTS();
+        //void testImageAvailable();
+        void testCameraStart();
+        void testCameraStop();
+
 };
 
 void Test::testPython(){
@@ -116,6 +122,34 @@ void Test::testTTS(){
 //    }
 //    REQUIRE(true);
 //}
+//void Test::testImageAvailable() {
+//    Camera camera;
+
+////    //QSignalSpy spy(&camera, &Camera::imageAvailable);
+
+//    //bool test = camera.getImageAvailable();
+//    //bool test = true;
+
+//    QVERIFY(test);
+//}
+
+void Test::testCameraStart(){
+    Camera camera;
+    camera.startCamera();
+    bool active = camera.getCameraActive();
+    //bool active = true;
+    QVERIFY(active);
+    //QVERIFY(true);
+
+}
+
+void Test::testCameraStop(){
+    Camera camera;
+    camera.stopCamera();
+    bool active = camera.getCameraActive();
+    QVERIFY(!active);
+
+}
 
 
 /// These two lines must be at the very bottom.

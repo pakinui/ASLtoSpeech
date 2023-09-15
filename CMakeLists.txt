@@ -53,6 +53,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         src/inference_classifier.py
+
 )
 
 
@@ -70,9 +71,12 @@ else()
     else()
         add_executable(345Application
             ${PROJECT_SOURCES}
+
         )
     endif()
 endif()
+
+
 
 target_link_libraries(345Application PRIVATE
     Qt6::Widgets
@@ -153,13 +157,14 @@ if(CMAKE_BUILD_TYPE STREQUAL "RelWithDebInfo")
                 COMMENT "Generating code coverage report for tests"
             )
             add_dependencies(345Application coverage_report_tests)
+        else()
+#            add_custom_target(coverage_report
+#                COMMAND powershell -ExecutionPolicy Bypass -File "${CMAKE_SOURCE_DIR}/coverage/generate_coverage.ps1"
+#                WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+#                COMMENT "Generating code coverage report"
+#            )
+#            add_dependencies(345Application coverage_report)
         endif()
-        add_custom_target(coverage_report
-            COMMAND powershell -ExecutionPolicy Bypass -File "${CMAKE_SOURCE_DIR}/coverage/generate_coverage.ps1"
-            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-            COMMENT "Generating code coverage report"
-        )
-        add_dependencies(345Application coverage_report)
     endif()
 else()
     message(WARNING "Code coverage report generation is only supported in RelWithDebInfo build type.")
@@ -174,7 +179,12 @@ endif()
 
 if(BUILD_TESTING)
 
-    add_executable(Tests "tests/test.cpp"  "src/text_to_speech/ttscall.cpp")
+    add_executable(Tests
+        tests/test.cpp
+        src/text_to_speech/ttscall.cpp
+        src/camera.cpp
+        #tests/cameraTest.cpp
+    )
 
     find_package(Qt6 REQUIRED COMPONENTS Test)
     find_package(Python REQUIRED Development)

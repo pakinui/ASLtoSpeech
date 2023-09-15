@@ -68,7 +68,7 @@ public:
     Camera();
 
 
-private:
+//private:
     Ui::Camera *ui;
     QList<QPair<QString, QString>> history; ///< list to store history of translations
     QActionGroup *videoDevicesGroup = nullptr; ///< group of video devices
@@ -93,7 +93,7 @@ private:
 
 public Q_SLOTS:
 
-private Q_SLOTS:
+//private Q_SLOTS:
     /**
      * @brief setupMenus
      *
@@ -197,6 +197,9 @@ private Q_SLOTS:
      * This checks the frame for a recognised ASL sign.
      */
     void imageAvailable(QVideoFrame frame);
+
+    bool getImageAvailable();
+    bool getCameraActive();
 };
 
 #endif // CAMERA_H

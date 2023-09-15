@@ -1,5 +1,6 @@
 & 'C:\Program Files\OpenCppCoverage\OpenCppCoverage.exe' `
     --export_type cobertura:coverage\coverage_info.xml `
-    build\build-cosc345-Desktop_x86_windows_msvc2022_pe_64bit-RelWithDebInfo\345Application.exe `
-    --modules build\build-cosc345-Desktop_x86_windows_msvc2022_pe_64bit-RelWithDebInfo\345Application.exe `
-    --sources=cosc345\src
+    build\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-RelWithDebInfo\345Application.exe `
+    --modules build\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-RelWithDebInfo\Tests.exe `
+    --modules build\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-RelWithDebInfo\345Application.exe `
+    --sources=cosc345\tests --sources=cosc345\src 

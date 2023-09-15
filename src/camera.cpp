@@ -76,6 +76,7 @@ PyObject *instance; ///< the python instance of the class object
 QString captures_path; ///< Path to where images are saved
 QString imgOutputPath; ///< Path where camera frames are saved
 QString detectedText; /// < Path wehre detected texts are saved
+bool cameraActive;
 /**
  * @brief Camera::Camera() : ui(new Ui::Camera) constructs a new Camera:: Camera object
  *
@@ -202,6 +203,11 @@ void Camera::imageAvailable(QVideoFrame frame) {
         }
     }
     count ++;
+}
+
+bool Camera::getImageAvailable(){
+    bool test = true;
+    return test;
 }
 
 /**
@@ -332,7 +338,7 @@ void Camera::updateCameraDevice(QAction * action)
 void Camera::startCamera()
 {
     //qDebug() << "starting camera";
-
+    cameraActive = true;
     m_camera.start();
     Py_Initialize();
 }
@@ -346,6 +352,7 @@ void Camera::startCamera()
  */
 void Camera::stopCamera()
 {
+    cameraActive = false;
     m_camera.stop();
     //qDebug() << "stopping camera";
     Py_Finalize(); // Stop the Python
@@ -493,4 +500,10 @@ void Camera::updateCameras()
 
         devicesMenu->addAction(videoDeviceAction);
     }
+}
+
+bool Camera::getCameraActive(){
+
+    return cameraActive;
+
 }
