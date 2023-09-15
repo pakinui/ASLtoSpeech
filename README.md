@@ -50,10 +50,10 @@ Working together as a team, we've selected two distinct datasets to create a uni
 
 **Beta:**
 1.  Source code that builds (on your computer in the lab in front of me) :white_check_mark:
-2.  Full working CI pipeline (see Assignment 2’s requirements) :question:
+2.  Full working CI pipeline (see Assignment 2’s requirements) :white_check_mark:
 3.  Program that is nearly finished :white_check_mark:
-4.  Through and extensive testing :question:
-5.  Increased coverage reports :question:
+4.  Through and extensive testing :white_check_mark:
+5.  Increased coverage reports :white_check_mark:
 6.  Fewer static analysis warnings (We have none! Thats pretty cool) :white_check_mark:
 7.  More documentation :white_check_mark:
 
