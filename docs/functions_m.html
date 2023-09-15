@@ -65,8 +65,20 @@ $(function() {
 <div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
 <h3><a id="index_m"></a>- m -</h3><ul>
+<li>m_applicationExiting
+: <a class="el" href="class_camera.html#aea0ad7dccd075af211374af6b46ba00f">Camera</a>
+</li>
+<li>m_audioInput
+: <a class="el" href="class_camera.html#ad99d3b7e291d41aabfe908e2ffeaa7e6">Camera</a>
+</li>
 <li>m_cachedToString
 : <a class="el" href="class_catch_1_1_matchers_1_1_matcher_untyped_base.html#ae4b0918ff4b95788748d27185c8a901f">Catch::Matchers::MatcherUntypedBase</a>
+</li>
+<li>m_camera
+: <a class="el" href="class_camera.html#a1618d9ca6920427196bdfd4e7150d848">Camera</a>
+</li>
+<li>m_captureSession
+: <a class="el" href="class_camera.html#a3415b282ebc01bf5c4fa605810843876">Camera</a>
 </li>
 <li>m_caseSensitivity
 : <a class="el" href="struct_catch_1_1_matchers_1_1_cased_string.html#a774357b969c4b39a1a069e561c67fb26">Catch::Matchers::CasedString</a>
@@ -92,16 +104,28 @@ $(function() {
 <li>m_description
 : <a class="el" href="class_catch_1_1_clara_1_1_detail_1_1_parser_ref_impl.html#aba77e6fe7c0455126f4c86bbd3ee59e3">Catch::Clara::Detail::ParserRefImpl&lt; DerivedT &gt;</a>
 </li>
+<li>m_devices
+: <a class="el" href="class_camera.html#a1926e80692c961d0228e0ed3711c2247">Camera</a>
+</li>
+<li>m_doImageCapture
+: <a class="el" href="class_camera.html#ab18b652d297f34df5c81b04afecc96db">Camera</a>
+</li>
 <li>m_errorMessage
 : <a class="el" href="class_catch_1_1_clara_1_1_detail_1_1_basic_result.html#a84c9409f5c91ba6794ea9ea87a38fdf8">Catch::Clara::Detail::BasicResult&lt; T &gt;</a>
 </li>
 <li>m_hint
 : <a class="el" href="class_catch_1_1_clara_1_1_detail_1_1_parser_ref_impl.html#a3553f58bdf9553505824b1218c4520e1">Catch::Clara::Detail::ParserRefImpl&lt; DerivedT &gt;</a>
 </li>
+<li>m_imageCapture
+: <a class="el" href="class_camera.html#ab2529c186e9dbb6acb309326adbad604">Camera</a>
+</li>
 <li>m_info
 : <a class="el" href="class_catch_1_1_assertion_result.html#a3e7236f73a51d6fc8bb9dfdefcee7772">Catch::AssertionResult</a>
 , <a class="el" href="struct_catch_1_1_message_builder.html#a979f1c2b36d78f80ee275bfa5ba0209f">Catch::MessageBuilder</a>
 , <a class="el" href="class_catch_1_1_scoped_message.html#ae6e1476f389cc6e1586f033b3747b27b">Catch::ScopedMessage</a>
+</li>
+<li>m_isCapturingImage
+: <a class="el" href="class_camera.html#a0000d24b4c817764b20b058913efdd80">Camera</a>
 </li>
 <li>m_lambda
 : <a class="el" href="struct_catch_1_1_clara_1_1_detail_1_1_bound_flag_lambda.html#a21acbc8d514b48c2f1fb2c9073666ae1">Catch::Clara::Detail::BoundFlagLambda&lt; L &gt;</a>
@@ -110,6 +134,9 @@ $(function() {
 <li>m_matchers
 : <a class="el" href="class_catch_1_1_matchers_1_1_detail_1_1_match_all_of_generic.html#aba931a43e2ccf87dae4c70c2f2826586">Catch::Matchers::Detail::MatchAllOfGeneric&lt; MatcherTs &gt;</a>
 , <a class="el" href="class_catch_1_1_matchers_1_1_detail_1_1_match_any_of_generic.html#a829150c8155f03b11b27e1e2e5e155dc">Catch::Matchers::Detail::MatchAnyOfGeneric&lt; MatcherTs &gt;</a>
+</li>
+<li>m_mediaRecorder
+: <a class="el" href="class_camera.html#a8e8878ec9fdf2706f475e0fe9f504263">Camera</a>
 </li>
 <li>m_moved
 : <a class="el" href="class_catch_1_1_scoped_message.html#a4fe5607c1f7407240a0da8405b1c12e7">Catch::ScopedMessage</a>
@@ -246,7 +273,7 @@ $(function() {
 , <a class="el" href="class_catch_1_1_matchers_1_1_within_ulps_matcher.html#a1ee441c69c751dc50e27417df359f815">Catch::Matchers::WithinUlpsMatcher</a>
 </li>
 <li>MatchAllOf()
-: <a class="el" href="class_catch_1_1_matchers_1_1_detail_1_1_match_all_of.html#a629d0bb9c57a092ee25628ef3e4eaeff">Catch::Matchers::Detail::MatchAllOf&lt; ArgT &gt;</a>
+: <a class="el" href="class_catch_1_1_matchers_1_1_detail_1_1_match_all_of.html#ad57f390bf68a6cdc8696dfae280a8c8d">Catch::Matchers::Detail::MatchAllOf&lt; ArgT &gt;</a>
 </li>
 <li>MatchAllOfGeneric()
 : <a class="el" href="class_catch_1_1_matchers_1_1_detail_1_1_match_all_of_generic.html#a50e7245f0b57c7490f4c6e71d79fa430">Catch::Matchers::Detail::MatchAllOfGeneric&lt; MatcherTs &gt;</a>
@@ -255,22 +282,20 @@ $(function() {
 : <a class="el" href="class_catch_1_1_matchers_1_1_detail_1_1_match_any_of.html#a8c376d9b2e4b43da97888346e3b57060">Catch::Matchers::Detail::MatchAnyOf&lt; ArgT &gt;</a>
 </li>
 <li>MatchAnyOfGeneric()
-: <a class="el" href="class_catch_1_1_matchers_1_1_detail_1_1_match_any_of_generic.html#a64f09a42a9a078caae810bee49b0f6ee">Catch::Matchers::Detail::MatchAnyOfGeneric&lt; MatcherTs &gt;</a>
+: <a class="el" href="class_catch_1_1_matchers_1_1_detail_1_1_match_any_of_generic.html#af59512bb8168e72f23adb757f93ccc49">Catch::Matchers::Detail::MatchAnyOfGeneric&lt; MatcherTs &gt;</a>
 </li>
 <li>MatcherGenericBase()
-: <a class="el" href="class_catch_1_1_matchers_1_1_matcher_generic_base.html#a2a7b13171a7b7ba7e3c5287ceaecc425">Catch::Matchers::MatcherGenericBase</a>
+: <a class="el" href="class_catch_1_1_matchers_1_1_matcher_generic_base.html#a0cdc7af239d2607159b806a8892904d3">Catch::Matchers::MatcherGenericBase</a>
 </li>
 <li>MatcherUntypedBase()
 : <a class="el" href="class_catch_1_1_matchers_1_1_matcher_untyped_base.html#a30c368272dbd280120b537947c275e72">Catch::Matchers::MatcherUntypedBase</a>
-</li>
-<li>matches()
-: <a class="el" href="class_catch_1_1_test_spec.html#a2342df9eff2c7db0d26432c1ddef796f">Catch::TestSpec</a>
 </li>
 <li>Matches
 : <a class="el" href="class_catch_1_1_test_spec.html#a06b08ac127c37d48a4353f34bf20c0e3">Catch::TestSpec</a>
 </li>
 <li>matches()
-: <a class="el" href="class_catch_1_1_wildcard_pattern.html#ae88acde37f50f7cbec8605acf434fe85">Catch::WildcardPattern</a>
+: <a class="el" href="class_catch_1_1_test_spec.html#a2342df9eff2c7db0d26432c1ddef796f">Catch::TestSpec</a>
+, <a class="el" href="class_catch_1_1_wildcard_pattern.html#ae88acde37f50f7cbec8605acf434fe85">Catch::WildcardPattern</a>
 </li>
 <li>matchesByFilter()
 : <a class="el" href="class_catch_1_1_test_spec.html#ae62a33926c9c2c3ab5b6f27a9e7aa484">Catch::TestSpec</a>

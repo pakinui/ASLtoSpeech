@@ -15,11 +15,79 @@ Inheritance diagram for Camera\+:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{class_camera}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_camera_a2708e264c4775ac23fa7bece9b1d0858}{setup\+Menus}} ()
+\begin{DoxyCompactList}\small\item\em setup\+Menus \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_af4778d67a15179347d34f3c20ce10b79}{display\+Camera\+Error}} ()
+\begin{DoxyCompactList}\small\item\em display\+Camera\+Error \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_aca4a1061c49367d75cdb58db780b1e10}{update\+Camera\+Device}} (QAction $\ast$action)
+\begin{DoxyCompactList}\small\item\em Update the camera device for the application to use. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a2d9d10823a15bdc97efab9ed226f6019}{update\+Cameras}} ()
+\begin{DoxyCompactList}\small\item\em update\+Cameras \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_af2a1e868f87fce9d293956e8b174ffa7}{set\+Camera}} (const QCamera\+Device \&camera\+Device)
+\begin{DoxyCompactList}\small\item\em Set the applications camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a663b2500e64ed3b3e4bf62ce2acd7de3}{update\+Camera\+Active}} (bool active)
+\begin{DoxyCompactList}\small\item\em update\+Camera\+Active \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_affc94f1467d82cad60ce8301c04ae16c}{translate\+Text}} ()
+\begin{DoxyCompactList}\small\item\em translate\+Text \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a7e3ad30918e6d62cc0f884b53725331f}{search\+Dictionary}} ()
+\begin{DoxyCompactList}\small\item\em search\+Dictionary \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a74780e70139915d42c3aa993900f1fe8}{add\+To\+History}} (const QString \&original, const QString \&translated)
+\begin{DoxyCompactList}\small\item\em add\+To\+History \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_ade336f9a3a887ac4c7ef93141d457c31}{start\+Camera}} ()
+\begin{DoxyCompactList}\small\item\em Start the current \mbox{\hyperlink{class_camera}{Camera}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_aac0e2e17954d17a0c15019ca74149f15}{stop\+Camera}} ()
+\begin{DoxyCompactList}\small\item\em Stop the current \mbox{\hyperlink{class_camera}{Camera}}. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_camera_a34c65eb12c00860f7bbbb7528e3376cb}{get\+History\+Text}} ()
+\begin{DoxyCompactList}\small\item\em get\+History\+Text \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_ac82ec2eaddeb101ebd7d4763a23f09ef}{image\+Available}} (QVideo\+Frame frame)
+\begin{DoxyCompactList}\small\item\em image\+Available \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_camera_a491ae3683ddd0ccdc4e06cfa41fea1db}{get\+Image\+Available}} ()
+\item 
+bool \mbox{\hyperlink{class_camera_a3b860e6a36dc14b9130638b7b6f97342}{get\+Camera\+Active}} ()
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_camera_a01f94c3543f56ede7af49dc778f19331}{Camera}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_camera_a01f94c3543f56ede7af49dc778f19331}{Camera()}} is the constructor for the \mbox{\hyperlink{class_camera}{Camera}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Camera $\ast$ \mbox{\hyperlink{class_camera_a9087edfa727221a07cce6e00962927d4}{ui}}
+\item 
+QList$<$ QPair$<$ QString, QString $>$ $>$ \mbox{\hyperlink{class_camera_a8fab72016f7864e07e358452c9e0e37f}{history}}
+\begin{DoxyCompactList}\small\item\em list to store history of translations \end{DoxyCompactList}\item 
+QAction\+Group $\ast$ \mbox{\hyperlink{class_camera_aec739a0d3478b18f8f5a371583b3c592}{video\+Devices\+Group}} = nullptr
+\begin{DoxyCompactList}\small\item\em group of video devices \end{DoxyCompactList}\item 
+QMedia\+Devices \mbox{\hyperlink{class_camera_a1926e80692c961d0228e0ed3711c2247}{m\+\_\+devices}}
+\begin{DoxyCompactList}\small\item\em available multimedia input/output devices instance \end{DoxyCompactList}\item 
+QImage\+Capture \mbox{\hyperlink{class_camera_ab2529c186e9dbb6acb309326adbad604}{m\+\_\+image\+Capture}}
+\begin{DoxyCompactList}\small\item\em image capture instance \end{DoxyCompactList}\item 
+QMedia\+Capture\+Session \mbox{\hyperlink{class_camera_a3415b282ebc01bf5c4fa605810843876}{m\+\_\+capture\+Session}}
+\begin{DoxyCompactList}\small\item\em media capture session instance \end{DoxyCompactList}\item 
+QCamera \mbox{\hyperlink{class_camera_a1618d9ca6920427196bdfd4e7150d848}{m\+\_\+camera}}
+\begin{DoxyCompactList}\small\item\em camera instance \end{DoxyCompactList}\item 
+QCamera $\ast$ \mbox{\hyperlink{class_camera_a8c1c1be1b17b7a874463c35eb709c5e3}{cam}}
+\item 
+QScoped\+Pointer$<$ QAudio\+Input $>$ \mbox{\hyperlink{class_camera_ad99d3b7e291d41aabfe908e2ffeaa7e6}{m\+\_\+audio\+Input}}
+\item 
+QScoped\+Pointer$<$ QMedia\+Recorder $>$ \mbox{\hyperlink{class_camera_a8e8878ec9fdf2706f475e0fe9f504263}{m\+\_\+media\+Recorder}}
+\item 
+QMenu $\ast$ \mbox{\hyperlink{class_camera_a646a808b96161fe88a9e6f1dcb71f2fc}{file\+Menu}}
+\item 
+QMenu $\ast$ \mbox{\hyperlink{class_camera_ad8a87927c53d733763fcb6cf3af68829}{devices\+Menu}}
+\item 
+QMenu $\ast$ \mbox{\hyperlink{class_camera_ab752ed49444b436aeef1f94cdadfe9ff}{camera\+Menu}}
+\item 
+bool \mbox{\hyperlink{class_camera_a0000d24b4c817764b20b058913efdd80}{m\+\_\+is\+Capturing\+Image}} = false
+\item 
+bool \mbox{\hyperlink{class_camera_aea0ad7dccd075af211374af6b46ba00f}{m\+\_\+application\+Exiting}} = false
+\item 
+bool \mbox{\hyperlink{class_camera_ab18b652d297f34df5c81b04afecc96db}{m\+\_\+do\+Image\+Capture}} = true
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -38,15 +106,424 @@ This class represents the main application window and provides functionalities r
 
 \mbox{\hyperlink{class_camera_a01f94c3543f56ede7af49dc778f19331}{Camera()}} is the constructor for the \mbox{\hyperlink{class_camera}{Camera}} class. 
 
-$<$ Path wehre detected texts are saved
+\mbox{\hyperlink{class_camera_a01f94c3543f56ede7af49dc778f19331}{Camera\+::\+Camera()}} \+: ui(new Ui\+::\+Camera) constructs a new \mbox{\hyperlink{class_camera}{Camera}}\+:\+: \mbox{\hyperlink{class_camera}{Camera}} object.
 
 The \mbox{\hyperlink{class_camera_a01f94c3543f56ede7af49dc778f19331}{Camera()}} constructor initializes the \mbox{\hyperlink{class_camera}{Camera}} class and sets up the UI and camera-\/related components.
 
-\mbox{\hyperlink{class_camera_a01f94c3543f56ede7af49dc778f19331}{Camera\+::\+Camera()}} \+: ui(new Ui\+::\+Camera) constructs a new \mbox{\hyperlink{class_camera}{Camera}}\+:\+: \mbox{\hyperlink{class_camera}{Camera}} object
+The \mbox{\hyperlink{class_camera_a01f94c3543f56ede7af49dc778f19331}{Camera\+::\+Camera()}} \+: ui(new Ui\+::\+Camera) constructor initializes the \mbox{\hyperlink{class_camera}{Camera}} object and sets up various connections for button clicks and video frame updates. It also initializes camera resources. Connect \mbox{\hyperlink{class_camera_ac82ec2eaddeb101ebd7d4763a23f09ef}{Camera\+::image\+Available}} to QVideo\+Sink\+::video\+Frame\+Changed.
 
-The \mbox{\hyperlink{class_camera_a01f94c3543f56ede7af49dc778f19331}{Camera\+::\+Camera()}} \+: ui(new Ui\+::\+Camera) constructor initializes the \mbox{\hyperlink{class_camera}{Camera}} object and sets up various connections for button clicks and video frame updates. It also initializes camera resources. Connect Camera\+::image\+Available to QVideo\+Sink\+::video\+Frame\+Changed.
+Everytime QVideo\+Sink has a new frame, \mbox{\hyperlink{class_camera_ac82ec2eaddeb101ebd7d4763a23f09ef}{Camera\+::image\+Available}} is called.
 
-Everytime QVideo\+Sink has a new frame, Camera\+::image\+Available is called.
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_camera_a74780e70139915d42c3aa993900f1fe8}\label{class_camera_a74780e70139915d42c3aa993900f1fe8}} 
+\index{Camera@{Camera}!addToHistory@{addToHistory}}
+\index{addToHistory@{addToHistory}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{addToHistory}{addToHistory}}
+{\footnotesize\ttfamily void Camera\+::add\+To\+History (\begin{DoxyParamCaption}\item[{const QString \&}]{original,  }\item[{const QString \&}]{translated }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+add\+To\+History 
+
+Adds an entry to the translation history.
+
+Adds the text in the text box to the history.
+
+
+\begin{DoxyParams}{Parameters}
+{\em original} & The original text. \\
+\hline
+{\em translated} & The translated text.\\
+\hline
+\end{DoxyParams}
+This function appends a pair of original and translated text to the translation history data structure. It updates the history display in the GUI to reflect the new entry.
+
+\begin{DoxyNote}{Note}
+Not currently active.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em original} & The original text before translation. \\
+\hline
+{\em translated} & The translated text (or modified text) after translation. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_camera_af4778d67a15179347d34f3c20ce10b79}\label{class_camera_af4778d67a15179347d34f3c20ce10b79}} 
+\index{Camera@{Camera}!displayCameraError@{displayCameraError}}
+\index{displayCameraError@{displayCameraError}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{displayCameraError}{displayCameraError}}
+{\footnotesize\ttfamily void Camera\+::display\+Camera\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+display\+Camera\+Error 
+
+Displays a camera error message.
+
+Displays an error message if the camera fails to start.
+
+This function displays a camera error message in a message box if there is an error with the camera. \mbox{\Hypertarget{class_camera_a3b860e6a36dc14b9130638b7b6f97342}\label{class_camera_a3b860e6a36dc14b9130638b7b6f97342}} 
+\index{Camera@{Camera}!getCameraActive@{getCameraActive}}
+\index{getCameraActive@{getCameraActive}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getCameraActive}{getCameraActive}}
+{\footnotesize\ttfamily bool Camera\+::get\+Camera\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\mbox{\Hypertarget{class_camera_a34c65eb12c00860f7bbbb7528e3376cb}\label{class_camera_a34c65eb12c00860f7bbbb7528e3376cb}} 
+\index{Camera@{Camera}!getHistoryText@{getHistoryText}}
+\index{getHistoryText@{getHistoryText}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getHistoryText}{getHistoryText}}
+{\footnotesize\ttfamily QString Camera\+::get\+History\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+get\+History\+Text 
+
+Retrieves formatted text for displaying translation history.
+
+Gets the text from the history.
+
+\begin{DoxyReturn}{Returns}
+The text from the history.
+\end{DoxyReturn}
+This function generates a formatted text string containing all entries in the translation history data structure. Each entry includes the original and translated (or modified) text. The formatted text is suitable for display in the history spot in the GUI.
+
+\begin{DoxyNote}{Note}
+Not currently active.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+A text string containing translation history. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_camera_a491ae3683ddd0ccdc4e06cfa41fea1db}\label{class_camera_a491ae3683ddd0ccdc4e06cfa41fea1db}} 
+\index{Camera@{Camera}!getImageAvailable@{getImageAvailable}}
+\index{getImageAvailable@{getImageAvailable}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getImageAvailable}{getImageAvailable}}
+{\footnotesize\ttfamily bool Camera\+::get\+Image\+Available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\mbox{\Hypertarget{class_camera_ac82ec2eaddeb101ebd7d4763a23f09ef}\label{class_camera_ac82ec2eaddeb101ebd7d4763a23f09ef}} 
+\index{Camera@{Camera}!imageAvailable@{imageAvailable}}
+\index{imageAvailable@{imageAvailable}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{imageAvailable}{imageAvailable}}
+{\footnotesize\ttfamily void Camera\+::image\+Available (\begin{DoxyParamCaption}\item[{QVideo\+Frame}]{frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+image\+Available 
+
+Slot called when a new video frame is captured.
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & The current frame from the camera.\\
+\hline
+\end{DoxyParams}
+This function is connected to the QVideo\+Sink\+::image\+Available function. Everytime the camera recieves a new frame, this function is also called. This checks the frame for a recognised ASL sign.
+
+This slot processes the incoming video frame, interacts with a Python module, and updates the video frame display. It also performs necessary data conversion between C++ and Python.
+
+\begin{DoxyNote}{Note}
+Currently only calls the Python function every 9 frames as to reduce lag.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & The incoming video frame. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_camera_a7e3ad30918e6d62cc0f884b53725331f}\label{class_camera_a7e3ad30918e6d62cc0f884b53725331f}} 
+\index{Camera@{Camera}!searchDictionary@{searchDictionary}}
+\index{searchDictionary@{searchDictionary}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{searchDictionary}{searchDictionary}}
+{\footnotesize\ttfamily void Camera\+::search\+Dictionary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+search\+Dictionary 
+
+Performs dictionary search logic.
+
+Searches the dictionary for the text in the text box.
+
+This function is triggered when the \char`\"{}\+Search\char`\"{} button is clicked in the GUI. It retrieves the input text from the UI and performs a search in the dictionary.
+
+\begin{DoxyNote}{Note}
+Not currently active. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_camera_af2a1e868f87fce9d293956e8b174ffa7}\label{class_camera_af2a1e868f87fce9d293956e8b174ffa7}} 
+\index{Camera@{Camera}!setCamera@{setCamera}}
+\index{setCamera@{setCamera}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setCamera}{setCamera}}
+{\footnotesize\ttfamily void Camera\+::set\+Camera (\begin{DoxyParamCaption}\item[{const QCamera\+Device \&}]{camera\+Device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Set the applications camera. 
+
+sets up the camera for the application to use.
+
+This function sets the camera for the application to use.
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Device} & The camera device for the application to use.\\
+\hline
+\end{DoxyParams}
+This function is called when the user selects a camera device from the Devices menu. It initializes the selected camera for video capture and updates the camera settings. Additionally, it sets up the necessary connections for camera signals.
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Device} & the camera for capturing video. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_camera_a2708e264c4775ac23fa7bece9b1d0858}\label{class_camera_a2708e264c4775ac23fa7bece9b1d0858}} 
+\index{Camera@{Camera}!setupMenus@{setupMenus}}
+\index{setupMenus@{setupMenus}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setupMenus}{setupMenus}}
+{\footnotesize\ttfamily void Camera\+::setup\+Menus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+setup\+Menus 
+
+Sets up the application menus.
+
+Sets up the Menu\+Bar in the applicatoin.
+
+This function creates and sets up menus for the application, such as File, Devices, and \mbox{\hyperlink{class_camera}{Camera}} menus. It also connects menu actions to corresponding functions in the \mbox{\hyperlink{class_camera}{Camera}} class. \mbox{\Hypertarget{class_camera_ade336f9a3a887ac4c7ef93141d457c31}\label{class_camera_ade336f9a3a887ac4c7ef93141d457c31}} 
+\index{Camera@{Camera}!startCamera@{startCamera}}
+\index{startCamera@{startCamera}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{startCamera}{startCamera}}
+{\footnotesize\ttfamily void Camera\+::start\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Start the current \mbox{\hyperlink{class_camera}{Camera}}. 
+
+Starts the current camera.
+
+This function starts the current \mbox{\hyperlink{class_camera}{Camera}}.
+
+This function starts the current camera.
+
+\begin{DoxyNote}{Note}
+Not currently active. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_camera_aac0e2e17954d17a0c15019ca74149f15}\label{class_camera_aac0e2e17954d17a0c15019ca74149f15}} 
+\index{Camera@{Camera}!stopCamera@{stopCamera}}
+\index{stopCamera@{stopCamera}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{stopCamera}{stopCamera}}
+{\footnotesize\ttfamily void Camera\+::stop\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Stop the current \mbox{\hyperlink{class_camera}{Camera}}. 
+
+Stops the current camera.
+
+This function stops the current \mbox{\hyperlink{class_camera}{Camera}}.
+
+This function stops the current camera.
+
+\begin{DoxyNote}{Note}
+Not currently active. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_camera_affc94f1467d82cad60ce8301c04ae16c}\label{class_camera_affc94f1467d82cad60ce8301c04ae16c}} 
+\index{Camera@{Camera}!translateText@{translateText}}
+\index{translateText@{translateText}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{translateText}{translateText}}
+{\footnotesize\ttfamily void Camera\+::translate\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+translate\+Text 
+
+Translates and displays input text using text-\/to-\/speech.
+
+Translates the text in the text box.
+
+This function is triggered when the \char`\"{}\+Translate\char`\"{} button is clicked in the GUI. It retrieves the input text from the UI, performs translation logic (if any), and then uses the text-\/to-\/speech function to generate speech from the input text. The translated text is displayed in the GUI, and the original and translated text are stored in the history for reference.
+
+\begin{DoxyNote}{Note}
+Not currently active. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_camera_a663b2500e64ed3b3e4bf62ce2acd7de3}\label{class_camera_a663b2500e64ed3b3e4bf62ce2acd7de3}} 
+\index{Camera@{Camera}!updateCameraActive@{updateCameraActive}}
+\index{updateCameraActive@{updateCameraActive}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{updateCameraActive}{updateCameraActive}}
+{\footnotesize\ttfamily void Camera\+::update\+Camera\+Active (\begin{DoxyParamCaption}\item[{bool}]{active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+update\+Camera\+Active 
+
+Updates the camera active state.
+
+Updates the camera status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em active} & This function updates the camera active state.\\
+\hline
+{\em active} & the new active state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_camera_aca4a1061c49367d75cdb58db780b1e10}\label{class_camera_aca4a1061c49367d75cdb58db780b1e10}} 
+\index{Camera@{Camera}!updateCameraDevice@{updateCameraDevice}}
+\index{updateCameraDevice@{updateCameraDevice}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{updateCameraDevice}{updateCameraDevice}}
+{\footnotesize\ttfamily void Camera\+::update\+Camera\+Device (\begin{DoxyParamCaption}\item[{QAction $\ast$}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Update the camera device for the application to use. 
+
+updates the camera device for the application to use.
+
+This function updates the camera device for the application to use.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & This function updates the camera device for the application to use.\\
+\hline
+{\em action} & the QAction corresponding to the camera device to use \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_camera_a2d9d10823a15bdc97efab9ed226f6019}\label{class_camera_a2d9d10823a15bdc97efab9ed226f6019}} 
+\index{Camera@{Camera}!updateCameras@{updateCameras}}
+\index{updateCameras@{updateCameras}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{updateCameras}{updateCameras}}
+{\footnotesize\ttfamily void Camera\+::update\+Cameras (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+update\+Cameras 
+
+Updates the list of available cameras in the Devices menu.
+
+Updates the list of available cameras.
+
+This function queries and updates the list of available camera devices in the Devices menu. Users can then select a camera device to use. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_camera_a8c1c1be1b17b7a874463c35eb709c5e3}\label{class_camera_a8c1c1be1b17b7a874463c35eb709c5e3}} 
+\index{Camera@{Camera}!cam@{cam}}
+\index{cam@{cam}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{cam}{cam}}
+{\footnotesize\ttfamily QCamera$\ast$ Camera\+::cam}
+
+\mbox{\Hypertarget{class_camera_ab752ed49444b436aeef1f94cdadfe9ff}\label{class_camera_ab752ed49444b436aeef1f94cdadfe9ff}} 
+\index{Camera@{Camera}!cameraMenu@{cameraMenu}}
+\index{cameraMenu@{cameraMenu}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{cameraMenu}{cameraMenu}}
+{\footnotesize\ttfamily QMenu$\ast$ Camera\+::camera\+Menu}
+
+\mbox{\Hypertarget{class_camera_ad8a87927c53d733763fcb6cf3af68829}\label{class_camera_ad8a87927c53d733763fcb6cf3af68829}} 
+\index{Camera@{Camera}!devicesMenu@{devicesMenu}}
+\index{devicesMenu@{devicesMenu}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{devicesMenu}{devicesMenu}}
+{\footnotesize\ttfamily QMenu$\ast$ Camera\+::devices\+Menu}
+
+\mbox{\Hypertarget{class_camera_a646a808b96161fe88a9e6f1dcb71f2fc}\label{class_camera_a646a808b96161fe88a9e6f1dcb71f2fc}} 
+\index{Camera@{Camera}!fileMenu@{fileMenu}}
+\index{fileMenu@{fileMenu}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{fileMenu}{fileMenu}}
+{\footnotesize\ttfamily QMenu$\ast$ Camera\+::file\+Menu}
+
+\mbox{\Hypertarget{class_camera_a8fab72016f7864e07e358452c9e0e37f}\label{class_camera_a8fab72016f7864e07e358452c9e0e37f}} 
+\index{Camera@{Camera}!history@{history}}
+\index{history@{history}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{history}{history}}
+{\footnotesize\ttfamily QList$<$QPair$<$QString, QString$>$ $>$ Camera\+::history}
+
+
+
+list to store history of translations 
+
+\mbox{\Hypertarget{class_camera_aea0ad7dccd075af211374af6b46ba00f}\label{class_camera_aea0ad7dccd075af211374af6b46ba00f}} 
+\index{Camera@{Camera}!m\_applicationExiting@{m\_applicationExiting}}
+\index{m\_applicationExiting@{m\_applicationExiting}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{m\_applicationExiting}{m\_applicationExiting}}
+{\footnotesize\ttfamily bool Camera\+::m\+\_\+application\+Exiting = false}
+
+\mbox{\Hypertarget{class_camera_ad99d3b7e291d41aabfe908e2ffeaa7e6}\label{class_camera_ad99d3b7e291d41aabfe908e2ffeaa7e6}} 
+\index{Camera@{Camera}!m\_audioInput@{m\_audioInput}}
+\index{m\_audioInput@{m\_audioInput}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{m\_audioInput}{m\_audioInput}}
+{\footnotesize\ttfamily QScoped\+Pointer$<$QAudio\+Input$>$ Camera\+::m\+\_\+audio\+Input}
+
+\mbox{\Hypertarget{class_camera_a1618d9ca6920427196bdfd4e7150d848}\label{class_camera_a1618d9ca6920427196bdfd4e7150d848}} 
+\index{Camera@{Camera}!m\_camera@{m\_camera}}
+\index{m\_camera@{m\_camera}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{m\_camera}{m\_camera}}
+{\footnotesize\ttfamily QCamera Camera\+::m\+\_\+camera}
+
+
+
+camera instance 
+
+\mbox{\Hypertarget{class_camera_a3415b282ebc01bf5c4fa605810843876}\label{class_camera_a3415b282ebc01bf5c4fa605810843876}} 
+\index{Camera@{Camera}!m\_captureSession@{m\_captureSession}}
+\index{m\_captureSession@{m\_captureSession}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{m\_captureSession}{m\_captureSession}}
+{\footnotesize\ttfamily QMedia\+Capture\+Session Camera\+::m\+\_\+capture\+Session}
+
+
+
+media capture session instance 
+
+\mbox{\Hypertarget{class_camera_a1926e80692c961d0228e0ed3711c2247}\label{class_camera_a1926e80692c961d0228e0ed3711c2247}} 
+\index{Camera@{Camera}!m\_devices@{m\_devices}}
+\index{m\_devices@{m\_devices}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{m\_devices}{m\_devices}}
+{\footnotesize\ttfamily QMedia\+Devices Camera\+::m\+\_\+devices}
+
+
+
+available multimedia input/output devices instance 
+
+\mbox{\Hypertarget{class_camera_ab18b652d297f34df5c81b04afecc96db}\label{class_camera_ab18b652d297f34df5c81b04afecc96db}} 
+\index{Camera@{Camera}!m\_doImageCapture@{m\_doImageCapture}}
+\index{m\_doImageCapture@{m\_doImageCapture}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{m\_doImageCapture}{m\_doImageCapture}}
+{\footnotesize\ttfamily bool Camera\+::m\+\_\+do\+Image\+Capture = true}
+
+\mbox{\Hypertarget{class_camera_ab2529c186e9dbb6acb309326adbad604}\label{class_camera_ab2529c186e9dbb6acb309326adbad604}} 
+\index{Camera@{Camera}!m\_imageCapture@{m\_imageCapture}}
+\index{m\_imageCapture@{m\_imageCapture}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{m\_imageCapture}{m\_imageCapture}}
+{\footnotesize\ttfamily QImage\+Capture Camera\+::m\+\_\+image\+Capture}
+
+
+
+image capture instance 
+
+\mbox{\Hypertarget{class_camera_a0000d24b4c817764b20b058913efdd80}\label{class_camera_a0000d24b4c817764b20b058913efdd80}} 
+\index{Camera@{Camera}!m\_isCapturingImage@{m\_isCapturingImage}}
+\index{m\_isCapturingImage@{m\_isCapturingImage}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{m\_isCapturingImage}{m\_isCapturingImage}}
+{\footnotesize\ttfamily bool Camera\+::m\+\_\+is\+Capturing\+Image = false}
+
+\mbox{\Hypertarget{class_camera_a8e8878ec9fdf2706f475e0fe9f504263}\label{class_camera_a8e8878ec9fdf2706f475e0fe9f504263}} 
+\index{Camera@{Camera}!m\_mediaRecorder@{m\_mediaRecorder}}
+\index{m\_mediaRecorder@{m\_mediaRecorder}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{m\_mediaRecorder}{m\_mediaRecorder}}
+{\footnotesize\ttfamily QScoped\+Pointer$<$QMedia\+Recorder$>$ Camera\+::m\+\_\+media\+Recorder}
+
+\mbox{\Hypertarget{class_camera_a9087edfa727221a07cce6e00962927d4}\label{class_camera_a9087edfa727221a07cce6e00962927d4}} 
+\index{Camera@{Camera}!ui@{ui}}
+\index{ui@{ui}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Camera$\ast$ Camera\+::ui}
+
+\mbox{\Hypertarget{class_camera_aec739a0d3478b18f8f5a371583b3c592}\label{class_camera_aec739a0d3478b18f8f5a371583b3c592}} 
+\index{Camera@{Camera}!videoDevicesGroup@{videoDevicesGroup}}
+\index{videoDevicesGroup@{videoDevicesGroup}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{videoDevicesGroup}{videoDevicesGroup}}
+{\footnotesize\ttfamily QAction\+Group$\ast$ Camera\+::video\+Devices\+Group = nullptr}
+
+
+
+group of video devices 
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

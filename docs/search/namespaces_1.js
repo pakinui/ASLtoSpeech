@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inference_5fclassifier_2070',['inference_classifier',['../namespaceinference__classifier.html',1,'']]]
+  ['inference_5fclassifier_2102',['inference_classifier',['../namespaceinference__classifier.html',1,'']]]
 ];
