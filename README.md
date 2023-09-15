@@ -61,9 +61,9 @@ Working together as a team, we've selected two distinct datasets to create a uni
 
 We received zero marks for cool points from the Alpha.<br />
 What we believe was cool from the <b>Alpha</b> that was no acknowledged:<br />
-1.  <br />
-2.  <br />
-3.  <br />
+1.  <br /> GitHub integrated through using a webhook in Discord
+2.  <br /> Artifact generation
+A more detailed document with evidence can be found [here](https://github.com/pakinui/cosc345/blob/main/PDFs/PotentialAlphaCoolPoints.pdf)
 For the <b>Beta</b>, we believe the following could be considered for cool points:<br />
 1.  <br />
 2.  <br />
