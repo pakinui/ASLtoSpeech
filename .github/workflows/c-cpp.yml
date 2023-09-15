@@ -62,59 +62,18 @@ jobs:
     - name: Test
       run: |
         ctest -C build --verbose --test-dir build
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: executable
-        path: build/345Application.exe
-        
-  run:
-    needs: build
-    runs-on: windows-latest
-    steps: 
-      - name: Download Artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: executable
-      - name: Run Executable
-        run: |
-          ./345Application.exe
-
-  code-coverage:
-    needs: run
-    runs-on: windows-latest
-    steps: 
-      - name: Checkout code
-        uses: actions/checkout@v3
-      # - name: Setup Python
-      #   uses: actions/setup-python@v4.7.0
-      #   with:
-      #     python-version: 3.10
-      # - name: Install C++ compiler
-      #   run: |
-      #     choco install visualcpp-build-tools -y
-      #   shell: powershell
-      # - name: Install gcovr
-      #   run: |
-      #     pip install gcovr
-      #   shell: powershell
-      # - name: Tests
-      #   run: |
-      #     ls -R 
-      #     g++ --coverage ${{github.workspace}}/tests/test.cpp  ${{github.workspace}}/src/text_to_speech/ttsCall.cpp -o ${{github.workspace}}/coverage/coverage_info -lwinmm
-      #     ls -R 
-      #     gcovr -r ${{github.workspace}} --xml -o ${{github.workspace}}/coverage/coverage_info.xml
-      - name: Check files
-        run: |
-            ls -R
-      - name: Upload coverage report to Codecov
-        uses: codecov/codecov-action@v2
-        env:
+    - name: Upload coverage report to Codecov
+      uses: codecov/codecov-action@v2
+      env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-        with:
-          files: |
-              ${{github.workspace}}/coverage/coverage_info.xml
-              ${{github.workspace}}/coverage/coverage_tests.xml
-          
-
+      with:
+          files: coverage\coverage_info.xml
+    - name: Upload test coverage report to Codecov
+      uses: codecov/codecov-action@v2
+      env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      with:
+          files: coverage\coverage_info.xml
+              
+              #coverage\coverage_tests.xml
     
