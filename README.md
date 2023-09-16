@@ -60,7 +60,7 @@ Working together as a team, we've selected two distinct datasets to create a uni
 **Cool Points:**
 
 We received zero marks for cool points from the <b>Alpha</b>.<br />
-What we believe was cool from the <b>Alpha</b> that was no acknowledged:<br />
+What we believe was cool from the <b>Alpha</b> that was not acknowledged:<br />
 1.  GitHub integrated through using a webhook in Discord<br />
 2.  Artifact generation<br />
 
@@ -105,13 +105,10 @@ choco install ninja
 git clone https://github.com/pakinui/cosc345.git
 cd cosc345
 pip install -r requirements.txt
-mkdir build
-cd build
-cmake ..
-cmake --build .
-cd Debug
-path/to/Qt/6.5.2/mxvc2019_64/bin/windeployqt.exe ./345Application.exe
-./345Application.exe
+Open the CMakeLists.txt file in Ot6.5.2
+Insert '\cosc345\build' into the build directory between the parent directory and the build directory
+  i.e.(...\parent-directory\cosc345\build\build-cosc345...)
+Build and Run the Application in Release mode
 ```
 
 ## Usage
