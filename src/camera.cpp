@@ -346,29 +346,9 @@ void Camera::stopCamera()
     cameraActive = false;
     m_camera.stop();
     //qDebug() << "stopping camera";
-    Py_Finalize(); // Stop the Python
+//    Py_Finalize(); // Stop the Python
 }
 
-/**
- * @brief Updates the camera active state.
- * 
- * This function updates the camera active state.
- * 
- * @param active the new active state
- */
-void Camera::updateCameraActive(bool active)
-{
-    if (active)
-    {
-        ui->actionStartCamera->setEnabled(false);
-        ui->actionStopCamera->setEnabled(true);
-    }
-    else
-    {
-        ui->actionStartCamera->setEnabled(true);
-        ui->actionStopCamera->setEnabled(false);
-    }
-}
 
 /**
  * @brief Sets up the application menus.
@@ -413,8 +393,8 @@ void Camera::setupMenus()
     cameraMenu->addAction(cameraSettingsAction);
 
     // Adding start and stop camera button connections
-    //connect(startCameraAction, &QAction::triggered, this, &Camera::startCamera);
-    //connect(stopCameraAction, &QAction::triggered, this, &Camera::stopCamera);
+    connect(startCameraAction, &QAction::triggered, this, &Camera::startCamera);
+    connect(stopCameraAction, &QAction::triggered, this, &Camera::stopCamera);
 
     menuBar()->addMenu(cameraMenu);
 }
@@ -456,7 +436,7 @@ void Camera::setCamera(const QCameraDevice &cameraDevice)
 
     m_captureSession.setVideoOutput(ui->viewfinder);
 
-    updateCameraActive(m_camera.isActive());
+    //updateCameraActive(m_camera.isActive());
     //    updateRecorderState(m_mediaRecorder->recorderState());
     //    readyForCapture(m_imageCapture->isReadyForCapture());
 

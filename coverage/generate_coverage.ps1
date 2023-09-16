@@ -3,4 +3,4 @@
     build\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-RelWithDebInfo\345Application.exe `
     --modules build\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-RelWithDebInfo\Tests.exe `
     --modules build\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-RelWithDebInfo\345Application.exe `
-    --sources=cosc345\tests --sources=cosc345\src 
+    --sources=cosc345\tests --sources=cosc345\src

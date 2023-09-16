@@ -54,7 +54,7 @@ QT_END_NAMESPACE
  */
 class Camera : public QMainWindow
 {
-    Q_OBJECT
+//    Q_OBJECT
 
 
 
@@ -132,14 +132,6 @@ public Q_SLOTS:
      */
     void setCamera(const QCameraDevice &cameraDevice);
     
-    /**
-     * @brief updateCameraActive
-     * 
-     * Updates the camera status.
-     * 
-     * @param active
-     */
-    void updateCameraActive(bool active);
     
     /**
      * @brief translateText

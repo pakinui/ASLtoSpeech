@@ -158,12 +158,12 @@ if(CMAKE_BUILD_TYPE STREQUAL "RelWithDebInfo")
             )
             add_dependencies(345Application coverage_report_tests)
         else()
-#            add_custom_target(coverage_report
-#                COMMAND powershell -ExecutionPolicy Bypass -File "${CMAKE_SOURCE_DIR}/coverage/generate_coverage.ps1"
-#                WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-#                COMMENT "Generating code coverage report"
-#            )
-#            add_dependencies(345Application coverage_report)
+            add_custom_target(coverage_report
+                COMMAND powershell -ExecutionPolicy Bypass -File "${CMAKE_SOURCE_DIR}/coverage/generate_coverage.ps1"
+                WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+                COMMENT "Generating code coverage report"
+            )
+            add_dependencies(345Application coverage_report)
         endif()
     endif()
 else()

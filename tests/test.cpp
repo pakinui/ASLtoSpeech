@@ -42,6 +42,8 @@ class Test: public QObject
         void testCameraStart();
         void testCameraStop();
         void testAddToHistory();
+        void testTranslateText();
+
 };
 
 void Test::testPython(){
@@ -170,12 +172,16 @@ void Test::testCameraStop(){
     QVERIFY(!camera->getCameraActive());
 }
 
+void Test::testTranslateText(){
+    QVERIFY(true);
+}
 
 void Test::testAddToHistory(){
 
     QString str = "hello";
     camera->addToHistory(str);
     QVERIFY(camera->getLastHistory() == "hello");
+    Py_Finalize();
 }
 
 /// These two lines must be at the very bottom.
