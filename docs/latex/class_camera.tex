@@ -32,9 +32,7 @@ void \mbox{\hyperlink{class_camera_a663b2500e64ed3b3e4bf62ce2acd7de3}{update\+Ca
 \begin{DoxyCompactList}\small\item\em update\+Camera\+Active \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_camera_affc94f1467d82cad60ce8301c04ae16c}{translate\+Text}} ()
 \begin{DoxyCompactList}\small\item\em translate\+Text \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_camera_a7e3ad30918e6d62cc0f884b53725331f}{search\+Dictionary}} ()
-\begin{DoxyCompactList}\small\item\em search\+Dictionary \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_camera_a74780e70139915d42c3aa993900f1fe8}{add\+To\+History}} (const QString \&original, const QString \&translated)
+void \mbox{\hyperlink{class_camera_a597b38dea0742096a2033d77a5a00750}{add\+To\+History}} (const QString \&original)
 \begin{DoxyCompactList}\small\item\em add\+To\+History \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_camera_ade336f9a3a887ac4c7ef93141d457c31}{start\+Camera}} ()
 \begin{DoxyCompactList}\small\item\em Start the current \mbox{\hyperlink{class_camera}{Camera}}. \end{DoxyCompactList}\item 
@@ -47,6 +45,8 @@ void \mbox{\hyperlink{class_camera_ac82ec2eaddeb101ebd7d4763a23f09ef}{image\+Ava
 bool \mbox{\hyperlink{class_camera_a491ae3683ddd0ccdc4e06cfa41fea1db}{get\+Image\+Available}} ()
 \item 
 bool \mbox{\hyperlink{class_camera_a3b860e6a36dc14b9130638b7b6f97342}{get\+Camera\+Active}} ()
+\item 
+QString \mbox{\hyperlink{class_camera_aa352f0c6e8e5563ff5a432a6f27f4a35}{get\+Last\+History}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -58,7 +58,7 @@ bool \mbox{\hyperlink{class_camera_a3b860e6a36dc14b9130638b7b6f97342}{get\+Camer
 \item 
 Ui\+::\+Camera $\ast$ \mbox{\hyperlink{class_camera_a9087edfa727221a07cce6e00962927d4}{ui}}
 \item 
-QList$<$ QPair$<$ QString, QString $>$ $>$ \mbox{\hyperlink{class_camera_a8fab72016f7864e07e358452c9e0e37f}{history}}
+QList$<$ QString $>$ \mbox{\hyperlink{class_camera_adb77212f0a2e8d3086e9dbd4d0f404db}{history}}
 \begin{DoxyCompactList}\small\item\em list to store history of translations \end{DoxyCompactList}\item 
 QAction\+Group $\ast$ \mbox{\hyperlink{class_camera_aec739a0d3478b18f8f5a371583b3c592}{video\+Devices\+Group}} = nullptr
 \begin{DoxyCompactList}\small\item\em group of video devices \end{DoxyCompactList}\item 
@@ -115,11 +115,11 @@ The \mbox{\hyperlink{class_camera_a01f94c3543f56ede7af49dc778f19331}{Camera\+::\
 Everytime QVideo\+Sink has a new frame, \mbox{\hyperlink{class_camera_ac82ec2eaddeb101ebd7d4763a23f09ef}{Camera\+::image\+Available}} is called.
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_camera_a74780e70139915d42c3aa993900f1fe8}\label{class_camera_a74780e70139915d42c3aa993900f1fe8}} 
+\mbox{\Hypertarget{class_camera_a597b38dea0742096a2033d77a5a00750}\label{class_camera_a597b38dea0742096a2033d77a5a00750}} 
 \index{Camera@{Camera}!addToHistory@{addToHistory}}
 \index{addToHistory@{addToHistory}!Camera@{Camera}}
 \doxysubsubsection{\texorpdfstring{addToHistory}{addToHistory}}
-{\footnotesize\ttfamily void Camera\+::add\+To\+History (\begin{DoxyParamCaption}\item[{const QString \&}]{original,  }\item[{const QString \&}]{translated }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+{\footnotesize\ttfamily void Camera\+::add\+To\+History (\begin{DoxyParamCaption}\item[{const QString \&}]{original }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
 
 
@@ -199,6 +199,12 @@ A text string containing translation history.
 \doxysubsubsection{\texorpdfstring{getImageAvailable}{getImageAvailable}}
 {\footnotesize\ttfamily bool Camera\+::get\+Image\+Available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
+\mbox{\Hypertarget{class_camera_aa352f0c6e8e5563ff5a432a6f27f4a35}\label{class_camera_aa352f0c6e8e5563ff5a432a6f27f4a35}} 
+\index{Camera@{Camera}!getLastHistory@{getLastHistory}}
+\index{getLastHistory@{getLastHistory}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getLastHistory}{getLastHistory}}
+{\footnotesize\ttfamily QString Camera\+::get\+Last\+History (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
 \mbox{\Hypertarget{class_camera_ac82ec2eaddeb101ebd7d4763a23f09ef}\label{class_camera_ac82ec2eaddeb101ebd7d4763a23f09ef}} 
 \index{Camera@{Camera}!imageAvailable@{imageAvailable}}
 \index{imageAvailable@{imageAvailable}!Camera@{Camera}}
@@ -228,25 +234,6 @@ Currently only calls the Python function every 9 frames as to reduce lag.
 {\em frame} & The incoming video frame. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_camera_a7e3ad30918e6d62cc0f884b53725331f}\label{class_camera_a7e3ad30918e6d62cc0f884b53725331f}} 
-\index{Camera@{Camera}!searchDictionary@{searchDictionary}}
-\index{searchDictionary@{searchDictionary}!Camera@{Camera}}
-\doxysubsubsection{\texorpdfstring{searchDictionary}{searchDictionary}}
-{\footnotesize\ttfamily void Camera\+::search\+Dictionary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
-
-
-
-search\+Dictionary 
-
-Performs dictionary search logic.
-
-Searches the dictionary for the text in the text box.
-
-This function is triggered when the \char`\"{}\+Search\char`\"{} button is clicked in the GUI. It retrieves the input text from the UI and performs a search in the dictionary.
-
-\begin{DoxyNote}{Note}
-Not currently active. 
-\end{DoxyNote}
 \mbox{\Hypertarget{class_camera_af2a1e868f87fce9d293956e8b174ffa7}\label{class_camera_af2a1e868f87fce9d293956e8b174ffa7}} 
 \index{Camera@{Camera}!setCamera@{setCamera}}
 \index{setCamera@{setCamera}!Camera@{Camera}}
@@ -427,11 +414,11 @@ This function queries and updates the list of available camera devices in the De
 \doxysubsubsection{\texorpdfstring{fileMenu}{fileMenu}}
 {\footnotesize\ttfamily QMenu$\ast$ Camera\+::file\+Menu}
 
-\mbox{\Hypertarget{class_camera_a8fab72016f7864e07e358452c9e0e37f}\label{class_camera_a8fab72016f7864e07e358452c9e0e37f}} 
+\mbox{\Hypertarget{class_camera_adb77212f0a2e8d3086e9dbd4d0f404db}\label{class_camera_adb77212f0a2e8d3086e9dbd4d0f404db}} 
 \index{Camera@{Camera}!history@{history}}
 \index{history@{history}!Camera@{Camera}}
 \doxysubsubsection{\texorpdfstring{history}{history}}
-{\footnotesize\ttfamily QList$<$QPair$<$QString, QString$>$ $>$ Camera\+::history}
+{\footnotesize\ttfamily QList$<$QString$>$ Camera\+::history}
 
 
 

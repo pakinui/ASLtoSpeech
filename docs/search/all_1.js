@@ -14,7 +14,7 @@ var searchData=
   ['addnextfilters_12',['addNextFilters',['../class_catch_1_1_test_case_tracking_1_1_section_tracker.html#aacb304830608dca2f480b8f5732a396b',1,'Catch::TestCaseTracking::SectionTracker']]],
   ['addreporter_13',['addReporter',['../class_catch_1_1_multi_reporter.html#a9c19799294c0e7f36717589c36dca921',1,'Catch::MultiReporter']]],
   ['addsingleton_14',['addSingleton',['../namespace_catch.html#a788ebefcd83342b7c479222a1eeffaee',1,'Catch']]],
-  ['addtohistory_15',['addToHistory',['../class_camera.html#a74780e70139915d42c3aa993900f1fe8',1,'Camera']]],
+  ['addtohistory_15',['addToHistory',['../class_camera.html#a597b38dea0742096a2033d77a5a00750',1,'Camera']]],
   ['adjuststring_16',['adjustString',['../struct_catch_1_1_matchers_1_1_cased_string.html#a13a5e09b4fbe68d3445fa11bb32c540f',1,'Catch::Matchers::CasedString']]],
   ['all_17',['all',['../struct_catch_1_1_tag_info.html#a383b0c3531d4822ef13991bc15a58974',1,'Catch::TagInfo']]],
   ['allmatch_18',['AllMatch',['../namespace_catch_1_1_matchers.html#a3bda6f79a33ead1bd79b63cfe5d11c2d',1,'Catch::Matchers']]],
