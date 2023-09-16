@@ -43,13 +43,12 @@ var searchData=
   ['executing_571',['Executing',['../class_catch_1_1_test_case_tracking_1_1_i_tracker.html#af980a6b8eebebe3d33cfb9ab486a77d6a9842b7c56b64db9d539d98ccd625a857',1,'Catch::TestCaseTracking::ITracker']]],
   ['executingchildren_572',['ExecutingChildren',['../class_catch_1_1_test_case_tracking_1_1_i_tracker.html#af980a6b8eebebe3d33cfb9ab486a77d6a271ee3ee98e6a9eaf79a1e05af5ca0bd',1,'Catch::TestCaseTracking::ITracker']]],
   ['executionplan_573',['ExecutionPlan',['../struct_catch_1_1_benchmark_1_1_execution_plan.html',1,'Catch::Benchmark']]],
-  ['exename_574',['ExeName',['../class_catch_1_1_clara_1_1_exe_name.html',1,'Catch::Clara']]],
+  ['exename_574',['ExeName',['../class_catch_1_1_clara_1_1_exe_name.html',1,'Catch::Clara::ExeName'],['../class_catch_1_1_clara_1_1_exe_name.html#abd67f80f71ef0e4148856ba62fa8832b',1,'Catch::Clara::ExeName::ExeName(LambdaT const &amp;lambda)'],['../class_catch_1_1_clara_1_1_exe_name.html#afca75aeb9679dffe95232d3ee19e9a9b',1,'Catch::Clara::ExeName::ExeName(std::string &amp;ref)'],['../class_catch_1_1_clara_1_1_exe_name.html#a1ac750117e67530dfcfe30463fc293c7',1,'Catch::Clara::ExeName::ExeName()']]],
   ['exename_575',['exeName',['../class_catch_1_1_clara_1_1_args.html#a7e9ac321676c99e0185fb94237199b84',1,'Catch::Clara::Args']]],
-  ['exename_576',['ExeName',['../class_catch_1_1_clara_1_1_exe_name.html#abd67f80f71ef0e4148856ba62fa8832b',1,'Catch::Clara::ExeName::ExeName(LambdaT const &amp;lambda)'],['../class_catch_1_1_clara_1_1_exe_name.html#afca75aeb9679dffe95232d3ee19e9a9b',1,'Catch::Clara::ExeName::ExeName(std::string &amp;ref)'],['../class_catch_1_1_clara_1_1_exe_name.html#a1ac750117e67530dfcfe30463fc293c7',1,'Catch::Clara::ExeName::ExeName()']]],
-  ['expandaliases_577',['expandAliases',['../class_catch_1_1_tag_alias_registry.html#a721693fa58ec30ec94079368eb388802',1,'Catch::TagAliasRegistry::expandAliases()'],['../class_catch_1_1_i_tag_alias_registry.html#ae729a7532faf7466db1a157ce0395170',1,'Catch::ITagAliasRegistry::expandAliases()']]],
-  ['expectedtofail_578',['expectedToFail',['../struct_catch_1_1_test_case_info.html#abe33d81233230cdae8afa714688e905b',1,'Catch::TestCaseInfo']]],
-  ['explicitfailure_579',['ExplicitFailure',['../struct_catch_1_1_result_was.html#a624e1ee3661fcf6094ceef1f654601efacecfc052e2499499b13304249303cc36',1,'Catch::ResultWas']]],
-  ['explicitskip_580',['ExplicitSkip',['../struct_catch_1_1_result_was.html#a624e1ee3661fcf6094ceef1f654601efa99a9169d030778cf863b92ef02a4de2c',1,'Catch::ResultWas']]],
-  ['expressionfailed_581',['ExpressionFailed',['../struct_catch_1_1_result_was.html#a624e1ee3661fcf6094ceef1f654601efa5e7126b8458dc1376ac870a719f7873f',1,'Catch::ResultWas']]],
-  ['exprlhs_582',['ExprLhs',['../class_catch_1_1_expr_lhs.html',1,'Catch::ExprLhs&lt; LhsT &gt;'],['../class_catch_1_1_expr_lhs.html#ad22c6af1a7d6993240624d299714a479',1,'Catch::ExprLhs::ExprLhs()']]]
+  ['expandaliases_576',['expandAliases',['../class_catch_1_1_tag_alias_registry.html#a721693fa58ec30ec94079368eb388802',1,'Catch::TagAliasRegistry::expandAliases()'],['../class_catch_1_1_i_tag_alias_registry.html#ae729a7532faf7466db1a157ce0395170',1,'Catch::ITagAliasRegistry::expandAliases()']]],
+  ['expectedtofail_577',['expectedToFail',['../struct_catch_1_1_test_case_info.html#abe33d81233230cdae8afa714688e905b',1,'Catch::TestCaseInfo']]],
+  ['explicitfailure_578',['ExplicitFailure',['../struct_catch_1_1_result_was.html#a624e1ee3661fcf6094ceef1f654601efacecfc052e2499499b13304249303cc36',1,'Catch::ResultWas']]],
+  ['explicitskip_579',['ExplicitSkip',['../struct_catch_1_1_result_was.html#a624e1ee3661fcf6094ceef1f654601efa99a9169d030778cf863b92ef02a4de2c',1,'Catch::ResultWas']]],
+  ['expressionfailed_580',['ExpressionFailed',['../struct_catch_1_1_result_was.html#a624e1ee3661fcf6094ceef1f654601efa5e7126b8458dc1376ac870a719f7873f',1,'Catch::ResultWas']]],
+  ['exprlhs_581',['ExprLhs',['../class_catch_1_1_expr_lhs.html',1,'Catch::ExprLhs&lt; LhsT &gt;'],['../class_catch_1_1_expr_lhs.html#ad22c6af1a7d6993240624d299714a479',1,'Catch::ExprLhs::ExprLhs()']]]
 ];

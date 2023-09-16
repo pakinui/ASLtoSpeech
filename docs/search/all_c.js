@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['lambdainvoker_927',['LambdaInvoker',['../struct_catch_1_1_clara_1_1_detail_1_1_lambda_invoker.html',1,'Catch::Clara::Detail']]],
-  ['lambdainvoker_3c_20void_20_3e_928',['LambdaInvoker&lt; void &gt;',['../struct_catch_1_1_clara_1_1_detail_1_1_lambda_invoker_3_01void_01_4.html',1,'Catch::Clara::Detail']]],
-  ['lastassertionpassed_929',['lastAssertionPassed',['../class_catch_1_1_i_result_capture.html#a973435fbdcb2f6f07a0ec5719a01e956',1,'Catch::IResultCapture::lastAssertionPassed()'],['../class_catch_1_1_run_context.html#aa81c2eaddbe2079f5889ba6e83357584',1,'Catch::RunContext::lastAssertionPassed()']]],
-  ['lazyexpression_930',['LazyExpression',['../class_catch_1_1_lazy_expression.html',1,'Catch::LazyExpression'],['../class_catch_1_1_lazy_expression.html#a47186c2487bd4bf871e870ba8048553a',1,'Catch::LazyExpression::LazyExpression(bool isNegated)'],['../class_catch_1_1_lazy_expression.html#a7295f508de1c34c521f4a9024985ad45',1,'Catch::LazyExpression::LazyExpression(LazyExpression const &amp;other)=default']]],
-  ['lazyexpression_931',['lazyExpression',['../struct_catch_1_1_assertion_result_data.html#ad20fe728af4ef4aef8b9aea522ffe8b3',1,'Catch::AssertionResultData']]],
+  ['lambdainvoker_926',['LambdaInvoker',['../struct_catch_1_1_clara_1_1_detail_1_1_lambda_invoker.html',1,'Catch::Clara::Detail']]],
+  ['lambdainvoker_3c_20void_20_3e_927',['LambdaInvoker&lt; void &gt;',['../struct_catch_1_1_clara_1_1_detail_1_1_lambda_invoker_3_01void_01_4.html',1,'Catch::Clara::Detail']]],
+  ['lastassertionpassed_928',['lastAssertionPassed',['../class_catch_1_1_i_result_capture.html#a973435fbdcb2f6f07a0ec5719a01e956',1,'Catch::IResultCapture::lastAssertionPassed()'],['../class_catch_1_1_run_context.html#aa81c2eaddbe2079f5889ba6e83357584',1,'Catch::RunContext::lastAssertionPassed()']]],
+  ['lazyexpression_929',['LazyExpression',['../class_catch_1_1_lazy_expression.html',1,'Catch']]],
+  ['lazyexpression_930',['lazyExpression',['../struct_catch_1_1_assertion_result_data.html#ad20fe728af4ef4aef8b9aea522ffe8b3',1,'Catch::AssertionResultData']]],
+  ['lazyexpression_931',['LazyExpression',['../class_catch_1_1_lazy_expression.html#a47186c2487bd4bf871e870ba8048553a',1,'Catch::LazyExpression::LazyExpression(bool isNegated)'],['../class_catch_1_1_lazy_expression.html#a7295f508de1c34c521f4a9024985ad45',1,'Catch::LazyExpression::LazyExpression(LazyExpression const &amp;other)=default']]],
   ['leakdetector_932',['LeakDetector',['../struct_catch_1_1_leak_detector.html',1,'Catch::LeakDetector'],['../struct_catch_1_1_leak_detector.html#a1a2eafceb04f9f5e4f6aea1ac6098bb0',1,'Catch::LeakDetector::LeakDetector()']]],
   ['left_933',['left',['../struct_catch_1_1_clara_1_1_detail_1_1_help_columns.html#ae2146379a2c62a134824a1b2d8ebf63c',1,'Catch::Clara::Detail::HelpColumns']]],
   ['lexicographicallysorted_934',['LexicographicallySorted',['../namespace_catch.html#aa820408cff40873fdf5c6662b6327100a925be02b7396cbc3eb07c0de96126a74',1,'Catch']]],
