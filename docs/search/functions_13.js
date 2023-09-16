@@ -8,9 +8,8 @@ var searchData=
   ['unorderedequalsmatcher_2737',['UnorderedEqualsMatcher',['../class_catch_1_1_matchers_1_1_unordered_equals_matcher.html#ad434cf67520598a9faf1c1d2c3bb3113',1,'Catch::Matchers::UnorderedEqualsMatcher']]],
   ['unorderedrangeequals_2738',['UnorderedRangeEquals',['../namespace_catch_1_1_matchers.html#a0fb327c5793bd08743ff302114edad77',1,'Catch::Matchers::UnorderedRangeEquals(RangeLike &amp;&amp;range, Equality &amp;&amp;predicate)'],['../namespace_catch_1_1_matchers.html#a91a75fd7bed9e2b3758ca6e43809ac2f',1,'Catch::Matchers::UnorderedRangeEquals(RangeLike &amp;&amp;range)']]],
   ['unorderedrangeequalsmatcher_2739',['UnorderedRangeEqualsMatcher',['../class_catch_1_1_matchers_1_1_unordered_range_equals_matcher.html#a84a4091111f850b5fa6d8e68a332d158',1,'Catch::Matchers::UnorderedRangeEqualsMatcher']]],
-  ['updatecameraactive_2740',['updateCameraActive',['../class_camera.html#a663b2500e64ed3b3e4bf62ce2acd7de3',1,'Camera']]],
-  ['updatecameradevice_2741',['updateCameraDevice',['../class_camera.html#aca4a1061c49367d75cdb58db780b1e10',1,'Camera']]],
-  ['updatecameras_2742',['updateCameras',['../class_camera.html#a2d9d10823a15bdc97efab9ed226f6019',1,'Camera']]],
-  ['useconfigdata_2743',['useConfigData',['../class_catch_1_1_session.html#a122417ed44bfa29a229941b1e12b91a3',1,'Catch::Session']]],
-  ['user_5fcode_2744',['user_code',['../namespace_catch_1_1_benchmark.html#a59d11a04c61ac4c4a740352ecff9b0eb',1,'Catch::Benchmark']]]
+  ['updatecameradevice_2740',['updateCameraDevice',['../class_camera.html#aca4a1061c49367d75cdb58db780b1e10',1,'Camera']]],
+  ['updatecameras_2741',['updateCameras',['../class_camera.html#a2d9d10823a15bdc97efab9ed226f6019',1,'Camera']]],
+  ['useconfigdata_2742',['useConfigData',['../class_catch_1_1_session.html#a122417ed44bfa29a229941b1e12b91a3',1,'Catch::Session']]],
+  ['user_5fcode_2743',['user_code',['../namespace_catch_1_1_benchmark.html#a59d11a04c61ac4c4a740352ecff9b0eb',1,'Catch::Benchmark']]]
 ];
