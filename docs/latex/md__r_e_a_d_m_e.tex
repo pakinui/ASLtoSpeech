@@ -44,7 +44,7 @@ Working together as a team, we\textquotesingle{}ve selected two distinct dataset
 {\bfseries{Cool Points\+:}}
 
 We received zero marks for cool points from the {\bfseries{Alpha}}.~\newline
- What we believe was cool from the {\bfseries{Alpha}} that was no acknowledged\+:~\newline
+ What we believe was cool from the {\bfseries{Alpha}} that was not acknowledged\+:~\newline
 
 \begin{DoxyEnumerate}
 \item Git\+Hub integrated through using a webhook in Discord~\newline
@@ -104,13 +104,10 @@ For the {\bfseries{Beta}}, we believe the following could be considered for cool
 \DoxyCodeLine{git clone https://github.com/pakinui/cosc345.git}
 \DoxyCodeLine{cd cosc345}
 \DoxyCodeLine{pip install -\/r requirements.txt}
-\DoxyCodeLine{mkdir build}
-\DoxyCodeLine{cd build}
-\DoxyCodeLine{cmake ..}
-\DoxyCodeLine{cmake -\/-\/build .}
-\DoxyCodeLine{cd Debug}
-\DoxyCodeLine{path/to/Qt/6.5.2/mxvc2019\_64/bin/windeployqt.exe ./345Application.exe}
-\DoxyCodeLine{./345Application.exe}
+\DoxyCodeLine{Open the CMakeLists.txt file in Ot6.5.2}
+\DoxyCodeLine{Insert '\(\backslash\)cosc345\(\backslash\)build' into the build directory between the parent directory and the build directory}
+\DoxyCodeLine{  i.e.(...\(\backslash\)parent-\/directory\(\backslash\)cosc345\(\backslash\)build\(\backslash\)build-\/cosc345...)}
+\DoxyCodeLine{Build and Run the Application in Release mode}
 
 \end{DoxyCode}
 \hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysubsection{Usage}\label{md__r_e_a_d_m_e_autotoc_md11}
