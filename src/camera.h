@@ -70,7 +70,7 @@ public:
 
 //private:
     Ui::Camera *ui;
-    QList<QPair<QString, QString>> history; ///< list to store history of translations
+    QList<QString> history; ///< list to store history of translations
     QActionGroup *videoDevicesGroup = nullptr; ///< group of video devices
 
     QMediaDevices m_devices; ///< available multimedia input/output devices instance
@@ -148,12 +148,6 @@ public Q_SLOTS:
      */
     void translateText();
 
-    /**
-     * @brief searchDictionary
-     * 
-     * Searches the dictionary for the text in the text box.
-     */
-    void searchDictionary();
 
     /**
      * @brief addToHistory
@@ -163,7 +157,7 @@ public Q_SLOTS:
      * @param original The original text.
      * @param translated The translated text.
      */
-    void addToHistory(const QString &original, const QString &translated);
+    void addToHistory(const QString &original);
 
     /**
      * @brief Start the current Camera.
@@ -200,6 +194,7 @@ public Q_SLOTS:
 
     bool getImageAvailable();
     bool getCameraActive();
+    QString getLastHistory();
 };
 
 #endif // CAMERA_H

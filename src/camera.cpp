@@ -10,10 +10,6 @@
 #include "ui_camera.h"
 #include "text_to_speech/ttsCall.h"
 #include <Python.h>
-
-// #include "dictionary.h" // for later use
-// #include "translationtab.h"
-// #include "dictionarytab.h"
 #include <opencv2/opencv.hpp>
 
 #include <QAudioDevice>
@@ -77,6 +73,7 @@ QString captures_path; ///< Path to where images are saved
 QString imgOutputPath; ///< Path where camera frames are saved
 QString detectedText; /// < Path wehre detected texts are saved
 bool cameraActive;
+QString lastTranslate;
 /**
  * @brief Camera::Camera() : ui(new Ui::Camera) constructs a new Camera:: Camera object
  *
@@ -86,12 +83,12 @@ bool cameraActive;
  */
 Camera::Camera() : ui(new Ui::Camera)
 {
-    qDebug() << "working?";
+//    qDebug() << "working?";
     ui->setupUi(this);
 
 //    QPlainTextEdit *historyTextEdit;
     connect(ui->translateButton, &QPushButton::clicked, this, &Camera::translateText);
-    //connect(ui->dictionaryButton, &QPushButton::clicked, this, &Camera::searchDictionary);
+
 
     m_captureSession.setCamera(&m_camera);
 
@@ -104,16 +101,16 @@ Camera::Camera() : ui(new Ui::Camera)
     setupMenus();
     updateCameras();
 
-    qDebug() << "workddding?";
+//    qDebug() << "workddding?";
     QString currentPath = QDir::currentPath();
     QString newPath = currentPath + "/../../src"; // The current path (of this file)
     std::string pythonCode = "import sys; sys.path.append('"+ newPath.toStdString() +"')";
     captures_path = currentPath + "/../../resources/captures"; // path to where images are saved
     imgOutputPath = captures_path + "/output.jpg"; // path where camera frames are saved
-    qDebug() << "workiasdasdddng?";
+//    qDebug() << "workiasdasdddng?";
     Py_Initialize();
     PyRun_SimpleString(pythonCode.c_str());
-    qDebug() << "working111?";
+//    qDebug() << "working111?";
     pModule = PyImport_ImportModule("inference_classifier");
     if(!pModule){
         qDebug() << "111?";
@@ -146,11 +143,11 @@ Camera::Camera() : ui(new Ui::Camera)
                      */
                     connect(sink, &QVideoSink::videoFrameChanged, this, &Camera::imageAvailable);
                 }
-                qDebug() << "1fff";
+//                qDebug() << "1fff";
             }
-            qDebug() << "2fff";
+//            qDebug() << "2fff";
         }
-        qDebug() << "3fff";
+//        qDebug() << "3fff";
     }
 
 
@@ -255,8 +252,8 @@ void Camera::translateText()
 
         //ui->translationDisplay->setPlainText(inputText);
         // Store translation in history data structure
-        // addToHistory(inputText, translatedText);
-        addToHistory(inputText, inputText);
+
+        addToHistory(inputText);
 
         detectedText = "";
         ui->translateInput->setPlainText(detectedText);
@@ -276,10 +273,13 @@ void Camera::translateText()
  * @param original The original text before translation.
  * @param translated The translated text (or modified text) after translation.
  */
-void Camera::addToHistory(const QString &original, const QString &translated)
+void Camera::addToHistory(const QString &original)
 {
-    history.append(QPair<QString, QString>(original, translated));
+
+    history.append(original);
     ui->historyDisplay->setPlainText(getHistoryText());
+    ui->translationDisplay->setPlainText(getHistoryText());
+    lastTranslate = original;
 }
 
 /**
@@ -297,40 +297,15 @@ void Camera::addToHistory(const QString &original, const QString &translated)
 QString Camera::getHistoryText()
 {
     QString historyText;
-    for (const QPair<QString, QString> &entry : history)
+
+    for (const QString &string : history)
     {
-        historyText += "Original: " + entry.first + "\n";
-        historyText += "Translated: " + entry.second + "\n\n";
+        historyText += string + "\n";
+
     }
     return historyText;
 }
 
-/**
- * @brief Performs dictionary search logic.
- *
- * This function is triggered when the "Search" button is clicked in the GUI.
- * It retrieves the input text from the UI and performs a search in the dictionary.
- *
- * @note Not currently active.
- */
-void Camera::searchDictionary()
-{
-    QString searchTerm = ui->dictionaryInput->toPlainText();
-
-    //    QResource jsonResource(":/data/1000.json");
-    //    QString dataFilePath = jsonResource.absoluteFilePath(); // Construct the file path
-
-    // qDebug() << dataFilePath;
-    //  Create an instance of the Dictionary class
-    // Dictionary dictionary(":/data/data/1000.json", ui->videoDisplay, ui->dictionaryPhoto);
-
-    // dictionary.search(searchTerm);
-
-    // Dictionary search logic
-    // QString searchResult = performDictionarySearch(searchTerm);
-    // ui->dictionaryDisplay->setPlainText(searchResult);
-    ui->dictionaryTextOutput->setPlainText(searchTerm);
-}
 
 /**
  * @brief updates the camera device for the application to use.
@@ -522,4 +497,8 @@ bool Camera::getCameraActive(){
 
     return cameraActive;
 
+}
+
+QString Camera::getLastHistory(){
+    return lastTranslate;
 }

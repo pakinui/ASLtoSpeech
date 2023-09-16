@@ -195,7 +195,10 @@ color: black;
           <attribute name="title">
            <string>Trans</string>
           </attribute>
-          <layout class="QVBoxLayout" name="verticalLayout_2" stretch="8,2">
+          <layout class="QVBoxLayout" name="verticalLayout_2" stretch="5,1">
+           <property name="spacing">
+            <number>6</number>
+           </property>
            <item>
             <widget class="QWidget" name="topArea" native="true">
              <widget class="QTextEdit" name="translationDisplay">
@@ -204,7 +207,7 @@ color: black;
                 <x>3</x>
                 <y>0</y>
                 <width>171</width>
-                <height>321</height>
+                <height>301</height>
                </rect>
               </property>
               <property name="styleSheet">
@@ -231,7 +234,7 @@ color: black;
                  <string notr="true">background-color: #F5F1F0</string>
                 </property>
                 <property name="readOnly">
-                 <bool>true</bool>
+                 <bool>false</bool>
                 </property>
                 <property name="placeholderText">
                  <string>Text to Translate ...</string>
@@ -246,57 +249,6 @@ color: black;</string>
                 </property>
                 <property name="text">
                  <string>Translate</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="dictionaryTab">
-          <property name="styleSheet">
-           <string notr="true">background-color: #E8E3E1</string>
-          </property>
-          <attribute name="title">
-           <string>Dict</string>
-          </attribute>
-          <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,8">
-           <item>
-            <widget class="QWidget" name="searchArea" native="true">
-             <layout class="QVBoxLayout" name="verticalLayout_5" stretch="3,1">
-              <item>
-               <widget class="QTextEdit" name="dictionaryInput"/>
-              </item>
-              <item>
-               <widget class="QPushButton" name="dictionaryButton">
-                <property name="enabled">
-                 <bool>true</bool>
-                </property>
-                <property name="text">
-                 <string>Coming Soon</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="dictDisplayArea" native="true">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="styleSheet">
-              <string notr="true"/>
-             </property>
-             <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1">
-              <item>
-               <widget class="QTextEdit" name="dictionaryTextOutput">
-                <property name="styleSheet">
-                 <string notr="true"/>
-                </property>
-                <property name="readOnly">
-                 <bool>true</bool>
                 </property>
                </widget>
               </item>
