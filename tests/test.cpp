@@ -10,7 +10,8 @@
 #include <QTest>
 #include <QString>
 #include <Python.h>
-
+#include <QSignalSpy>
+#include <QDebug>
 
 #include <windows.h>
 #include <iostream>
@@ -30,14 +31,16 @@ class Test: public QObject
 {
     Q_OBJECT
     QString currentPath = QDir::currentPath();
+    Camera *camera;
+
     private Q_SLOTS:
         void testPython();
         void importScript();
         void testTTS();
-        //void testImageAvailable();
+
+        void testCameraConstructor();
         void testCameraStart();
         void testCameraStop();
-
 };
 
 void Test::testPython(){
@@ -122,33 +125,48 @@ void Test::testTTS(){
 //    }
 //    REQUIRE(true);
 //}
-//void Test::testImageAvailable() {
-//    Camera camera;
 
-////    //QSignalSpy spy(&camera, &Camera::imageAvailable);
 
-//    //bool test = camera.getImageAvailable();
-//    //bool test = true;
+void Test::testCameraConstructor() {
+    // Create a new Camera object.
+    Py_Initialize();
+    camera = new Camera();
+    camera->show();
+    // Check that the camera object's properties are initialized correctly.
+    QVERIFY(camera->m_camera.isAvailable());
 
-//    QVERIFY(test);
-//}
+
+}
 
 void Test::testCameraStart(){
-    Camera camera;
-    camera.startCamera();
-    bool active = camera.getCameraActive();
-    //bool active = true;
-    QVERIFY(active);
-    //QVERIFY(true);
+   // QVERIFY(true);
+
+    qDebug() << camera->m_camera.isAvailable();
+    while (!camera->m_camera.isAvailable()){
+        qDebug() << "waiting";
+    }
+    camera->startCamera();
+
+
+    // Check that the camera is available.
+    QVERIFY(camera->getCameraActive());
+
 
 }
 
 void Test::testCameraStop(){
-    Camera camera;
-    camera.stopCamera();
-    bool active = camera.getCameraActive();
-    QVERIFY(!active);
+//    QVERIFY(true);
 
+    qDebug() << camera->m_camera.isAvailable();
+    while (!camera->m_camera.isAvailable()){
+        qDebug() << "waiting111";
+    }
+    camera->stopCamera();
+
+
+    // Check that the camera is available.
+    // If you remove the ! it is false which is what we want
+    QVERIFY(!camera->getCameraActive());
 }
 
 

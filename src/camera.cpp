@@ -86,7 +86,7 @@ bool cameraActive;
  */
 Camera::Camera() : ui(new Ui::Camera)
 {
-
+    qDebug() << "working?";
     ui->setupUi(this);
 
 //    QPlainTextEdit *historyTextEdit;
@@ -104,46 +104,62 @@ Camera::Camera() : ui(new Ui::Camera)
     setupMenus();
     updateCameras();
 
-
+    qDebug() << "workddding?";
     QString currentPath = QDir::currentPath();
     QString newPath = currentPath + "/../../src"; // The current path (of this file)
     std::string pythonCode = "import sys; sys.path.append('"+ newPath.toStdString() +"')";
     captures_path = currentPath + "/../../resources/captures"; // path to where images are saved
     imgOutputPath = captures_path + "/output.jpg"; // path where camera frames are saved
-
+    qDebug() << "workiasdasdddng?";
     Py_Initialize();
     PyRun_SimpleString(pythonCode.c_str());
-
+    qDebug() << "working111?";
     pModule = PyImport_ImportModule("inference_classifier");
     if(!pModule){
+        qDebug() << "111?";
+
         PyErr_Print();
+    }else{
+        class_object = PyObject_GetAttrString(pModule, "PythonTest");
+        if(!class_object){
+            qDebug() << "222?";
+            PyErr_Print();
+        }else{
+            instance = PyObject_CallObject(class_object, NULL); // Create an instance of the Python class module
+            if(!instance){
+                qDebug() << "333";
+                PyErr_Print();
+            }else{
+                pFunc = PyObject_GetAttrString(instance, "sign_identifier"); // The Python function to identify the ASL sign.
+                if(!pFunc){
+                    qDebug() << "444?";
+                    PyErr_Print();
+                }else{
+                    m_captureSession.setImageCapture(&m_imageCapture);
+                    m_imageCapture.capture();
+                    m_camera.start();
+                    qDebug() << "working111111112?";
+                    /**
+                     * @brief Connect Camera::imageAvailable to QVideoSink::videoFrameChanged.
+                     *
+                     * Everytime QVideoSink has a new frame, Camera::imageAvailable is called.
+                     */
+                    connect(sink, &QVideoSink::videoFrameChanged, this, &Camera::imageAvailable);
+                }
+                qDebug() << "1fff";
+            }
+            qDebug() << "2fff";
+        }
+        qDebug() << "3fff";
     }
 
-    class_object = PyObject_GetAttrString(pModule, "PythonTest");
-    if(!class_object){
-        PyErr_Print();
-    }
 
-    instance = PyObject_CallObject(class_object, NULL); // Create an instance of the Python class module
-    if(!instance){
-        PyErr_Print();
-    }
 
-    pFunc = PyObject_GetAttrString(instance, "sign_identifier"); // The Python function to identify the ASL sign.
-    if(!pFunc){
-        PyErr_Print();
-    }
 
-    m_captureSession.setImageCapture(&m_imageCapture);
-    m_imageCapture.capture();
-    m_camera.start();
 
-    /**
-     * @brief Connect Camera::imageAvailable to QVideoSink::videoFrameChanged.
-     *
-     * Everytime QVideoSink has a new frame, Camera::imageAvailable is called.
-     */
-    connect(sink, &QVideoSink::videoFrameChanged, this, &Camera::imageAvailable);
+
+
+
 
 }
 

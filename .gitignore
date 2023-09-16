@@ -92,3 +92,4 @@ CMakeLists.txt.user*
 
 
 *.gcno
+LastCoverageResults.log
