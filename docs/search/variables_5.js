@@ -1,12 +1,4 @@
 var searchData=
 [
-  ['factories_2898',['factories',['../struct_catch_1_1_reporter_registry_1_1_reporter_registry_impl.html#ae200d7213c95d056fad5ca997401d293',1,'Catch::ReporterRegistry::ReporterRegistryImpl']]],
-  ['failed_2899',['failed',['../struct_catch_1_1_counts.html#ab0bda88e125a1ba60b47c262fc2c529c',1,'Catch::Counts']]],
-  ['failedbutok_2900',['failedButOk',['../struct_catch_1_1_counts.html#ad42a25fd6c31ca6c6320f4cf5e857028',1,'Catch::Counts']]],
-  ['file_2901',['file',['../struct_catch_1_1_source_line_info.html#ad65537703e9f08c1fa7777fbc3f0c617',1,'Catch::SourceLineInfo']]],
-  ['filemenu_2902',['fileMenu',['../class_camera.html#a646a808b96161fe88a9e6f1dcb71f2fc',1,'Camera']]],
-  ['filenamesastags_2903',['filenamesAsTags',['../struct_catch_1_1_config_data.html#a4c582987ddd060919a6fd203661f9210',1,'Catch::ConfigData']]],
-  ['finished_2904',['finished',['../struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_model.html#ab3cfa080dee083a2ca79683eed55d732',1,'Catch::Benchmark::Detail::ChronometerModel']]],
-  ['fourcc_2905',['fourcc',['../classinference__classifier_1_1_python_test.html#aef0f60edb8b97bc9450cbb616d875aaf',1,'inference_classifier::PythonTest']]],
-  ['fun_2906',['fun',['../struct_catch_1_1_benchmark_1_1_detail_1_1repeater.html#a97f32a92784f901935534cee88726a46',1,'Catch::Benchmark::Detail::repeater']]]
+  ['lasttranslate_129',['lastTranslate',['../camera_8cpp.html#a82e9005ec96631d20b92a5f9d433cfa3',1,'camera.cpp']]]
 ];

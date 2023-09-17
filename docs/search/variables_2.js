@@ -1,30 +1,5 @@
 var searchData=
 [
-  ['c_2862',['c',['../struct_catch_1_1line_of_chars.html#a4fe021a144e1394ac6b1528e880f331b',1,'Catch::lineOfChars']]],
-  ['cam_2863',['cam',['../class_camera.html#a8c1c1be1b17b7a874463c35eb709c5e3',1,'Camera']]],
-  ['cameraactive_2864',['cameraActive',['../camera_8cpp.html#ab37aad1ef710745ff6d994a6ba118931',1,'camera.cpp']]],
-  ['cameramenu_2865',['cameraMenu',['../class_camera.html#ab752ed49444b436aeef1f94cdadfe9ff',1,'Camera']]],
-  ['cap_2866',['cap',['../classinference__classifier_1_1_python_test.html#af9bd02f0466b016e62655201b6297dd5',1,'inference_classifier::PythonTest']]],
-  ['capturedexpression_2867',['capturedExpression',['../struct_catch_1_1_assertion_info.html#accd36744b4acaa3a691a72df0b42190f',1,'Catch::AssertionInfo']]],
-  ['captures_5fpath_2868',['captures_path',['../camera_8cpp.html#a6e439f8deb135436151d480aec315b41',1,'camera.cpp']]],
-  ['children_2869',['children',['../struct_catch_1_1_cumulative_reporter_base_1_1_node.html#a7b123f17f6b77f5cd4e2f9c1325515a4',1,'Catch::CumulativeReporterBase::Node']]],
-  ['childsections_2870',['childSections',['../struct_catch_1_1_cumulative_reporter_base_1_1_section_node.html#a2582b7ea64bdb6d780b2f53cb3d157d5',1,'Catch::CumulativeReporterBase::SectionNode']]],
-  ['class_5fobject_2871',['class_object',['../camera_8cpp.html#a61277ddb50aabc074b0742719df29937',1,'camera.cpp']]],
-  ['classname_2872',['className',['../struct_catch_1_1_test_case_info.html#a1daaddce433ef171e34bec5a4719e772',1,'Catch::TestCaseInfo']]],
-  ['clock_5fcost_2873',['clock_cost',['../struct_catch_1_1_benchmark_1_1_environment.html#acf985d3f2e196a698719ca9a2397537a',1,'Catch::Benchmark::Environment']]],
-  ['clock_5fcost_5festimation_5fiterations_2874',['clock_cost_estimation_iterations',['../namespace_catch_1_1_benchmark_1_1_detail.html#a971609fd1bf1dffc78fbb645d649bcae',1,'Catch::Benchmark::Detail']]],
-  ['clock_5fcost_5festimation_5ftick_5flimit_2875',['clock_cost_estimation_tick_limit',['../namespace_catch_1_1_benchmark_1_1_detail.html#a1ee35c3ddb5cdf0f4ad7354240e4288d',1,'Catch::Benchmark::Detail']]],
-  ['clock_5fcost_5festimation_5ftime_2876',['clock_cost_estimation_time',['../namespace_catch_1_1_benchmark_1_1_detail.html#a9b7d750760d2dbafad94a78957d85b68',1,'Catch::Benchmark::Detail']]],
-  ['clock_5fcost_5festimation_5ftime_5flimit_2877',['clock_cost_estimation_time_limit',['../namespace_catch_1_1_benchmark_1_1_detail.html#a258a5fe6cc543b6ab8cceb3e175e1c1d',1,'Catch::Benchmark::Detail']]],
-  ['clock_5fresolution_2878',['clock_resolution',['../struct_catch_1_1_benchmark_1_1_environment.html#acd47578c42bb7ee6ffb3011807acea43',1,'Catch::Benchmark::Environment']]],
-  ['clock_5fresolution_5festimation_5ftime_2879',['clock_resolution_estimation_time',['../namespace_catch_1_1_benchmark_1_1_detail.html#a805143fb513ffc616374ea01f764f87c',1,'Catch::Benchmark::Detail']]],
-  ['clockcost_2880',['clockCost',['../struct_catch_1_1_benchmark_info.html#a1e5b58de921a9e88b72749cf3bd6efea',1,'Catch::BenchmarkInfo']]],
-  ['clockresolution_2881',['clockResolution',['../struct_catch_1_1_benchmark_info.html#afc6fa85797067ea9af01fb0e2bc0d790',1,'Catch::BenchmarkInfo']]],
-  ['colourmode_2882',['colourMode',['../struct_catch_1_1_processed_reporter_spec.html#ad17b305aa863b41fadf2dc45f45a1952',1,'Catch::ProcessedReporterSpec']]],
-  ['confidence_5finterval_2883',['confidence_interval',['../struct_catch_1_1_benchmark_1_1_estimate.html#aec651fd645e25b52a24ff0e2a8fcb4b9',1,'Catch::Benchmark::Estimate']]],
-  ['count_2884',['count',['../camera_8cpp.html#ad43c3812e6d13e0518d9f8b8f463ffcf',1,'count():&#160;camera.cpp'],['../struct_catch_1_1_tag_info.html#ae056c754ab1e2f1a8f175096ae5835c2',1,'Catch::TagInfo::count()']]],
-  ['currentstring_2885',['currentString',['../tts_call_8cpp.html#a2f170ad18ecd4208c730e8d08a880ceb',1,'ttsCall.cpp']]],
-  ['currenttestcaseinfo_2886',['currentTestCaseInfo',['../class_catch_1_1_streaming_reporter_base.html#af9ca5c5966f269475d9621aa5e63a111',1,'Catch::StreamingReporterBase']]],
-  ['currenttestruninfo_2887',['currentTestRunInfo',['../class_catch_1_1_streaming_reporter_base.html#a973ae44ceadf335cd07e48cd4ea61335',1,'Catch::StreamingReporterBase']]],
-  ['customoptions_2888',['customOptions',['../struct_catch_1_1_processed_reporter_spec.html#aaaeead5abd0ff72b8a1837b23243336a',1,'Catch::ProcessedReporterSpec']]]
+  ['filemenu_121',['fileMenu',['../class_camera.html#a646a808b96161fe88a9e6f1dcb71f2fc',1,'Camera']]],
+  ['fourcc_122',['fourcc',['../classinference__classifier_1_1_python_test.html#aef0f60edb8b97bc9450cbb616d875aaf',1,'inference_classifier::PythonTest']]]
 ];

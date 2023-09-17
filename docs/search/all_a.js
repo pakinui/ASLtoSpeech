@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['jackknife_924',['jackknife',['../namespace_catch_1_1_benchmark_1_1_detail.html#a1826a6e1e8081967f7637dcc4616a9ea',1,'Catch::Benchmark::Detail']]],
-  ['junitreporter_925',['JunitReporter',['../class_catch_1_1_junit_reporter.html',1,'Catch::JunitReporter'],['../class_catch_1_1_junit_reporter.html#ad367918f93081de6215d6382f4888c62',1,'Catch::JunitReporter::JunitReporter()']]],
-  ['justification_926',['justification',['../catch__amalgamated_8cpp.html#ac97cfc311188fc98d6a0f2b16e2b9bab',1,'catch_amalgamated.cpp']]]
+  ['old_5fframe_51',['old_frame',['../camera_8cpp.html#a16df30dbceece8ecb372b47feb3f2290',1,'camera.cpp']]],
+  ['out_52',['out',['../classinference__classifier_1_1_python_test.html#adc0c07694cc1842974c570e330c6fbef',1,'inference_classifier::PythonTest']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['elapsed_2895',['elapsed',['../struct_catch_1_1_benchmark_1_1_timing.html#a509b2f52910556c1b3edfe968d8a45dd',1,'Catch::Benchmark::Timing']]],
-  ['estimated_5fduration_2896',['estimated_duration',['../struct_catch_1_1_benchmark_1_1_execution_plan.html#adacf1528cc65befc69a8f55176257893',1,'Catch::Benchmark::ExecutionPlan']]],
-  ['estimatedduration_2897',['estimatedDuration',['../struct_catch_1_1_benchmark_info.html#ac3e87a646e9fb0771e495938ef878cd4',1,'Catch::BenchmarkInfo']]]
+  ['img_5fpath_126',['img_path',['../classinference__classifier_1_1_python_test.html#aeb8fc6b2e37ac5f4e32f12d319e3b4ce',1,'inference_classifier::PythonTest']]],
+  ['imgoutputpath_127',['imgOutputPath',['../camera_8cpp.html#a4f663c585b133e04c0167b276d576346',1,'camera.cpp']]],
+  ['instance_128',['instance',['../camera_8cpp.html#a042bdaef342f7cc6b44fe013af07fdab',1,'camera.cpp']]]
 ];
