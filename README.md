@@ -68,7 +68,7 @@ A more detailed document with evidence can be found [here](https://github.com/pa
 
 For the <b>Beta</b>, we believe the following could be considered for cool points:<br />
 1.  A retrospective, [here](https://github.com/pakinui/cosc345/blob/main/PDFs/retrospective%26actions.png), along with the follow up to it, [here](https://github.com/pakinui/cosc345/blob/main/PDFs/retrospective_follow_up.png)<br />
-2.  <br />
+2.  An analysis on user testing [here](https://github.com/pakinui/cosc345/blob/main/PDFs/user_testing_review.pdf)<br />
  
 ## Features
 
