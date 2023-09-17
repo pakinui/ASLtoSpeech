@@ -71,7 +71,7 @@ PyObject *class_object; ///< the python class object from inference_classifier
 PyObject *instance; ///< the python instance of the class object
 QString captures_path; ///< Path to where images are saved
 QString imgOutputPath; ///< Path where camera frames are saved
-QString detectedText; /// < Path wehre detected texts are saved
+QString detectedText; ///< Path wehre detected texts are saved
 bool cameraActive; ///< Boolean to check if camera is active
 QString lastTranslate; ///< The last translated text
 /**
