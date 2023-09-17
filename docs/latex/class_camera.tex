@@ -43,9 +43,9 @@ void \mbox{\hyperlink{class_camera_ac82ec2eaddeb101ebd7d4763a23f09ef}{image\+Ava
 bool \mbox{\hyperlink{class_camera_a491ae3683ddd0ccdc4e06cfa41fea1db}{get\+Image\+Available}} ()
 \item 
 bool \mbox{\hyperlink{class_camera_a3b860e6a36dc14b9130638b7b6f97342}{get\+Camera\+Active}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the current camera. \end{DoxyCompactList}\item 
 QString \mbox{\hyperlink{class_camera_aa352f0c6e8e5563ff5a432a6f27f4a35}{get\+Last\+History}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns the last translated text. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -166,6 +166,15 @@ This function displays a camera error message in a message box if there is an er
 \doxysubsubsection{\texorpdfstring{getCameraActive}{getCameraActive}}
 {\footnotesize\ttfamily bool Camera\+::get\+Camera\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
+
+
+Returns the current camera. 
+
+This function returns the current camera that is being used.
+
+\begin{DoxyReturn}{Returns}
+The current camera that is being used. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_camera_a34c65eb12c00860f7bbbb7528e3376cb}\label{class_camera_a34c65eb12c00860f7bbbb7528e3376cb}} 
 \index{Camera@{Camera}!getHistoryText@{getHistoryText}}
 \index{getHistoryText@{getHistoryText}!Camera@{Camera}}
@@ -203,6 +212,15 @@ A text string containing translation history.
 \doxysubsubsection{\texorpdfstring{getLastHistory}{getLastHistory}}
 {\footnotesize\ttfamily QString Camera\+::get\+Last\+History (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
+
+
+Returns the last translated text. 
+
+This function returns the last translated text, which is the last entry in the translation history.
+
+\begin{DoxyReturn}{Returns}
+The last translated text. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_camera_ac82ec2eaddeb101ebd7d4763a23f09ef}\label{class_camera_ac82ec2eaddeb101ebd7d4763a23f09ef}} 
 \index{Camera@{Camera}!imageAvailable@{imageAvailable}}
 \index{imageAvailable@{imageAvailable}!Camera@{Camera}}
