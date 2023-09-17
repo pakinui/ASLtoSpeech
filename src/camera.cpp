@@ -72,8 +72,8 @@ PyObject *instance; ///< the python instance of the class object
 QString captures_path; ///< Path to where images are saved
 QString imgOutputPath; ///< Path where camera frames are saved
 QString detectedText; /// < Path wehre detected texts are saved
-bool cameraActive;
-QString lastTranslate;
+bool cameraActive; ///< Boolean to check if camera is active
+QString lastTranslate; ///< The last translated text
 /**
  * @brief Camera::Camera() : ui(new Ui::Camera) constructs a new Camera:: Camera object
  *
@@ -459,7 +459,7 @@ void Camera::updateCameras()
      * This will add all available cameras to the devicesMenu.
      * You can then select which camera you would like to use
      * from the list.
-     * */
+     */
     const QList<QCameraDevice> availableCameras = QMediaDevices::videoInputs();
     for (const QCameraDevice &cameraDevice : availableCameras)
     {
@@ -473,12 +473,27 @@ void Camera::updateCameras()
     }
 }
 
+/**
+ * @brief Returns the current camera.
+ *
+ * This function returns the current camera that is being used.
+ *
+ * @return The current camera that is being used.
+ */
 bool Camera::getCameraActive(){
 
     return cameraActive;
 
 }
 
+/**
+ * @brief Returns the last translated text.
+ *
+ * This function returns the last translated text, which is the last entry in the
+ * translation history.
+ *
+ * @return The last translated text.
+ */
 QString Camera::getLastHistory(){
     return lastTranslate;
 }

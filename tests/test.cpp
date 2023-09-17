@@ -24,9 +24,9 @@
  * @brief This is the class implemented for testing of our application.
  *
  * This class contains the unit tests for our application.
- * It contains tests for the text-to-speech functionality,
- * the Python functionality, and the GUI functionality.
-*/
+ * It contains tests for QObjects, Python, scripts, text-to-speech functionality,
+ * the Camera, the History, and the Translator.
+ */
 class Test: public QObject
 {
     Q_OBJECT
