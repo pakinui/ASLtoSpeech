@@ -106,10 +106,10 @@ git clone https://github.com/pakinui/cosc345.git
 cd cosc345
 pip install -r requirements.txt
 ```
-Open the CMakeLists.txt file in Ot6.5.2
-Insert '\cosc345\build' into the build directory between the parent directory and the build directory
-  i.e.(...\parent-directory\cosc345\build\build-cosc345...)
-Build and Run the Application in Release mode
+Open the CMakeLists.txt file in Ot6.5.2<br />
+Insert '\cosc345\build' into the build directory between the parent directory and the build directory<br />
+  i.e.(...\parent-directory\cosc345\build\build-cosc345...)<br />
+Build and Run the Application in Release mode<br />
 ****
 
 ## Usage
