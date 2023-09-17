@@ -15,14 +15,17 @@ jobs:
           ls coverage
     - name: Upload coverage report to Codecov
       uses: codecov/codecov-action@v2
+      
       env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+          CODECOV_MAX_REPORT_AGE: off
       with:
           files: coverage\coverage_info.xml
     - name: Upload test coverage report to Codecov
       uses: codecov/codecov-action@v2
       env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+          CODECOV_MAX_REPORT_AGE: off
       with:
           files: coverage\coverage_tests.xml
               
