@@ -3,7 +3,7 @@
 An innovative application that bridges the communication gap between individuals using American Sign Language (ASL) and those who communicate through spoken language. The Sign Language to Speech App utilizes machine learning and text-to-speech technologies to seamlessly translate ASL gestures into spoken words.
 
 <p align="center">
-  <img src="ASL guidline.png" />
+  <img src="ASL guidline.png" width="500" height= "800"/>
 </p>
 <p align="center">
   ASL guidebook
