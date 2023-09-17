@@ -6,7 +6,7 @@ An innovative application that bridges the communication gap between individuals
   <img src="ASL guidline.png" width="500" height= "800"/>
 </p>
 <p align="center">
-  ASL guidebook
+  "Guideline for American Sign Language"
 </p>
 
 
