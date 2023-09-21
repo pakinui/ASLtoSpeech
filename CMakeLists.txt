@@ -179,11 +179,14 @@ endif()
 
 if(BUILD_TESTING)
 
+
+
     add_executable(Tests
         tests/test.cpp
         src/text_to_speech/ttscall.cpp
         src/camera.cpp
-        #tests/cameraTest.cpp
+
+
     )
 
     find_package(Qt6 REQUIRED COMPONENTS Test)
@@ -200,7 +203,9 @@ if(BUILD_TESTING)
         Qt6::Quick
         Qt6::Gui
         Python::Python
+
     )
+
 
 
 endif()

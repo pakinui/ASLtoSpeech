@@ -1,4 +1,4 @@
-[2023-09-16 13:29:37] [info] Start Program:
+[2023-09-22 11:29:42] [info] Start Program:
 Path:"build\\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-RelWithDebInfo\\Tests.exe"
 Arguments:
 Working directory: not set.
@@ -14,9 +14,9 @@ Input coverage:
 Unified diff: 
 Excluded line regular expressions: 
 Substitute pdb source paths: 
-[2023-09-16 13:29:37] [info] Module: C:\Users\poppy\Documents\GitHub\cosc345\build\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-RelWithDebInfo\Tests.exe is selected because it matches selected pattern: 
-[2023-09-16 13:29:42] [info] ----------------------------------------------------
-[2023-09-16 13:29:42] [info] Cobertura report generated: coverage\coverage_tests.xml
-[2023-09-16 13:29:42] [info] ----------------------------------------------------
-[2023-09-16 13:29:42] [info] The code coverage report is not what you expect? See the FAQ https://github.com/OpenCppCoverage/OpenCppCoverage/wiki/FAQ.
-[2023-09-16 13:29:42] [error] Your program stop with error code: 1
+[2023-09-22 11:29:42] [info] Module: C:\Users\poppy\Documents\GitHub\cosc345\build\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-RelWithDebInfo\Tests.exe is selected because it matches selected pattern: 
+[2023-09-22 11:29:45] [info] ----------------------------------------------------
+[2023-09-22 11:29:45] [info] Cobertura report generated: coverage\coverage_tests.xml
+[2023-09-22 11:29:45] [info] ----------------------------------------------------
+[2023-09-22 11:29:45] [info] The code coverage report is not what you expect? See the FAQ https://github.com/OpenCppCoverage/OpenCppCoverage/wiki/FAQ.
+[2023-09-22 11:29:45] [error] Your program stop with error code: 1

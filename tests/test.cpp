@@ -42,7 +42,10 @@ class Test: public QObject
         void testCameraStart();
         void testCameraStop();
         void testAddToHistory();
-        void testTranslateText();
+        void testTranslateTextAddedToHistory();
+        void clearTranslateTextAfterTranslate();
+//        void testImageAvailable();
+        void testSubtitles();
 
 };
 
@@ -98,36 +101,6 @@ void Test::testTTS(){
     QVERIFY(test.getString() == "testing");
 }
 
-//TEST_CASE( "speech.wav file created", "[file_check]" ) {
-//     TextToSpeech test;
-//     test.TextToSpeech::tts("testing");
-//    //tts("testing");
-
-//    std::string filePath = "speech.wav";
-
-
-//    DWORD fileAttributes = GetFileAttributesA(filePath.c_str());
-
-//    if (fileAttributes != INVALID_FILE_ATTRIBUTES && !(fileAttributes & FILE_ATTRIBUTE_DIRECTORY)) {
-//        REQUIRE(true);
-//    } else {
-//        REQUIRE(false);
-//    }
-//}
-
-//TEST_CASE("matching strings", "[strings]") {
-//    TextToSpeech test;
-//    test.tts("testing");
-
-//    SECTION("string matching"){
-//        if (test.getString() == "testing"){
-//            REQUIRE(true);
-//        }else{
-//            REQUIRE(false);
-//        }
-//    }
-//    REQUIRE(true);
-//}
 
 
 void Test::testCameraConstructor() {
@@ -169,11 +142,40 @@ void Test::testCameraStop(){
 
     // Check that the camera is available.
     // If you remove the ! it is false which is what we want
+    // So !bool is want we want for a pass
     QVERIFY(!camera->getCameraActive());
 }
 
-void Test::testTranslateText(){
-    QVERIFY(true);
+void Test::testTranslateTextAddedToHistory(){
+
+    QString str = "Hello1";
+    camera->setTranslateText(str);
+    camera->translateText();
+
+
+    QVERIFY(camera->getLastHistory() == str);
+
+//    QVERIFY(true);
+}
+
+void Test::clearTranslateTextAfterTranslate(){
+    QString str = "Hello2";
+    camera->setTranslateText(str);
+    camera->translateText();
+
+
+    QVERIFY(camera->getTranslateText() == "");
+}
+
+
+//void Test::testImageAvailable(){
+//    QVERIFY(true);
+//}
+
+void Test::testSubtitles(){
+    QString str = "subtitle";
+    camera->setSubtitle(str);
+    QVERIFY(camera->getSubtitle() == str);
 }
 
 void Test::testAddToHistory(){

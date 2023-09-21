@@ -107,21 +107,21 @@ public Q_SLOTS:
      */
     void displayCameraError();
     
-    /**
-     * @brief Update the camera device for the application to use.
-     * 
-     * This function updates the camera device for the application to use.
-     * 
-     * @param action
-     */
-    void updateCameraDevice(QAction *action);
+//    /**
+//     * @brief Update the camera device for the application to use.
+//     *
+//     * This function updates the camera device for the application to use.
+//     *
+//     * @param action
+//     */
+//    void updateCameraDevice(QAction *action);
     
-    /**
-     * @brief updateCameras
-     * 
-     * Updates the list of available cameras.
-     */
-    void updateCameras();
+//    /**
+//     * @brief updateCameras
+//     *
+//     * Updates the list of available cameras.
+//     */
+//    void updateCameras();
     
     /**
      * @brief Set the applications camera.
@@ -184,9 +184,14 @@ public Q_SLOTS:
      */
     void imageAvailable(QVideoFrame frame);
 
-    bool getImageAvailable();
+
     bool getCameraActive();
     QString getLastHistory();
+    QString getTranslateText();
+    void setTranslateText(QString str);
+    void setSubtitle(QString str);
+    QString getSubtitle();
+    void onAboutToQuit();
 };
 
 #endif // CAMERA_H

@@ -74,6 +74,7 @@ QString imgOutputPath; ///< Path where camera frames are saved
 QString detectedText; ///< Path wehre detected texts are saved
 bool cameraActive; ///< Boolean to check if camera is active
 QString lastTranslate; ///< The last translated text
+QString currentSubtitle;
 /**
  * @brief Camera::Camera() : ui(new Ui::Camera) constructs a new Camera:: Camera object
  *
@@ -99,7 +100,7 @@ Camera::Camera() : ui(new Ui::Camera)
     m_captureSession.setVideoOutput(sink);
 
     setupMenus();
-    updateCameras();
+//    updateCameras();
 
 //    qDebug() << "workddding?";
     QString currentPath = QDir::currentPath();
@@ -135,7 +136,7 @@ Camera::Camera() : ui(new Ui::Camera)
                     m_captureSession.setImageCapture(&m_imageCapture);
                     m_imageCapture.capture();
                     m_camera.start();
-                    qDebug() << "working111111112?";
+                    //qDebug() << "working111111112?";
                     /**
                      * @brief Connect Camera::imageAvailable to QVideoSink::videoFrameChanged.
                      *
@@ -148,18 +149,17 @@ Camera::Camera() : ui(new Ui::Camera)
 //            qDebug() << "2fff";
         }
 //        qDebug() << "3fff";
+
     }
 
-
-
-
-
-
-
-
+    connect(QApplication::instance(), &QApplication::aboutToQuit, this, &Camera::onAboutToQuit);
 
 }
 
+void Camera::onAboutToQuit(){
+    qDebug() << "Quitting";
+    Py_Finalize();
+}
 /**
  * @brief Slot called when a new video frame is captured.
  *
@@ -211,17 +211,23 @@ void Camera::imageAvailable(QVideoFrame frame) {
                     detectedText.append(resultString);
                     ui->translateInput->setPlainText(detectedText);
                 }
-                sink->setSubtitleText(resultString);
+//                sink->setSubtitleText(resultString);
+                setSubtitle(resultString);
             }
         }
     }
     count ++;
 }
 
-bool Camera::getImageAvailable(){
-    bool test = true;
-    return test;
+void Camera::setSubtitle(QString str){
+    sink->setSubtitleText(str);
+    currentSubtitle = str;
 }
+
+//bool Camera::getImageAvailable(){
+//    bool test = true;
+//    return test;
+//}
 
 /**
  * @brief Translates and displays input text using text-to-speech.
@@ -307,17 +313,17 @@ QString Camera::getHistoryText()
 }
 
 
-/**
- * @brief updates the camera device for the application to use.
- * 
- * This function updates the camera device for the application to use.
- * 
- * @param action the QAction corresponding to the camera device to use
- */
-void Camera::updateCameraDevice(QAction * action)
-{
-    setCamera(qvariant_cast<QCameraDevice>(action->data()));
-}
+///**
+// * @brief updates the camera device for the application to use.
+// *
+// * This function updates the camera device for the application to use.
+// *
+// * @param action the QAction corresponding to the camera device to use
+// */
+//void Camera::updateCameraDevice(QAction * action)
+//{
+//    setCamera(qvariant_cast<QCameraDevice>(action->data()));
+//}
 
 /**
  * @brief Starts the current camera.
@@ -376,10 +382,10 @@ void Camera::setupMenus()
 
     // Devices menu
     // Prob can remove and put in settings?
-    devicesMenu = new QMenu("Devices", this);
-    //    QAction *deviceAction = new QAction("Choose device", this);
-    //    devicesMenu->addAction(deviceAction);
-    menuBar()->addMenu(devicesMenu);
+//    devicesMenu = new QMenu("Devices", this);
+//    //    QAction *deviceAction = new QAction("Choose device", this);
+//    //    devicesMenu->addAction(deviceAction);
+//    menuBar()->addMenu(devicesMenu);
 
     // Camera menu
     cameraMenu = new QMenu("Camera", this);
@@ -446,32 +452,32 @@ void Camera::setCamera(const QCameraDevice &cameraDevice)
     m_camera.start();
 }
 
-/**
- * @brief Updates the list of available cameras in the Devices menu.
- *
- * This function queries and updates the list of available camera devices in the
- * Devices menu. Users can then select a camera device to use.
- */
-void Camera::updateCameras()
-{
-    devicesMenu->clear();
-    /*
-     * This will add all available cameras to the devicesMenu.
-     * You can then select which camera you would like to use
-     * from the list.
-     */
-    const QList<QCameraDevice> availableCameras = QMediaDevices::videoInputs();
-    for (const QCameraDevice &cameraDevice : availableCameras)
-    {
-        QAction *videoDeviceAction = new QAction(cameraDevice.description(), videoDevicesGroup);
-        videoDeviceAction->setCheckable(true);
-        videoDeviceAction->setData(QVariant::fromValue(cameraDevice));
-        if (cameraDevice == QMediaDevices::defaultVideoInput())
-            videoDeviceAction->setChecked(true);
+///**
+// * @brief Updates the list of available cameras in the Devices menu.
+// *
+// * This function queries and updates the list of available camera devices in the
+// * Devices menu. Users can then select a camera device to use.
+// */
+//void Camera::updateCameras()
+//{
+//    devicesMenu->clear();
+//    /*
+//     * This will add all available cameras to the devicesMenu.
+//     * You can then select which camera you would like to use
+//     * from the list.
+//     */
+//    const QList<QCameraDevice> availableCameras = QMediaDevices::videoInputs();
+//    for (const QCameraDevice &cameraDevice : availableCameras)
+//    {
+//        QAction *videoDeviceAction = new QAction(cameraDevice.description(), videoDevicesGroup);
+//        videoDeviceAction->setCheckable(true);
+//        videoDeviceAction->setData(QVariant::fromValue(cameraDevice));
+//        if (cameraDevice == QMediaDevices::defaultVideoInput())
+//            videoDeviceAction->setChecked(true);
 
-        devicesMenu->addAction(videoDeviceAction);
-    }
-}
+//        devicesMenu->addAction(videoDeviceAction);
+//    }
+//}
 
 /**
  * @brief Returns the current camera.
@@ -496,4 +502,17 @@ bool Camera::getCameraActive(){
  */
 QString Camera::getLastHistory(){
     return lastTranslate;
+}
+
+QString Camera::getTranslateText(){
+    QString text = ui->translateInput->toPlainText();
+    return text;
+}
+
+void Camera::setTranslateText(QString str){
+    ui->translateInput->setPlainText(str);
+}
+
+QString Camera::getSubtitle(){
+    return currentSubtitle;
 }
