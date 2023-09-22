@@ -197,7 +197,7 @@ if(BUILD_TESTING)
         Qt6::Quick
         Qt6::Gui
         Python::Python
-
+        winmm
     )
 
 

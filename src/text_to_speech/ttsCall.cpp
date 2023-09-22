@@ -9,6 +9,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <Windows.h>
+#include <QDebug>
+#include <chrono>
 
 std::string currentString = ""; ///< The placeholder string that will be used in TTS.
 
@@ -20,19 +22,23 @@ bool TextToSpeech::tts(const std::string& text) {
     currentString = text;
 
     // Construct the command using the passed text
-    std::string command = "espeak-ng \"" + text + "\"";
+    //std::string command = "espeak-ng -v en \"" + text + "\" -w \"output.wav\" | start \"output.wav\"";
+    std::string command = "espeak-ng -v en \"" + text + "\" -w \"newoutput.wav\"";
+    //safjsdj
 
     STARTUPINFOA startupInfo = { sizeof(STARTUPINFOA) };
     PROCESS_INFORMATION processInfo;
-
     if (CreateProcessA(NULL, const_cast<char*>(command.c_str()), NULL, NULL, FALSE, CREATE_NO_WINDOW | DETACHED_PROCESS, NULL, NULL, &startupInfo, &processInfo)) {
+        WaitForSingleObject(processInfo.hProcess, INFINITE);
         CloseHandle(processInfo.hThread);
         CloseHandle(processInfo.hProcess);
+        PlaySound(TEXT("newoutput.wav"), NULL, SND_FILENAME | SND_ASYNC);
         return true;
     } else {
         // Handle error
         return false;
     }
+
 
     // Always return success for this example
     return 0;
