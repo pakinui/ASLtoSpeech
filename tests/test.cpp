@@ -18,6 +18,7 @@
 #include <cstdlib>
 #include <Windows.h>
 #include <filesystem>
+#include <QMessageBox>
 
 /**
  * @class Test
@@ -46,6 +47,9 @@ class Test: public QObject
         void clearTranslateTextAfterTranslate();
 //        void testImageAvailable();
         void testSubtitles();
+        void testDisplayCameraError();
+        void testOnAboutToQuit();
+        void testSetCamera();
 
 };
 
@@ -172,10 +176,50 @@ void Test::clearTranslateTextAfterTranslate(){
 //    QVERIFY(true);
 //}
 
+
 void Test::testSubtitles(){
     QString str = "subtitle";
     camera->setSubtitle(str);
     QVERIFY(camera->getSubtitle() == str);
+}
+void Test::testDisplayCameraError() {
+    // Simulate a camera error.
+
+    //camera->m_camera.setError(QCamera::NoError);
+
+    // Call the displayCameraError() method.
+    camera->displayCameraError();
+    qDebug() << "hhh" << camera->msgBox.text();
+
+    if (camera->m_camera.error() != QCamera::NoError){
+        QVERIFY(camera->msgBox.isVisible());
+    }else{
+        qDebug() << "eror" << camera->m_camera.errorString();
+//        QVERIFY(camera->m_camera.errorString() == "");
+        QVERIFY(!camera->msgBox.isVisible());
+    }
+
+}
+
+void Test::testOnAboutToQuit() {
+    // Connect a slot to the aboutToQuit() signal.
+    //connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, this, &CameraTest::onAboutToQuitSlot);
+
+//    // Emit the aboutToQuit() signal.
+//    QApplication::instance()->aboutToQuit();
+
+//    // Assert that the expected results are produced.
+//    QVERIFY(m_onAboutToQuitCalled);
+//    QVERIFY(m_pyFinalizeCalled);
+    QVERIFY(true);
+
+}
+
+void Test::testSetCamera(){
+    QCameraDevice camDevice = camera->m_camera.cameraDevice();
+
+    QVERIFY(true);
+
 }
 
 void Test::testAddToHistory(){

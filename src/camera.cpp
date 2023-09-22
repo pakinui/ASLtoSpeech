@@ -75,6 +75,8 @@ QString detectedText; ///< Path wehre detected texts are saved
 bool cameraActive; ///< Boolean to check if camera is active
 QString lastTranslate; ///< The last translated text
 QString currentSubtitle;
+
+
 /**
  * @brief Camera::Camera() : ui(new Ui::Camera) constructs a new Camera:: Camera object
  *
@@ -246,25 +248,18 @@ void Camera::translateText()
     // Translation logic
     QString inputText = ui->translateInput->toPlainText();
     if(inputText != ""){ // if there is text to give to tts
-        // QString translatedText = performTranslation(inputText);
-        // ui->translationDisplay->setPlainText(translatedText);
 
         // Create standard string of input text
         std::string inputTextStdString = inputText.toStdString();
+
         // Call the text-to-speech function with the standard string of input text
-
-
         text2Speech.TextToSpeech::tts(inputTextStdString);
 
-        //ui->translationDisplay->setPlainText(inputText);
         // Store translation in history data structure
-
         addToHistory(inputText);
-
         detectedText = "";
         ui->translateInput->setPlainText(detectedText);
     }
-
 }
 
 /**
@@ -413,71 +408,11 @@ void Camera::setupMenus()
  */
 void Camera::displayCameraError()
 {
-    if (m_camera.error() != QCamera::NoError)
-        QMessageBox::warning(this, tr("Camera Error"), m_camera.errorString());
-}
-
-/**
- * @brief sets up the camera for the application to use.
- * 
- * This function is called when the user selects a camera device from the Devices menu.
- * It initializes the selected camera for video capture and updates the camera settings.
- * Additionally, it sets up the necessary connections for camera signals.
- * 
- * @param cameraDevice the camera for capturing video.
- */
-void Camera::setCamera(const QCameraDevice &cameraDevice)
-{
-    // m_camera.reset(new QCamera(cameraDevice));
-    // m_captureSession.setCamera(m_camera.data());
-
-    // connect(m_camera.data(), &QCamera::activeChanged, this, &Camera::updateCameraActive);
-    // connect(m_camera.data(), &QCamera::errorOccurred, this, &Camera::displayCameraError);
-
-    if (!m_mediaRecorder)
-    {
-        m_mediaRecorder.reset(new QMediaRecorder);
-        m_captureSession.setRecorder(m_mediaRecorder.data());
+    if (m_camera.error() != QCamera::NoError){
+        QString errString = m_camera.errorString();
+        QMessageBox::warning(this, tr("Camera Error"), errString);
     }
-
-    m_captureSession.setVideoOutput(ui->viewfinder);
-
-    //updateCameraActive(m_camera.isActive());
-    //    updateRecorderState(m_mediaRecorder->recorderState());
-    //    readyForCapture(m_imageCapture->isReadyForCapture());
-
-    //    updateCaptureMode();
-    m_doImageCapture = 1;
-
-    m_camera.start();
 }
-
-///**
-// * @brief Updates the list of available cameras in the Devices menu.
-// *
-// * This function queries and updates the list of available camera devices in the
-// * Devices menu. Users can then select a camera device to use.
-// */
-//void Camera::updateCameras()
-//{
-//    devicesMenu->clear();
-//    /*
-//     * This will add all available cameras to the devicesMenu.
-//     * You can then select which camera you would like to use
-//     * from the list.
-//     */
-//    const QList<QCameraDevice> availableCameras = QMediaDevices::videoInputs();
-//    for (const QCameraDevice &cameraDevice : availableCameras)
-//    {
-//        QAction *videoDeviceAction = new QAction(cameraDevice.description(), videoDevicesGroup);
-//        videoDeviceAction->setCheckable(true);
-//        videoDeviceAction->setData(QVariant::fromValue(cameraDevice));
-//        if (cameraDevice == QMediaDevices::defaultVideoInput())
-//            videoDeviceAction->setChecked(true);
-
-//        devicesMenu->addAction(videoDeviceAction);
-//    }
-//}
 
 /**
  * @brief Returns the current camera.

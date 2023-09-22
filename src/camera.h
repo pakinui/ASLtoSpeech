@@ -27,6 +27,7 @@
 #include <QImageCapture>
 #include <QVideoSink>
 #include <QtCore>
+#include <QMessageBox>
 
 /**
  * @namespace Ui
@@ -81,6 +82,7 @@ public:
 
     QScopedPointer<QAudioInput> m_audioInput;
     QScopedPointer<QMediaRecorder> m_mediaRecorder;
+    QMessageBox msgBox;
 
     //Menu bar objects
     QMenu *fileMenu;
@@ -106,32 +108,6 @@ public Q_SLOTS:
      * Displays an error message if the camera fails to start.
      */
     void displayCameraError();
-    
-//    /**
-//     * @brief Update the camera device for the application to use.
-//     *
-//     * This function updates the camera device for the application to use.
-//     *
-//     * @param action
-//     */
-//    void updateCameraDevice(QAction *action);
-    
-//    /**
-//     * @brief updateCameras
-//     *
-//     * Updates the list of available cameras.
-//     */
-//    void updateCameras();
-    
-    /**
-     * @brief Set the applications camera.
-     * 
-     * This function sets the camera for the application to use.
-     * 
-     * @param cameraDevice The camera device for the application to use.
-     */
-    void setCamera(const QCameraDevice &cameraDevice);
-    
     
     /**
      * @brief translateText

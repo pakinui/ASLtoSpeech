@@ -150,22 +150,16 @@ if(CMAKE_BUILD_TYPE STREQUAL "RelWithDebInfo")
     if(DEFINED ENV{GITHUB_ACTIONS})
 
     else()
-        if(BUILD_TESTING)
-            add_custom_target(coverage_report_tests
-                COMMAND powershell -ExecutionPolicy Bypass -File "${CMAKE_SOURCE_DIR}/coverage/generate_coverage_tests.ps1"
-                WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-                COMMENT "Generating code coverage report for tests"
-            )
-            add_dependencies(345Application coverage_report_tests)
-        else()
-            add_custom_target(coverage_report
-                COMMAND powershell -ExecutionPolicy Bypass -File "${CMAKE_SOURCE_DIR}/coverage/generate_coverage.ps1"
-                WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-                COMMENT "Generating code coverage report"
-            )
-            add_dependencies(345Application coverage_report)
-        endif()
+
+        add_custom_target(coverage_report_tests
+
+            COMMAND powershell -ExecutionPolicy Bypass -File "${CMAKE_SOURCE_DIR}/coverage/generate_coverage_tests.ps1"
+            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+            COMMENT "Generating code coverage report for tests"
+        )
+        add_dependencies(345Application coverage_report_tests)
     endif()
+
 else()
     message(WARNING "Code coverage report generation is only supported in RelWithDebInfo build type.")
 endif()
