@@ -28,6 +28,7 @@
 #include <QVideoSink>
 #include <QtCore>
 #include <QMessageBox>
+#include <QStackedWidget>
 
 /**
  * @namespace Ui
@@ -71,6 +72,7 @@ public:
 
 //private:
     Ui::Camera *ui;
+    QStackedWidget *stacked;
     QList<QString> history; ///< list to store history of translations
     QActionGroup *videoDevicesGroup = nullptr; ///< group of video devices
 
@@ -168,6 +170,11 @@ public Q_SLOTS:
     void setSubtitle(QString str);
     QString getSubtitle();
     void onAboutToQuit();
+    QString getHistoryForTranslate();
+    void openSettings();
+    void closeSettings();
+    void closeApp();
+    void enableTyping();
 };
 
 #endif // CAMERA_H

@@ -75,6 +75,7 @@ QString detectedText; ///< Path wehre detected texts are saved
 bool cameraActive; ///< Boolean to check if camera is active
 QString lastTranslate; ///< The last translated text
 QString currentSubtitle;
+QString lastTranslateString;
 
 
 /**
@@ -88,6 +89,9 @@ Camera::Camera() : ui(new Ui::Camera)
 {
 //    qDebug() << "working?";
     ui->setupUi(this);
+    stacked = ui->stackedWidget;
+
+    enableTyping();
 
 //    QPlainTextEdit *historyTextEdit;
     connect(ui->translateButton, &QPushButton::clicked, this, &Camera::translateText);
@@ -155,11 +159,34 @@ Camera::Camera() : ui(new Ui::Camera)
     }
 
     connect(QApplication::instance(), &QApplication::aboutToQuit, this, &Camera::onAboutToQuit);
+    closeSettings();
+}
+
+void Camera::closeSettings(){
+    //qDebug() << "Camera active" << cameraActive << m_camera.isActive();
+    if(cameraActive){
+        m_camera.start();
+    }
+    stacked->setCurrentIndex(1);
+    cameraMenu->menuAction()->setVisible(true);
+
+}
+
+void Camera::openSettings(){
+    //    qDebug() << "settings open";
+    cameraActive = m_camera.isActive();
+    //qDebug() << "Camera activ1e" << cameraActive << m_camera.isActive();
+    if(m_camera.isActive()){
+        m_camera.stop();
+    }
+
+    stacked->setCurrentIndex(2);
+    cameraMenu->menuAction()->setVisible(false);
 
 }
 
 void Camera::onAboutToQuit(){
-    qDebug() << "Quitting";
+//    qDebug() << "Quitting";
     Py_Finalize();
 }
 /**
@@ -177,7 +204,7 @@ void Camera::imageAvailable(QVideoFrame frame) {
 
     frame.setMirrored(true);
 
-    if(count%9 == 0){ // Only call the Python function every 9 frames
+    if(count%3 == 0){ // Only call the Python function every 9 frames
 
         QImage image = frame.toImage();
         if (image.isNull())
@@ -244,6 +271,7 @@ void Camera::setSubtitle(QString str){
  */
 void Camera::translateText()
 {
+
     TextToSpeech text2Speech;
     // Translation logic
     QString inputText = ui->translateInput->toPlainText();
@@ -276,10 +304,20 @@ void Camera::translateText()
  */
 void Camera::addToHistory(const QString &original)
 {
+//    if (!lastTranslateString){
+//        qDebug() << "first one";
+//        QString currentHistory = "";
+//    }else{
 
-    history.append(original);
+//    }
+//    QList<QString> subList = orinigal;
+//    subList.append("_______________");
+//    subList.append(history.mid(2));
+
+
+    history.prepend(original);
     ui->historyDisplay->setPlainText(getHistoryText());
-    ui->translationDisplay->setPlainText(getHistoryText());
+    ui->translationDisplay->setPlainText(getHistoryForTranslate());
     lastTranslate = original;
 }
 
@@ -303,6 +341,21 @@ QString Camera::getHistoryText()
     {
         historyText += string + "\n";
 
+    }
+    return historyText;
+}
+
+QString Camera::getHistoryForTranslate()
+{
+    QString historyText;
+    int count = 0;
+    for (const QString &string : history)
+    {
+        if (count == 1){
+            historyText += "---------------\n";
+        }
+        historyText += string + "\n";
+        count++;
     }
     return historyText;
 }
@@ -372,6 +425,12 @@ void Camera::setupMenus()
     fileMenu->addSeparator(); // Adds a separator line
     fileMenu->addAction(closeAction);
 
+    connect(settingsAction, &QAction::triggered, this, &Camera::openSettings);
+
+    connect(closeAction, &QAction::triggered, this, &Camera::closeApp);
+
+    connect(ui->exitSettingsButton, &QPushButton::clicked, this, &Camera::closeSettings);
+    connect(ui->enableTypingCheckBox, &QCheckBox::toggled, this, &Camera::enableTyping);
     // Add the menu to the menu bar
     menuBar()->addMenu(fileMenu);
 
@@ -400,6 +459,24 @@ void Camera::setupMenus()
     menuBar()->addMenu(cameraMenu);
 }
 
+void Camera::closeApp(){
+    onAboutToQuit(); // To stop python
+    qDebug() << "closing";
+    this->close();
+}
+
+void Camera::enableTyping(){
+    bool checked = ui->enableTypingCheckBox->isChecked();
+
+    if(checked){
+
+        ui->translateInput->setReadOnly(false);
+    }else{
+
+        ui->translateInput->setReadOnly(true);
+    }
+}
+
 /**
  * @brief Displays a camera error message.
  *
@@ -426,6 +503,8 @@ bool Camera::getCameraActive(){
     return cameraActive;
 
 }
+
+
 
 /**
  * @brief Returns the last translated text.

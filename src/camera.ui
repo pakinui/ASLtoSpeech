@@ -151,7 +151,7 @@ QLabel {
           </palette>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="previewPage">
           <layout class="QGridLayout" name="gridLayout_7">
@@ -171,6 +171,84 @@ QLabel {
           <layout class="QGridLayout" name="gridLayout_6">
            <item row="0" column="0">
             <widget class="QVideoWidget" name="viewfinder" native="true"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="settingsPage">
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QWidget" name="widget_2" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,1,5,1">
+              <item>
+               <widget class="QWidget" name="enableTyping" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_2">
+                 <item>
+                  <widget class="QLabel" name="enableTypingLabel">
+                   <property name="enabled">
+                    <bool>true</bool>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: black;
+</string>
+                   </property>
+                   <property name="text">
+                    <string>Enable Typing</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                   <property name="margin">
+                    <number>10</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="enableTypingCheckBox">
+                   <property name="enabled">
+                    <bool>true</bool>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: black;</string>
+                   </property>
+                   <property name="text">
+                    <string>Enable Typing</string>
+                   </property>
+                   <property name="tristate">
+                    <bool>false</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_4" native="true"/>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_6" native="true"/>
+              </item>
+              <item>
+               <widget class="QWidget" name="backToCamera" native="true">
+                <widget class="QPushButton" name="exitSettingsButton">
+                 <property name="geometry">
+                  <rect>
+                   <x>160</x>
+                   <y>10</y>
+                   <width>80</width>
+                   <height>18</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: black;</string>
+                 </property>
+                 <property name="text">
+                  <string>Exit</string>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
            </item>
           </layout>
          </widget>
@@ -211,7 +289,8 @@ color: black;
                </rect>
               </property>
               <property name="styleSheet">
-               <string notr="true">background-color: #D9D1CE</string>
+               <string notr="true">background-color: #D9D1CE;
+line-height: 2;</string>
               </property>
               <property name="lineWidth">
                <number>3</number>
