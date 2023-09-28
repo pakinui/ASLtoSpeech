@@ -205,7 +205,8 @@ void Camera::imageAvailable(QVideoFrame frame) {
     frame.setMirrored(true);
 
     if(count%3 == 0){ // Only call the Python function every 9 frames
-
+        QString inputText = ui->translateInput->toPlainText();
+//        detectedText = inputText;
         QImage image = frame.toImage();
         if (image.isNull())
         {
@@ -222,7 +223,7 @@ void Camera::imageAvailable(QVideoFrame frame) {
         {
             qDebug() << "Failed to save image.";
         }
-        if(count%4 == 0){
+        if(count%8 == 0){
             PyObject *result = PyObject_CallObject(pFunc, NULL);
             Py_DECREF(result);
             if(result){
@@ -230,7 +231,11 @@ void Camera::imageAvailable(QVideoFrame frame) {
                 if(resultString =="del" && detectedText.length() != 0){
                     detectedText.remove(detectedText.length() - 1, 1);
                     ui->translateInput->setPlainText(detectedText);
-                }else if(resultString != "del"){
+                }
+
+                setSubtitle(resultString);
+
+                if(resultString != "del"){
                     if(resultString == "space"){
                         resultString = " ";
                     }
@@ -241,7 +246,6 @@ void Camera::imageAvailable(QVideoFrame frame) {
                     ui->translateInput->setPlainText(detectedText);
                 }
 //                sink->setSubtitleText(resultString);
-                setSubtitle(resultString);
             }
         }
     }

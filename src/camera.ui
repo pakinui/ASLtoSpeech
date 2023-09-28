@@ -312,9 +312,6 @@ line-height: 2;</string>
                 <property name="styleSheet">
                  <string notr="true">background-color: #F5F1F0</string>
                 </property>
-                <property name="readOnly">
-                 <bool>false</bool>
-                </property>
                 <property name="placeholderText">
                  <string>Text to Translate ...</string>
                 </property>
