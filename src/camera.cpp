@@ -76,7 +76,7 @@ bool cameraActive; ///< Boolean to check if camera is active
 QString lastTranslate; ///< The last translated text
 QString currentSubtitle;
 QString lastTranslateString;
-
+TextToSpeech text2Speech;
 
 /**
  * @brief Camera::Camera() : ui(new Ui::Camera) constructs a new Camera:: Camera object
@@ -275,8 +275,6 @@ void Camera::setSubtitle(QString str){
  */
 void Camera::translateText()
 {
-
-    TextToSpeech text2Speech;
     // Translation logic
     QString inputText = ui->translateInput->toPlainText();
     if(inputText != ""){ // if there is text to give to tts
@@ -435,6 +433,10 @@ void Camera::setupMenus()
 
     connect(ui->exitSettingsButton, &QPushButton::clicked, this, &Camera::closeSettings);
     connect(ui->enableTypingCheckBox, &QCheckBox::toggled, this, &Camera::enableTyping);
+    connect(ui->pitchSlider, &QSlider::sliderReleased, this, [=]() {
+        text2Speech.setPitch(ui->pitchSlider->value());
+    });
+
     // Add the menu to the menu bar
     menuBar()->addMenu(fileMenu);
 

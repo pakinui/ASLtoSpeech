@@ -13,7 +13,7 @@
 #include <chrono>
 
 std::string currentString = ""; ///< The placeholder string that will be used in TTS.
-
+int pitch = 50;
 
 bool TextToSpeech::tts(const std::string& text) {
 
@@ -23,7 +23,9 @@ bool TextToSpeech::tts(const std::string& text) {
 
     // Construct the command using the passed text
     //std::string command = "espeak-ng -v en \"" + text + "\" -w \"output.wav\" | start \"output.wav\"";
-    std::string command = "espeak-ng -v en \"" + text + "\" -w \"newoutput.wav\"";
+    std::string pitchStr = std::to_string(pitch);
+
+    std::string command = "espeak-ng -v en -p " + pitchStr + " \"" + currentString + "\" -w \"newoutput.wav\"";
     //safjsdj
 
     STARTUPINFOA startupInfo = { sizeof(STARTUPINFOA) };
@@ -53,4 +55,10 @@ bool TextToSpeech::tts(const std::string& text) {
  */
 std::string TextToSpeech::getString(){
     return currentString;
+}
+
+
+void TextToSpeech::setPitch(int s){
+    pitch = s;
+
 }

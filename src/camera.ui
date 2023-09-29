@@ -178,30 +178,10 @@ QLabel {
           <layout class="QVBoxLayout" name="verticalLayout_4">
            <item>
             <widget class="QWidget" name="widget_2" native="true">
-             <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,1,5,1">
+             <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0,0,5,1">
               <item>
                <widget class="QWidget" name="enableTyping" native="true">
                 <layout class="QHBoxLayout" name="horizontalLayout_2">
-                 <item>
-                  <widget class="QLabel" name="enableTypingLabel">
-                   <property name="enabled">
-                    <bool>true</bool>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">color: black;
-</string>
-                   </property>
-                   <property name="text">
-                    <string>Enable Typing</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                   </property>
-                   <property name="margin">
-                    <number>10</number>
-                   </property>
-                  </widget>
-                 </item>
                  <item>
                   <widget class="QCheckBox" name="enableTypingCheckBox">
                    <property name="enabled">
@@ -225,7 +205,112 @@ QLabel {
                <widget class="QWidget" name="widget_4" native="true"/>
               </item>
               <item>
-               <widget class="QWidget" name="widget_6" native="true"/>
+               <widget class="QWidget" name="widget_6" native="true">
+                <widget class="QSlider" name="pitchSlider">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>20</y>
+                   <width>160</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label">
+                 <property name="geometry">
+                  <rect>
+                   <x>70</x>
+                   <y>0</y>
+                   <width>49</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Pitch&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+                <widget class="QSlider" name="volumeSlider">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>80</y>
+                   <width>160</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_3">
+                 <property name="geometry">
+                  <rect>
+                   <x>60</x>
+                   <y>60</y>
+                   <width>49</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Volume&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+                <widget class="QSlider" name="speedSlider">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>130</y>
+                   <width>160</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_5">
+                 <property name="geometry">
+                  <rect>
+                   <x>60</x>
+                   <y>110</y>
+                   <width>49</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Speed&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+                <widget class="QRadioButton" name="radioButton">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>160</y>
+                   <width>533</width>
+                   <height>22</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Male</string>
+                 </property>
+                </widget>
+                <widget class="QRadioButton" name="radioButton_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>190</y>
+                   <width>91</width>
+                   <height>22</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Female</string>
+                 </property>
+                </widget>
+               </widget>
               </item>
               <item>
                <widget class="QWidget" name="backToCamera" native="true">

@@ -34,6 +34,7 @@ public:
     bool tts(const std::string& text);
 
     std::string getString();
+    void setPitch(int s);
 
 };
 
