@@ -1,5 +1,6 @@
 name: Doxygen
 
+
 on:
   push:
     branches:
@@ -13,19 +14,20 @@ jobs:
       success: ${{ steps.run_code.outputs.success }}
 
     steps:
+    
       - name: Checkout Repository
         uses: actions/checkout@v2
       - name: Set up Doxygen
         id: run_code
         run: |
           choco install doxygen.install -y
-        continue-on-error: true  # Continue to next step even if this step fails
+      #   continue-on-error: true  # Continue to next step even if this step fails
 
-      - name: Check Result and Retry
-        if: ${{ job.outputs.success != 'true' && job.run_number < 3 }}  # Retry up to 2 times
-        run: |
-          echo "Doxygen install failed, retrying (run number: ${job.run_number})"
-          exit 0  # This will allow the job to be retried
+      # - name: Check Result and Retry
+      #   if: ${{ job.outputs.success != 'true'}}  # Retry up to 2 times
+      #   run: |
+      #     echo "Doxygen install failed, retrying "
+      #     exit 0  # This will allow the job to be retried
           
       - name: Delete Old Files
         working-directory: ${{github.workspace}}
@@ -33,7 +35,8 @@ jobs:
           rm -r docs/*
         
       - name: Generate Documentation
-        run: doxygen Doxyfile  # Adjust the path to Doxyfile
+        run: |
+          C:\Program Files\doxygen\doxygen Doxyfile
       
       - name: Move files to /docs
         run: mv docs/html/* docs/
