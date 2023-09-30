@@ -21,6 +21,13 @@ jobs:
         id: run_code
         run: |
           choco install doxygen.install -y
+      - name: Check if Doxygen is installed
+        run: |
+          command -v doxygen > /dev/null 2>&1
+          if [[ $? -ne 0 ]]; then
+            echo "Doxygen is not installed"
+            exit 1
+          fi
       #   continue-on-error: true  # Continue to next step even if this step fails
 
       # - name: Check Result and Retry
