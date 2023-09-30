@@ -1,0 +1,47 @@
+name: Doxygen
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  retry_job:
+    runs-on: windows-latest
+
+    outputs:
+      success: ${{ steps.run_code.outputs.success }}
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Set up Doxygen
+        id: run_code
+        run: |
+          choco install doxygen.install -y
+        continue-on-error: true  # Continue to next step even if this step fails
+
+      - name: Check Result and Retry
+        if: ${{ job.outputs.success != 'true' && job.run_number < 3 }}  # Retry up to 2 times
+        run: |
+          echo "Doxygen install failed, retrying (run number: ${job.run_number})"
+          exit 0  # This will allow the job to be retried
+          
+      - name: Delete Old Files
+        working-directory: ${{github.workspace}}
+        run: |
+          rm -r docs/*
+        
+      - name: Generate Documentation
+        run: doxygen Doxyfile  # Adjust the path to Doxyfile
+      
+      - name: Move files to /docs
+        run: mv docs/html/* docs/
+        
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
+          git add docs/
+          git commit -m "Update documentation"
+          git push
