@@ -552,12 +552,23 @@ void Camera::setupMenus()
     menuBar()->addMenu(cameraMenu);
 }
 
+/**
+ * @brief Allows the application to be closed from the file menu.
+ *
+ * This function is called when the user selects the 'close' item in
+ * the file menu.
+ */
 void Camera::closeApp(){
     onAboutToQuit(); // To stop python
-    qDebug() << "closing";
+//    qDebug() << "closing";
     this->close();
 }
 
+/**
+ * @brief Updates the readOnly variable of the translate text input box.
+ *
+ * This function updates the readOnly function of the translate text input box.
+ */
 void Camera::enableTyping(){
     bool checked = ui->enableTypingCheckBox->isChecked();
 
@@ -620,6 +631,13 @@ void Camera::setTranslateText(QString str){
     ui->translateInput->setPlainText(str);
 }
 
+/**
+ * @brief Returns the subtitle text.
+ *
+ * This function returns the current subtitle text.
+ *
+ * @return The current subtitle text.
+ */
 QString Camera::getSubtitle(){
     return currentSubtitle;
 }
