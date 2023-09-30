@@ -36,7 +36,7 @@ jobs:
         
       - name: Generate Documentation
         run: |
-          "C:\Program Files\doxygen\doxygen Doxyfile"
+          doxygen Doxyfile
           ls -R
       
       - name: Move files to /docs
