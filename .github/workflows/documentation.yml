@@ -1,9 +1,9 @@
 name: Doxygen
 
 on:
-  push:
+  commit:
     branches:
-      - main
+      - codecov-folder-moving
 
 jobs:
   retry_job:
