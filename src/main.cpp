@@ -17,6 +17,8 @@
 #include <QStringLiteral>
 #include <QDir>
 #include "ui_camera.h"
+#include <QIcon>
+
 
 /**
  * @brief The entry point for the application.
@@ -34,6 +36,15 @@ int main(int argc, char *argv[])
 
     // Initialize the GUI application
     QApplication a(argc, argv);
+
+//    QPixmap logoPixmap("./../resources/icon.jpg");
+//    QIcon appIcon(logoPixmap);
+//    a.setWindowIcon(appIcon);
+
+
+
+
+
 
     // Create the main camera window
     Camera w;

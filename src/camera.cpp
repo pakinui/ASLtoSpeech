@@ -59,6 +59,8 @@
 #include <QVideoSink>
 #include <QVideoFrameFormat>
 #include <QtMultimedia>
+#include <QGraphicsScene>
+#include <QGraphicsWidget>
 
 
 int count = 1; ///< counter for the number of frames
@@ -77,6 +79,13 @@ QString lastTranslate; ///< The last translated text
 QString currentSubtitle;
 QString lastTranslateString;
 TextToSpeech text2Speech;
+QTimer* progressTimer;
+const int progressDuration = 200; // 2 seconds in milliseconds
+
+QString lastCharacter; ///< The last character identified
+int lastCharacterCount; ///< The number of times in a row the last chracter is found
+QString currentCharacter;
+QString timerCharacter; // The letter for this current progress bar
 
 /**
  * @brief Camera::Camera() : ui(new Ui::Camera) constructs a new Camera:: Camera object
@@ -90,6 +99,7 @@ Camera::Camera() : ui(new Ui::Camera)
 //    qDebug() << "working?";
     ui->setupUi(this);
     stacked = ui->stackedWidget;
+    progressBar = ui->progressBar;
 
     enableTyping();
 
@@ -160,6 +170,11 @@ Camera::Camera() : ui(new Ui::Camera)
 
     connect(QApplication::instance(), &QApplication::aboutToQuit, this, &Camera::onAboutToQuit);
     closeSettings();
+
+    progressTimer = new QTimer(this);
+    progressTimer->setInterval(progressDuration / 100); // Update the progress bar every 10 milliseconds
+    //connect(progressTimer, &QTimer::timeout, this, &Camera::updateProgressBar);
+
 }
 
 void Camera::closeSettings(){
@@ -170,6 +185,10 @@ void Camera::closeSettings(){
     stacked->setCurrentIndex(1);
     cameraMenu->menuAction()->setVisible(true);
 
+}
+
+void Camera::setProgressBarValue(int value){
+    progressBar->setValue(value);
 }
 
 void Camera::openSettings(){
@@ -203,6 +222,7 @@ void Camera::onAboutToQuit(){
 void Camera::imageAvailable(QVideoFrame frame) {
 
     frame.setMirrored(true);
+    QString resultString = ui->translateInput->toPlainText();
 
     if(count%3 == 0){ // Only call the Python function every 9 frames
         QString inputText = ui->translateInput->toPlainText();
@@ -223,38 +243,106 @@ void Camera::imageAvailable(QVideoFrame frame) {
         {
             qDebug() << "Failed to save image.";
         }
-        if(count%8 == 0){
+        if(count%2 == 0){
             PyObject *result = PyObject_CallObject(pFunc, NULL);
             Py_DECREF(result);
             if(result){
+
                 QString resultString = QString::fromUtf8(PyUnicode_AsUTF8(result));
-                if(resultString =="del" && detectedText.length() != 0){
-                    detectedText.remove(detectedText.length() - 1, 1);
-                    ui->translateInput->setPlainText(detectedText);
-                }
+
+                currentCharacter = resultString.toLower();
+                updateProgressBar();
 
                 setSubtitle(resultString);
-
-                if(resultString != "del"){
-                    if(resultString == "space"){
-                        resultString = " ";
-                    }
-                    if(detectedText.size() >= 1){
-                        resultString = resultString.toLower();
-                    }
-                    detectedText.append(resultString);
-                    ui->translateInput->setPlainText(detectedText);
-                }
-//                sink->setSubtitleText(resultString);
             }
         }
     }
     count ++;
 }
 
+void Camera::signTimer(){
+    progressTimer = new QTimer(this);
+    progressTimer->setInterval(progressDuration / 10); // Update the progress bar every 10 milliseconds
+    connect(progressTimer, &QTimer::timeout, this, &Camera::updateProgressBar);
+
+}
+
+void Camera::updateProgressBar() {
+    int currentValue = progressBar->value();
+    if (currentCharacter != ""){
+        if (currentValue < 10) {
+
+
+            if(currentCharacter == timerCharacter){
+                if(currentCharacter =="del" && detectedText.length() != 0){
+                    progressBar->setValue(currentValue + 2);
+                }else if(currentCharacter =="space" && detectedText.length() != 0){
+                    progressBar->setValue(currentValue + 2);
+                }else{
+                    progressBar->setValue(currentValue + 1);
+                }
+
+            }else{
+                progressBar->setValue(0);
+                progressTimer->stop(); // Stop the timer
+                timerCharacter = currentCharacter;
+                startProgressBar();
+
+
+
+            }
+
+        } else {
+            // The progress bar is full, add the letter to the text box and reset the progress bar
+
+
+
+            if(currentCharacter =="del" && detectedText.length() != 0){
+                detectedText.remove(detectedText.length() - 1, 1);
+                ui->translateInput->setPlainText(detectedText);
+            }else if(currentCharacter =="space"){
+                QString resultString = " ";
+                detectedText.append(resultString);
+                ui->translateInput->setPlainText(detectedText);
+
+            }else{
+                if(detectedText.size() == 0){
+                    currentCharacter = currentCharacter.toUpper();
+
+                }
+                //qDebug() << currentCharacter;
+                detectedText.append(currentCharacter);
+                ui->translateInput->setPlainText(detectedText);
+            }
+
+            lastCharacter = currentCharacter;
+            progressBar->setValue(0);
+            progressTimer->stop(); // Stop the timer
+        }
+    }else{
+        progressBar->setValue(0);
+        progressTimer->stop(); // Stop the timer
+    }
+
+
+}
+
+void Camera::startProgressBar() {
+    progressBar->setValue(0); // Reset the progress bar
+    progressTimer->start(); // Start the timer to update the progress bar
+}
+
+
 void Camera::setSubtitle(QString str){
-    sink->setSubtitleText(str);
+    if(str == ""){
+        sink->setSubtitleText(nullptr);
+
+    }else{
+        sink->setSubtitleText(str);
+
+    }
     currentSubtitle = str;
+
 }
 
 //bool Camera::getImageAvailable(){
@@ -302,7 +390,6 @@ void Camera::translateText()
  * @note Not currently active.
  *
  * @param original The original text before translation.
- * @param translated The translated text (or modified text) after translation.
  */
 void Camera::addToHistory(const QString &original)
 {

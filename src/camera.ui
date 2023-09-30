@@ -17,7 +17,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>ASL to Speech</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: #F5EFEE;</string>
@@ -151,7 +151,7 @@ QLabel {
           </palette>
          </property>
          <property name="currentIndex">
-          <number>2</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="previewPage">
           <layout class="QGridLayout" name="gridLayout_7">
@@ -168,9 +168,25 @@ QLabel {
           <property name="styleSheet">
            <string notr="true">background-color: #E8E3E1</string>
           </property>
-          <layout class="QGridLayout" name="gridLayout_6">
-           <item row="0" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
             <widget class="QVideoWidget" name="viewfinder" native="true"/>
+           </item>
+           <item>
+            <widget class="QProgressBar" name="progressBar">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="maximum">
+              <number>10</number>
+             </property>
+             <property name="value">
+              <number>0</number>
+             </property>
+             <property name="textVisible">
+              <bool>false</bool>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>

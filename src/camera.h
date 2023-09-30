@@ -29,6 +29,7 @@
 #include <QtCore>
 #include <QMessageBox>
 #include <QStackedWidget>
+#include <QProgressBar>
 
 /**
  * @namespace Ui
@@ -95,6 +96,9 @@ public:
     bool m_applicationExiting = false;
     bool m_doImageCapture = true;
 
+    QProgressBar *progressBar;
+
+
 public Q_SLOTS:
 
 //private Q_SLOTS:
@@ -125,7 +129,6 @@ public Q_SLOTS:
      * Adds the text in the text box to the history.
      * 
      * @param original The original text.
-     * @param translated The translated text.
      */
     void addToHistory(const QString &original);
 
@@ -154,11 +157,12 @@ public Q_SLOTS:
 
     /**
      * @brief imageAvailable
-     * @param frame The current frame from the camera.
      *
      * This function is connected to the QVideoSink::imageAvailable function.
      * Everytime the camera recieves a new frame, this function is also called.
      * This checks the frame for a recognised ASL sign.
+     *
+     * @param frame The current frame from the camera.
      */
     void imageAvailable(QVideoFrame frame);
 
@@ -175,6 +179,11 @@ public Q_SLOTS:
     void closeSettings();
     void closeApp();
     void enableTyping();
+    void signTimer();
+    void updateProgressBar();
+    void startProgressBar();
+    void setProgressBarValue(int value);
+
 };
 
 #endif // CAMERA_H
