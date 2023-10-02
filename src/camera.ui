@@ -151,7 +151,7 @@ QLabel {
           </palette>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="previewPage">
           <layout class="QGridLayout" name="gridLayout_7">
@@ -300,7 +300,7 @@ QLabel {
                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Speed&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                 </widget>
-                <widget class="QRadioButton" name="radioButton">
+                <widget class="QRadioButton" name="maleButton">
                  <property name="geometry">
                   <rect>
                    <x>0</x>
@@ -313,7 +313,7 @@ QLabel {
                   <string>Male</string>
                  </property>
                 </widget>
-                <widget class="QRadioButton" name="radioButton_2">
+                <widget class="QRadioButton" name="femaleButton">
                  <property name="geometry">
                   <rect>
                    <x>0</x>

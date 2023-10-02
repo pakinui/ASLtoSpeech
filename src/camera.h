@@ -30,6 +30,7 @@
 #include <QMessageBox>
 #include <QStackedWidget>
 #include <QProgressBar>
+#include <QRadioButton>
 
 /**
  * @namespace Ui
@@ -97,6 +98,8 @@ public:
     bool m_doImageCapture = true;
 
     QProgressBar *progressBar;
+    QRadioButton *maleButton;
+    QRadioButton *femaleButton;
 
 
 public Q_SLOTS:
@@ -183,6 +186,7 @@ public Q_SLOTS:
     void updateProgressBar();
     void startProgressBar();
     void setProgressBarValue(int value);
+    int getGender();
 
 };
 

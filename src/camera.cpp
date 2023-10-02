@@ -175,6 +175,9 @@ Camera::Camera() : ui(new Ui::Camera)
     progressTimer->setInterval(progressDuration / 100); // Update the progress bar every 10 milliseconds
     //connect(progressTimer, &QTimer::timeout, this, &Camera::updateProgressBar);
 
+    femaleButton = ui->femaleButton;
+    maleButton = ui->maleButton;
+
 }
 
 void Camera::closeSettings(){
@@ -523,6 +526,17 @@ void Camera::setupMenus()
     connect(ui->pitchSlider, &QSlider::sliderReleased, this, [=]() {
         text2Speech.setPitch(ui->pitchSlider->value());
     });
+    connect(ui->maleButton, &QRadioButton::clicked, this, [=]() {
+
+        text2Speech.setGender(getGender());
+
+    });
+    connect(ui->femaleButton, &QRadioButton::clicked, this, [=]() {
+        text2Speech.setGender(getGender());
+
+    });
+    text2Speech.setGender(0);
+
 
     // Add the menu to the menu bar
     menuBar()->addMenu(fileMenu);
@@ -550,6 +564,19 @@ void Camera::setupMenus()
     connect(stopCameraAction, &QAction::triggered, this, &Camera::stopCamera);
 
     menuBar()->addMenu(cameraMenu);
+}
+
+int Camera::getGender(){
+    if(ui->maleButton->isChecked()){
+//        qDebug() << "male";
+        return -1;
+    }else if(ui->femaleButton->isChecked()){
+//        qDebug() << "female";
+        return 1;
+    }else{
+//        qDebug() << "neither";
+        return 0;
+    }
 }
 
 /**
