@@ -531,6 +531,13 @@ void Camera::setupMenus()
         text2Speech.setPitch(ui->pitchSlider->value());
     });
 
+    connect(ui->volumeSlider, &QSlider::sliderPressed, this, [=]() mutable {
+        text2Speech.setVolume(ui->volumeSlider->value());
+    });
+    connect(ui->volumeSlider, &QSlider::valueChanged, this, [=]() mutable {
+        text2Speech.setVolume(ui->volumeSlider->value());
+    });
+
     connect(ui->speedSlider, &QSlider::sliderPressed, this, [=]() mutable {
         text2Speech.setSpeed(ui->speedSlider->value());
     });

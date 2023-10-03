@@ -231,6 +231,9 @@ QLabel {
                    <height>16</height>
                   </rect>
                  </property>
+                 <property name="autoFillBackground">
+                  <bool>true</bool>
+                 </property>
                  <property name="value">
                   <number>50</number>
                  </property>
@@ -241,10 +244,10 @@ QLabel {
                 <widget class="QLabel" name="label">
                  <property name="geometry">
                   <rect>
-                   <x>70</x>
+                   <x>60</x>
                    <y>0</y>
-                   <width>49</width>
-                   <height>16</height>
+                   <width>51</width>
+                   <height>20</height>
                   </rect>
                  </property>
                  <property name="text">
@@ -255,10 +258,19 @@ QLabel {
                  <property name="geometry">
                   <rect>
                    <x>0</x>
-                   <y>80</y>
+                   <y>70</y>
                    <width>160</width>
                    <height>16</height>
                   </rect>
+                 </property>
+                 <property name="autoFillBackground">
+                  <bool>true</bool>
+                 </property>
+                 <property name="maximum">
+                  <number>200</number>
+                 </property>
+                 <property name="value">
+                  <number>100</number>
                  </property>
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
@@ -268,7 +280,7 @@ QLabel {
                  <property name="geometry">
                   <rect>
                    <x>60</x>
-                   <y>60</y>
+                   <y>50</y>
                    <width>49</width>
                    <height>16</height>
                   </rect>
@@ -281,10 +293,13 @@ QLabel {
                  <property name="geometry">
                   <rect>
                    <x>0</x>
-                   <y>130</y>
+                   <y>120</y>
                    <width>160</width>
                    <height>16</height>
                   </rect>
+                 </property>
+                 <property name="autoFillBackground">
+                  <bool>true</bool>
                  </property>
                  <property name="minimum">
                   <number>80</number>
@@ -303,8 +318,8 @@ QLabel {
                  <property name="geometry">
                   <rect>
                    <x>60</x>
-                   <y>110</y>
-                   <width>49</width>
+                   <y>100</y>
+                   <width>41</width>
                    <height>16</height>
                   </rect>
                  </property>
@@ -336,6 +351,9 @@ QLabel {
                    <width>91</width>
                    <height>22</height>
                   </rect>
+                 </property>
+                 <property name="autoFillBackground">
+                  <bool>false</bool>
                  </property>
                  <property name="text">
                   <string>Female</string>
