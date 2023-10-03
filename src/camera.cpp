@@ -523,9 +523,14 @@ void Camera::setupMenus()
 
     connect(ui->exitSettingsButton, &QPushButton::clicked, this, &Camera::closeSettings);
     connect(ui->enableTypingCheckBox, &QCheckBox::toggled, this, &Camera::enableTyping);
-    connect(ui->pitchSlider, &QSlider::sliderReleased, this, [=]() {
+
+    connect(ui->pitchSlider, &QSlider::sliderPressed, this, [=]() mutable {
         text2Speech.setPitch(ui->pitchSlider->value());
     });
+    connect(ui->pitchSlider, &QSlider::valueChanged, this, [=]() mutable {
+        text2Speech.setPitch(ui->pitchSlider->value());
+    });
+
     connect(ui->maleButton, &QRadioButton::clicked, this, [=]() {
 
         text2Speech.setGender(getGender());
@@ -535,7 +540,6 @@ void Camera::setupMenus()
         text2Speech.setGender(getGender());
 
     });
-    text2Speech.setGender(0);
 
 
     // Add the menu to the menu bar

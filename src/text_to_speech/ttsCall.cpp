@@ -15,6 +15,7 @@
 std::string currentString = ""; ///< The placeholder string that will be used in TTS.
 int pitch = 50;
 std::string genderString = "";
+std::string testString = "Do you like my new voice?";
 
 bool TextToSpeech::tts(const std::string& text) {
 
@@ -61,7 +62,7 @@ std::string TextToSpeech::getString(){
 
 void TextToSpeech::setPitch(int s){
     pitch = s;
-
+    tts(testString);
 }
 \
 // after en
@@ -78,4 +79,5 @@ void TextToSpeech::setGender(int gender){
     }else{
         genderString = "";
     }
+    tts(testString);
 }
