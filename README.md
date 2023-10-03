@@ -29,6 +29,7 @@ An innovative application that bridges the communication gap between individuals
 
 -   [About](#about)
 -   [Guidelines](#guidelines)
+-   [User Documentation](#userdocumentation)
 -   [Features](#features)
 -   [Installation](#installation)
 -   [Usage](#usage)
@@ -57,6 +58,16 @@ Working together as a team, we've selected two distinct datasets to create a uni
 6.  Fewer static analysis warnings (We have none! Thats pretty cool) :white_check_mark:
 7.  More documentation :white_check_mark:
 
+**Final Product:**
+1.  Did you hit the deadline? :white_check_mark:
+2.  Source code that builds in the lab :white_check_mark:
+3.  Stable and Robust App :white_check_mark:
+4.  Professionalism (look and feel)
+5.  Professionalism (other aspects i.e. Sound, Text etc.)
+6.  User Documentation :white_check_mark:
+7.  User Testing :white_check_mark:
+8.  Analysis of User feedback
+
 **Cool Points:**
 
 We received zero marks for cool points from the <b>Alpha</b>.<br />
@@ -66,11 +77,26 @@ What we believe was cool from the <b>Alpha</b> that was not acknowledged:<br />
 
 A more detailed document with evidence can be found [here](https://github.com/pakinui/cosc345/blob/main/PDFs/PotentialAlphaCoolPoints.pdf)<br />
 
-For the <b>Beta</b>, we believe the following could be considered for cool points:<br />
+For the <b>Beta</b>, we believe the following could be considered for cool points:
 1.  A retrospective, [here](https://github.com/pakinui/cosc345/blob/main/PDFs/retrospective%26actions.png), along with the follow up to it, [here](https://github.com/pakinui/cosc345/blob/main/PDFs/retrospective_follow_up.png)<br />
 2.  An analysis on user testing [here](https://github.com/pakinui/cosc345/blob/main/PDFs/user_testing_review.pdf)<br />
-3.  Laura has drawn an amazing ASL sign language guide for our application as seen at the top of the README :)
- 
+
+For the <b>Final Product</b>, we discussed and confirmed that these should be counted for cool points:
+1.  Laura has drawn an amazing ASL sign language guide for our application as seen at the top of the README. She also drew the logo for our app!
+2.  Laura also performed the training of our AI model. The fact that we trained our own model for our app is extremely cool
+
+## UserDocumentation
+
+To use the app, we recommend that users first have a look at the ASL hand chart drawn by Laura Yoo, and practice doing a few of the hand symbols. The app can of course be used before doing this, however it can be somewhat hard to create legible sentences without any experience using sign language. 
+
+Upon opening the app, you should be able to see yourself in the webcam frame. There is a box to the right that will have the letters signed added to it, and pressing translate speaks that sentence, as well as moves that sentence to the larger box above, displaying the history of what has been said. This is the default tab, however you can change to the hist tab to see the history of chat in more depth, as well as a dict tab to see the hand symbol to letter chart drawn by Laura.
+
+When performing signs, you should see a green bar that fills at the bottom of the GUI. This indicates that a letter is being added to the translated sentence. When the green bar fills, the letter is added. You can tell what letter is going to be added as it is displayed on the screen, near the bottom of the webcam frame. This therefore allows more control of what is being added to the translated sentence. 
+
+The app has ability to change the output voice, such that if you want to speak in a male or female voice, you have the ability to, as well as having the ability to change the pitch and the speed of the output voice. This can be accessed by opening the settings tab in the top left of the apps GUI.
+
+That's all she wrote! Enjoy using the app, and if you have any questions or want to make a contribution, please get in touch!
+
 ## Features
 
 **Essential Features:**
@@ -80,7 +106,7 @@ For the <b>Beta</b>, we believe the following could be considered for cool point
 
 **Potential/Along-the-line Features:**
 
-1.  **Record Transcript:** Optional feature to save conversation transcripts as .txt files.
+1.  **Record Transcript:** Optional feature to save conversation transcripts as .txt files. 
 2.  **Add Gestures:** Allow users to add custom gestures to expand the vocabulary of the app.
 3.  **Change Voice:** Provide users with the flexibility to select and customize the synthesized voice.
 4.  **Emotion Detector:** Utilize facial emotion recognition to infuse emotion into the generated speech.
