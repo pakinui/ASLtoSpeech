@@ -35,6 +35,7 @@ public:
 
     std::string getString();
     void setPitch(int s);
+    void setSpeed(int s);
     void setGender(int gender);
 
 };

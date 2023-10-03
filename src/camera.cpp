@@ -531,6 +531,13 @@ void Camera::setupMenus()
         text2Speech.setPitch(ui->pitchSlider->value());
     });
 
+    connect(ui->speedSlider, &QSlider::sliderPressed, this, [=]() mutable {
+        text2Speech.setSpeed(ui->speedSlider->value());
+    });
+    connect(ui->speedSlider, &QSlider::valueChanged, this, [=]() mutable {
+        text2Speech.setSpeed(ui->speedSlider->value());
+    });
+
     connect(ui->maleButton, &QRadioButton::clicked, this, [=]() {
 
         text2Speech.setGender(getGender());

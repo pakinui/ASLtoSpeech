@@ -14,6 +14,7 @@
 
 std::string currentString = ""; ///< The placeholder string that will be used in TTS.
 int pitch = 50;
+int speed = 175;
 std::string genderString = "";
 std::string testString = "Do you like my new voice?";
 
@@ -26,8 +27,9 @@ bool TextToSpeech::tts(const std::string& text) {
     // Construct the command using the passed text
     //std::string command = "espeak-ng -v en \"" + text + "\" -w \"output.wav\" | start \"output.wav\"";
     std::string pitchStr = std::to_string(pitch);
+    std::string speedStr = std::to_string(speed);
 
-    std::string command = "espeak-ng -v en" + genderString + " -p " + pitchStr + " \"" + currentString + "\" -w \"newoutput.wav\"";
+    std::string command = "espeak-ng -v en" + genderString + " -p " + pitchStr + " -s " + speedStr + " \"" + currentString + "\" -w \"newoutput.wav\"";
     //safjsdj
 
     STARTUPINFOA startupInfo = { sizeof(STARTUPINFOA) };
@@ -64,7 +66,12 @@ void TextToSpeech::setPitch(int s){
     pitch = s;
     tts(testString);
 }
-\
+
+void TextToSpeech::setSpeed(int s){
+    speed = s;
+    tts(testString);
+}
+
 // after en
 //+m1 for male
 //+f2 for female
