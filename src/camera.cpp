@@ -229,7 +229,7 @@ void Camera::imageAvailable(QVideoFrame frame) {
 
     if(count%3 == 0){ // Only call the Python function every 9 frames
         QString inputText = ui->translateInput->toPlainText();
-//        detectedText = inputText;
+        detectedText = inputText;
         QImage image = frame.toImage();
         if (image.isNull())
         {
