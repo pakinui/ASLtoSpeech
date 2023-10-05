@@ -64,9 +64,9 @@ Working together as a team, we've selected two distinct datasets to create a uni
 3.  Stable and Robust App :white_check_mark:
 4.  Professionalism (look and feel) :white_check_mark:
 5.  Professionalism (other aspects i.e. Sound, Text etc.) :white_check_mark:
-6.  User Documentation :white_check_mark:
+6.  User Documentation :white_check_mark: (can be seen [here](#userdocumentation))
 7.  User Testing :white_check_mark:
-8.  Analysis of User feedback :white_check_mark:
+8.  Analysis of User feedback :white_check_mark: (Can be accessed [here](https://github.com/pakinui/cosc345/blob/main/PDFs/2nd_user_testing_review.pdf))
 
 **Cool Points:**
 
