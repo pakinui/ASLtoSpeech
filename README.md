@@ -62,11 +62,11 @@ Working together as a team, we've selected two distinct datasets to create a uni
 1.  Did you hit the deadline? :white_check_mark:
 2.  Source code that builds in the lab :white_check_mark:
 3.  Stable and Robust App :white_check_mark:
-4.  Professionalism (look and feel)
-5.  Professionalism (other aspects i.e. Sound, Text etc.)
+4.  Professionalism (look and feel) :white_check_mark:
+5.  Professionalism (other aspects i.e. Sound, Text etc.) :white_check_mark:
 6.  User Documentation :white_check_mark:
 7.  User Testing :white_check_mark:
-8.  Analysis of User feedback
+8.  Analysis of User feedback :white_check_mark:
 
 **Cool Points:**
 
@@ -87,13 +87,13 @@ For the <b>Final Product</b>, we discussed and confirmed that these should be co
 
 ## UserDocumentation
 
-To use the app, we recommend that users first have a look at the ASL hand chart drawn by Laura Yoo, and practice doing a few of the hand symbols. The app can of course be used before doing this, however it can be somewhat hard to create legible sentences without any experience using sign language. 
+To use the app, we recommend that users first have a look at the ASL hand chart drawn by Laura Yoo, and practice doing a few of the hand symbols. The app can of course be used before doing this, however it can be somewhat hard to create legible sentences without any experience with American Sign Language.
 
-Upon opening the app, you should be able to see yourself in the webcam frame. There is a box to the right that will have the letters signed added to it, and pressing translate speaks that sentence, as well as moves that sentence to the larger box above, displaying the history of what has been said. This is the default tab, however you can change to the hist tab to see the history of chat in more depth, as well as a dict tab to see the hand symbol to letter chart drawn by Laura.
+Upon opening the app, you should be able to see yourself in the webcam frame. There is a box to the right that will have the letters signed added to it (after the bar under the cam is filled), and pressing translate speaks that sentence, as well as moves that sentence to the larger box above, displaying the history of what has been said. This is the default tab, however you can change to the "Hist" tab to see the history of chat in more depth, as well as a "Dict" tab to see the hand symbol to letter chart drawn by Laura.
 
 When performing signs, you should see a green bar that fills at the bottom of the GUI. This indicates that a letter is being added to the translated sentence. When the green bar fills, the letter is added. You can tell what letter is going to be added as it is displayed on the screen, near the bottom of the webcam frame. This therefore allows more control of what is being added to the translated sentence. 
 
-The app has ability to change the output voice, such that if you want to speak in a male or female voice, you have the ability to, as well as having the ability to change the pitch and the speed of the output voice. This can be accessed by opening the settings tab in the top left of the apps GUI.
+The app has ability to change the output voice, such that if you want to speak in a male or female voice, you have the ability to, as well as having the ability to change the pitch and the speed of the output voice. This can be accessed by opening the settings tab in the top left of the apps GUI. There is also a "Help" tab, in which there is in-app User Documentation.
 
 That's all she wrote! Enjoy using the app, and if you have any questions or want to make a contribution, please get in touch!
 
