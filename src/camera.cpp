@@ -190,6 +190,16 @@ void Camera::closeSettings(){
 
 }
 
+void Camera::closeHelp(){
+    //qDebug() << "Camera active" << cameraActive << m_camera.isActive();
+    if(cameraActive){
+        m_camera.start();
+    }
+    stacked->setCurrentIndex(1);
+    cameraMenu->menuAction()->setVisible(true);
+
+}
+
 void Camera::setProgressBarValue(int value){
     progressBar->setValue(value);
 }
@@ -203,6 +213,19 @@ void Camera::openSettings(){
     }
 
     stacked->setCurrentIndex(2);
+    cameraMenu->menuAction()->setVisible(false);
+
+}
+
+void Camera::openHelp(){
+    //    qDebug() << "settings open";
+    cameraActive = m_camera.isActive();
+    //qDebug() << "Camera activ1e" << cameraActive << m_camera.isActive();
+    if(m_camera.isActive()){
+        m_camera.stop();
+    }
+
+    stacked->setCurrentIndex(0);
     cameraMenu->menuAction()->setVisible(false);
 
 }
@@ -518,11 +541,13 @@ void Camera::setupMenus()
     fileMenu->addAction(closeAction);
 
     connect(settingsAction, &QAction::triggered, this, &Camera::openSettings);
+    connect(helpAction, &QAction::triggered, this, &Camera::openHelp);
 
     connect(closeAction, &QAction::triggered, this, &Camera::closeApp);
 
     connect(ui->exitSettingsButton, &QPushButton::clicked, this, &Camera::closeSettings);
     connect(ui->enableTypingCheckBox, &QCheckBox::toggled, this, &Camera::enableTyping);
+    connect(ui->helpExit, &QPushButton::clicked, this, &Camera::closeHelp);
 
     connect(ui->pitchSlider, &QSlider::sliderPressed, this, [=]() mutable {
         text2Speech.setPitch(ui->pitchSlider->value());
@@ -582,6 +607,17 @@ void Camera::setupMenus()
     connect(stopCameraAction, &QAction::triggered, this, &Camera::stopCamera);
 
     menuBar()->addMenu(cameraMenu);
+
+//    QGraphicsView view = ui->dictView;
+//    QGraphicsScene scene;
+
+//    QPixmap pixmap("..\ASL guideline.png");
+//    scene.addPixmap(pixmap);
+
+//    view.setScene(&scene);
+//    view.show();
+
+
 }
 
 int Camera::getGender(){

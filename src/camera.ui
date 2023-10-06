@@ -6,14 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>500</height>
+    <width>1200</width>
+    <height>700</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>800</width>
-    <height>500</height>
+    <width>1200</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1200</width>
+    <height>700</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -65,27 +71,27 @@ QLabel {
             <colorrole role="Button">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>245</red>
-               <green>239</green>
-               <blue>238</blue>
+               <red>232</red>
+               <green>227</green>
+               <blue>225</blue>
               </color>
              </brush>
             </colorrole>
             <colorrole role="Base">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>245</red>
-               <green>239</green>
-               <blue>238</blue>
+               <red>232</red>
+               <green>227</green>
+               <blue>225</blue>
               </color>
              </brush>
             </colorrole>
             <colorrole role="Window">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>245</red>
-               <green>239</green>
-               <blue>238</blue>
+               <red>232</red>
+               <green>227</green>
+               <blue>225</blue>
               </color>
              </brush>
             </colorrole>
@@ -94,27 +100,27 @@ QLabel {
             <colorrole role="Button">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>245</red>
-               <green>239</green>
-               <blue>238</blue>
+               <red>232</red>
+               <green>227</green>
+               <blue>225</blue>
               </color>
              </brush>
             </colorrole>
             <colorrole role="Base">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>245</red>
-               <green>239</green>
-               <blue>238</blue>
+               <red>232</red>
+               <green>227</green>
+               <blue>225</blue>
               </color>
              </brush>
             </colorrole>
             <colorrole role="Window">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>245</red>
-               <green>239</green>
-               <blue>238</blue>
+               <red>232</red>
+               <green>227</green>
+               <blue>225</blue>
               </color>
              </brush>
             </colorrole>
@@ -123,43 +129,80 @@ QLabel {
             <colorrole role="Button">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>245</red>
-               <green>239</green>
-               <blue>238</blue>
+               <red>232</red>
+               <green>227</green>
+               <blue>225</blue>
               </color>
              </brush>
             </colorrole>
             <colorrole role="Base">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>245</red>
-               <green>239</green>
-               <blue>238</blue>
+               <red>232</red>
+               <green>227</green>
+               <blue>225</blue>
               </color>
              </brush>
             </colorrole>
             <colorrole role="Window">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>245</red>
-               <green>239</green>
-               <blue>238</blue>
+               <red>232</red>
+               <green>227</green>
+               <blue>225</blue>
               </color>
              </brush>
             </colorrole>
            </disabled>
           </palette>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #E8E3E1;</string>
+         </property>
          <property name="currentIndex">
           <number>2</number>
          </property>
-         <widget class="QWidget" name="previewPage">
-          <layout class="QGridLayout" name="gridLayout_7">
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_2">
-             <property name="text">
-              <string>TextLabel</string>
+         <widget class="QWidget" name="helpPage">
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QWidget" name="widget_3" native="true">
+             <property name="styleSheet">
+              <string notr="true">background-color: #D9D1CE;</string>
              </property>
+             <layout class="QVBoxLayout" name="verticalLayout_7">
+              <item>
+               <widget class="QLabel" name="label_2">
+                <property name="styleSheet">
+                 <string notr="true">color: black;
+font: 12pt &quot;Segoe UI&quot;;</string>
+                </property>
+                <property name="text">
+                 <string>To use this app, we recommend that users first have a look at the ASL hand chart drawn by Laura Yoo, and practice doing a few of the hand symbols. This app can of course be used before doing this, however it can be somewhat hard to create legible sentences without any experience with American Sign Language.
+
+In this app, you should be able to see yourself in the webcam frame. There is a box to the right that will have the letters signed added to it (after the bar under the cam is filled), and pressing translate speaks that sentence, as well as moves that sentence to the larger box above, displaying the history of what has been said. This is the default tab, however you can change to the &quot;Hist&quot; tab to see the history of chat in more depth, as well as a &quot;Dict&quot; tab to see the hand symbol to letter chart drawn by Laura.
+
+When performing signs, you should see a green bar that fills at the bottom of the GUI. This indicates that a letter is being added to the translated sentence. When the green bar fills, the letter is added. You can tell what letter is going to be added as it is displayed on the screen, near the bottom of the webcam frame. This therefore allows more control of what is being added to the translated sentence.
+
+This app has ability to change the output voice, such that if you want to speak in a male or female voice, you have the ability to, as well as having the ability to change the pitch and the speed of the output voice. This can be accessed by opening the settings tab in the top left of the apps dropdown tabs, next to where you found this help section! 
+
+Enjoy using the app, and if you have any questions or want to make a contribution, please get in touch! Find us at our GitHub, https://github.com/pakinui/cosc345</string>
+                </property>
+                <property name="scaledContents">
+                 <bool>false</bool>
+                </property>
+                <property name="wordWrap">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="helpExit">
+                <property name="text">
+                 <string>Exit</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
           </layout>
@@ -191,10 +234,16 @@ QLabel {
           </layout>
          </widget>
          <widget class="QWidget" name="settingsPage">
+          <property name="styleSheet">
+           <string notr="true">background-color: #D9D1CE;</string>
+          </property>
           <layout class="QVBoxLayout" name="verticalLayout_4">
            <item>
             <widget class="QWidget" name="widget_2" native="true">
-             <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0,0,5,1">
+             <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0,1,0,6,1">
+              <item>
+               <widget class="QWidget" name="widget_5" native="true"/>
+              </item>
               <item>
                <widget class="QWidget" name="enableTyping" native="true">
                 <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -232,7 +281,7 @@ QLabel {
                   </rect>
                  </property>
                  <property name="autoFillBackground">
-                  <bool>true</bool>
+                  <bool>false</bool>
                  </property>
                  <property name="value">
                   <number>50</number>
@@ -264,7 +313,7 @@ QLabel {
                   </rect>
                  </property>
                  <property name="autoFillBackground">
-                  <bool>true</bool>
+                  <bool>false</bool>
                  </property>
                  <property name="maximum">
                   <number>200</number>
@@ -299,7 +348,7 @@ QLabel {
                   </rect>
                  </property>
                  <property name="autoFillBackground">
-                  <bool>true</bool>
+                  <bool>false</bool>
                  </property>
                  <property name="minimum">
                   <number>80</number>
@@ -405,7 +454,7 @@ color: black;
            <string notr="true">background-color: #E8E3E1</string>
           </property>
           <attribute name="title">
-           <string>Trans</string>
+           <string>Translation</string>
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout_2" stretch="5,1">
            <property name="spacing">
@@ -418,9 +467,15 @@ color: black;
                <rect>
                 <x>3</x>
                 <y>0</y>
-                <width>171</width>
-                <height>301</height>
+                <width>300</width>
+                <height>501</height>
                </rect>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
               </property>
               <property name="styleSheet">
                <string notr="true">background-color: #D9D1CE;
@@ -467,9 +522,26 @@ color: black;</string>
            </item>
           </layout>
          </widget>
+         <widget class="QWidget" name="dictTab">
+          <attribute name="title">
+           <string>Dictionary</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item>
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap resource="../resources.qrc">:/icon/resources/dictImg.png</pixmap>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
          <widget class="QWidget" name="historyTab">
           <attribute name="title">
-           <string>Hist</string>
+           <string>History</string>
           </attribute>
           <widget class="QTextEdit" name="historyDisplay">
            <property name="geometry">
@@ -481,13 +553,13 @@ color: black;</string>
             </rect>
            </property>
            <property name="documentTitle">
-            <string>Coming Soon</string>
+            <string/>
            </property>
            <property name="readOnly">
             <bool>true</bool>
            </property>
            <property name="placeholderText">
-            <string>Coming Soon</string>
+            <string/>
            </property>
           </widget>
          </widget>
@@ -517,6 +589,8 @@ color: black;</string>
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -187,6 +187,8 @@ public Q_SLOTS:
     void startProgressBar();
     void setProgressBarValue(int value);
     int getGender();
+    void openHelp();
+    void closeHelp();
 
 };
 

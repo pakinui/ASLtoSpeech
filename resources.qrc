@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>resources/appIcon.ico</file>
+        <file>ASL guidline.png</file>
+        <file>resources/small.png</file>
+        <file>resources/dictImg.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>resources/helpText</file>
+    </qresource>
+</RCC>

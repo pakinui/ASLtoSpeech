@@ -18,6 +18,7 @@
 #include <QDir>
 #include "ui_camera.h"
 #include <QIcon>
+#include <QMainWindow>
 
 
 /**
@@ -37,20 +38,14 @@ int main(int argc, char *argv[])
     // Initialize the GUI application
     QApplication a(argc, argv);
 
-//    QPixmap logoPixmap("./../resources/icon.jpg");
-//    QIcon appIcon(logoPixmap);
-//    a.setWindowIcon(appIcon);
-
-
-
-
-
-
     // Create the main camera window
     Camera w;
-    w.show();
+    //w.setAttribute(Qt::WA_Resizeable, false);
 
-    // Start the event loop
+    w.show();
+//    QIcon icon(":/icons/appIcon.ico");
+//    w.setWindowIcon(icon);
+
     return a.exec();
 }
 
