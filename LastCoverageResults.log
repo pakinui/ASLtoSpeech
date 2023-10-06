@@ -1,4 +1,4 @@
-[2023-10-06 14:26:06] [info] Start Program:
+[2023-10-06 14:45:28] [info] Start Program:
 Path:"build\\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-RelWithDebInfo\\Tests.exe"
 Arguments:
 Working directory: not set.
@@ -14,4 +14,4 @@ Input coverage:
 Unified diff: 
 Excluded line regular expressions: 
 Substitute pdb source paths: 
-[2023-10-06 14:26:06] [error] Error: Cannot find path: build\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-RelWithDebInfo\Tests.exe
+[2023-10-06 14:45:28] [error] Error: Cannot find path: build\build-cosc345-Desktop_Qt_6_5_2_MSVC2019_64bit-RelWithDebInfo\Tests.exe

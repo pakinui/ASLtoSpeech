@@ -4,6 +4,9 @@
         <file>ASL guidline.png</file>
         <file>resources/small.png</file>
         <file>resources/dictImg.png</file>
+        <file>resources/small2.png</file>
+        <file>resources/final.png</file>
+        <file>resources/final2.png</file>
     </qresource>
     <qresource prefix="/">
         <file>resources/helpText</file>

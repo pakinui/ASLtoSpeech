@@ -59,7 +59,7 @@ QLabel {
     </item>
     <item>
      <widget class="QWidget" name="widget" native="true">
-      <layout class="QHBoxLayout" name="horizontalLayout" stretch="3,1">
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="3,0">
        <property name="spacing">
         <number>5</number>
        </property>
@@ -409,131 +409,146 @@ font: 14pt &quot;Segoe UI&quot;;</string>
         </widget>
        </item>
        <item>
-        <widget class="QTabWidget" name="tabWidget">
-         <property name="styleSheet">
-          <string notr="true">background-color: #E8E3E1;
+        <widget class="QWidget" name="widget_7" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_14" stretch="7,1">
+          <item>
+           <widget class="QTabWidget" name="tabWidget">
+            <property name="styleSheet">
+             <string notr="true">background-color: #E8E3E1;
 border-style: none;
 color: black;
 
 </string>
-         </property>
-         <property name="currentIndex">
-          <number>0</number>
-         </property>
-         <widget class="QWidget" name="translationTab">
-          <property name="styleSheet">
-           <string notr="true">background-color: #E8E3E1</string>
-          </property>
-          <attribute name="title">
-           <string>Translation</string>
-          </attribute>
-          <layout class="QVBoxLayout" name="verticalLayout_2" stretch="5,1">
-           <property name="spacing">
-            <number>6</number>
-           </property>
-           <item>
-            <widget class="QWidget" name="topArea" native="true">
-             <widget class="QTextEdit" name="translationDisplay">
-              <property name="geometry">
-               <rect>
-                <x>3</x>
-                <y>0</y>
-                <width>300</width>
-                <height>501</height>
-               </rect>
+            </property>
+            <property name="currentIndex">
+             <number>1</number>
+            </property>
+            <widget class="QWidget" name="translationTab">
+             <property name="styleSheet">
+              <string notr="true">background-color: #E8E3E1</string>
+             </property>
+             <attribute name="title">
+              <string>Translation</string>
+             </attribute>
+             <layout class="QVBoxLayout" name="verticalLayout_11" stretch="5">
+              <property name="spacing">
+               <number>6</number>
               </property>
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">background-color: #D9D1CE;
-line-height: 2;</string>
-              </property>
-              <property name="lineWidth">
-               <number>3</number>
-              </property>
-              <property name="sizeAdjustPolicy">
-               <enum>QAbstractScrollArea::AdjustIgnored</enum>
-              </property>
-              <property name="readOnly">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="bottomArea" native="true">
-             <layout class="QVBoxLayout" name="verticalLayout_3" stretch="6,1">
               <item>
-               <widget class="QTextEdit" name="translateInput">
-                <property name="styleSheet">
-                 <string notr="true">background-color: #F5F1F0</string>
-                </property>
-                <property name="placeholderText">
-                 <string>Text to Translate ...</string>
-                </property>
+               <widget class="QWidget" name="topArea" native="true">
+                <widget class="QTextEdit" name="translationDisplay">
+                 <property name="geometry">
+                  <rect>
+                   <x>3</x>
+                   <y>0</y>
+                   <width>300</width>
+                   <height>501</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: #D9D1CE;
+line-height: 2;</string>
+                 </property>
+                 <property name="lineWidth">
+                  <number>3</number>
+                 </property>
+                 <property name="sizeAdjustPolicy">
+                  <enum>QAbstractScrollArea::AdjustIgnored</enum>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                </widget>
                </widget>
               </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="dictTab">
+             <attribute name="title">
+              <string>Dictionary</string>
+             </attribute>
+             <layout class="QVBoxLayout" name="verticalLayout_13">
               <item>
-               <widget class="QPushButton" name="translateButton">
-                <property name="styleSheet">
-                 <string notr="true">background-color: #D9D1CE;
-color: black;</string>
-                </property>
+               <widget class="QLabel" name="label_7">
                 <property name="text">
-                 <string>Translate</string>
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap resource="../resources.qrc">:/icon/resources/final2.png</pixmap>
                 </property>
                </widget>
               </item>
              </layout>
             </widget>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="dictTab">
-          <attribute name="title">
-           <string>Dictionary</string>
-          </attribute>
-          <layout class="QVBoxLayout" name="verticalLayout_8">
-           <item>
-            <widget class="QLabel" name="label_6">
-             <property name="text">
-              <string/>
-             </property>
-             <property name="pixmap">
-              <pixmap resource="../resources.qrc">:/icon/resources/dictImg.png</pixmap>
-             </property>
+            <widget class="QWidget" name="historyTab">
+             <attribute name="title">
+              <string>History</string>
+             </attribute>
+             <widget class="QTextEdit" name="historyDisplay">
+              <property name="geometry">
+               <rect>
+                <x>3</x>
+                <y>3</y>
+                <width>181</width>
+                <height>421</height>
+               </rect>
+              </property>
+              <property name="documentTitle">
+               <string/>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+              <property name="placeholderText">
+               <string/>
+              </property>
+             </widget>
             </widget>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="historyTab">
-          <attribute name="title">
-           <string>History</string>
-          </attribute>
-          <widget class="QTextEdit" name="historyDisplay">
-           <property name="geometry">
-            <rect>
-             <x>3</x>
-             <y>3</y>
-             <width>181</width>
-             <height>421</height>
-            </rect>
-           </property>
-           <property name="documentTitle">
-            <string/>
-           </property>
-           <property name="readOnly">
-            <bool>true</bool>
-           </property>
-           <property name="placeholderText">
-            <string/>
-           </property>
-          </widget>
-         </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget_8" native="true">
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QWidget" name="bottomArea" native="true">
+               <property name="styleSheet">
+                <string notr="true">background-color: #D9D1CE;</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_15" stretch="6,1">
+                <item>
+                 <widget class="QTextEdit" name="translateInput">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: #F5F1F0</string>
+                  </property>
+                  <property name="placeholderText">
+                   <string>Text to Translate ...</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="translateButton">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: #D9D1CE;
+color: black;</string>
+                  </property>
+                  <property name="text">
+                   <string>Translate</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
       </layout>
