@@ -596,11 +596,11 @@ void Camera::setupMenus()
 
     QAction *startCameraAction = new QAction("Start Camera", this);
     QAction *stopCameraAction = new QAction("Stop Camera", this);
-    QAction *cameraSettingsAction = new QAction("Camera Settings", this);
+    //QAction *cameraSettingsAction = new QAction("Camera Settings", this);
 
     cameraMenu->addAction(startCameraAction);
     cameraMenu->addAction(stopCameraAction);
-    cameraMenu->addAction(cameraSettingsAction);
+    //cameraMenu->addAction(cameraSettingsAction);
 
     // Adding start and stop camera button connections
     connect(startCameraAction, &QAction::triggered, this, &Camera::startCamera);
