@@ -139,12 +139,6 @@ Insert '\cosc345\build' into the build directory between the parent directory an
 Build and Run the Application in Release mode<br />
 ****
 
-## Usage
-
-Firstly, our ASL to Speech App will access the webcam from user's devices to detect the hand object.<br />
-Once it is detected, it will then be put through our pre-trained American Sign Lanauge model to do the language detection.<br />
-Those detected sign language symbols will be converted to text, and said text will be shown on the frame as a subtitle. <br />
-The subtitle text will form sentences made out of Sign Lanauge Symbols displayed in the translate box, which can be converted to speech by pressing the 'Translate' button. <br />
 
 
 ## Codecov Coverage Graph
